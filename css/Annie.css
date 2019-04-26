@@ -178,7 +178,7 @@ sub {
 code {
 	font-family: Georgia, Times New Roman, Times, serif;
 	font-size: 1em;
-	font-style: italic;
+	/* font-style: italic; */
 	color: #c7254e;
 	background: rgba(220, 220, 220, 0.25);
 }
