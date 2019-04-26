@@ -1,0 +1,903 @@
+
+
+	<!DOCTYPE html>
+	<html class="scrollbar">
+		
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      初探微信小程序之小川天气 | Mescal 川
+    
+  </title>
+  <meta name="author" content="Mescal Chuan">
+  <meta name="keywords" content>
+  <meta name="description" content>
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+    <!-- jquery -->
+	<script src="/js/jquery-2.1.1.min.js"></script>
+
+  <!-- leancloud -->
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script src="/js/leancloud.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="transition">
+					<div class="three-bounce1"></div>
+					<div class="three-bounce2"></div>
+					<div class="three-bounce3"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground" data-img-mode="normal" data-normal-src="/img/48.jpg" data-random-max="110" data-random-src="https://sariay.github.io/Random-img/">
+	<div class="mask">
+		<div class="h-header">
+			<div id="logo-S">
+				
+					<a href="/">
+						Mescal
+					</a>
+				
+			</div>
+			<!-- Navigation in header(id="navigation-S") -->
+			<div id="navigation-S">
+				<ul>
+					
+						<li class="menu-home">
+							<a href="/" class="menu-item-home">主页</a>
+						</li>
+					
+						<li class="menu-archive">
+							<a href="/archives" class="menu-item-archive">归档</a>
+						</li>
+					
+						<li class="menu-categories">
+							<a href="/categories" class="menu-item-categories">分类</a>
+						</li>
+					
+						<li class="menu-tags">
+							<a href="/tags" class="menu-item-tags">标签</a>
+						</li>
+					
+						<li class="menu-about">
+							<a href="/about" class="menu-item-about">关于</a>
+						</li>
+					
+						<li class="menu-gallery">
+							<a href="/gallery" class="menu-item-gallery">摄影集</a>
+						</li>
+					
+
+					
+						<li class="menu-search">
+							<a href="javascript:;" class="popup-trigger" title="Search">搜索</a>
+						</li>
+					
+				</ul>			
+			</div>				
+		</div>
+
+		<div class="h-body">	
+			<!-- motto -->
+			
+				<div id="page-motto">
+					<p class="motto">
+						
+					</p>
+				</div>
+			
+
+			<div id="navigation-H">
+				<!-- Page title -->
+				<p>
+					
+						当前文章&nbsp;:&nbsp;《初探微信小程序之小川天气》
+					
+				</p>
+				<!-- Progress bar -->
+				<div id="progress-bar"></div>
+
+				<!-- Progress percent -->
+				<div id="progress-percentage">
+					<h1>0.0%</h1>
+				</div>
+			</div>
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<ul>
+				<!-- <li>
+					<a><i class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>切换背景</a>
+				</li> -->
+				<li>
+					<a href="javascript:;" id="read-more"><i class="fa fa-angle-double-down"></i></a>
+				</li>
+				<!-- <li>
+					<a href="https://github.com/Sariay/hexo-theme-Annie" target="_blank"><i class="fa fa-download"></i>克隆主题</a>
+				</li> -->
+			</ul>
+		</div>
+		
+		<!-- This is only a demo, please go to "https://time.is" to set your city time! -->
+<style type="text/css">
+	.header-date {
+		position: absolute;
+		left: 40px;
+		bottom: 30px;
+		writing-mode: tb-rl;
+		font-size: 36px;
+	}	
+	.header-date a {
+		border-bottom: none;
+	}
+	@media only screen and (max-width: 768 ) {
+		.header-date {
+			position: absolute;
+			left: 40px;
+			bottom: 30px;
+			writing-mode: tb-rl;
+			font-size: 20px;
+		}			
+	}
+</style>
+<div class="header-date">
+	<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow"></a>
+	<span id="Beijing_z43d"></span>
+</div>
+<script src="//widget.time.is/zh.js"></script>
+<script>
+	time_is_widget.init({
+		Beijing_z43d:{
+			template:"DATE", 
+			date_format:"year年 monthname dnum日"
+		}
+	});
+</script>
+</div></header>
+
+<!-- Navigation in div(id="navigation-H") -->
+<a class="nav-trigger">
+	<span></span>
+</a>
+
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<h3>Navigation</h3>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	<div class="nav-body">
+		<ul>
+			
+				<li class="menu-home">
+					<a href="/" class="menu-item-home">主页</a>
+				</li>
+			
+				<li class="menu-archive">
+					<a href="/archives" class="menu-item-archive">归档</a>
+				</li>
+			
+				<li class="menu-categories">
+					<a href="/categories" class="menu-item-categories">分类</a>
+				</li>
+			
+				<li class="menu-tags">
+					<a href="/tags" class="menu-item-tags">标签</a>
+				</li>
+			
+				<li class="menu-about">
+					<a href="/about" class="menu-item-about">关于</a>
+				</li>
+			
+				<li class="menu-gallery">
+					<a href="/gallery" class="menu-item-gallery">摄影集</a>
+				</li>
+			
+
+			
+				<li class="menu-search">
+					<a href="javascript:;" class="popup-trigger" title="Search">搜索</a>
+				</li>
+			
+		</ul>
+	</div>
+
+	<div class="nav-footer">
+		<ul>
+	
+		
+			<li>
+				<a href="https://github.com/mescalchuan" title="Github" target="_blank">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="https://weibo.com/6454388854/profile?topnav=1&wvr=6" title="Weibo" target="_blank">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="/1335382915@qq.com" title="Email" target="_blank">
+					<i class="fa fa-envelope-o"></i>
+				</a>
+			</li>
+		
+
+		
+			<li>
+				<a href="/1335382915" title="QQ" target="_blank">
+					<i class="fa fa-qq"></i>
+				</a>
+			</li>
+		
+		
+	 
+</ul>
+	</div>
+</nav>
+
+		
+		<!--main-->
+		<main>
+			<div class="layout-post">
+	
+	
+	<div class="article-title">
+		
+	<a href="/2018/08/29/2018-08-29-technology-weixin/" itemprop="url">
+		初探微信小程序之小川天气
+	</a>
+
+	</div>
+
+	<div class="article-meta">
+		<span>
+			
+	发布于
+	<a href="/2018/08/29/2018-08-29-technology-weixin/" itemprop="url">
+		<time datetime="2018-08-29T10:32:20.000Z" itemprop="datePublished">
+	  		2018-08-29
+	  </time>
+	</a> 
+
+	/
+	更新于
+	<a href="/2018/08/29/2018-08-29-technology-weixin/" itemprop="url">
+		<time datetime="2018-08-29T10:32:20.000Z" itemprop="dateUpdated">
+	  		2019-04-26
+	  </time>
+	</a> 	
+
+		</span>
+		/
+		<span>
+			<i class="fa fa-tags"></i>
+			
+	
+		<a href="/tags/博客/" class=" ">
+			博客
+		</a>
+	
+		<a href="/tags/技术博客/" class=" ">
+			技术博客
+		</a>
+	
+		<a href="/tags/小程序/" class=" ">
+			小程序
+		</a>
+	
+		
+		</span>
+		<!-- /
+		
+
+    <span class="leancloud_visitors" id="/2018/08/29/2018-08-29-technology-weixin/_visitors" data-url="/2018/08/29/2018-08-29-technology-weixin/" data-title="初探微信小程序之小川天气">
+        热度
+        <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
+    </span>
+    
+    /
+
+
+
+    <span class="leancloud_likes" id="/2018/08/29/2018-08-29-technology-weixin/_likes" data-url="/2018/08/29/2018-08-29-technology-weixin/" data-title="初探微信小程序之小川天气" rel="unlike">
+        喜欢
+        <i class="fa fa-heart"></i>
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+ -->
+	</div>
+
+	<div class="article-content" id="article-content">
+		<p>微信小程序可以说是当下很火热的应用了。在好奇心的作用下，通读了一遍之后便开始上手撸了一个很简单的天气应用——小川天气。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-6895c3ecc8731c6c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="小川天气"><br><img src="https://upload-images.jianshu.io/upload_images/1495096-6b52de2058465306.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="首页"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-097faac85ddac982.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="生活指数"><br><img src="https://upload-images.jianshu.io/upload_images/1495096-fb080aab4403782b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="导航"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-1239aa459b6252ae.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="城市选择"></p>
+<p>目前已经发布正式版本，你可以直接在微信中搜索<code>小川天气</code>来使用。</p>
+<p>小程序的文档已经很完善了，通读一遍后上手写代码并不是很难，下面主要讲一下本人在开发微信小程序的一些感触（坑）~</p>
+<h4 id="SetData"><a href="#SetData" class="headerlink" title="SetData"></a>SetData</h4><p>类似于<code>React</code>的<code>setState</code>，用于更改状态，但小程序做得更加智能，你完全可以直接修改数组中的某一项的值而不必再克隆一份出来：</p>
+<pre><code>//小程序
+this.setData({
+    &quot;arr[0]&quot;: &quot;new value&quot;
+})
+//react
+let _arr = JSON.parse(JSON.stringify(this.state.arr));
+_arr[0] = &quot;new value&quot;;
+this.setState({
+    arr: _arr
+})
+</code></pre><p>修改对象也是如此：</p>
+<pre><code>//小程序
+this.setData({
+    &quot;obj.name&quot;: &quot;mescal-chuan&quot;
+})
+//react
+let _obj = JSON.parse(JSON.stringify(this.state.obj));
+_obj.name = &quot;mescal-chuan&quot;;
+this.setState({
+    obj: _obj
+})
+</code></pre><h4 id="页面中绑定函数"><a href="#页面中绑定函数" class="headerlink" title="页面中绑定函数"></a>页面中绑定函数</h4><p>使用<code>bind</code>指令进行函数绑定：</p>
+<pre><code> &lt;view bindtap=&quot;openModal&quot;&gt;&lt;/view&gt;
+</code></pre><p>看起来和<code>vue</code>差不多，然而如果你想给这个函数传递一些参数就比较恶心了：</p>
+<pre><code> &lt;view bindtap=&quot;openModal&quot; data-index=&quot;{{index}}&quot;&gt;&lt;/view&gt;
+//js
+openModal() {
+    const currentIndex = e.currentTarget.dataset.index;
+    this.setData({
+      currentIndex
+    })
+    wx.showModal({
+        title: config.lifeStyleTitle(activity[currentIndex].type),
+        content: activity[currentIndex].txt,
+        showCancel: false
+    })
+}
+</code></pre><h4 id="页面通信"><a href="#页面通信" class="headerlink" title="页面通信"></a>页面通信</h4><p>以本应用为例，用户在城市选择页选择新的城市之后，需要通知首页刷新数据。在单页应用中我们可以使用<code>redux</code>或<code>vuex</code>这类状态管理库实现状态的全局化；在使用<code>dcloud</code>这类<code>webapp</code>开发时，我们可以用它们自己内部定制的事件传递来实现跨页面通信。那么在微信小程序中，你可以获取一个页面的实例，然后直接调用该页面内部的方法。</p>
+<pre><code>//city.js
+selectCity(e) {
+    const keyIndex = e.currentTarget.dataset.key;
+    const childIndex = e.currentTarget.dataset.child;
+    const pages = getCurrentPages();
+    const homePage = pages[0];
+    //调用首页的方法来刷新首页数据
+    homePage.getNewCity(null, keyIndex, childIndex);
+    wx.navigateBack();
+}
+</code></pre><h4 id="指令中使用函数"><a href="#指令中使用函数" class="headerlink" title="指令中使用函数"></a>指令中使用函数</h4><p>很遗憾，一个页面内部的函数只能用在事件绑定中，你必须使用<code>wxs</code>来实现在页面中访问内部函数。它是小程序的一套脚本语言，配合我们的<code>wxml</code>一起完成页面构建。</p>
+<pre><code>//index.vue
+&lt;template&gt;
+    &lt;p&gt;{{getDateText(index)}}&lt;/p&gt;
+&lt;/template&gt;
+&lt;script&gt;
+    export default {
+        ...
+        methods: {
+            getDateText(index) {
+                return xxx;
+            }
+        }
+        ...
+    }
+&lt;/script&gt;
+</code></pre><pre><code>//index.wxs
+var getDateText = function(index) {
+    return xxx;
+}
+module.exports = {
+    getDateText: getDateText
+}
+//index.wxml
+&lt;wxs src=&quot;./index.wxs&quot; module=&quot;forecast&quot;/&gt;
+&lt;text&gt;{{forecast.getDateText(index)}}&lt;/text&gt;
+</code></pre><h4 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h4><p>小程序的组件到目前为止还不是很完善，一些比较常用的组件需要自己实现，比如：抽屉、模态框、Loading等。当然，<code>github</code>上也有一些比较成熟的UI库供你直接使用，比如本项目中用到的<a href="https://github.com/ecomfe/echarts-for-weixin" target="_blank" rel="noopener">小程序版echarts</a>。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>目前为止遇到的坑大致如此，由于只是开发了一个简单应用，所涉及到的知识只是皮毛，后续有时间会继续开发一个复杂应用。</p>
+	
+	</div>
+	
+	<div id="current-post-cover" data-scr="/img/mescal/xiaochuan_weather.jpg"></div>
+
+	<!-- relate post, comment...-->
+	<div class="investment-container">
+		<div class="investment-header">
+			<div class="investment-title-1">
+				<div class="on">相关文章</div>
+				<!-- <div>评论</div> -->
+			</div>
+			<div class="investment-title-2">	            
+				
+	<span>
+		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
+		
+			<a href="/2018/09/27/2018-09-27-technology-vue-app-cli/" title="快速开发基于vue的app应用——vue-app-cli" rel="prev">
+				&laquo;上一篇
+			</a>
+		
+		
+			<a href="/2018/07/31/2018-07-31-technology-node-health/" title="基于React和Node实现一个食物热量参考应用" rel="next">
+				下一篇&raquo;
+			</a>
+			
+	</span>
+      		
+			</div>	
+		</div>
+		
+		<div class="investment-content">
+			<div class="investment-content-list">
+				
+
+<div class="relate-post">
+	<ul>
+		
+				<li>
+					<div>
+						<a href="/2018/09/27/2018-09-27-technology-vue-app-cli/" title="快速开发基于vue的app应用——vue-app-cli">
+							快速开发基于vue的app应用——vue-app-cli
+						</a>
+						<p>
+							
+一个能够让你快速构建基于vue的app多页应用脚手架，可独立开发h5 app或集成到hbuilder开发原生应用。文档地址vue-cli之所以不使用官方的vue-cli构建应用是因为：
+
+vue-cli需要自己实现多页面构建。
+在开...
+						</p>
+					</div>
+
+					<a href="/2018/09/27/2018-09-27-technology-vue-app-cli/" title="快速开发基于vue的app应用——vue-app-cli">				
+						<img src="/img/mescal/1.jpg" class="relateImg" alt="快速开发基于vue的app应用——vue-app-cli">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/07/31/2018-07-31-technology-node-health/" title="基于React和Node实现一个食物热量参考应用">
+							基于React和Node实现一个食物热量参考应用
+						</a>
+						<p>
+							利用业余时间，自己做了一个食物热量参考网站，数据参考自一个app食物库。技术栈使用了sass+react+react-router+redux+antd+express+mongoose。
+
+一、How To Use下载首先将代码cl...
+						</p>
+					</div>
+
+					<a href="/2018/07/31/2018-07-31-technology-node-health/" title="基于React和Node实现一个食物热量参考应用">				
+						<img src="/img/mescal/node_health.jpg" class="relateImg" alt="基于React和Node实现一个食物热量参考应用">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/07/04/2018-07-04-technology-vpull-refresh/" title="基于vue封装的轻量级下拉刷新组件">
+							基于vue封装的轻量级下拉刷新组件
+						</a>
+						<p>
+							如何使用将项目中的src/components/pullRefresh.vue和src/img拷贝到你的工程内。如层级发生改变，你需要手动修改pullRefresh.vue中的图片链接地址。
+API
+
+
+属性
+说明
+类型
+默认值
+
+
+...
+						</p>
+					</div>
+
+					<a href="/2018/07/04/2018-07-04-technology-vpull-refresh/" title="基于vue封装的轻量级下拉刷新组件">				
+						<img src="/img/mescal/2.jpg" class="relateImg" alt="基于vue封装的轻量级下拉刷新组件">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/04/21/2018-04-21-technology-x-ui/" title="x-ui">
+							x-ui
+						</a>
+						<p>
+							跨平台的移动端ui组件库
+介绍x-ui是基于react native和react开发出的跨android、ios和h5的三端ui组件库。
+如何使用起步git clone https://github.com/mescalchuan/x...
+						</p>
+					</div>
+
+					<a href="/2018/04/21/2018-04-21-technology-x-ui/" title="x-ui">				
+						<img src="/img/mescal/3.jpg" class="relateImg" alt="x-ui">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/02/25/2018-02-25-technology-angular-m-cli/" title="一个能够快速构建AngularJS多页项目的轻量级脚手架">
+							一个能够快速构建AngularJS多页项目的轻量级脚手架
+						</a>
+						<p>
+							
+一款基于webpack的快速构建angular1的多页应用构建方案文档地址使用angular-m-cli，您可以做到
+快速构建项目原型
+自动生成新页面并完成相关配置（包括入口文件、css、index.html）
+利用本地服务器完成开...
+						</p>
+					</div>
+
+					<a href="/2018/02/25/2018-02-25-technology-angular-m-cli/" title="一个能够快速构建AngularJS多页项目的轻量级脚手架">				
+						<img src="/img/mescal/4.jpg" class="relateImg" alt="一个能够快速构建AngularJS多页项目的轻量级脚手架">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/01/27/2018-01-27-technology-atom/" title="优雅地配置Atom">
+							优雅地配置Atom
+						</a>
+						<p>
+							从最初的sublime text，到webstorm，后来又转战visual studio code，直到现在的atom，就个人使用体验来看是越来越舒适的。之前一直在使用sublime text和webstorm，后来尝试了一把vs ...
+						</p>
+					</div>
+
+					<a href="/2018/01/27/2018-01-27-technology-atom/" title="优雅地配置Atom">				
+						<img src="/img/mescal/5.jpg" class="relateImg" alt="优雅地配置Atom">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/01/19/2018-01-19-technology-react-native-textinput/" title="React Native之巧用TextInput">
+							React Native之巧用TextInput
+						</a>
+						<p>
+							近日使用rn开发电商app遇到一个再简单不过的需求：买家申请退款，填写申请单，其中有一个多行文本输入框用于填写退款理由，如图所示：
+
+看似简单的需求，然而用rn开发还是会遇到问题。
+页面搭建两个View和一个TextInput足矣，外...
+						</p>
+					</div>
+
+					<a href="/2018/01/19/2018-01-19-technology-react-native-textinput/" title="React Native之巧用TextInput">				
+						<img src="/img/mescal/6.jpg" class="relateImg" alt="React Native之巧用TextInput">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2017/11/20/2017-11-20-technology-react-native-linking/" title="近日使用React Native Linking踩过的坑">
+							近日使用React Native Linking踩过的坑
+						</a>
+						<p>
+							使用react native（以下简称rn）开发移动端app已经有四个月的时间了（包括第一个月的上手），感谢rn，让前端开发人员也能够开发原生的app。前几天遇到一个需求：打开第三方的支付应用并监听返回的结果。听上去这个需求并不难，然...
+						</p>
+					</div>
+
+					<a href="/2017/11/20/2017-11-20-technology-react-native-linking/" title="近日使用React Native Linking踩过的坑">				
+						<img src="/img/mescal/7.jpg" class="relateImg" alt="近日使用React Native Linking踩过的坑">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2017/11/15/2017-11-15-technology-webpack-config/" title="Webpack工程化配置">
+							Webpack工程化配置
+						</a>
+						<p>
+							本文重点讲述如何一步一步搭建webpack工程化配置，这里涉及到一些常用插件的使用以及node.js的文件操作。上篇文章介绍到，webpack配置成了两种模式，有些人喜欢将两种模式的代码放到不同的配置文件中，而我更偏爱全部集成到web...
+						</p>
+					</div>
+
+					<a href="/2017/11/15/2017-11-15-technology-webpack-config/" title="Webpack工程化配置">				
+						<img src="/img/mescal/8.jpg" class="relateImg" alt="Webpack工程化配置">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2017/04/26/2017-04-26-technology-express-build/" title="基于Express搭建前后端分离的开发环境">
+							基于Express搭建前后端分离的开发环境
+						</a>
+						<p>
+							对于一个前端开发人员来说，node.js可以说是开发后端的福音。本人毕设项目使用的是asp.net（只是使用ashx来接收前端的ajax，并没有使用那些恶心的控件），通过对比发现整个项目都使用js实在是幸福。
+Node.js关于nod...
+						</p>
+					</div>
+
+					<a href="/2017/04/26/2017-04-26-technology-express-build/" title="基于Express搭建前后端分离的开发环境">				
+						<img src="/img/mescal/9.jpg" class="relateImg" alt="基于Express搭建前后端分离的开发环境">
+					</a>
+				</li>											
+		
+		
+	</ul>
+</div>	
+			</div>
+			<div class="investment-content-list">
+				<div class="layout-comment">
+
+	
+
+		
+
+			<!-- I don't know 【表情】-->
+			
+		
+		
+	
+
+</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+
+	<script>
+		var appid = 'CqXKtSjjcNvnClld9bAoTF5d-gzGzoHsz',
+            appkey = 'u6UWhjE8CwlhhefsUo7HNHRq';	  
+        AnnieLeancloud(appid, appkey);         
+	</script>
+    
+
+
+ 
+
+<!-- show math formula -->
+
+
+
+
+<!-- TODO: There seems to be a bug when you close the post gallery! -->
+<link rel="stylesheet" href="/plugin/lightgallery/css/lightgallery.css">
+<script src="/plugin/lightgallery/js/jquery-1.11.0.min.js"></script>
+<script src="/plugin/lightgallery/js/lightgallery-all.min.js"></script>
+
+<script type="text/javascript">
+	var postTitle = $('.article-title a').text() ? $('.article-title a').text() : "No post title!";
+	$('.article-content img').each(function() {
+		var imgPath = $(this).attr('src'),
+			imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		$(this).wrap('<div class="img-responsive" data-src="' + imgPath + '" data-responsive="' + imgPath + '" data-sub-html="<p>图片 ' + imgTitle + '</p><h4>文章' + postTitle + '</h4>"></div>');
+	});
+
+	$('.article-content').lightGallery({
+		mode: 'lg-slide',
+		selector: '.img-responsive',
+		share: false,
+		zoom: false,
+		download: false
+	});
+	//TODO：支持video
+</script>
+
+<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+		
+
+		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
+	
+		</main>
+		
+		<!--footer-->
+		<footer>
+	<div class="social">
+		<ul>
+	
+		
+			<li>
+				<a href="https://github.com/mescalchuan" title="Github" target="_blank">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="https://weibo.com/6454388854/profile?topnav=1&wvr=6" title="Weibo" target="_blank">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="/1335382915@qq.com" title="Email" target="_blank">
+					<i class="fa fa-envelope-o"></i>
+				</a>
+			</li>
+		
+
+		
+			<li>
+				<a href="/1335382915" title="QQ" target="_blank">
+					<i class="fa fa-qq"></i>
+				</a>
+			</li>
+		
+		
+	 
+</ul>
+	</div>
+		
+	<div class="copyright">
+		<p>
+			 
+				&copy;2019, content by Mescal Chuan. All Rights Reserved.
+			
+			
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<!-- <span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span> -->
+
+	
+
+
+
+
+		</p>
+		<!-- <p>
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay. 					
+		</p> -->
+	</div>		
+</footer>
+		
+    <!-- set '1' to show motto in all pages! -->
+
+	<script src="/js/motto.js"></script>
+	<script type="text/javascript">
+		$(".motto").html( getMingYanContent() );
+	</script>	
+
+
+
+
+    <!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup">
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      ESC
+   </span>
+		<div class="local-search-header">
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			
+
+   
+	<div id="topN"></div>
+	
+    <script>
+        var appid = 'CqXKtSjjcNvnClld9bAoTF5d-gzGzoHsz',
+            appkey = 'u6UWhjE8CwlhhefsUo7HNHRq',
+            limitCount = 10;
+        if( $('#topN').length ){
+            AV.initialize(appid, appkey);
+            var Counter = AV.Object.extend("Counter");  
+            topNPost(Counter, limitCount);
+        }
+    </script>
+   
+
+		</div>
+	</div>
+</div>
+
+<script src="/js/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
+
+
+
+
+<!--back to top-->
+
+    
+	<div id="totop">
+  		<a href="javascript:;" name="TOTOP" class="fa fa-arrow-up"></a>
+	</div>
+	<div id="tobuttom">
+		<a href="javascript:;" name="TOBUTTOM" class="fa fa-arrow-down"></a>
+	</div>
+ 
+
+
+ 
+
+<script src="/js/vibrant.js"></script>
+<script src="/js/chinese.js"></script>
+<script src="/js/main.js"></script>
+	</body>
+	</html>

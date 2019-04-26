@@ -1,0 +1,1325 @@
+
+
+	<!DOCTYPE html>
+	<html class="scrollbar">
+		
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      基于React和Node实现一个食物热量参考应用 | Mescal 川
+    
+  </title>
+  <meta name="author" content="Mescal Chuan">
+  <meta name="keywords" content>
+  <meta name="description" content>
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+    <!-- jquery -->
+	<script src="/js/jquery-2.1.1.min.js"></script>
+
+  <!-- leancloud -->
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script src="/js/leancloud.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="transition">
+					<div class="three-bounce1"></div>
+					<div class="three-bounce2"></div>
+					<div class="three-bounce3"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground" data-img-mode="normal" data-normal-src="/img/48.jpg" data-random-max="110" data-random-src="https://sariay.github.io/Random-img/">
+	<div class="mask">
+		<div class="h-header">
+			<div id="logo-S">
+				
+					<a href="/">
+						Mescal
+					</a>
+				
+			</div>
+			<!-- Navigation in header(id="navigation-S") -->
+			<div id="navigation-S">
+				<ul>
+					
+						<li class="menu-home">
+							<a href="/" class="menu-item-home">主页</a>
+						</li>
+					
+						<li class="menu-archive">
+							<a href="/archives" class="menu-item-archive">归档</a>
+						</li>
+					
+						<li class="menu-categories">
+							<a href="/categories" class="menu-item-categories">分类</a>
+						</li>
+					
+						<li class="menu-tags">
+							<a href="/tags" class="menu-item-tags">标签</a>
+						</li>
+					
+						<li class="menu-about">
+							<a href="/about" class="menu-item-about">关于</a>
+						</li>
+					
+						<li class="menu-gallery">
+							<a href="/gallery" class="menu-item-gallery">摄影集</a>
+						</li>
+					
+
+					
+						<li class="menu-search">
+							<a href="javascript:;" class="popup-trigger" title="Search">搜索</a>
+						</li>
+					
+				</ul>			
+			</div>				
+		</div>
+
+		<div class="h-body">	
+			<!-- motto -->
+			
+				<div id="page-motto">
+					<p class="motto">
+						
+					</p>
+				</div>
+			
+
+			<div id="navigation-H">
+				<!-- Page title -->
+				<p>
+					
+						当前文章&nbsp;:&nbsp;《基于React和Node实现一个食物热量参考应用》
+					
+				</p>
+				<!-- Progress bar -->
+				<div id="progress-bar"></div>
+
+				<!-- Progress percent -->
+				<div id="progress-percentage">
+					<h1>0.0%</h1>
+				</div>
+			</div>
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<ul>
+				<!-- <li>
+					<a><i class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>切换背景</a>
+				</li> -->
+				<li>
+					<a href="javascript:;" id="read-more"><i class="fa fa-angle-double-down"></i></a>
+				</li>
+				<!-- <li>
+					<a href="https://github.com/Sariay/hexo-theme-Annie" target="_blank"><i class="fa fa-download"></i>克隆主题</a>
+				</li> -->
+			</ul>
+		</div>
+		
+		<!-- This is only a demo, please go to "https://time.is" to set your city time! -->
+<style type="text/css">
+	.header-date {
+		position: absolute;
+		left: 40px;
+		bottom: 30px;
+		writing-mode: tb-rl;
+		font-size: 36px;
+	}	
+	.header-date a {
+		border-bottom: none;
+	}
+	@media only screen and (max-width: 768 ) {
+		.header-date {
+			position: absolute;
+			left: 40px;
+			bottom: 30px;
+			writing-mode: tb-rl;
+			font-size: 20px;
+		}			
+	}
+</style>
+<div class="header-date">
+	<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow"></a>
+	<span id="Beijing_z43d"></span>
+</div>
+<script src="//widget.time.is/zh.js"></script>
+<script>
+	time_is_widget.init({
+		Beijing_z43d:{
+			template:"DATE", 
+			date_format:"year年 monthname dnum日"
+		}
+	});
+</script>
+</div></header>
+
+<!-- Navigation in div(id="navigation-H") -->
+<a class="nav-trigger">
+	<span></span>
+</a>
+
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<h3>Navigation</h3>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	<div class="nav-body">
+		<ul>
+			
+				<li class="menu-home">
+					<a href="/" class="menu-item-home">主页</a>
+				</li>
+			
+				<li class="menu-archive">
+					<a href="/archives" class="menu-item-archive">归档</a>
+				</li>
+			
+				<li class="menu-categories">
+					<a href="/categories" class="menu-item-categories">分类</a>
+				</li>
+			
+				<li class="menu-tags">
+					<a href="/tags" class="menu-item-tags">标签</a>
+				</li>
+			
+				<li class="menu-about">
+					<a href="/about" class="menu-item-about">关于</a>
+				</li>
+			
+				<li class="menu-gallery">
+					<a href="/gallery" class="menu-item-gallery">摄影集</a>
+				</li>
+			
+
+			
+				<li class="menu-search">
+					<a href="javascript:;" class="popup-trigger" title="Search">搜索</a>
+				</li>
+			
+		</ul>
+	</div>
+
+	<div class="nav-footer">
+		<ul>
+	
+		
+			<li>
+				<a href="https://github.com/mescalchuan" title="Github" target="_blank">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="https://weibo.com/6454388854/profile?topnav=1&wvr=6" title="Weibo" target="_blank">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="/1335382915@qq.com" title="Email" target="_blank">
+					<i class="fa fa-envelope-o"></i>
+				</a>
+			</li>
+		
+
+		
+			<li>
+				<a href="/1335382915" title="QQ" target="_blank">
+					<i class="fa fa-qq"></i>
+				</a>
+			</li>
+		
+		
+	 
+</ul>
+	</div>
+</nav>
+
+		
+		<!--main-->
+		<main>
+			<div class="layout-post">
+	
+	
+	<div class="article-title">
+		
+	<a href="/2018/07/31/2018-07-31-technology-node-health/" itemprop="url">
+		基于React和Node实现一个食物热量参考应用
+	</a>
+
+	</div>
+
+	<div class="article-meta">
+		<span>
+			
+	发布于
+	<a href="/2018/07/31/2018-07-31-technology-node-health/" itemprop="url">
+		<time datetime="2018-07-31T10:32:20.000Z" itemprop="datePublished">
+	  		2018-07-31
+	  </time>
+	</a> 
+
+	/
+	更新于
+	<a href="/2018/07/31/2018-07-31-technology-node-health/" itemprop="url">
+		<time datetime="2018-07-31T10:32:20.000Z" itemprop="dateUpdated">
+	  		2019-04-26
+	  </time>
+	</a> 	
+
+		</span>
+		/
+		<span>
+			<i class="fa fa-tags"></i>
+			
+	
+		<a href="/tags/博客/" class=" ">
+			博客
+		</a>
+	
+		<a href="/tags/技术博客/" class=" ">
+			技术博客
+		</a>
+	
+		<a href="/tags/react/" class=" ">
+			react
+		</a>
+	
+		<a href="/tags/node/" class=" ">
+			node
+		</a>
+	
+		
+		</span>
+		<!-- /
+		
+
+    <span class="leancloud_visitors" id="/2018/07/31/2018-07-31-technology-node-health/_visitors" data-url="/2018/07/31/2018-07-31-technology-node-health/" data-title="基于React和Node实现一个食物热量参考应用">
+        热度
+        <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
+    </span>
+    
+    /
+
+
+
+    <span class="leancloud_likes" id="/2018/07/31/2018-07-31-technology-node-health/_likes" data-url="/2018/07/31/2018-07-31-technology-node-health/" data-title="基于React和Node实现一个食物热量参考应用" rel="unlike">
+        喜欢
+        <i class="fa fa-heart"></i>
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+ -->
+	</div>
+
+	<div class="article-content" id="article-content">
+		<p>利用业余时间，自己做了一个食物热量参考网站，数据参考自一个app<code>食物库</code>。技术栈使用了<code>sass</code>+<code>react</code>+<code>react-router</code>+<code>redux</code>+<code>antd</code>+<code>express</code>+<code>mongoose</code>。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-ffa2512a13209649.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="node-health"></p>
+<h3 id="一、How-To-Use"><a href="#一、How-To-Use" class="headerlink" title="一、How To Use"></a>一、How To Use</h3><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>首先将代码clone到本地</p>
+<pre><code>git clone https://github.com/mescalchuan/node-health.git
+</code></pre><h4 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h4><pre><code>cd node-health &amp;&amp; npm i
+</code></pre><h4 id="引入数据并启动mongodb服务"><a href="#引入数据并启动mongodb服务" class="headerlink" title="引入数据并启动mongodb服务"></a>引入数据并启动mongodb服务</h4><p>要确保你已经安装了<code>mongodb</code>，然后在自己电脑上新建数据库文件夹（我的是E:\mongodbData\db）。在<code>mongodb</code>安装目录的<code>bin</code>文件夹下启动<code>mongodb</code>服务：</p>
+<pre><code>mongodb --dbpath=&quot;E:\mongodbData\db&quot; --port 27017 -journal
+</code></pre><p>启动成功后，数据库是没有任何数据的，我们需要将一些默认数据导入进来，我已经将这些数据导出成<code>json</code>了，你只需要重开一个命令行并输入：</p>
+<pre><code>mongoexport -d db -c category -o &quot;E:node-health\db\category.json&quot; --type json --port 27017
+mongoexport -d db -c food -o &quot;E:node-health\db\food.json&quot; --type json --port 27017
+</code></pre><p>这里推荐一个超轻量级数据库操作工具：<a href="https://github.com/mrvautin/adminMongo" target="_blank" rel="noopener">adminMongo</a>。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-e7118805d7624887.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="adminMongo"></p>
+<p>如果数据导入成功，那么在<code>food</code>和<code>category</code>表里会看到导入进来的数据，否则，你需要在<code>adminMongo</code>里自己手动创建这两张表，然后再导入数据就可以了。</p>
+<h4 id="启动前端服务"><a href="#启动前端服务" class="headerlink" title="启动前端服务"></a>启动前端服务</h4><pre><code>cd /e/node-health
+webpack --watch
+</code></pre><p>用户：<code>http://localhost:8888</code><br>管理员：<code>http://localhost:8888/admin.html</code>，用户名和密码均为admin</p>
+<h4 id="启动后台服务"><a href="#启动后台服务" class="headerlink" title="启动后台服务"></a>启动后台服务</h4><pre><code>cd /e/node-health
+node app
+</code></pre><p>项目截图</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-ffa2512a13209649.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="node-health"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-f2d395dcca74ce45.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="分类"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-b314d35f12de3cf7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="推荐食物"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-8ef8a51aea0bb38d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="高热量食物"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-5a308abbb2a3d4cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="食物详情"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-a9bf6ad837bd0be8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="搜索结果页"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-45ad6317e2122e73.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="管理员登录页"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-85fbba304bf1b718.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="后台管理页"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-6a581c610961d210.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="添加食物"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-55d878686ece6c52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="食物详情"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-55117aecde6650fb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改食物"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-4b7fe599c24563ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="删除食物"></p>
+<h3 id="二、说明"><a href="#二、说明" class="headerlink" title="二、说明"></a>二、说明</h3><p>该项目适用于有一定前端基础（包括<code>react</code>和<code>redux</code>）和<code>node.js</code>基础的同学，如果你正在学习<code>node</code>，但又无法将一系列知识体系串起来，那么本项目同样适合你~</p>
+<h3 id="三、环境搭建"><a href="#三、环境搭建" class="headerlink" title="三、环境搭建"></a>三、环境搭建</h3><h4 id="整体目录结构"><a href="#整体目录结构" class="headerlink" title="整体目录结构"></a>整体目录结构</h4><p><img src="https://upload-images.jianshu.io/upload_images/1495096-d0b177f78d6bc024.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<ul>
+<li>controller：后端控制层</li>
+<li>db：导出的数据库<code>json</code>文件</li>
+<li>model：后端模型层</li>
+<li>router：后端路由</li>
+<li>src：前端代码</li>
+<li>admin.ejs：管理员页面（模板引擎）</li>
+<li>app.js：后端根文件</li>
+<li>index.ejs：用户页面（模板引擎）</li>
+<li>webpack.config.js：<code>webpack</code>配置文件</li>
+</ul>
+<h4 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h4><p>目录结构如下：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-d95fff03f6252fab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p>从头搭建<code>webpack</code>吧，由于用到了后台模板引擎，因此我们就不再单独用<code>webpack</code>启动一个服务了。</p>
+<pre><code>var path = require(&quot;path&quot;);
+var webpack = require(&quot;webpack&quot;);
+
+var OpenBrowserPlugin = require(&quot;open-browser-webpack-plugin&quot;);
+var ExtractTextPlugin = require(&quot;extract-text-webpack-plugin&quot;);
+var OptimizeCSSPlugin = require(&quot;optimize-css-assets-webpack-plugin&quot;);
+//提高loader的解析速度
+var HappyPack = require(&quot;happypack&quot;);
+var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
+var NoEmitOnErrorsPlugin = webpack.NoEmitOnErrorsPlugin;
+var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
+
+//externals配置的对象在生产环境下会自动引入CDN的对象，不会将node_modules下的文件打包进来
+var externals = {
+    &quot;React&quot;: &quot;react&quot;,
+    &quot;ReactDOM&quot;: &quot;react-dom&quot;
+}
+//配置多入口文件，包括用户和管理员
+var entry = {
+    &quot;index&quot;: &quot;./src/index.js&quot;,
+    &quot;admin&quot;: &quot;./src/admin.js&quot;
+};
+
+//最基本的webpack配置
+var webpackConfig = {
+    entry: entry,
+    output: {
+        path: path.resolve(__dirname, &quot;src/build&quot;),
+        filename: &quot;[name].bundle.js&quot;
+    },
+    externals: externals,
+    devtool: &quot;source-map&quot;,
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: [&quot;happypack/loader?id=babel&quot;]
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                loader: &quot;url-loader&quot;,
+                options: {
+                    limit: 8192,
+                    name: &quot;[name].[ext]&quot;
+                }
+            }, {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                use: ExtractTextPlugin.extract({
+                    fallback: &quot;style-loader&quot;,
+                    use: [&quot;css-loader&quot;]
+                })
+            }, 
+            {
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                use: ExtractTextPlugin.extract({
+                    use: [&quot;css-loader&quot;, &quot;sass-loader&quot;],
+                    fallback: &quot;style-loader&quot;
+                })
+            }
+        ]
+    },
+    resolve: {
+        extensions: [&quot;.js&quot;, &quot;.json&quot;]
+    },
+    plugins: [
+        new HappyPack({
+            id: &quot;babel&quot;,
+            loaders: [{
+                loader: &quot;babel-loader&quot;,
+                options: {
+                    presets: [&quot;es2015&quot;, &quot;stage-2&quot;, &quot;react&quot;]
+                }
+            }]
+        }),
+        new CommonsChunkPlugin({
+            name: [&quot;vendor&quot;],
+            filename: &quot;vendor.bundle.js&quot;,
+            minChunks: Infinity
+        }),
+        new NoEmitOnErrorsPlugin(),
+        new OpenBrowserPlugin({
+            url: &quot;http://localhost:8888&quot;
+        }),
+        new ExtractTextPlugin(&quot;[name].bundle.css&quot;, {
+            allChunks: false
+        }),
+        //为了方便调试，暂时屏蔽
+        // new UglifyJsPlugin({
+        //     minimize: true,
+        //     output: {
+        //         comments: false,
+        //         beautify: false
+        //     },
+        //     compress: {
+        //         warnings: false,
+        //         drop_console: true,
+        //         collapse_vars: true,
+        //         reduce_vars: true
+        //     }
+        // }),
+        new OptimizeCSSPlugin()
+    ]
+};
+
+module.exports = webpackConfig;
+</code></pre><p>之后，使用<code>webpack --watch</code>既可以完成打包。</p>
+<h4 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h4><p>后端基于<code>express</code>和<code>mongoose</code>，用到了<code>express-session</code>和<code>body-parser</code>，所以我们先把这些包安装好：</p>
+<pre><code>npm i express mongoose express-session body-parser -S
+</code></pre><p>然后我们看一下<code>app.js</code>：</p>
+<pre><code>const express = require(&quot;express&quot;);
+const mongoose = require(&quot;mongoose&quot;);
+const cookieParser = require(&quot;cookie-parser&quot;);
+const bodyParser = require(&quot;body-parser&quot;);
+const session = require(&quot;express-session&quot;);
+
+const app = express();
+
+app.use(cookieParser());
+//解析post请求
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+//设置session
+app.use(session({
+    secret: &#39;keyboard cat&#39;,
+    resave: false,
+    saveUninitialized: true
+}));
+
+//设置存放模板文件的目录
+app.set(&quot;views&quot;, __dirname);
+//设置模板引擎为ejs
+app.set(&quot;view engine&quot;, &quot;ejs&quot;);
+//访问静态资源文件
+app.use(express.static(&quot;src&quot;));
+app.use(express.static(__dirname));
+app.get(&quot;/&quot;, (req, res) =&gt; {
+    return res.render(&quot;index&quot;, {
+        userName: &quot;&quot;,
+        token: &quot;&quot;,
+        hasLogin: false
+    })
+})
+//连接mongodb，db为该工程的数据库名
+mongoose.connect(&quot;mongodb://localhost/db&quot;, function(err, db) {
+    if(err) {
+        console.log(&quot;连接失败&quot;);
+        process.exit(1);
+    }
+    else {
+        console.log(&quot;连接成功&quot;)
+    }
+})
+
+app.listen(&quot;8888&quot;, () =&gt; {
+    console.log(&quot;server created!&quot;);
+})
+</code></pre><p>运行<code>node app</code>：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-aaec7a6377726802.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p>我们还可以使用<code>supervisor</code>实现代码更新功能，只需要<code>npm i supervisor -g</code>然后用<code>supervisor app</code>代替<code>node app</code>即可。每次代码有了变更都会自动帮你重启服务器。</p>
+<h4 id="环境搭建结束"><a href="#环境搭建结束" class="headerlink" title="环境搭建结束"></a>环境搭建结束</h4><p>到此步为止，环境搭建已经结束，项目也可以成功跑起来了，只不过没有任何内容，剩下的就是一步一步写业务。</p>
+<h3 id="四、CSRF防范"><a href="#四、CSRF防范" class="headerlink" title="四、CSRF防范"></a>四、CSRF防范</h3><p>在写业务之前，简单实现了一下<code>CSRF的</code>防范，我的做法是管理员登录成功后，后端直接在页面中生成一个<code>script</code>标签，标签内包含了简单的登录信息和<code>token</code>。之后管理员每一次与后端交互都要发送这个<code>token</code>，由后端校验<code>token</code>，如果不一致，则直接返回，不再执行正常逻辑。</p>
+<h4 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h4><p>由后端生成<code>script</code>标签，让我最先想到了模板引擎，因此我使用了<code>ejs</code>来实现该功能，这也是为什么用户页面和管理员页面的后缀不是<code>html</code>的原因。我们看一下<code>admin.html</code>里面的内容吧：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-3d14255409e4604c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p>当管理员登录成功后，就可以全局访问<code>userInfo</code>了。</p>
+<p>下面我们看一下登录的逻辑：</p>
+<pre><code>const login = module.exports = (req, res) =&gt; {
+    const {userName, password} = req.body;
+    const session = req.session;
+    //用户名和密码正确，保存session，并告知前端登录成功
+    if(userName === &quot;admin&quot; &amp;&amp; password === &quot;admin&quot;) {
+        if(session) {
+            if(session.user) {
+                res.json({
+                    retCode: -1,
+                    retMsg: &quot;您已登录过了&quot;
+                })
+            }
+            else {
+                session.user = {
+                    userName,
+                    password
+                }
+                res.json({
+                    retCode: 0,
+                    retInfo: {}
+                })
+            }
+        }
+        else {
+            res.json({
+                retCode: -1,
+                retMsg: &quot;&quot;
+            })
+        }
+    }
+    else {
+        res.json({
+            retCode: -1,
+            retMsg: &quot;用户名或密码错误&quot;
+        })
+    }
+}
+</code></pre><h4 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h4><p>管理员登录成功后，<code>session</code>里面保存了登录信息，那么下一步就是生成<code>token</code>并将其和用户登录信息渲染到页面中。在<code>asp.net</code>和<code>java</code>中有一个叫做<code>拦截器</code>的东西，它的作用就是拦截所有请求，包括ajax请求和资源请求，在其中做一些操作然后控制请求是否继续往下执行，就像一个管道一样。在<code>express</code>中，<code>中间件</code>的作用和其是一样的，我们看一下中间件的代码：</p>
+<pre><code>//app,js
+const interceptor = require(&quot;./controller/interceptorCtrl&quot;);
+app.use((req, res, next) =&gt; {
+    interceptor(req, res, next);
+})
+
+//interceptorCtrl.js
+const jwt = require(&#39;jsonwebtoken&#39;);
+
+const interceptor = module.exports = (req, res, next) =&gt; {
+    let url = req.path;
+    //页面请求，判断session是否有值，如果有的话则生成token并将userName、token、hasLogin渲染到页面上
+    if(!!(~url.indexOf(&quot;.html&quot;))) {
+        url = url.replace(/\//g, &quot;&quot;);
+        const page = url.split(&quot;.&quot;)[0];
+        //将用户登录信息和token返回给前台
+        if(req.session.user) {
+            const token = jwt.sign({name: &quot;token&quot;}, &quot;node-health&quot;, {expiresIn: 600});
+            const { userName } = req.session.user;
+            res.render(page, {
+                userName,
+                token,
+                hasLogin: true
+            })
+        }
+        else {
+            res.render(page, {
+                userName: &quot;&quot;,
+                token: &quot;&quot;,
+                hasLogin: false
+            })
+        }
+        next();
+    }
+    //如果是ajax请求并且请求接口来自管理员，那么校验请求参数中的token是否正确，不正确的话则直接返回retCode 500
+    else if(!!(~url.indexOf(&quot;/api/admin&quot;))) {
+        let token = &quot;&quot;;
+        const method = req.method.toLowerCase();
+        if(method == &quot;get&quot;) {
+            token = req.query.token;
+        }
+        else {
+            token = req.body.token;
+        }
+        jwt.verify(token, &quot;node-health&quot;, function (err, decoded) {
+            if (!err) {
+                if(decoded.name !== &quot;token&quot;) {
+                    return res.json({
+                        retCode: 500,
+                        retMsg: &quot;csrf&quot;
+                    })
+                }
+                else {
+                    next();
+                }
+            }
+            else {
+                return res.json({
+                    retCode: 500,
+                    retMsg: &quot;csrf&quot;
+                })
+            }
+        })
+    }
+    else {
+        next();
+    }
+}
+</code></pre><p>功能很简单：如果是页面请求，则判断session是否有用户信息：如果有的话说明登录成功了，生成<code>token</code>并将其和登录信息渲染到页面上；如果没有登录信息，则渲染空值即可，执行<code>next()</code>让请求继续往下执行。如果是ajax请求，获取请求参数中的<code>token</code>并解密，校验值的正确性：如果不正确，则直接返回错误信息，请求不再往下执行；如果正确，执行<code>next()</code>让请求继续往下执行。</p>
+<h3 id="五、写一个Ajax吧"><a href="#五、写一个Ajax吧" class="headerlink" title="五、写一个Ajax吧"></a>五、写一个Ajax吧</h3><p>我们以管理员获取所有分类为例，看一下前后端分别是如何实现的。</p>
+<h4 id="前端-1"><a href="#前端-1" class="headerlink" title="前端"></a>前端</h4><p>组件在<code>componentDidMount</code>阶段发起<code>server</code>的请求 –&gt; 等待后端返回数据 –&gt; 发起<code>action</code> –&gt; <code>reducer</code>中保存数据 –&gt; 更新视图</p>
+<p>由于用户和管理员都需要获取分类列表，因此我将分类的<code>server</code>和<code>action</code>都划分到了用户模块。</p>
+<h5 id="src-components-admin-center-js"><a href="#src-components-admin-center-js" class="headerlink" title="src/components/admin/center.js"></a>src/components/admin/center.js</h5><pre><code>import { bindActionCreators } from &quot;redux&quot;;
+import { connect } from &quot;react-redux&quot;;
+import * as server from &quot;../../server/adminServer&quot;;
+...
+componentDidMount() {
+    this.props.actions.getCategory({token: userInfo.token}, null, res =&gt; message.error(res.retMsg));
+}
+render() {
+    return (
+        &lt;div&gt;
+            ...
+            {/*渲染分类列表*/}
+            {this.props.category.map((item, index) =&gt; (&lt;div&gt;...&lt;/div&gt;)}
+        &lt;/div&gt;
+    )
+}
+...
+// 将actions绑定到props上
+const mapDispatchToProps = (dispatch) =&gt; ({
+    actions: bindActionCreators(server, dispatch)
+});
+//将state绑定到props上
+const mapStateToProps = (state) =&gt; ({
+    category: state.adminReducer.category
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(AdminCenter);
+</code></pre><h5 id="src-server-adminServer-js"><a href="#src-server-adminServer-js" class="headerlink" title="src/server/adminServer.js"></a>src/server/adminServer.js</h5><p>这里使用到了<code>redux-thunk</code>。</p>
+<pre><code>...
+import * as action from &quot;../action/userAction&quot;;
+export function getCategory(successBK, errorBK) {
+    return (dispatch, getState) =&gt; {
+        return getData(url.SERVER_ADMIN + url.GET_CATEGORY).then(res =&gt; {
+            if(res.retCode == 0) {
+                dispatch(action.getCategory(res.retInfo));
+                successBK &amp;&amp; successBK(res.retInfo);
+            }
+            else {
+                errorBK &amp;&amp; errorBK(res);
+            }
+        }, e =&gt; console.log(e))
+        .catch(e =&gt; console.log(e))
+    }
+}
+</code></pre><h5 id="src-actionType-userAction-js"><a href="#src-actionType-userAction-js" class="headerlink" title="src/actionType/userAction.js"></a>src/actionType/userAction.js</h5><pre><code>...
+export function getCategory(category) {
+    return {
+        type: types.GET_CATEGORY,
+        category
+    }
+}
+</code></pre><h5 id="src-reducer-adminReducer-js"><a href="#src-reducer-adminReducer-js" class="headerlink" title="src/reducer/adminReducer.js"></a>src/reducer/adminReducer.js</h5><pre><code>...
+const defaultState = {
+    category: []
+}
+const adminReducer = (state = defaultState, action) =&gt; {
+    switch(action.type) {
+        case types.GET_CATEGORY: 
+            return Object.assign({}, state, {
+                category: action.category
+            })
+        default:
+            return state;
+    }
+}
+export default adminReducer;
+</code></pre><h4 id="后端-1"><a href="#后端-1" class="headerlink" title="后端"></a>后端</h4><p><code>中间件</code>拦截请求，校验<code>token</code>并继续执行 –&gt; 路由映射 –&gt; 转发给控制层 –&gt; 处理并返回数据</p>
+<h5 id="app-js"><a href="#app-js" class="headerlink" title="app.js"></a>app.js</h5><pre><code>...
+const adminRouter = require(&quot;./router/adminRouter&quot;);
+
+app.use(&quot;/api/admin&quot;, adminRouter);
+...
+</code></pre><h5 id="router-adminRouter-js"><a href="#router-adminRouter-js" class="headerlink" title="router/adminRouter.js"></a>router/adminRouter.js</h5><pre><code>const express = require(&quot;express&quot;);
+const category= require(&quot;../controller/user/category&quot;);
+const router = express.Router();
+...
+//调用控制层
+router.get(&quot;/getCategory&quot;, (req, res) =&gt; {
+    category.getCategory(req, res);
+})
+
+module.exports = router;
+</code></pre><h5 id="controller-user-category"><a href="#controller-user-category" class="headerlink" title="controller/user/category"></a>controller/user/category</h5><pre><code>const models = require(&quot;../../model/index&quot;);
+//从数据库中读取分类并返回给前端
+const getCategory = (req, res) =&gt; {
+    models.Category.find((err, result) =&gt; {
+        if(err) {
+            res.json({
+                retCode: -1,
+                retMsg: &quot;mongoose error&quot;
+            })
+        }
+        res.json({
+            retCode: 0,
+            retInfo: result
+        })
+    })
+}
+
+module.exports = {
+    getCategory
+}
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/1495096-7d39ad4d5ba42568.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<h3 id="六、图片上传"><a href="#六、图片上传" class="headerlink" title="六、图片上传"></a>六、图片上传</h3><p>管理员添加和修改食物信息时需要上传图片。如果只是练习的话，可以将图片保存到本地并将图片绝对路径保存到数据库中。但是，我们来个更加贴切真实项目的吧，将图片保存到图片服务器中~</p>
+<p>我们将图片保存到<code>七牛云</code>存储系统中，你需要先注册个账号，官网地址在<a href="https://www.qiniu.com/" target="_blank" rel="noopener">这里</a>。</p>
+<p>在管理控制台 –&gt; 对象存储 –&gt; 内容管理中可以看到已经存储的图片：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-624c106bf6b7671d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p>下一步要做的就是前端上传图片发送给后端，后端上传到七牛云并将图片链接保存到数据库。</p>
+<h4 id="前端上传图片"><a href="#前端上传图片" class="headerlink" title="前端上传图片"></a>前端上传图片</h4><p>使用<code>&lt;input type=&quot;file&quot; /&gt;</code>实现图片选择。默认样式比较丑，因此我自己重写了样式：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-f78df8643831c1e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p>然后要做的就是使用<code>formData</code>对象将图片信息发送给后端。</p>
+<pre><code>const fileEle = this.refs.file;
+const file = fileEle.files[0];
+let formData = new FormData();
+formData.append(&quot;imgUrl&quot;, file);
+formData.append(&quot;name&quot;, this.state.name);
+...
+this.props.actions.addFood(formData);
+</code></pre><h4 id="后端接收图片"><a href="#后端接收图片" class="headerlink" title="后端接收图片"></a>后端接收图片</h4><p>后端接收图片需要用到<code>multiparty</code>插件，你只需要<code>npm i multiparty -S</code>即可。</p>
+<pre><code>//controller/admin/foodHandler.js
+const multiparty = require(&quot;multiparty&quot;);
+
+const addFood = (req, res) =&gt; {
+    const form = new multiparty.Form();
+    form.parse(req, (err, fields, files) =&gt; {
+        console.log(fields);
+        console.log(files);
+    })
+}
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/1495096-673e21339f1f2449.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<h4 id="上传到七牛云"><a href="#上传到七牛云" class="headerlink" title="上传到七牛云"></a>上传到七牛云</h4><p>我们需要使用到七牛云的<code>node sdk</code>，<code>npm i qiniu -S</code>。使用文档请访问<a href="https://developer.qiniu.com/kodo/sdk/1289/nodejs" target="_blank" rel="noopener">Node.js SDK</a>。</p>
+<p>我们首先要做一些配置：</p>
+<pre><code>//七牛云图片域名
+const domain = &quot;http://ox6gixp8f.bkt.clouddn.com/&quot;;
+//两个密钥，可以在七牛云的个人中心的密钥管理中找到
+const accessKey = &quot;qVavZs09FHGxYJdaC-1ZDQeqJVbJQAbyOPnBGu5g&quot;;
+const secretKey = &quot;I4Y4lXRbZz4zL7t2llASK5Lg8Eo5zKEna_uTCPfe&quot;;
+//定义鉴权对象mac
+const mac = new qiniu.auth.digest.Mac(accessKey, secretKey);
+//空间名，请和你的七牛云空间名保持一致
+const bucket = &quot;sunnychuan&quot;;
+//上传的凭证
+const options = {
+    scope: bucket,
+    expires: 7200
+};
+//生成凭证
+const putPolicy = new qiniu.rs.PutPolicy(options);
+//生成token
+const uploadToken = putPolicy.uploadToken(mac);
+//初始化config
+const config = new qiniu.conf.Config();
+// 空间对应的机房
+config.zone = qiniu.zone.Zone_z0;
+//七牛云图片上传对象
+const formUploader = new qiniu.form_up.FormUploader(config);
+const putExtra = new qiniu.form_up.PutExtra();
+</code></pre><p>接下来要做的就是将图片信息上传到七牛云：</p>
+<pre><code>const file = files.imgUrl[0];
+const localFile = file.path;
+const temp = file.path.split(&quot;\\&quot;);
+const key = temp[temp.length - 1]; //xxx.jpg
+
+formUploader.putFile(uploadToken, key, localFile, putExtra, (respErr, respBody, respInfo) =&gt; {
+    if(respInfo.statusCode == 200) {
+        const imgUrl = domain + respBody.key;
+        //保存到数据库即可
+    }
+})
+</code></pre><p>我们可以在七牛云上看到已经上传的图片：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1495096-fe9e12a4ba7b95c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<h3 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h3><p>本项目从功能上来说只是简单的<code>CRUD</code>，但用到的技术比较多，也是为了给自己做一个整体技术栈的实战，后期还可以考虑添加分页和排序功能。</p>
+<p>如果你觉得对你有帮助，欢迎<code>star</code>~，如果有任何疑问或bug，也欢迎提供<code>issue</code>。</p>
+	
+	</div>
+	
+	<div id="current-post-cover" data-scr="/img/mescal/node_health.jpg"></div>
+
+	<!-- relate post, comment...-->
+	<div class="investment-container">
+		<div class="investment-header">
+			<div class="investment-title-1">
+				<div class="on">相关文章</div>
+				<!-- <div>评论</div> -->
+			</div>
+			<div class="investment-title-2">	            
+				
+	<span>
+		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
+		
+			<a href="/2018/08/29/2018-08-29-technology-weixin/" title="初探微信小程序之小川天气" rel="prev">
+				&laquo;上一篇
+			</a>
+		
+		
+			<a href="/2018/07/17/2018-07-17-life-cannon/" title="拇指琴之卡农第一部分" rel="next">
+				下一篇&raquo;
+			</a>
+			
+	</span>
+      		
+			</div>	
+		</div>
+		
+		<div class="investment-content">
+			<div class="investment-content-list">
+				
+
+<div class="relate-post">
+	<ul>
+		
+				<li>
+					<div>
+						<a href="/2018/09/27/2018-09-27-technology-vue-app-cli/" title="快速开发基于vue的app应用——vue-app-cli">
+							快速开发基于vue的app应用——vue-app-cli
+						</a>
+						<p>
+							
+一个能够让你快速构建基于vue的app多页应用脚手架，可独立开发h5 app或集成到hbuilder开发原生应用。文档地址vue-cli之所以不使用官方的vue-cli构建应用是因为：
+
+vue-cli需要自己实现多页面构建。
+在开...
+						</p>
+					</div>
+
+					<a href="/2018/09/27/2018-09-27-technology-vue-app-cli/" title="快速开发基于vue的app应用——vue-app-cli">				
+						<img src="/img/mescal/1.jpg" class="relateImg" alt="快速开发基于vue的app应用——vue-app-cli">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/08/29/2018-08-29-technology-weixin/" title="初探微信小程序之小川天气">
+							初探微信小程序之小川天气
+						</a>
+						<p>
+							微信小程序可以说是当下很火热的应用了。在好奇心的作用下，通读了一遍之后便开始上手撸了一个很简单的天气应用——小川天气。
+
+
+
+目前已经发布正式版本，你可以直接在微信中搜索小川天气来使用。
+小程序的文档已经很完善了，通读一遍后上手写代码...
+						</p>
+					</div>
+
+					<a href="/2018/08/29/2018-08-29-technology-weixin/" title="初探微信小程序之小川天气">				
+						<img src="/img/mescal/xiaochuan_weather.jpg" class="relateImg" alt="初探微信小程序之小川天气">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/07/04/2018-07-04-technology-vpull-refresh/" title="基于vue封装的轻量级下拉刷新组件">
+							基于vue封装的轻量级下拉刷新组件
+						</a>
+						<p>
+							如何使用将项目中的src/components/pullRefresh.vue和src/img拷贝到你的工程内。如层级发生改变，你需要手动修改pullRefresh.vue中的图片链接地址。
+API
+
+
+属性
+说明
+类型
+默认值
+
+
+...
+						</p>
+					</div>
+
+					<a href="/2018/07/04/2018-07-04-technology-vpull-refresh/" title="基于vue封装的轻量级下拉刷新组件">				
+						<img src="/img/mescal/2.jpg" class="relateImg" alt="基于vue封装的轻量级下拉刷新组件">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/04/21/2018-04-21-technology-x-ui/" title="x-ui">
+							x-ui
+						</a>
+						<p>
+							跨平台的移动端ui组件库
+介绍x-ui是基于react native和react开发出的跨android、ios和h5的三端ui组件库。
+如何使用起步git clone https://github.com/mescalchuan/x...
+						</p>
+					</div>
+
+					<a href="/2018/04/21/2018-04-21-technology-x-ui/" title="x-ui">				
+						<img src="/img/mescal/3.jpg" class="relateImg" alt="x-ui">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/02/25/2018-02-25-technology-angular-m-cli/" title="一个能够快速构建AngularJS多页项目的轻量级脚手架">
+							一个能够快速构建AngularJS多页项目的轻量级脚手架
+						</a>
+						<p>
+							
+一款基于webpack的快速构建angular1的多页应用构建方案文档地址使用angular-m-cli，您可以做到
+快速构建项目原型
+自动生成新页面并完成相关配置（包括入口文件、css、index.html）
+利用本地服务器完成开...
+						</p>
+					</div>
+
+					<a href="/2018/02/25/2018-02-25-technology-angular-m-cli/" title="一个能够快速构建AngularJS多页项目的轻量级脚手架">				
+						<img src="/img/mescal/4.jpg" class="relateImg" alt="一个能够快速构建AngularJS多页项目的轻量级脚手架">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/01/27/2018-01-27-technology-atom/" title="优雅地配置Atom">
+							优雅地配置Atom
+						</a>
+						<p>
+							从最初的sublime text，到webstorm，后来又转战visual studio code，直到现在的atom，就个人使用体验来看是越来越舒适的。之前一直在使用sublime text和webstorm，后来尝试了一把vs ...
+						</p>
+					</div>
+
+					<a href="/2018/01/27/2018-01-27-technology-atom/" title="优雅地配置Atom">				
+						<img src="/img/mescal/5.jpg" class="relateImg" alt="优雅地配置Atom">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/01/19/2018-01-19-technology-react-native-textinput/" title="React Native之巧用TextInput">
+							React Native之巧用TextInput
+						</a>
+						<p>
+							近日使用rn开发电商app遇到一个再简单不过的需求：买家申请退款，填写申请单，其中有一个多行文本输入框用于填写退款理由，如图所示：
+
+看似简单的需求，然而用rn开发还是会遇到问题。
+页面搭建两个View和一个TextInput足矣，外...
+						</p>
+					</div>
+
+					<a href="/2018/01/19/2018-01-19-technology-react-native-textinput/" title="React Native之巧用TextInput">				
+						<img src="/img/mescal/6.jpg" class="relateImg" alt="React Native之巧用TextInput">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2017/11/20/2017-11-20-technology-react-native-linking/" title="近日使用React Native Linking踩过的坑">
+							近日使用React Native Linking踩过的坑
+						</a>
+						<p>
+							使用react native（以下简称rn）开发移动端app已经有四个月的时间了（包括第一个月的上手），感谢rn，让前端开发人员也能够开发原生的app。前几天遇到一个需求：打开第三方的支付应用并监听返回的结果。听上去这个需求并不难，然...
+						</p>
+					</div>
+
+					<a href="/2017/11/20/2017-11-20-technology-react-native-linking/" title="近日使用React Native Linking踩过的坑">				
+						<img src="/img/mescal/7.jpg" class="relateImg" alt="近日使用React Native Linking踩过的坑">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2017/11/15/2017-11-15-technology-webpack-config/" title="Webpack工程化配置">
+							Webpack工程化配置
+						</a>
+						<p>
+							本文重点讲述如何一步一步搭建webpack工程化配置，这里涉及到一些常用插件的使用以及node.js的文件操作。上篇文章介绍到，webpack配置成了两种模式，有些人喜欢将两种模式的代码放到不同的配置文件中，而我更偏爱全部集成到web...
+						</p>
+					</div>
+
+					<a href="/2017/11/15/2017-11-15-technology-webpack-config/" title="Webpack工程化配置">				
+						<img src="/img/mescal/8.jpg" class="relateImg" alt="Webpack工程化配置">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2017/04/26/2017-04-26-technology-express-build/" title="基于Express搭建前后端分离的开发环境">
+							基于Express搭建前后端分离的开发环境
+						</a>
+						<p>
+							对于一个前端开发人员来说，node.js可以说是开发后端的福音。本人毕设项目使用的是asp.net（只是使用ashx来接收前端的ajax，并没有使用那些恶心的控件），通过对比发现整个项目都使用js实在是幸福。
+Node.js关于nod...
+						</p>
+					</div>
+
+					<a href="/2017/04/26/2017-04-26-technology-express-build/" title="基于Express搭建前后端分离的开发环境">				
+						<img src="/img/mescal/9.jpg" class="relateImg" alt="基于Express搭建前后端分离的开发环境">
+					</a>
+				</li>											
+		
+		
+	</ul>
+</div>	
+			</div>
+			<div class="investment-content-list">
+				<div class="layout-comment">
+
+	
+
+		
+
+			<!-- I don't know 【表情】-->
+			
+		
+		
+	
+
+</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+
+	<script>
+		var appid = 'CqXKtSjjcNvnClld9bAoTF5d-gzGzoHsz',
+            appkey = 'u6UWhjE8CwlhhefsUo7HNHRq';	  
+        AnnieLeancloud(appid, appkey);         
+	</script>
+    
+
+
+ 
+
+<!-- show math formula -->
+
+
+
+
+<!-- TODO: There seems to be a bug when you close the post gallery! -->
+<link rel="stylesheet" href="/plugin/lightgallery/css/lightgallery.css">
+<script src="/plugin/lightgallery/js/jquery-1.11.0.min.js"></script>
+<script src="/plugin/lightgallery/js/lightgallery-all.min.js"></script>
+
+<script type="text/javascript">
+	var postTitle = $('.article-title a').text() ? $('.article-title a').text() : "No post title!";
+	$('.article-content img').each(function() {
+		var imgPath = $(this).attr('src'),
+			imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		$(this).wrap('<div class="img-responsive" data-src="' + imgPath + '" data-responsive="' + imgPath + '" data-sub-html="<p>图片 ' + imgTitle + '</p><h4>文章' + postTitle + '</h4>"></div>');
+	});
+
+	$('.article-content').lightGallery({
+		mode: 'lg-slide',
+		selector: '.img-responsive',
+		share: false,
+		zoom: false,
+		download: false
+	});
+	//TODO：支持video
+</script>
+
+<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+		
+
+		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
+	
+		</main>
+		
+		<!--footer-->
+		<footer>
+	<div class="social">
+		<ul>
+	
+		
+			<li>
+				<a href="https://github.com/mescalchuan" title="Github" target="_blank">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="https://weibo.com/6454388854/profile?topnav=1&wvr=6" title="Weibo" target="_blank">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="/1335382915@qq.com" title="Email" target="_blank">
+					<i class="fa fa-envelope-o"></i>
+				</a>
+			</li>
+		
+
+		
+			<li>
+				<a href="/1335382915" title="QQ" target="_blank">
+					<i class="fa fa-qq"></i>
+				</a>
+			</li>
+		
+		
+	 
+</ul>
+	</div>
+		
+	<div class="copyright">
+		<p>
+			 
+				&copy;2019, content by Mescal Chuan. All Rights Reserved.
+			
+			
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<!-- <span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span> -->
+
+	
+
+
+
+
+		</p>
+		<!-- <p>
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay. 					
+		</p> -->
+	</div>		
+</footer>
+		
+    <!-- set '1' to show motto in all pages! -->
+
+	<script src="/js/motto.js"></script>
+	<script type="text/javascript">
+		$(".motto").html( getMingYanContent() );
+	</script>	
+
+
+
+
+    <!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup">
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      ESC
+   </span>
+		<div class="local-search-header">
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			
+
+   
+	<div id="topN"></div>
+	
+    <script>
+        var appid = 'CqXKtSjjcNvnClld9bAoTF5d-gzGzoHsz',
+            appkey = 'u6UWhjE8CwlhhefsUo7HNHRq',
+            limitCount = 10;
+        if( $('#topN').length ){
+            AV.initialize(appid, appkey);
+            var Counter = AV.Object.extend("Counter");  
+            topNPost(Counter, limitCount);
+        }
+    </script>
+   
+
+		</div>
+	</div>
+</div>
+
+<script src="/js/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
+
+
+
+
+<!--back to top-->
+
+    
+	<div id="totop">
+  		<a href="javascript:;" name="TOTOP" class="fa fa-arrow-up"></a>
+	</div>
+	<div id="tobuttom">
+		<a href="javascript:;" name="TOBUTTOM" class="fa fa-arrow-down"></a>
+	</div>
+ 
+
+
+ 
+
+<script src="/js/vibrant.js"></script>
+<script src="/js/chinese.js"></script>
+<script src="/js/main.js"></script>
+	</body>
+	</html>

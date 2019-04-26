@@ -1,0 +1,2815 @@
+
+
+	<!DOCTYPE html>
+	<html class="scrollbar">
+		
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      x-ui | Mescal 川
+    
+  </title>
+  <meta name="author" content="Mescal Chuan">
+  <meta name="keywords" content>
+  <meta name="description" content>
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+    <!-- jquery -->
+	<script src="/js/jquery-2.1.1.min.js"></script>
+
+  <!-- leancloud -->
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script src="/js/leancloud.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="transition">
+					<div class="three-bounce1"></div>
+					<div class="three-bounce2"></div>
+					<div class="three-bounce3"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground" data-img-mode="normal" data-normal-src="/img/48.jpg" data-random-max="110" data-random-src="https://sariay.github.io/Random-img/">
+	<div class="mask">
+		<div class="h-header">
+			<div id="logo-S">
+				
+					<a href="/">
+						Mescal
+					</a>
+				
+			</div>
+			<!-- Navigation in header(id="navigation-S") -->
+			<div id="navigation-S">
+				<ul>
+					
+						<li class="menu-home">
+							<a href="/" class="menu-item-home">主页</a>
+						</li>
+					
+						<li class="menu-archive">
+							<a href="/archives" class="menu-item-archive">归档</a>
+						</li>
+					
+						<li class="menu-categories">
+							<a href="/categories" class="menu-item-categories">分类</a>
+						</li>
+					
+						<li class="menu-tags">
+							<a href="/tags" class="menu-item-tags">标签</a>
+						</li>
+					
+						<li class="menu-about">
+							<a href="/about" class="menu-item-about">关于</a>
+						</li>
+					
+						<li class="menu-gallery">
+							<a href="/gallery" class="menu-item-gallery">摄影集</a>
+						</li>
+					
+
+					
+						<li class="menu-search">
+							<a href="javascript:;" class="popup-trigger" title="Search">搜索</a>
+						</li>
+					
+				</ul>			
+			</div>				
+		</div>
+
+		<div class="h-body">	
+			<!-- motto -->
+			
+				<div id="page-motto">
+					<p class="motto">
+						
+					</p>
+				</div>
+			
+
+			<div id="navigation-H">
+				<!-- Page title -->
+				<p>
+					
+						当前文章&nbsp;:&nbsp;《x-ui》
+					
+				</p>
+				<!-- Progress bar -->
+				<div id="progress-bar"></div>
+
+				<!-- Progress percent -->
+				<div id="progress-percentage">
+					<h1>0.0%</h1>
+				</div>
+			</div>
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<ul>
+				<!-- <li>
+					<a><i class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>切换背景</a>
+				</li> -->
+				<li>
+					<a href="javascript:;" id="read-more"><i class="fa fa-angle-double-down"></i></a>
+				</li>
+				<!-- <li>
+					<a href="https://github.com/Sariay/hexo-theme-Annie" target="_blank"><i class="fa fa-download"></i>克隆主题</a>
+				</li> -->
+			</ul>
+		</div>
+		
+		<!-- This is only a demo, please go to "https://time.is" to set your city time! -->
+<style type="text/css">
+	.header-date {
+		position: absolute;
+		left: 40px;
+		bottom: 30px;
+		writing-mode: tb-rl;
+		font-size: 36px;
+	}	
+	.header-date a {
+		border-bottom: none;
+	}
+	@media only screen and (max-width: 768 ) {
+		.header-date {
+			position: absolute;
+			left: 40px;
+			bottom: 30px;
+			writing-mode: tb-rl;
+			font-size: 20px;
+		}			
+	}
+</style>
+<div class="header-date">
+	<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow"></a>
+	<span id="Beijing_z43d"></span>
+</div>
+<script src="//widget.time.is/zh.js"></script>
+<script>
+	time_is_widget.init({
+		Beijing_z43d:{
+			template:"DATE", 
+			date_format:"year年 monthname dnum日"
+		}
+	});
+</script>
+</div></header>
+
+<!-- Navigation in div(id="navigation-H") -->
+<a class="nav-trigger">
+	<span></span>
+</a>
+
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<h3>Navigation</h3>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	<div class="nav-body">
+		<ul>
+			
+				<li class="menu-home">
+					<a href="/" class="menu-item-home">主页</a>
+				</li>
+			
+				<li class="menu-archive">
+					<a href="/archives" class="menu-item-archive">归档</a>
+				</li>
+			
+				<li class="menu-categories">
+					<a href="/categories" class="menu-item-categories">分类</a>
+				</li>
+			
+				<li class="menu-tags">
+					<a href="/tags" class="menu-item-tags">标签</a>
+				</li>
+			
+				<li class="menu-about">
+					<a href="/about" class="menu-item-about">关于</a>
+				</li>
+			
+				<li class="menu-gallery">
+					<a href="/gallery" class="menu-item-gallery">摄影集</a>
+				</li>
+			
+
+			
+				<li class="menu-search">
+					<a href="javascript:;" class="popup-trigger" title="Search">搜索</a>
+				</li>
+			
+		</ul>
+	</div>
+
+	<div class="nav-footer">
+		<ul>
+	
+		
+			<li>
+				<a href="https://github.com/mescalchuan" title="Github" target="_blank">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="https://weibo.com/6454388854/profile?topnav=1&wvr=6" title="Weibo" target="_blank">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="/1335382915@qq.com" title="Email" target="_blank">
+					<i class="fa fa-envelope-o"></i>
+				</a>
+			</li>
+		
+
+		
+			<li>
+				<a href="/1335382915" title="QQ" target="_blank">
+					<i class="fa fa-qq"></i>
+				</a>
+			</li>
+		
+		
+	 
+</ul>
+	</div>
+</nav>
+
+		
+		<!--main-->
+		<main>
+			<div class="layout-post">
+	
+	
+	<div class="article-title">
+		
+	<a href="/2018/04/21/2018-04-21-technology-x-ui/" itemprop="url">
+		x-ui
+	</a>
+
+	</div>
+
+	<div class="article-meta">
+		<span>
+			
+	发布于
+	<a href="/2018/04/21/2018-04-21-technology-x-ui/" itemprop="url">
+		<time datetime="2018-04-21T10:32:20.000Z" itemprop="datePublished">
+	  		2018-04-21
+	  </time>
+	</a> 
+
+	/
+	更新于
+	<a href="/2018/04/21/2018-04-21-technology-x-ui/" itemprop="url">
+		<time datetime="2018-04-21T10:32:20.000Z" itemprop="dateUpdated">
+	  		2019-04-26
+	  </time>
+	</a> 	
+
+		</span>
+		/
+		<span>
+			<i class="fa fa-tags"></i>
+			
+	
+		<a href="/tags/博客/" class=" ">
+			博客
+		</a>
+	
+		<a href="/tags/技术博客/" class=" ">
+			技术博客
+		</a>
+	
+		<a href="/tags/react/" class=" ">
+			react
+		</a>
+	
+		<a href="/tags/react-native/" class=" ">
+			react-native
+		</a>
+	
+		
+		</span>
+		<!-- /
+		
+
+    <span class="leancloud_visitors" id="/2018/04/21/2018-04-21-technology-x-ui/_visitors" data-url="/2018/04/21/2018-04-21-technology-x-ui/" data-title="x-ui">
+        热度
+        <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
+    </span>
+    
+    /
+
+
+
+    <span class="leancloud_likes" id="/2018/04/21/2018-04-21-technology-x-ui/_likes" data-url="/2018/04/21/2018-04-21-technology-x-ui/" data-title="x-ui" rel="unlike">
+        喜欢
+        <i class="fa fa-heart"></i>
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+ -->
+	</div>
+
+	<div class="article-content" id="article-content">
+		<p>跨平台的移动端ui组件库</p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>x-ui是基于react native和react开发出的跨android、ios和h5的三端ui组件库。</p>
+<h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><h4 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h4><p><code>git clone https://github.com/mescalchuan/x-ui.git</code>，将<code>common</code>和<code>component</code>放入项目中，之后您需要根据自身需求做出相应配置。</p>
+<h4 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h4><h5 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h5><p><code>x-ui</code> h5端统一使用了阿里的<code>flexible.js</code>适配方案，版本为<code>0.3.4</code>，通过<code>&lt;script src=&quot;http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js&quot;&gt;&lt;/script&gt;</code>将其链接到<code>header</code>标签中。<code>flexible.js</code>以iphone6为参考单位：在<code>375 x 667</code>dp， <code>dpr</code>为2的情况下，页面的缩放比例为0.5，html的<code>font-size</code>为75px。以100px为例，最终计算出的rem值为<code>(100*2/75)rem</code>。对于字体而言，建议以<code>[data-dpr]</code>属性来区分不同dpr下的文本字号大小：</p>
+<pre><code>div { font-size: 16px; } 
+[data-dpr=&quot;2&quot;] div { font-size: 32px; } 
+[data-dpr=&quot;3&quot;] div { font-size: 48px; }
+</code></pre><h5 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h5><p>请将<code>fonts</code>文件夹放入您的项目中，并在css文件中配置：</p>
+<pre><code>@font-face
+{
+    font-family: Ionicons;
+    src: url(&#39;fonts/Ionicons.ttf&#39;);
+    font-style: italic; //required
+}
+</code></pre><h4 id="React-Native"><a href="#React-Native" class="headerlink" title="React Native"></a>React Native</h4><h5 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h5><p>请将<code>fonts</code>文件夹放入<code>android/app/src/main/assets/</code>中。</p>
+<h5 id="IOS"><a href="#IOS" class="headerlink" title="IOS"></a>IOS</h5><p>请将<code>fonts</code>文件夹托至xcode中，勾选<code>Add to targets</code>和<code>Create groups</code>。在<code>Info.plist</code>中新建<code>Fonts provided by application</code>属性，item设置为<code>Ionicons</code>。</p>
+<h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><ul>
+<li><h4 id="ActionSheet"><a href="#ActionSheet" class="headerlink" title="ActionSheet"></a>ActionSheet</h4>底部弹出框，多用于分享、图片下载等操作。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>标题</td>
+<td>string</td>
+<td><code>&quot;&quot;</code></td>
+</tr>
+<tr>
+<td>options</td>
+<td>按钮配置项</td>
+<td>array</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td>showCancelButton</td>
+<td>是否显示取消按钮</td>
+<td>boolean</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>cancelButtonTitle</td>
+<td>“取消”按钮的标题</td>
+<td>string</td>
+<td><code>&quot;取消&quot;</code></td>
+</tr>
+<tr>
+<td>cancelButtonColor</td>
+<td>“取消”按钮的颜色</td>
+<td>string</td>
+<td><code>&quot;#108EE9&quot;</code></td>
+</tr>
+<tr>
+<td>backdropPressToClose</td>
+<td>点击遮罩层时是否关闭ActionSheet</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>onPress</td>
+<td>ActionSheet点击事件，会返回每个options的索引</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>show() <code>static</code></td>
+<td>外部打开actionsheet</td>
+<td>function</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>hide()  <code>static</code></td>
+<td>外部关闭actionsheet</td>
+<td>function</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;ActionSheet
+  ref = {o =&gt; this.ActionSheet = o}
+  options = {[
+    &#39;option1&#39;,
+    &lt;span className = {&#39;header-text text-blue-color&#39;} &gt;{&#39;option2&#39;}&lt;/span&gt;,
+    &lt;span className = {&#39;intro-title main-text-color&#39;} &gt;{&#39;删除&#39;}&lt;/span&gt;
+  ]}
+  title = {&#39;自定义组件&#39;}
+  backdropPressToClose = {true}
+  cancelButtonColor = {&#39;#ff4f4f&#39;}
+  onPress = {() =&gt; alert(index)}
+/&gt;
+&lt;button onClick = {() =&gt; this.ActionSheet.show()} &gt;open&lt;/button&gt;
+</code></pre><pre><code>&lt;ActionSheet
+  ref = {o =&gt; this.ActionSheet = o}
+  options = {[
+    &#39;option1&#39;,
+    &lt;Text style = {{color: '#108EE9', fontSize: 18}} &gt;{&#39;option2&#39;}&lt;/Text&gt;,
+    &lt;Text style = {{color: '#ff4f4f', fontSize: 20}} &gt;{&#39;删除&#39;}&lt;/Text&gt;
+  ]}
+  title = {&#39;自定义组件&#39;}
+/&gt;
+&lt;Button title = {&#39;open&#39;} onPress = {() =&gt; this.ActionSheet.show()} /&gt;
+</code></pre><ul>
+<li><h4 id="Badge"><a href="#Badge" class="headerlink" title="Badge"></a>Badge</h4>角标，用于消息数量的显示以及一般的小型徽标。当含有子组件时，角标悬浮在自组件右上角，num生效，text失效；当不含自组件时，角标作为单独的徽标，text失效，num生效。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>num</td>
+<td>角标数字</td>
+<td>number</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>defaultBackColor</td>
+<td>角标背景色</td>
+<td>string</td>
+<td><code>&quot;#ff4f4f&quot;</code></td>
+</tr>
+<tr>
+<td>fontColor</td>
+<td>角标文字颜色</td>
+<td>string</td>
+<td><code>&quot;white&quot;</code></td>
+</tr>
+<tr>
+<td>text</td>
+<td>自定义角标内容</td>
+<td>string</td>
+<td><code>&quot;&quot;</code></td>
+</tr>
+<tr>
+<td>style</td>
+<td>自定义角标样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>const boxContainer = &lt;div className = {&#39;badge-box&#39;} &gt;&lt;/div&gt;
+&lt;Badge num = {1} style = {{marginRight: '0.8rem'}} &gt;{boxContainer}&lt;/Badge&gt;
+&lt;Badge text = {&#39;券&#39;} defaultBackColor = {&#39;#f19736&#39;} /&gt;
+</code></pre><pre><code>const containerBox = {
+  width: 30,
+  height: 30,
+  backgroundColor: &#39;gray&#39;
+}
+&lt;Badge num = {1} style = {{marginRight: 30}} &gt;
+  &lt;View style = {containerBox} &gt;&lt;/View&gt;
+&lt;/Badge&gt;
+</code></pre><ul>
+<li><h4 id="Button"><a href="#Button" class="headerlink" title="Button"></a>Button</h4>按钮，支持块级、内联级、全填充、边框填充、大小等设置。</li>
+</ul>
+<p><code>import Button, {BUTTON_SIZE, BUTTON_TYPE} from &#39;./component/button&#39;</code></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activeOpacity <code>rn only</code></td>
+<td>按钮点击时的按钮透明度</td>
+<td>number</td>
+<td><code>0.6</code></td>
+</tr>
+<tr>
+<td>inline</td>
+<td>是否是行内按钮</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>buttonColor</td>
+<td>按钮背景色</td>
+<td>string</td>
+<td><code>&quot;#ff4f4f&quot;</code></td>
+</tr>
+<tr>
+<td>buttonStyle</td>
+<td>自定义按钮样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>size</td>
+<td>按钮大小</td>
+<td>BUTTON_SIZE</td>
+<td><code>BUTTON_SIZE.MIDDLE</code></td>
+</tr>
+<tr>
+<td>type</td>
+<td>按钮类型</td>
+<td>BUTTON_TYPE</td>
+<td><code>BUTTON_TYPE.FILL</code></td>
+</tr>
+<tr>
+<td>textStyle</td>
+<td>文本样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>是否禁用</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>loading <code>rn only</code></td>
+<td>是否显示loading圈</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>loadingColor <code>rn only</code></td>
+<td>loading圈的颜色</td>
+<td>string</td>
+<td><code>&quot;white&quot;</code></td>
+</tr>
+<tr>
+<td>icon</td>
+<td>按钮小图标, 如果loading为true，则icon无效</td>
+<td>element</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>onPress</td>
+<td>触摸函数</td>
+<td>function</td>
+<td><code>() =&gt; {}</code> </td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;Button
+  inline
+  size = {BUTTON_SIZE.SMALL}
+  type = {BUTTON_TYPE.GHOST}
+  icon = {&lt;Icon name = {&#39;ios-close-circle&#39;} color = {&#39;white&#39;} size = {14} /&gt;}
+  onPress = {() =&gt; alert(&#39;button&#39;)}
+&gt;small&lt;/Button&gt;
+</code></pre><ul>
+<li><h4 id="Card"><a href="#Card" class="headerlink" title="Card"></a>Card</h4>卡片视图，用于详细信息的展示。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Card</code> cardStyle</td>
+<td>卡片基本样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td><code>Card.Header</code> headerStyle</td>
+<td>头部样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td><code>Card.Body</code> bodyStyle</td>
+<td>主要内容体样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td><code>Card.Footer</code> footerStyle</td>
+<td>底部样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;Card cardStyle = {margin15Ver} &gt;
+  &lt;Card.Header&gt;
+    &lt;p className = {&#39;intro-text&#39;} &gt;这是一个标题&lt;/p&gt;
+  &lt;/Card.Header&gt;
+  &lt;Card.Body&gt;
+    &lt;p className = {&#39;intro-text&#39;} &gt;这是一个同时使用到了Card.Header、Card.Body、Card.Footer的卡片。&lt;/p&gt;
+  &lt;/Card.Body&gt;
+  &lt;Card.Footer&gt;
+    &lt;p className = {&#39;intro-text&#39;} &gt;底部左侧&lt;/p&gt;
+    &lt;p className = {&#39;intro-text&#39;} &gt;底部右侧&lt;/p&gt;
+  &lt;/Card.Footer&gt;
+&lt;/Card&gt;
+</code></pre><pre><code>&lt;Card cardStyle = {{marginHorizontal: 15, borderRadius: 8}} &gt;
+  &lt;Card.Header&gt;
+    &lt;Text style = {{color: '#333333', fontSize: 16, fontWeight: 'bold'}} &gt;标题&lt;/Text&gt;
+  &lt;/Card.Header&gt;
+  &lt;Card.Body&gt;
+    &lt;Text style = {{color: '#666666'}} &gt;考虑到卡片的样式因需求的不同而不同，我们没有规定卡片所嵌套的组件的样式，这需要您自己定制。&lt;/Text&gt;
+  &lt;/Card.Body&gt;
+  &lt;Card.Footer footerStyle = {{paddingVertical: 10}} &gt;
+    &lt;Text style = {{color: '#68b1ed'}} &gt;喜欢&lt;/Text&gt;
+    &lt;Text style = {{color: '#68b1ed'}} &gt;更多&lt;/Text&gt;
+  &lt;/Card.Footer&gt;
+&lt;/Card&gt;
+</code></pre><ul>
+<li><h4 id="Carousel"><a href="#Carousel" class="headerlink" title="Carousel"></a>Carousel</h4>轮播图，用于图片切换展示。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>当前索引值</td>
+<td>number</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>width</td>
+<td>轮播图宽度 <code>required</code></td>
+<td>number <code>rn</code>, any <code>h5</code></td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>height</td>
+<td>轮播图高度 <code>required</code></td>
+<td>number <code>rn</code>, any <code>h5</code></td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>autoPlay</td>
+<td>是否自动播放</td>
+<td>boolean</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>autoPlayTimeout</td>
+<td>自动播放时每张图片的切换时间</td>
+<td>number</td>
+<td><code>3000 =&gt; ms</code></td>
+</tr>
+<tr>
+<td>showDot</td>
+<td>是否展示圆点</td>
+<td>boolean</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>dotColor</td>
+<td>圆点的颜色</td>
+<td>string</td>
+<td><code>&quot;#666666&quot;</code></td>
+</tr>
+<tr>
+<td>activeDotColor</td>
+<td>激活圆点的颜色</td>
+<td>string</td>
+<td><code>&quot;#68b1ed&quot;</code></td>
+</tr>
+<tr>
+<td>dotWidth</td>
+<td>圆点的宽度</td>
+<td>number</td>
+<td><code>10 =&gt; rn</code>, <code>20 =&gt; h5(px)</code></td>
+</tr>
+<tr>
+<td>dotBottomOffset <code>rn only</code></td>
+<td>原点距离轮播图底部的距离，默认为圆点的宽度</td>
+<td>number</td>
+<td><code>dotWidth</code></td>
+</tr>
+<tr>
+<td>onIndexChanged</td>
+<td>索引值发生改变时的回调</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>carouselStyle <code>rn only</code></td>
+<td>轮播图样式</td>
+<td>object</td>
+<td><code>{}</code> </td>
+</tr>
+</tbody>
+</table>
+<pre><code>const imgArr = [&#39;./image/1.jpg&#39;, &#39;./image/2.jpg&#39;, &#39;./image/3.jpg&#39;, &#39;./image/4.jpg&#39;];
+&lt;Carousel
+  width = { &#39;100vw&#39; }
+  height = { &#39;30vh&#39; }
+  autoPlay = {false} 
+  index = {2} 
+  onIndexChanged = {(index) =&gt; console.log(index)}
+&gt;
+  {
+    imgArr &amp;&amp; imgArr.map((url, index) =&gt;
+      &lt;img key = { index } src = { url }/&gt;)
+  }
+&lt;/Carousel&gt;
+</code></pre><pre><code>const style = {width: utils.window.width, height: 200}
+&lt;Carousel 
+  carouselStyle = {{marginBottom: 20}} 
+  width = {utils.window.width} 
+  height = {200} 
+  autoPlay = {false} 
+  index = {2} 
+  onIndexChanged = {(index) =&gt; console.log(index)}
+&gt;
+  &lt;Image source = {require(&#39;../../image/scenery.jpg&#39;)} style = {style } /&gt;
+  &lt;Image source = {require(&#39;../../image/carousel1.jpg&#39;)} style = {style} /&gt;
+  &lt;Image source = {require(&#39;../../image/swiper-bk.jpg&#39;)} style = {style} /&gt;
+  &lt;Image source = {require(&#39;../../image/carousel2.jpg&#39;)} style = {style} /&gt;
+&lt;/Carousel&gt;
+</code></pre><ul>
+<li><h4 id="Checkbox"><a href="#Checkbox" class="headerlink" title="Checkbox"></a>Checkbox</h4>多选框</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Checkbox.Group</code> defaultValue</td>
+<td>默认value</td>
+<td>any</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td><code>Checkbox.Group</code> value</td>
+<td>value（受控）</td>
+<td>any</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td><code>Checkbox.Group</code> onChange</td>
+<td>多选框勾选值发生改变时的回调，将会返回新的勾选值</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td><code>Checkbox.Group</code> disabled</td>
+<td>是否禁用</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>Checkbox.Group</code> groupStyle</td>
+<td>自定义group容器样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>id <code>h5 only</code></td>
+<td>checkbox id <code>required</code></td>
+<td>string</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>value</td>
+<td>checkbox value</td>
+<td>any</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>checked</td>
+<td>是否勾选（受控）</td>
+<td>boolean</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>checkboxColor <code>rn only</code></td>
+<td>颜色</td>
+<td>string</td>
+<td><code>#ff4f4f</code></td>
+</tr>
+<tr>
+<td>checkboxStyle</td>
+<td>自定义样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>textStyle</td>
+<td>自定义文本样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>是否禁用</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>onChange</td>
+<td>每次点击时的回调，返回勾选状态（bool）</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;Checkbox.Group value = {this.state.value} onChange = {value =&gt; this.setState({value})} &gt;
+  &lt;Checkbox id = {&#39;checkbox_1&#39;} value = {&#39;A&#39;} &gt;A&lt;/Checkbox&gt;
+  &lt;Checkbox id = {&#39;checkbox_2&#39;} value = {&#39;B&#39;} &gt;B&lt;/Checkbox&gt;
+  &lt;Checkbox id = {&#39;checkbox_3&#39;} value = {&#39;C&#39;} &gt;C&lt;/Checkbox&gt;
+&lt;/Checkbox.Group&gt;
+</code></pre><pre><code>&lt;Checkbox.Group defaultValue = {[&#39;B&#39;]} &gt;
+  &lt;Checkbox value = {&#39;A&#39;} &gt;A&lt;/Checkbox&gt;
+  &lt;Checkbox value = {&#39;B&#39;} &gt;B&lt;/Checkbox&gt;
+  &lt;Checkbox value = {&#39;C&#39;} &gt;C&lt;/Checkbox&gt;
+&lt;/Checkbox.Group&gt;
+</code></pre><ul>
+<li><h4 id="Collapse"><a href="#Collapse" class="headerlink" title="Collapse"></a>Collapse</h4>折叠面板，信息的展开与收起。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activityKey</td>
+<td>当前激活项</td>
+<td>string, number</td>
+<td><code>&quot;&quot;</code></td>
+</tr>
+<tr>
+<td>onChange</td>
+<td>任意一个折叠面板的折叠状态发生改变时的回调，返回当前激活项（string or JSON.stringify(stringArray)）</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>accordion</td>
+<td>是否开启手风琴模式</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>style</td>
+<td>自定义样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td><code>Collapse.Panel</code> key</td>
+<td>id</td>
+<td>string, number</td>
+<td><code>&quot;&quot;</code></td>
+</tr>
+<tr>
+<td><code>Collapse.Panel</code> title</td>
+<td>标题</td>
+<td>string, number</td>
+<td><code>&quot;&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;Collapse
+  accordion = {true}
+  onChange = {(activeKey) =&gt; activeKey &amp;&amp; alert(activeKey)}
+  style = {{marginBottom: '0.4rem'}}
+  activeKey = {&#39;panel2&#39;}
+&gt;
+  &lt;Collapse.Panel title = {&#39;标题1&#39;} panelKey = {&#39;panel1&#39;} &gt;
+    &lt;p className = {&#39;panel-margin&#39;} &gt;这是一个含有回调函数的手风琴模式的面板子组件&lt;/p&gt;
+  &lt;/Collapse.Panel&gt;
+  &lt;Collapse.Panel title = {&#39;标题2&#39;} panelKey = {&#39;panel2&#39;} &gt;
+    &lt;p className = {&#39;panel-margin&#39;} &gt;这是一个含有回调函数的手风琴模式的面板子组件&lt;/p&gt;
+  &lt;/Collapse.Panel&gt;
+  &lt;Collapse.Panel title = {&#39;标题3&#39;} panelKey = {&#39;panel3&#39;} &gt;
+    &lt;p className = {&#39;panel-margin&#39;} &gt;这是一个含有回调函数的手风琴模式的面板子组件&lt;/p&gt;
+  &lt;/Collapse.Panel&gt;
+&lt;/Collapse&gt;
+</code></pre><pre><code>&lt;Collapse
+  accordion = {true}
+  onChange = {(activeKey) =&gt; activeKey &amp;&amp; ToastAndroid.show(activeKey, ToastAndroid.SHORT)}
+  style = {{marginBottom: 20}}
+&gt;
+  &lt;Collapse.Panel title = {&#39;标题1&#39;} panelKey = {&#39;panel1&#39;} &gt;
+    &lt;Text style= {styles.panel} &gt;这是一个含有回调函数的手风琴模式的面板子组件&lt;/Text&gt;
+  &lt;/Collapse.Panel&gt;
+  &lt;Collapse.Panel title = {&#39;标题2&#39;} panelKey = {&#39;panel2&#39;} &gt;
+    &lt;Text style= {styles.panel} &gt;这是一个含有回调函数的手风琴模式的面板子组件&lt;/Text&gt;
+  &lt;/Collapse.Panel&gt;
+  &lt;Collapse.Panel title = {&#39;标题3&#39;} panelKey = {&#39;panel3&#39;} &gt;
+    &lt;Text style= {styles.panel} &gt;这是一个含有回调函数的手风琴模式的面板子组件&lt;/Text&gt;
+  &lt;/Collapse.Panel&gt;
+&lt;/Collapse&gt;
+</code></pre><ul>
+<li><h4 id="Counter"><a href="#Counter" class="headerlink" title="Counter"></a>Counter</h4>计数器，数字选择框。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>defaultValue</td>
+<td>计数器默认值</td>
+<td>number</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>value</td>
+<td>计数器的值</td>
+<td>number</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>maxValue</td>
+<td>最大值</td>
+<td>number</td>
+<td><code>99</code></td>
+</tr>
+<tr>
+<td>minValue</td>
+<td>最小值</td>
+<td>number</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>stepNum</td>
+<td>跨度值</td>
+<td>number</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>btnWidth <code>rn only</code></td>
+<td>按钮宽度</td>
+<td>number</td>
+<td><code>35</code></td>
+</tr>
+<tr>
+<td>containerHeight <code>rn only</code></td>
+<td>总高度</td>
+<td>number</td>
+<td><code>30</code></td>
+</tr>
+<tr>
+<td>inputWidth <code>rn only</code></td>
+<td>输入框宽度</td>
+<td>number</td>
+<td><code>40</code></td>
+</tr>
+<tr>
+<td>borderColor</td>
+<td>边框颜色</td>
+<td>string</td>
+<td><code>&quot;#d5d3d3&quot;</code></td>
+</tr>
+<tr>
+<td>btnColor</td>
+<td>按钮颜色</td>
+<td>string</td>
+<td><code>&quot;#eeeeee&quot;</code></td>
+</tr>
+<tr>
+<td>onChange</td>
+<td>value发生改变时的回调</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>是否禁用</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>getValue() <code>static</code></td>
+<td>外部获取计数值</td>
+<td>function</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;Counter defaultValue = {5} stepNum = {2} minValue = {1} maxValue = {9} /&gt;
+</code></pre><ul>
+<li><h4 id="DrawerLayout"><a href="#DrawerLayout" class="headerlink" title="DrawerLayout"></a>DrawerLayout</h4>抽屉视图，用于左右侧弹出的菜单。<br><code>import DrawerLayout, {DRAWER_POSITION, DRAWER_LOCK_MODE, KEYBOARD_DISMISS_MODE} from &#39;./component/drawerLayout&#39;</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>drawerWidth <code>rn only</code></td>
+<td>抽屉宽度</td>
+<td>number</td>
+<td><code>200</code></td>
+</tr>
+<tr>
+<td>renderNavigationView</td>
+<td>抽屉内容</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>drawerPosition</td>
+<td>抽屉位置</td>
+<td>DRAWER_POSITION</td>
+<td><code>DRAWER_POSITION.LEFT</code></td>
+</tr>
+<tr>
+<td>drawerLockMode <code>rn only</code></td>
+<td>抽屉状态</td>
+<td>DRAWER_LOCK_MODE</td>
+<td><code>DRAWER_LOCK_MODE.UNLOCKED</code></td>
+</tr>
+<tr>
+<td>keyboardDismissMode <code>rn only</code></td>
+<td>键盘关闭模式</td>
+<td>KEYBOARD_DISMISS_MODE</td>
+<td><code>KEYBOARD_DISMISS_MODE.NONE</code></td>
+</tr>
+<tr>
+<td>onDrawerOpen</td>
+<td>抽屉打开时的回调</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>onDrawerClose</td>
+<td>抽屉关闭时的回调</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>onDrawerSlide <code>rn only</code></td>
+<td>抽屉滑动时的回调</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>openDrawer() <code>static</code></td>
+<td>外部打开抽屉</td>
+<td>function</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>closeDrawer() <code>static</code></td>
+<td>外部关闭抽屉</td>
+<td>function</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code>const drawerView = (
+  &lt;div&gt;
+    &lt;List title = {&#39;前往商城&#39;} showLine /&gt;
+    &lt;List title = {&#39;个人中心&#39;} showLine /&gt;
+    &lt;List title = {&#39;设置&#39;} showLine /&gt;
+    &lt;p className = {&#39;margin-15 header-text&#39;}&gt;I&#39;m in the Drawer!&lt;/p&gt;
+  &lt;/div&gt;
+)
+&lt;Button 
+  onPress = {() =&gt; this.drawer.openDrawer()} 
+&gt;打开右侧抽屉&lt;/Button&gt;
+&lt;DrawerLayout 
+  drawerPosition = {DRAWER_POSITION.RIGHT} 
+  renderNavigationView = {() =&gt; drawerView} 
+  ref = {drawer =&gt; this.drawer = drawer} 
+/&gt;
+</code></pre><pre><code>const navigationView = (
+  &lt;View style={{flex: 1, backgroundColor: '#fff'}} &gt;
+    &lt;List title = {&#39;前往商城&#39;} /&gt;
+    &lt;List title = {&#39;个人中心&#39;} /&gt;
+    &lt;List title = {&#39;设置&#39;} /&gt;
+    &lt;Text style={{margin: 10, fontSize: 15, textAlign: 'left'}}&gt;I&#39;m in the Drawer!&lt;/Text&gt;
+  &lt;/View&gt;
+)
+&lt;DrawerLayout
+  drawerWidth = {200}
+  renderNavigationView = {() =&gt; navigationView}
+  onDrawerOpen = {() =&gt; console.log(&#39;opend&#39;)}
+  onDrawerClose = {() =&gt; console.log(&#39;closed&#39;)}
+  onDrawerSlide = {() =&gt; console.log(&#39;sliding&#39;)}
+  ref = {drawer =&gt; this.Drawer = drawer}
+&gt;
+  &lt;View style = {styles.container} &gt;
+    &lt;Text style = {styles.introduction} &gt;一个纯JavaScript实现的抽屉组件，具有和React Native的DrawerLayoutAndroid相同的api。我们舍弃了使用率较低的onDrawerStateChanged，并将所有枚举类型单独提取出来。&lt;/Text&gt;
+    &lt;Button buttonColor = {&#39;#108EE9&#39;} onPress = {() =&gt; this.Drawer.openDrawer()} &gt;打开抽屉&lt;/Button&gt;
+  &lt;/View&gt;
+&lt;/DrawerLayout&gt;
+</code></pre><ul>
+<li><h4 id="Flex"><a href="#Flex" class="headerlink" title="Flex"></a>Flex</h4>基于flex实现的栅格系统。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>justify</td>
+<td>主轴对齐方式</td>
+<td>string, flex-justify-conent</td>
+<td><code>&quot;flex-start&quot;</code></td>
+</tr>
+<tr>
+<td>align</td>
+<td>次轴对齐方式</td>
+<td>string, flex-align-items (<code>h5</code>比<code>rn</code>多了<code>stretch</code>和<code>baseline</code>)</td>
+<td><code>&quot;flex-start&quot;</code></td>
+</tr>
+<tr>
+<td>wrap</td>
+<td>折行方式</td>
+<td>string, flex-wrap</td>
+<td><code>&quot;wrap&quot;</code></td>
+</tr>
+<tr>
+<td>flexStyle</td>
+<td>容器样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td><code>Flex.Item</code> flex</td>
+<td>空间分配比例</td>
+<td>number</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>Flex.Item</code> flexItemStyle</td>
+<td>flexItem样式</td>
+<td>object</td>
+<td><code>{}</code> </td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;Flex flexStyle = {{marginBottom: '0.4rem'}} &gt;
+  &lt;Flex.Item&gt;
+    &lt;div className = {&#39;flex-item&#39;} style = {{backgroundColor: '#108EE9'}} &gt;
+      &lt;p className = {&#39;flex-text&#39;} &gt;50%&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/Flex.Item&gt;
+  &lt;Flex.Item&gt;
+    &lt;div className = {&#39;flex-item&#39;} style = {{backgroundColor: '#4badf3'}} &gt;
+      &lt;p className = {&#39;flex-text&#39;} &gt;50%&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/Flex.Item&gt;
+&lt;/Flex&gt;
+</code></pre><pre><code>&lt;Flex 
+  justify = {&#39;flex-end&#39;} 
+  align = {&#39;flex-end&#39;} 
+  flexStyle = {{marginBottom: 20}} 
+&gt;
+  {
+    (function() {
+      return [1,2,3].map((item, index) =&gt; {
+        let secondViewStyle = {};
+        if(index == 1) {
+          secondViewStyle = {
+            height: 20
+          }
+        }
+        return (
+          &lt;View 
+            key = {index} 
+            style = {[styles.wrapStyle, secondViewStyle, {marginLeft: 10, marginRight: 0}, {backgroundColor: &#39;#8c62f9&#39;}]} 
+          &gt;
+            &lt;Text style = {styles.flexText} &gt;修改次轴&lt;/Text&gt;
+          &lt;/View&gt;
+        )
+      })
+    })()
+  }
+&lt;/Flex&gt;
+</code></pre><ul>
+<li><h4 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h4>头部导航</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>containerStyle</td>
+<td>容器样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+<td>string</td>
+<td><code>&quot;&quot;</code></td>
+</tr>
+<tr>
+<td>titleStyle</td>
+<td>标题样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>leftBtn</td>
+<td>自定义左侧按钮</td>
+<td>element</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>rightBtn</td>
+<td>自定义右侧按钮</td>
+<td>element</td>
+<td><code>null</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;Header
+  title = {&#39;导航栏&#39;}
+  containerStyle = {{backgroundColor: '#01DD9B'}}
+  rightBtn = {&lt;span className = {&#39;header-text&#39;} style = {{color: 'white'}} &gt;更多&lt;/span&gt;}
+/&gt;
+</code></pre><pre><code>const rightBtn = (
+  &lt;TouchableOpacity onPress = {() =&gt; alert(&#39;更多&#39;)} &gt;
+    &lt;Text style = {styles.more} &gt;更多&lt;/Text&gt;
+  &lt;/TouchableOpacity&gt;
+)
+&lt;Header
+  title = {&#39;头部&#39;}
+  leftBtn = {rightBtn}
+  containerStyle = {{backgroundColor: '#f0eded'}}
+  titleStyle = {{color: '#333333'}}
+/&gt;
+</code></pre><ul>
+<li><h4 id="Icon"><a href="#Icon" class="headerlink" title="Icon"></a>Icon</h4>字体图标，基于<code>Ionicons</code>。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>icon名字，参考<code>iconMap.json</code></td>
+<td>string</td>
+<td><code>&quot;ios-add&quot;</code></td>
+</tr>
+<tr>
+<td>size</td>
+<td>icon大小</td>
+<td>number</td>
+<td><code>15 =&gt; rn</code>, <code>30 =&gt; h5(px)</code></td>
+</tr>
+<tr>
+<td>color</td>
+<td>icon颜色</td>
+<td>string</td>
+<td><code>&quot;#666666&quot;</code></td>
+</tr>
+<tr>
+<td>iconStyle</td>
+<td>自定义icon样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;Icon name = {&#39;ios-analytics&#39;} size = {20} color = {&#39;#ff4f4f&#39;} /&gt;
+</code></pre><ul>
+<li><h4 id="List"><a href="#List" class="headerlink" title="List"></a>List</h4>列表，用于数据列表展示、基本内容呈现。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>listStyle</td>
+<td>list最顶层的样式，一般用于margin和padding</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>contentStyle <code>rn only</code></td>
+<td>list内容样式，不包括按钮</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>title</td>
+<td>列表标题</td>
+<td>string</td>
+<td><code>&quot;&quot;</code></td>
+</tr>
+<tr>
+<td>titleStyle</td>
+<td>自定义标题样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>rightContent</td>
+<td>list右侧内容</td>
+<td>element</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>rightIcon</td>
+<td>右侧icon</td>
+<td>element</td>
+<td><code>&lt;Image/&gt; =&gt; rn</code>, <code>&lt;img/&gt; =&gt; h5</code></td>
+</tr>
+<tr>
+<td>showRightIcon</td>
+<td>是否显示右侧icon</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>leftContent</td>
+<td>list左侧内容</td>
+<td>element</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>leftContentFlex</td>
+<td>左侧内容的垂直布局</td>
+<td>string, flex-justify-content</td>
+<td><code>&quot;center&quot;</code></td>
+</tr>
+<tr>
+<td>rightContentFlex</td>
+<td>右侧内容的垂直布局</td>
+<td>string, flex-justify-content</td>
+<td><code>&quot;center&quot;</code></td>
+</tr>
+<tr>
+<td>onPress</td>
+<td>list点击时的回调</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>touchOpacity <code>rn only</code></td>
+<td>list点击时的透明度</td>
+<td>number</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>showLine</td>
+<td>是否显示底部分割线</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>lineMargin</td>
+<td>底部分割线的margin</td>
+<td>number</td>
+<td><code>15 =&gt; rn</code>, <code>30 =&gt; h5(px)</code></td>
+</tr>
+<tr>
+<td>btnConfig <code>rn only</code></td>
+<td>左滑显示出的按钮, <code>//[], {text, color, fontSize, backgroundColor, width}</code></td>
+<td>array</td>
+<td><code>[]</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;List
+  title = {&#39;控制左右内容的对齐方式&#39;}
+  showRightIcon = {false}
+  leftContent = {contacts}
+  rightContent = {&lt;span className = {&#39;list-third-text&#39;} &gt;12:00&lt;/span&gt;}
+  rightContentFlex = {&#39;flex-start&#39;}
+&gt;
+  &lt;p className = {&#39;list-second-text&#39;} &gt;左侧内容居中于List&lt;/p&gt;
+  &lt;p className = {&#39;list-third-text&#39;} &gt;右侧内容上对齐于List&lt;/p&gt;
+&lt;/List&gt;
+</code></pre><pre><code>&lt;List
+  title = {&#39;灰色置顶&#39;}
+  listStyle = {{marginBottom: 20}}
+  showRightIcon = {false}
+  btnConfig = {[{
+    text: &#39;置顶&#39;,
+    width: 60,
+    backgroundColor: &#39;gray&#39;,
+    onPress: () =&gt; alert(&#39;您点击了置顶按钮&#39;)
+  }, {
+    text: &#39;提醒&#39;,
+    width: 60,
+    backgroundColor: &#39;#c4af00&#39;,
+    onPress: () =&gt; alert(&#39;您点击了提醒按钮&#39;)
+  }, {
+    text: &#39;删除&#39;,
+    width: 60,
+    onPress: () =&gt; alert(&#39;您点击了删除按钮&#39;)
+  }]}
+&gt;
+  &lt;Text style = {{fontSize: 15}} &gt;黄色提醒&lt;/Text&gt;
+  &lt;Text style = {{fontSize: 14}} &gt;红色删除&lt;/Text&gt;
+&lt;/List&gt;
+</code></pre><ul>
+<li><h4 id="Pagination"><a href="#Pagination" class="headerlink" title="Pagination"></a>Pagination</h4>分页控件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>defaultPageNum</td>
+<td>默认页码数</td>
+<td>number</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>pageNum</td>
+<td>页码数</td>
+<td>number</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>pageTotal</td>
+<td>总页数</td>
+<td>number</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>previous</td>
+<td>上一页按钮文字</td>
+<td>string</td>
+<td><code>&quot;上一页&quot;</code></td>
+</tr>
+<tr>
+<td>next</td>
+<td>下一页按钮文字</td>
+<td>stirng</td>
+<td><code>&quot;下一页&quot;</code></td>
+</tr>
+<tr>
+<td>hidePage</td>
+<td>隐藏数字</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>hideButton</td>
+<td>隐藏按钮</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>禁用分页按钮</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>onChange</td>
+<td>页码改变时的回调</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>activePageColor</td>
+<td>当前页码的颜色</td>
+<td>string</td>
+<td><code>&quot;#ff4f4f&quot;</code></td>
+</tr>
+<tr>
+<td>pageColor</td>
+<td>数字的颜色(/pageTotal)</td>
+<td>string</td>
+<td><code>&quot;#333333&quot;</code></td>
+</tr>
+<tr>
+<td>previousBtnStyle</td>
+<td>上一页按钮样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>nextBtnStyle</td>
+<td>下一页按钮样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>previousTextStyle</td>
+<td>上一页文字样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>nextTextStyle</td>
+<td>下一页文字样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;Pagination
+  pageTotal = {5}
+  previous = {&#39;prev&#39;}
+  next = {&#39;next&#39;}
+  activePageColor = {&#39;#108EE9&#39;}
+  pageColor = {&#39;#333333&#39;}
+  previousBtnStyle = {{backgroundColor: '#108EE9', borderWidth: 0}}
+  previousTextStyle = {{color: 'white'}}
+  nextBtnStyle = {{backgroundColor: '#108EE9', borderWidth: 0}}
+  nextTextStyle = {{color: 'white'}}
+/&gt;
+</code></pre><ul>
+<li><h4 id="Radio"><a href="#Radio" class="headerlink" title="Radio"></a>Radio</h4>单选框</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Radio.Group</code> defaultValue</td>
+<td>默认值</td>
+<td>any</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td><code>Radio.Group</code> value</td>
+<td>value –&gt; 受控</td>
+<td>any</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td><code>Radio.Group</code> onChange</td>
+<td>group value更改时的回调，返回当前value</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td><code>Radio.Group</code> disabled</td>
+<td>是否禁用</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>Radio.Group</code> groupStyle</td>
+<td>自定义group容器样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>id <code>h5 only</code></td>
+<td>radio id <code>required</code></td>
+<td>string</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>value</td>
+<td>radio value</td>
+<td>any</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>checked</td>
+<td>是否勾选（受控）</td>
+<td>boolean</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>radioColor <code>rn only</code></td>
+<td>radio颜色</td>
+<td>string</td>
+<td><code>&quot;#ff4f4f&quot;</code></td>
+</tr>
+<tr>
+<td>radioStyle</td>
+<td>自定义radio样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>textStyle</td>
+<td>自定义文本样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>是否禁用</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;Radio.Group value = {this.state.value} onChange = {value =&gt; this.setState({value})} &gt;
+  &lt;Radio id = {&#39;radio_1&#39;} value = {&#39;A&#39;} &gt;A&lt;/Radio&gt;
+  &lt;Radio id = {&#39;radio_2&#39;} value = {&#39;B&#39;} &gt;B&lt;/Radio&gt;
+  &lt;Radio id = {&#39;radio_3&#39;} value = {&#39;C&#39;} &gt;C&lt;/Radio&gt;
+&lt;/Radio.Group&gt;
+</code></pre><pre><code>&lt;Radio.Group defaultValue = {&#39;B&#39;} &gt;
+  &lt;Radio value = {&#39;A&#39;} &gt;A&lt;/Radio&gt;
+  &lt;Radio value = {&#39;B&#39;} &gt;B&lt;/Radio&gt;
+  &lt;Radio value = {&#39;C&#39;} &gt;C&lt;/Radio&gt;
+&lt;/Radio.Group&gt;
+</code></pre><ul>
+<li><h4 id="Search"><a href="#Search" class="headerlink" title="Search"></a>Search</h4>搜索框，一般放置于头部导航下方，用于搜索信息，支持弹出层。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>defaultValue</td>
+<td>默认值</td>
+<td>string</td>
+<td><code>&quot;&quot;</code></td>
+</tr>
+<tr>
+<td>value</td>
+<td>value（受控）</td>
+<td>string</td>
+<td><code>&quot;&quot;</code></td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td>提示信息</td>
+<td>string</td>
+<td><code>&quot;搜索&quot;</code></td>
+</tr>
+<tr>
+<td>cancelText</td>
+<td>“取消”按钮的文本</td>
+<td>string</td>
+<td><code>&quot;取消&quot;</code></td>
+</tr>
+<tr>
+<td>touchableOpacity <code>rn only</code></td>
+<td>触摸透明度</td>
+<td>number</td>
+<td><code>0.8</code></td>
+</tr>
+<tr>
+<td>onChange</td>
+<td>搜索框内容发生改变时触发</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>onSubmit</td>
+<td>提交时触发</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>onFocus</td>
+<td>聚焦时触发</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>onBlur</td>
+<td>失焦时触发</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>onCancel</td>
+<td>点击“取消”时触发</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>showModal</td>
+<td>是否启动modal模式</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>showCancelButton</td>
+<td>是否始终显示“取消”按钮</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>是否禁用</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>modalComponent</td>
+<td>如果开启了modal模式，使用该属性定义Modal组件内的子元素</td>
+<td>element</td>
+<td><code>null</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;Search
+  defaultValue = {&#39;test&#39;}
+  placeholder = {&#39;输入任何内容&#39;}
+  showCancelButton
+/&gt;
+</code></pre><pre><code>&lt;Search
+  defaultValue = {&#39;test&#39;}
+  value = {this.state.value}
+  onChange = {(value) =&gt; {this.setState({value})}}
+  showModal
+  modalComponent = {
+    &lt;View style = {styles.component} &gt;
+      &lt;Text style = {{fontSize: 16}} &gt;您自己的组件&lt;/Text&gt;
+    &lt;/View&gt;
+  }
+/&gt;
+</code></pre><ul>
+<li><h4 id="Slider"><a href="#Slider" class="headerlink" title="Slider"></a>Slider</h4>滑块</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td>滑块宽度</td>
+<td>number</td>
+<td><code>150 =&gt; rn</code>, <code>300 =&gt; h5(px)</code></td>
+</tr>
+<tr>
+<td>progress</td>
+<td>当前value值</td>
+<td>number</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>minValue</td>
+<td>滑块最小值</td>
+<td>number</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>maxValue</td>
+<td>滑块最大值</td>
+<td>number</td>
+<td><code>100</code></td>
+</tr>
+<tr>
+<td>barColor</td>
+<td>轨道颜色</td>
+<td>string</td>
+<td><code>&quot;#d5d3d3&quot;</code></td>
+</tr>
+<tr>
+<td>ballColor</td>
+<td>圆形按钮颜色</td>
+<td>string</td>
+<td><code>&quot;#108ee9&quot;</code></td>
+</tr>
+<tr>
+<td>crossColor</td>
+<td>已经过的轨道的颜色</td>
+<td>string</td>
+<td><code>&quot;#108ee9&quot;</code></td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>是否禁用</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>onChange</td>
+<td>value发生改变时的回调</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>getValue() <code>static</code></td>
+<td>外部获取滑块值</td>
+<td>function</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;Slider
+  progress = {1}
+  minValue = {1}
+  maxValue = {99}
+  onChange = {val =&gt; this.setState({value2: val})}
+/&gt;
+</code></pre><ul>
+<li><h4 id="Switch"><a href="#Switch" class="headerlink" title="Switch"></a>Switch</h4>开关，用于设置两个相互斥的选项。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>开关值（true or false）</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>onValueChange</td>
+<td>value发生改变时的回调</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+<tr>
+<td>onTintColor</td>
+<td>开关打开时背景色</td>
+<td>string</td>
+<td><code>&quot;#00b247&quot;</code></td>
+</tr>
+<tr>
+<td>tintColor</td>
+<td>开关关闭时背景色</td>
+<td>string</td>
+<td><code>&quot;white&quot;</code></td>
+</tr>
+<tr>
+<td>thumbTintColor</td>
+<td>圆形按钮背景色</td>
+<td>string</td>
+<td><code>&quot;white&quot;</code></td>
+</tr>
+<tr>
+<td>onTintBorderColor</td>
+<td>开关打开时边框颜色</td>
+<td>string</td>
+<td><code>&quot;#eeeeee&quot;</code></td>
+</tr>
+<tr>
+<td>tintBorderColor</td>
+<td>开关关闭时边框颜色</td>
+<td>string</td>
+<td><code>&quot;#eeeeee&quot;</code></td>
+</tr>
+<tr>
+<td>thumbBorderColor</td>
+<td>圆形按钮边框颜色</td>
+<td>string</td>
+<td><code>&quot;#eeeeee&quot;</code></td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>是否禁用</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;Switch
+  tintColor = {&#39;gray&#39;}
+  onTintColor = {&#39;#f75b25&#39;}
+  thumbTintColor = {&#39;#68b1ed&#39;}
+  tintBorderColor = {&#39;gray&#39;}
+  onTintBorderColor = {&#39;#f75b25&#39;}
+  thumbBorderColor = {&#39;#68b1ed&#39;}
+  value = {this.state.value}
+  onValueChange = {value =&gt; this.setState({value: value})}
+/&gt;
+</code></pre><ul>
+<li><h4 id="Tabbar"><a href="#Tabbar" class="headerlink" title="Tabbar"></a>Tabbar</h4>选项卡，位于页面最底部，用于页面切换。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性<code>rn</code></th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tabBarStyle</td>
+<td>自定义tabBar容器样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>tabBarShadowStyle</td>
+<td>自定义tabBar最上方的分割线的样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>hidesTabTouch</td>
+<td>指定为true时，touchableOpacity将变为1</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> selected</td>
+<td>是否被选中</td>
+<td>boolean</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> titleStyle</td>
+<td>自定义默认（未选中）时的文本样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> selectedTitleStyle</td>
+<td>自定义选中时的文本样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> title</td>
+<td>标题</td>
+<td>string</td>
+<td><code>&quot;&quot;</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> name</td>
+<td>指定一个key</td>
+<td>string</td>
+<td><code>&quot;&quot;</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> tabStyle</td>
+<td>自定义每个TabBar.Item的容器样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> icon</td>
+<td>未选中时的图标</td>
+<td>element</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> selectedIcon</td>
+<td>选中时的图标</td>
+<td>element</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> changeTab</td>
+<td>切换时触发，返回选中状态的item的name（key）</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>属性<code>h5</code></th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tabBarStyle</td>
+<td>自定义tabBar容器样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>tabBarShadowStyle</td>
+<td>自定义tabBar最上方的分割线的样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td>items</td>
+<td>tabbarItems</td>
+<td>array</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td>components</td>
+<td>tabbarComponents</td>
+<td>array</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td>selectedTab</td>
+<td>选中的tab的name</td>
+<td>string</td>
+<td><code>&quot;&quot;</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> titleStyle</td>
+<td>自定义默认（未选中）时的文本样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> selectedTitleStyle</td>
+<td>自定义选中时的文本样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> title</td>
+<td>标题</td>
+<td>string</td>
+<td><code>&quot;&quot;</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> name</td>
+<td>指定一个key</td>
+<td>string</td>
+<td><code>&quot;&quot;</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> tabStyle</td>
+<td>自定义每个TabBar.Item的容器样式</td>
+<td>object</td>
+<td><code>{}</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> icon</td>
+<td>未选中时的图标</td>
+<td>element</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> selectedIcon</td>
+<td>选中时的图标</td>
+<td>element</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td><code>TabBar.Item</code> changeTab</td>
+<td>切换时触发，返回选中状态的item的name（key）</td>
+<td>function</td>
+<td><code>() =&gt; {}</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>import {Home, Active, Timer, Settings} from &#39;./container&#39;;
+
+constructor(props) {
+  super(props);
+  this.state = {
+    currentTab: &#39;active&#39;
+  };
+}
+setTabItem(name, title, icon) {
+  return (
+    &lt;TabBar.Item 
+      changeTab = {(tab) =&gt; this.setState({currentTab: tab})}
+      title = {title}
+      name = {name}
+      icon = {&lt;Icon name = {icon} size = {25} color = {&#39;#666666&#39;} /&gt;}
+      selectedIcon = {&lt;Icon name = {icon} size = {25} color = {&#39;#ff4f4f&#39;} /&gt;}
+    /&gt;
+  )
+}
+setTabComponent(name, component) {
+  return (
+    &lt;TabBar.Component name = {name} &gt;
+      {component}
+    &lt;/TabBar.Component&gt;
+  )
+}
+renderTabItem() {
+  let tabItems = [];
+  tabItems.push(this.setTabItem(&#39;home&#39;, &#39;首页&#39;, &#39;ios-home&#39;));
+  tabItems.push(this.setTabItem(&#39;active&#39;, &#39;激活&#39;, &#39;ios-bulb&#39;));
+  tabItems.push(this.setTabItem(&#39;timer&#39;, &#39;定时器&#39;, &#39;ios-clock&#39;));
+  tabItems.push(this.setTabItem(&#39;settings&#39;, &#39;设置&#39;, &#39;ios-settings&#39;));
+  return tabItems;
+}
+renderTabComponents() {
+  let tabComponents = [];
+  tabComponents.push(this.setTabComponent(&#39;home&#39;, &lt;Home/&gt;));
+  tabComponents.push(this.setTabComponent(&#39;active&#39;, &lt;Active/&gt;));
+  tabComponents.push(this.setTabComponent(&#39;timer&#39;, &lt;Timer/&gt;));
+  tabComponents.push(this.setTabComponent(&#39;settings&#39;, &lt;Settings/&gt;));
+  return tabComponents;
+}
+render() {
+  return (
+    &lt;TabBar 
+      selectedTab = {this.state.currentTab} 
+      items = {this.renderTabItem()} 
+      components = {this.renderTabComponents()} 
+    /&gt;
+  )
+}
+</code></pre><pre><code>import {Home, Active, Timer, Settings} from &#39;./container&#39;;
+constructor(props) {
+  super(props);
+  this.state = {
+    currentTab: &#39;active&#39;
+  }
+}
+renderTabItem(name, title, icon, component) {
+  return (
+    &lt;TabBar.Item
+      selected = {this.state.currentTab === name}
+      changeTab = {(tab) =&gt; this.setState({currentTab: tab})}
+      title = {title}
+      name = {name}
+      icon = {&lt;Icon name = {icon} size = {25} color = {&#39;#666666&#39;} /&gt;}
+      selectedIcon = {&lt;Icon name = {icon} size = {25} color = {&#39;#ff4f4f&#39;} /&gt;}
+      titleStyle = {{fontSize: 12, color: '#666666'}}
+      selectedTitleStyle = {{fontSize: 12}}
+    &gt;
+      {component}
+    &lt;/TabBar.Item&gt;
+  )
+}
+render() {
+  return (
+    &lt;TabBar hidesTabTouch&gt;
+      {this.renderTabItem(&#39;home&#39;, &#39;首页&#39;, &#39;ios-home&#39;, &lt;Home/&gt;)}
+      {this.renderTabItem(&#39;active&#39;, &#39;激活&#39;, &#39;ios-bulb&#39;, &lt;Active/&gt;)}
+      {this.renderTabItem(&#39;timer&#39;, &#39;定时器&#39;, &#39;ios-clock&#39;, &lt;Timer/&gt;)}
+      {this.renderTabItem(&#39;settings&#39;, &#39;设置&#39;, &#39;ios-settings&#39;, &lt;Settings/&gt;)}
+    &lt;/TabBar&gt;
+  )
+}
+</code></pre><ul>
+<li><h4 id="Toast"><a href="#Toast" class="headerlink" title="Toast"></a>Toast</h4>小型提示框</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>说明</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>content</td>
+<td>提示信息</td>
+<td>string</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>持续时间</td>
+<td>number (ms)</td>
+</tr>
+<tr>
+<td>mask</td>
+<td>是否使用遮罩层，默认为true，使用遮罩层的话在toast显示期间无法对屏幕进行任何操作</td>
+<td>boolean</td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;Button onPress = {() =&gt; this.toast.show({
+  content: &#39;取消遮罩层&#39;,
+  mask: false
+})} &gt;取消遮罩层&lt;/Button&gt;
+&lt;Toast ref = {toast =&gt; this.toast = toast} /&gt;
+</code></pre><h5 id="全局提示"><a href="#全局提示" class="headerlink" title="全局提示"></a>全局提示</h5><pre><code>//根js
+componentDidMount() {
+  window.addEventListener(&#39;showToast&#39;, e =&gt; {
+    this.rootToast.show(window.toastConfig);
+  })
+}
+render() {
+  return (
+    &lt;div&gt;
+      &lt;Router history={hashHistory} routes = {routerConfig} /&gt;
+        &lt;Toast ref = {toast =&gt; this.rootToast = toast} /&gt;
+    &lt;/div&gt;
+  )
+}
+
+//子组件
+&lt;Button onPress = {() =&gt; {
+  window.toastConfig = {
+    content: &#39;全局提示&#39;,
+    mask: false
+  }
+  window.dispatchEvent(new Event(&#39;showToast&#39;))
+}} &gt;全局提示&lt;/Button&gt;
+</code></pre><pre><code>//根js
+componentDidMount() {
+  DeviceEventEmitter.addListener(&#39;showToast&#39;, (config) =&gt; {
+    this.rootToast.show(config);
+  })
+}
+render() {
+  return (
+    &lt;View style = {{flex: 1}} &gt;
+      &lt;Navigator /&gt;
+      &lt;Toast ref = {toast =&gt; this.rootToast = toast} /&gt;
+    &lt;/View&gt;
+  );
+}
+
+//子组件
+&lt;Button 
+  onPress = {() =&gt; DeviceEventEmitter.emit(&#39;showToast&#39;, {
+    content: &#39;全局提示&#39;,
+    mask: false
+})} &gt;全局提示&lt;/Button&gt;
+</code></pre>	
+	</div>
+	
+	<div id="current-post-cover" data-scr="/img/mescal/3.jpg"></div>
+
+	<!-- relate post, comment...-->
+	<div class="investment-container">
+		<div class="investment-header">
+			<div class="investment-title-1">
+				<div class="on">相关文章</div>
+				<!-- <div>评论</div> -->
+			</div>
+			<div class="investment-title-2">	            
+				
+	<span>
+		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
+		
+			<a href="/2018/07/04/2018-07-04-technology-vpull-refresh/" title="基于vue封装的轻量级下拉刷新组件" rel="prev">
+				&laquo;上一篇
+			</a>
+		
+		
+			<a href="/2018/02/25/2018-02-25-technology-angular-m-cli/" title="一个能够快速构建AngularJS多页项目的轻量级脚手架" rel="next">
+				下一篇&raquo;
+			</a>
+			
+	</span>
+      		
+			</div>	
+		</div>
+		
+		<div class="investment-content">
+			<div class="investment-content-list">
+				
+
+<div class="relate-post">
+	<ul>
+		
+				<li>
+					<div>
+						<a href="/2018/09/27/2018-09-27-technology-vue-app-cli/" title="快速开发基于vue的app应用——vue-app-cli">
+							快速开发基于vue的app应用——vue-app-cli
+						</a>
+						<p>
+							
+一个能够让你快速构建基于vue的app多页应用脚手架，可独立开发h5 app或集成到hbuilder开发原生应用。文档地址vue-cli之所以不使用官方的vue-cli构建应用是因为：
+
+vue-cli需要自己实现多页面构建。
+在开...
+						</p>
+					</div>
+
+					<a href="/2018/09/27/2018-09-27-technology-vue-app-cli/" title="快速开发基于vue的app应用——vue-app-cli">				
+						<img src="/img/mescal/1.jpg" class="relateImg" alt="快速开发基于vue的app应用——vue-app-cli">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/08/29/2018-08-29-technology-weixin/" title="初探微信小程序之小川天气">
+							初探微信小程序之小川天气
+						</a>
+						<p>
+							微信小程序可以说是当下很火热的应用了。在好奇心的作用下，通读了一遍之后便开始上手撸了一个很简单的天气应用——小川天气。
+
+
+
+目前已经发布正式版本，你可以直接在微信中搜索小川天气来使用。
+小程序的文档已经很完善了，通读一遍后上手写代码...
+						</p>
+					</div>
+
+					<a href="/2018/08/29/2018-08-29-technology-weixin/" title="初探微信小程序之小川天气">				
+						<img src="/img/mescal/xiaochuan_weather.jpg" class="relateImg" alt="初探微信小程序之小川天气">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/07/31/2018-07-31-technology-node-health/" title="基于React和Node实现一个食物热量参考应用">
+							基于React和Node实现一个食物热量参考应用
+						</a>
+						<p>
+							利用业余时间，自己做了一个食物热量参考网站，数据参考自一个app食物库。技术栈使用了sass+react+react-router+redux+antd+express+mongoose。
+
+一、How To Use下载首先将代码cl...
+						</p>
+					</div>
+
+					<a href="/2018/07/31/2018-07-31-technology-node-health/" title="基于React和Node实现一个食物热量参考应用">				
+						<img src="/img/mescal/node_health.jpg" class="relateImg" alt="基于React和Node实现一个食物热量参考应用">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/07/04/2018-07-04-technology-vpull-refresh/" title="基于vue封装的轻量级下拉刷新组件">
+							基于vue封装的轻量级下拉刷新组件
+						</a>
+						<p>
+							如何使用将项目中的src/components/pullRefresh.vue和src/img拷贝到你的工程内。如层级发生改变，你需要手动修改pullRefresh.vue中的图片链接地址。
+API
+
+
+属性
+说明
+类型
+默认值
+
+
+...
+						</p>
+					</div>
+
+					<a href="/2018/07/04/2018-07-04-technology-vpull-refresh/" title="基于vue封装的轻量级下拉刷新组件">				
+						<img src="/img/mescal/2.jpg" class="relateImg" alt="基于vue封装的轻量级下拉刷新组件">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/02/25/2018-02-25-technology-angular-m-cli/" title="一个能够快速构建AngularJS多页项目的轻量级脚手架">
+							一个能够快速构建AngularJS多页项目的轻量级脚手架
+						</a>
+						<p>
+							
+一款基于webpack的快速构建angular1的多页应用构建方案文档地址使用angular-m-cli，您可以做到
+快速构建项目原型
+自动生成新页面并完成相关配置（包括入口文件、css、index.html）
+利用本地服务器完成开...
+						</p>
+					</div>
+
+					<a href="/2018/02/25/2018-02-25-technology-angular-m-cli/" title="一个能够快速构建AngularJS多页项目的轻量级脚手架">				
+						<img src="/img/mescal/4.jpg" class="relateImg" alt="一个能够快速构建AngularJS多页项目的轻量级脚手架">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/01/27/2018-01-27-technology-atom/" title="优雅地配置Atom">
+							优雅地配置Atom
+						</a>
+						<p>
+							从最初的sublime text，到webstorm，后来又转战visual studio code，直到现在的atom，就个人使用体验来看是越来越舒适的。之前一直在使用sublime text和webstorm，后来尝试了一把vs ...
+						</p>
+					</div>
+
+					<a href="/2018/01/27/2018-01-27-technology-atom/" title="优雅地配置Atom">				
+						<img src="/img/mescal/5.jpg" class="relateImg" alt="优雅地配置Atom">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/01/19/2018-01-19-technology-react-native-textinput/" title="React Native之巧用TextInput">
+							React Native之巧用TextInput
+						</a>
+						<p>
+							近日使用rn开发电商app遇到一个再简单不过的需求：买家申请退款，填写申请单，其中有一个多行文本输入框用于填写退款理由，如图所示：
+
+看似简单的需求，然而用rn开发还是会遇到问题。
+页面搭建两个View和一个TextInput足矣，外...
+						</p>
+					</div>
+
+					<a href="/2018/01/19/2018-01-19-technology-react-native-textinput/" title="React Native之巧用TextInput">				
+						<img src="/img/mescal/6.jpg" class="relateImg" alt="React Native之巧用TextInput">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2017/11/20/2017-11-20-technology-react-native-linking/" title="近日使用React Native Linking踩过的坑">
+							近日使用React Native Linking踩过的坑
+						</a>
+						<p>
+							使用react native（以下简称rn）开发移动端app已经有四个月的时间了（包括第一个月的上手），感谢rn，让前端开发人员也能够开发原生的app。前几天遇到一个需求：打开第三方的支付应用并监听返回的结果。听上去这个需求并不难，然...
+						</p>
+					</div>
+
+					<a href="/2017/11/20/2017-11-20-technology-react-native-linking/" title="近日使用React Native Linking踩过的坑">				
+						<img src="/img/mescal/7.jpg" class="relateImg" alt="近日使用React Native Linking踩过的坑">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2017/11/15/2017-11-15-technology-webpack-config/" title="Webpack工程化配置">
+							Webpack工程化配置
+						</a>
+						<p>
+							本文重点讲述如何一步一步搭建webpack工程化配置，这里涉及到一些常用插件的使用以及node.js的文件操作。上篇文章介绍到，webpack配置成了两种模式，有些人喜欢将两种模式的代码放到不同的配置文件中，而我更偏爱全部集成到web...
+						</p>
+					</div>
+
+					<a href="/2017/11/15/2017-11-15-technology-webpack-config/" title="Webpack工程化配置">				
+						<img src="/img/mescal/8.jpg" class="relateImg" alt="Webpack工程化配置">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2017/04/26/2017-04-26-technology-express-build/" title="基于Express搭建前后端分离的开发环境">
+							基于Express搭建前后端分离的开发环境
+						</a>
+						<p>
+							对于一个前端开发人员来说，node.js可以说是开发后端的福音。本人毕设项目使用的是asp.net（只是使用ashx来接收前端的ajax，并没有使用那些恶心的控件），通过对比发现整个项目都使用js实在是幸福。
+Node.js关于nod...
+						</p>
+					</div>
+
+					<a href="/2017/04/26/2017-04-26-technology-express-build/" title="基于Express搭建前后端分离的开发环境">				
+						<img src="/img/mescal/9.jpg" class="relateImg" alt="基于Express搭建前后端分离的开发环境">
+					</a>
+				</li>											
+		
+		
+	</ul>
+</div>	
+			</div>
+			<div class="investment-content-list">
+				<div class="layout-comment">
+
+	
+
+		
+
+			<!-- I don't know 【表情】-->
+			
+		
+		
+	
+
+</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+
+	<script>
+		var appid = 'CqXKtSjjcNvnClld9bAoTF5d-gzGzoHsz',
+            appkey = 'u6UWhjE8CwlhhefsUo7HNHRq';	  
+        AnnieLeancloud(appid, appkey);         
+	</script>
+    
+
+
+ 
+
+<!-- show math formula -->
+
+
+
+
+<!-- TODO: There seems to be a bug when you close the post gallery! -->
+<link rel="stylesheet" href="/plugin/lightgallery/css/lightgallery.css">
+<script src="/plugin/lightgallery/js/jquery-1.11.0.min.js"></script>
+<script src="/plugin/lightgallery/js/lightgallery-all.min.js"></script>
+
+<script type="text/javascript">
+	var postTitle = $('.article-title a').text() ? $('.article-title a').text() : "No post title!";
+	$('.article-content img').each(function() {
+		var imgPath = $(this).attr('src'),
+			imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		$(this).wrap('<div class="img-responsive" data-src="' + imgPath + '" data-responsive="' + imgPath + '" data-sub-html="<p>图片 ' + imgTitle + '</p><h4>文章' + postTitle + '</h4>"></div>');
+	});
+
+	$('.article-content').lightGallery({
+		mode: 'lg-slide',
+		selector: '.img-responsive',
+		share: false,
+		zoom: false,
+		download: false
+	});
+	//TODO：支持video
+</script>
+
+<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+		
+
+		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
+	
+		</main>
+		
+		<!--footer-->
+		<footer>
+	<div class="social">
+		<ul>
+	
+		
+			<li>
+				<a href="https://github.com/mescalchuan" title="Github" target="_blank">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="https://weibo.com/6454388854/profile?topnav=1&wvr=6" title="Weibo" target="_blank">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="/1335382915@qq.com" title="Email" target="_blank">
+					<i class="fa fa-envelope-o"></i>
+				</a>
+			</li>
+		
+
+		
+			<li>
+				<a href="/1335382915" title="QQ" target="_blank">
+					<i class="fa fa-qq"></i>
+				</a>
+			</li>
+		
+		
+	 
+</ul>
+	</div>
+		
+	<div class="copyright">
+		<p>
+			 
+				&copy;2019, content by Mescal Chuan. All Rights Reserved.
+			
+			
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<!-- <span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span> -->
+
+	
+
+
+
+
+		</p>
+		<!-- <p>
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay. 					
+		</p> -->
+	</div>		
+</footer>
+		
+    <!-- set '1' to show motto in all pages! -->
+
+	<script src="/js/motto.js"></script>
+	<script type="text/javascript">
+		$(".motto").html( getMingYanContent() );
+	</script>	
+
+
+
+
+    <!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup">
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      ESC
+   </span>
+		<div class="local-search-header">
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			
+
+   
+	<div id="topN"></div>
+	
+    <script>
+        var appid = 'CqXKtSjjcNvnClld9bAoTF5d-gzGzoHsz',
+            appkey = 'u6UWhjE8CwlhhefsUo7HNHRq',
+            limitCount = 10;
+        if( $('#topN').length ){
+            AV.initialize(appid, appkey);
+            var Counter = AV.Object.extend("Counter");  
+            topNPost(Counter, limitCount);
+        }
+    </script>
+   
+
+		</div>
+	</div>
+</div>
+
+<script src="/js/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
+
+
+
+
+<!--back to top-->
+
+    
+	<div id="totop">
+  		<a href="javascript:;" name="TOTOP" class="fa fa-arrow-up"></a>
+	</div>
+	<div id="tobuttom">
+		<a href="javascript:;" name="TOBUTTOM" class="fa fa-arrow-down"></a>
+	</div>
+ 
+
+
+ 
+
+<script src="/js/vibrant.js"></script>
+<script src="/js/chinese.js"></script>
+<script src="/js/main.js"></script>
+	</body>
+	</html>

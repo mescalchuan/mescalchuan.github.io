@@ -2,6 +2,7 @@ var path = require('path');
 var fs = require('fs');
 var webpack = require('webpack');
 var config = require('./config');
+var hljs = require('highlight.js'); 
 
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
@@ -36,7 +37,7 @@ files.forEach(function(filename) {
     }
 })
 
-var remLoader = `px2rem-loader?remUnit=${config.remUnit}`
+//var remLoader = `px2rem-loader?remUnit=${config.remUnit}`
 
 //webpack配置
 var webpackConfig = {
@@ -66,12 +67,12 @@ var webpackConfig = {
     		test: /\.css$/,
 	        use: ExtractTextPlugin.extract({
 	            fallback: 'style-loader',
-	            use: ['css-loader', remLoader]
+	            use: ['css-loader']
 	        })
 		}, {
 			test: /\.scss$/,
 	        use: ExtractTextPlugin.extract({
-	            use: ['css-loader', remLoader, 'sass-loader'],
+	            use: ['css-loader', 'sass-loader'],
 	            fallback: 'style-loader'
 	        })
 		}, {
@@ -81,6 +82,28 @@ var webpackConfig = {
                 limit: 8192,
                 name: 'images/[name].[ext]'
             }
+        }, {
+            test: /\.md$/,
+            use: [
+                {
+                    loader: "html-loader"
+                },
+                {
+                    loader: "markdown-loader",
+                    options: {
+                        /* your options here */
+                        highlight: function (str, lang) {
+                            if (lang && hljs.getLanguage(lang)) {
+                              try {
+                                return hljs.highlight(lang, str).value;
+                              } catch (__) {}
+                            }
+                        
+                            return ''; // use external default escaping
+                          }
+                    }
+                }
+            ]
         }]
     },
     resolve: {
@@ -112,15 +135,15 @@ var webpackConfig = {
         		options: {
         			loaders: {
 			      		scss: ExtractTextPlugin.extract({
-			              	use: `css-loader!${remLoader}!sass-loader`,
+			              	use: `css-loader!sass-loader`,
 			              	fallback: 'vue-style-loader'
 			            }),
 			      		sass: ExtractTextPlugin.extract({
-			              	use: `css-loader!${remLoader}!sass-loader?indentedSyntax`,
+			              	use: `css-loader!sass-loader?indentedSyntax`,
 			              	fallback: 'vue-style-loader'
 			            }),
 			    		css: ExtractTextPlugin.extract({
-			              	use: `css-loader!${remLoader}`,
+			              	use: `css-loader`,
 			              	fallback: 'vue-style-loader'
 			            })
         			}

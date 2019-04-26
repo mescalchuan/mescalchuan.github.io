@@ -1,0 +1,906 @@
+
+
+	<!DOCTYPE html>
+	<html class="scrollbar">
+		
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      Blob对象 | Mescal 川
+    
+  </title>
+  <meta name="author" content="Mescal Chuan">
+  <meta name="keywords" content>
+  <meta name="description" content>
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+    <!-- jquery -->
+	<script src="/js/jquery-2.1.1.min.js"></script>
+
+  <!-- leancloud -->
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script src="/js/leancloud.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="transition">
+					<div class="three-bounce1"></div>
+					<div class="three-bounce2"></div>
+					<div class="three-bounce3"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground" data-img-mode="normal" data-normal-src="/img/48.jpg" data-random-max="110" data-random-src="https://sariay.github.io/Random-img/">
+	<div class="mask">
+		<div class="h-header">
+			<div id="logo-S">
+				
+					<a href="/">
+						Mescal
+					</a>
+				
+			</div>
+			<!-- Navigation in header(id="navigation-S") -->
+			<div id="navigation-S">
+				<ul>
+					
+						<li class="menu-home">
+							<a href="/" class="menu-item-home">主页</a>
+						</li>
+					
+						<li class="menu-archive">
+							<a href="/archives" class="menu-item-archive">归档</a>
+						</li>
+					
+						<li class="menu-categories">
+							<a href="/categories" class="menu-item-categories">分类</a>
+						</li>
+					
+						<li class="menu-tags">
+							<a href="/tags" class="menu-item-tags">标签</a>
+						</li>
+					
+						<li class="menu-about">
+							<a href="/about" class="menu-item-about">关于</a>
+						</li>
+					
+						<li class="menu-gallery">
+							<a href="/gallery" class="menu-item-gallery">摄影集</a>
+						</li>
+					
+
+					
+						<li class="menu-search">
+							<a href="javascript:;" class="popup-trigger" title="Search">搜索</a>
+						</li>
+					
+				</ul>			
+			</div>				
+		</div>
+
+		<div class="h-body">	
+			<!-- motto -->
+			
+				<div id="page-motto">
+					<p class="motto">
+						
+					</p>
+				</div>
+			
+
+			<div id="navigation-H">
+				<!-- Page title -->
+				<p>
+					
+						当前文章&nbsp;:&nbsp;《Blob对象》
+					
+				</p>
+				<!-- Progress bar -->
+				<div id="progress-bar"></div>
+
+				<!-- Progress percent -->
+				<div id="progress-percentage">
+					<h1>0.0%</h1>
+				</div>
+			</div>
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<ul>
+				<!-- <li>
+					<a><i class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>切换背景</a>
+				</li> -->
+				<li>
+					<a href="javascript:;" id="read-more"><i class="fa fa-angle-double-down"></i></a>
+				</li>
+				<!-- <li>
+					<a href="https://github.com/Sariay/hexo-theme-Annie" target="_blank"><i class="fa fa-download"></i>克隆主题</a>
+				</li> -->
+			</ul>
+		</div>
+		
+		<!-- This is only a demo, please go to "https://time.is" to set your city time! -->
+<style type="text/css">
+	.header-date {
+		position: absolute;
+		left: 40px;
+		bottom: 30px;
+		writing-mode: tb-rl;
+		font-size: 36px;
+	}	
+	.header-date a {
+		border-bottom: none;
+	}
+	@media only screen and (max-width: 768 ) {
+		.header-date {
+			position: absolute;
+			left: 40px;
+			bottom: 30px;
+			writing-mode: tb-rl;
+			font-size: 20px;
+		}			
+	}
+</style>
+<div class="header-date">
+	<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow"></a>
+	<span id="Beijing_z43d"></span>
+</div>
+<script src="//widget.time.is/zh.js"></script>
+<script>
+	time_is_widget.init({
+		Beijing_z43d:{
+			template:"DATE", 
+			date_format:"year年 monthname dnum日"
+		}
+	});
+</script>
+</div></header>
+
+<!-- Navigation in div(id="navigation-H") -->
+<a class="nav-trigger">
+	<span></span>
+</a>
+
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<h3>Navigation</h3>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	<div class="nav-body">
+		<ul>
+			
+				<li class="menu-home">
+					<a href="/" class="menu-item-home">主页</a>
+				</li>
+			
+				<li class="menu-archive">
+					<a href="/archives" class="menu-item-archive">归档</a>
+				</li>
+			
+				<li class="menu-categories">
+					<a href="/categories" class="menu-item-categories">分类</a>
+				</li>
+			
+				<li class="menu-tags">
+					<a href="/tags" class="menu-item-tags">标签</a>
+				</li>
+			
+				<li class="menu-about">
+					<a href="/about" class="menu-item-about">关于</a>
+				</li>
+			
+				<li class="menu-gallery">
+					<a href="/gallery" class="menu-item-gallery">摄影集</a>
+				</li>
+			
+
+			
+				<li class="menu-search">
+					<a href="javascript:;" class="popup-trigger" title="Search">搜索</a>
+				</li>
+			
+		</ul>
+	</div>
+
+	<div class="nav-footer">
+		<ul>
+	
+		
+			<li>
+				<a href="https://github.com/mescalchuan" title="Github" target="_blank">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="https://weibo.com/6454388854/profile?topnav=1&wvr=6" title="Weibo" target="_blank">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="/1335382915@qq.com" title="Email" target="_blank">
+					<i class="fa fa-envelope-o"></i>
+				</a>
+			</li>
+		
+
+		
+			<li>
+				<a href="/1335382915" title="QQ" target="_blank">
+					<i class="fa fa-qq"></i>
+				</a>
+			</li>
+		
+		
+	 
+</ul>
+	</div>
+</nav>
+
+		
+		<!--main-->
+		<main>
+			<div class="layout-post">
+	
+	
+	<div class="article-title">
+		
+	<a href="/2016/08/02/2016-08-02-technology-blob/" itemprop="url">
+		Blob对象
+	</a>
+
+	</div>
+
+	<div class="article-meta">
+		<span>
+			
+	发布于
+	<a href="/2016/08/02/2016-08-02-technology-blob/" itemprop="url">
+		<time datetime="2016-08-02T10:32:20.000Z" itemprop="datePublished">
+	  		2016-08-02
+	  </time>
+	</a> 
+
+	/
+	更新于
+	<a href="/2016/08/02/2016-08-02-technology-blob/" itemprop="url">
+		<time datetime="2016-08-02T10:32:20.000Z" itemprop="dateUpdated">
+	  		2019-04-26
+	  </time>
+	</a> 	
+
+		</span>
+		/
+		<span>
+			<i class="fa fa-tags"></i>
+			
+	
+		<a href="/tags/博客/" class=" ">
+			博客
+		</a>
+	
+		<a href="/tags/技术博客/" class=" ">
+			技术博客
+		</a>
+	
+		<a href="/tags/javascript/" class=" ">
+			javascript
+		</a>
+	
+		
+		</span>
+		<!-- /
+		
+
+    <span class="leancloud_visitors" id="/2016/08/02/2016-08-02-technology-blob/_visitors" data-url="/2016/08/02/2016-08-02-technology-blob/" data-title="Blob对象">
+        热度
+        <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
+    </span>
+    
+    /
+
+
+
+    <span class="leancloud_likes" id="/2016/08/02/2016-08-02-technology-blob/_likes" data-url="/2016/08/02/2016-08-02-technology-blob/" data-title="Blob对象" rel="unlike">
+        喜欢
+        <i class="fa fa-heart"></i>
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+ -->
+	</div>
+
+	<div class="article-content" id="article-content">
+		<p>前几天写公司的SpreadJS控件的测试用例时遇到一个需求，不通过input标签的type=file的形式来实现本地文件选择，而是直接指定自己想要上传的文件（因为模拟ui行为的测试会占用大量的时间，影响测试效率）。一开始我认为这是不可能实现的，因为浏览器的安全性原因，js是不能直接访问系统文件的（node.js除外）。ie浏览器支持使用FileSystemObject接口来访问本地文件，但是其他浏览器均没有实现。初步方案是利用后端语言去访问系统文件然后转换成base64格式返回给前端，前端将base64转成file文件。</p>
+<h4 id="一、后端操作"><a href="#一、后端操作" class="headerlink" title="一、后端操作"></a>一、后端操作</h4><p>后端语言可以很轻松地去访问本地文件，我将文件对象存入到byte数组中并转换成了base64的字符串传给前端。后端代码就不写了，很简单。<br><br></p>
+<h4 id="二、前端操作"><a href="#二、前端操作" class="headerlink" title="二、前端操作"></a>二、前端操作</h4><p>我想通过后端的base64字符串来生成File对象的实例。这里就需要了解input标签形式的文件上传的底层原理。</p>
+<h4 id="1-input生成文件对象的原理"><a href="#1-input生成文件对象的原理" class="headerlink" title="1.input生成文件对象的原理"></a>1.input生成文件对象的原理</h4><p>查阅w3c的文档得知：在 HTML 文档中<code>&lt;input type=&quot;file&quot;&gt;</code>标签每出现一次，一个 FileUpload 对象就会被创建。</p>
+<p>该元素包含一个文本输入字段，用来输入文件名，还有一个按钮，用来打开文件选择对话框以便图形化选择文件。当用户选择了一个或多个文件点击”打开”时，js会生成一个FileList数组来保存用户所选择的文件。FileList包含了一个或多个File对象。可以通过<code>document.getElemenById(&quot;uploadFile&quot;).files</code>来进行访问。处于安全性的考虑，File对象不会暴露出文件的内容，它只提供了一些只读的属性来描述修改时间、文件类型、长度、名字等。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1495096-0895fa2984313aad.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br><br></p>
+<h4 id="2-创建File对象"><a href="#2-创建File对象" class="headerlink" title="2.创建File对象"></a>2.创建File对象</h4><p>js有一个底层的Blob对象，它是一个包含有只读原始数据的类文件对象。File对象就继承自Blob对象并扩展了系统文件的支持。</p>
+<p>Blob对象的构造函数（来自MDN）</p>
+<pre><code>Blob Blob(
+  [optional] Array parts,
+  [optional] BlobPropertyBag properties
+);
+</code></pre><p>第一个参数是一个数组，里面可以是DOMString，也可以是TypeArray或者Blob。<br>这里需要解释一下TypedArray：在JS语言中，数值只有一种称为Number的类型，而不像C语言或底层CPU指令那样区分是整型还是浮点型，是有符号的还是无符号的，是32位的还是64位的。Typed Array的主要是为了弥补JS处理二进制格式数据的不足，利用Typed Array可以非常方便地操作二进制的数据。TypedArray包括Int32Array、Uint8Array、Float32Array等，也可以是连续的内存缓冲区ArrayBuffer或者工具类DataView。</p>
+<pre><code>var myFile=new Blob([u8arr],{type : &#39;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&#39;});
+</code></pre><p>第一个参数是一个Uint8Array的TypedArray类型，它是一个8比特的无符号的int数组，通过base64转换而来。第二参数是该文件的mime类型，不同的文件类型可以参考w3c的mime手册。<br><br></p>
+<h4 id="3-base64的转换"><a href="#3-base64的转换" class="headerlink" title="3.base64的转换"></a>3.base64的转换</h4><p>还剩最后一个问题，如何把base64转成Uint8Array?<br>js提供了window.atob(base64)的方式对base64进行解码。再通过charCodeAt()的方式转成Uint类型。代码如下</p>
+<pre><code>var bytes=window.atob(base64),      //解码  
+    n=bytes.length,
+    u8arr=new Uint8Array(n),
+while(n--){
+    u8arr[n]=bytes.charCodeAt(n);   //将编码转换成Unicode编码
+}
+</code></pre><p>我对这一操作做了封装</p>
+<pre><code>//假设有一个xlsx文件
+function createFile(urlData){
+     var bytes=window.atob(urlData),
+         n=bytes.length,
+         u8arr=new Uint8Array(n);
+     while(n--){
+          u8arr[n]=bytes.charCodeAt(n);
+     }
+     return new Blob([u8arr],{type:&#39;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&#39;}});
+}
+var str=&quot;&quot;;   //str接收来自后端返回的base64
+var myFile=createFile(str);
+</code></pre><p>现在就大功告成了。前端的文件对象已经成功生成。<br><br></p>
+<h4 id="4-最终测试"><a href="#4-最终测试" class="headerlink" title="4.最终测试"></a>4.最终测试</h4><p>我在代码中创建一个链接去下载这个文件</p>
+<pre><code>var a = document.createElement(&quot;a&quot;);
+a.href =window.URL.createObjectURL(myFile); //下载路径指向这个文件对象 
+a.download = &quot;SunnyChuan.xlsx&quot;; 
+a.click();    //指定页面自动下载文件
+document.body.appendChild(a);
+</code></pre><p>页面打开后会自动下载文件</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1495096-63f4eab0b989b958.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p>我们把文件打开测试一下整个流程中有没有数据损失</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1495096-d471e0364e320580.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p>从图中可以看出文件完成无损地传到了前端。</p>
+<p>这里有一个小插曲:用ie浏览器是无法下载的，因此需要做hack:、</p>
+<pre><code>if(navigator.appVersion.toString().indexOf(&quot;.NET&quot;)&gt;0){
+     window.navigator.msSaveBlob(myFile, &quot;SunnyChuan.xlsx&quot;);
+}
+else{
+        var a = document.createElement(&quot;a&quot;);
+        a.href =window.URL.createObjectURL(myFile); 
+        a.download = &quot;SunnyChuan.xlsx&quot;; 
+        a.click(); 
+        document.body.appendChild(a);
+}  
+</code></pre><p>附上完整的代码</p>
+<pre><code>function createFile(urlData,fileType){
+     var bytes=window.atob(urlData),
+         n=bytes.length,
+         u8arr=new Uint8Array(n);
+     while(n--){
+          u8arr[n]=bytes.charCodeAt(n);
+     }
+     return new Blob([u8arr],{type:fileType});
+}
+var str=&quot;&quot;;   //str接收来自后端返回的base64
+var fileType=&quot;&quot;;//指定mime
+var myFile=createFile(str,fileType);
+if(navigator.appVersion.toString().indexOf(&quot;.NET&quot;)&gt;0){
+     window.navigator.msSaveBlob(myFile, &quot;SunnyChuan.xlsx&quot;);
+}
+else{
+        var a = document.createElement(&quot;a&quot;);
+        a.href =window.URL.createObjectURL(myFile); 
+        a.download = &quot;SunnyChuan.xlsx&quot;; 
+        a.click(); 
+        document.body.appendChild(a);
+}  
+</code></pre><h4 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h4><p>js一般是不可以直接访问本地文件的，但是可以通过一些间接的方式去实现。js的文件操作一般用于下载文件以及保存图片。我实习的公司就是通过将产品内部的图片转成base64，在需要使用的时候再转换回图片，这种方式不需要产品附带图片文件，产品最终只有一个js文件，极大地减少了产品尺寸。</p>
+	
+	</div>
+	
+	<div id="current-post-cover" data-scr="/img/mescal/13.jpg"></div>
+
+	<!-- relate post, comment...-->
+	<div class="investment-container">
+		<div class="investment-header">
+			<div class="investment-title-1">
+				<div class="on">相关文章</div>
+				<!-- <div>评论</div> -->
+			</div>
+			<div class="investment-title-2">	            
+				
+	<span>
+		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
+		
+			<a href="/2016/10/30/2016-10-30-technology-es6-2/" title="ES6学习笔记（二）" rel="prev">
+				&laquo;上一篇
+			</a>
+		
+		
+			<a href="/2016/03/15/2016-03-15-technology-h-v-center/" title="水平垂直居中那些事" rel="next">
+				下一篇&raquo;
+			</a>
+			
+	</span>
+      		
+			</div>	
+		</div>
+		
+		<div class="investment-content">
+			<div class="investment-content-list">
+				
+
+<div class="relate-post">
+	<ul>
+		
+				<li>
+					<div>
+						<a href="/2018/09/27/2018-09-27-technology-vue-app-cli/" title="快速开发基于vue的app应用——vue-app-cli">
+							快速开发基于vue的app应用——vue-app-cli
+						</a>
+						<p>
+							
+一个能够让你快速构建基于vue的app多页应用脚手架，可独立开发h5 app或集成到hbuilder开发原生应用。文档地址vue-cli之所以不使用官方的vue-cli构建应用是因为：
+
+vue-cli需要自己实现多页面构建。
+在开...
+						</p>
+					</div>
+
+					<a href="/2018/09/27/2018-09-27-technology-vue-app-cli/" title="快速开发基于vue的app应用——vue-app-cli">				
+						<img src="/img/mescal/1.jpg" class="relateImg" alt="快速开发基于vue的app应用——vue-app-cli">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/08/29/2018-08-29-technology-weixin/" title="初探微信小程序之小川天气">
+							初探微信小程序之小川天气
+						</a>
+						<p>
+							微信小程序可以说是当下很火热的应用了。在好奇心的作用下，通读了一遍之后便开始上手撸了一个很简单的天气应用——小川天气。
+
+
+
+目前已经发布正式版本，你可以直接在微信中搜索小川天气来使用。
+小程序的文档已经很完善了，通读一遍后上手写代码...
+						</p>
+					</div>
+
+					<a href="/2018/08/29/2018-08-29-technology-weixin/" title="初探微信小程序之小川天气">				
+						<img src="/img/mescal/xiaochuan_weather.jpg" class="relateImg" alt="初探微信小程序之小川天气">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/07/31/2018-07-31-technology-node-health/" title="基于React和Node实现一个食物热量参考应用">
+							基于React和Node实现一个食物热量参考应用
+						</a>
+						<p>
+							利用业余时间，自己做了一个食物热量参考网站，数据参考自一个app食物库。技术栈使用了sass+react+react-router+redux+antd+express+mongoose。
+
+一、How To Use下载首先将代码cl...
+						</p>
+					</div>
+
+					<a href="/2018/07/31/2018-07-31-technology-node-health/" title="基于React和Node实现一个食物热量参考应用">				
+						<img src="/img/mescal/node_health.jpg" class="relateImg" alt="基于React和Node实现一个食物热量参考应用">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/07/04/2018-07-04-technology-vpull-refresh/" title="基于vue封装的轻量级下拉刷新组件">
+							基于vue封装的轻量级下拉刷新组件
+						</a>
+						<p>
+							如何使用将项目中的src/components/pullRefresh.vue和src/img拷贝到你的工程内。如层级发生改变，你需要手动修改pullRefresh.vue中的图片链接地址。
+API
+
+
+属性
+说明
+类型
+默认值
+
+
+...
+						</p>
+					</div>
+
+					<a href="/2018/07/04/2018-07-04-technology-vpull-refresh/" title="基于vue封装的轻量级下拉刷新组件">				
+						<img src="/img/mescal/2.jpg" class="relateImg" alt="基于vue封装的轻量级下拉刷新组件">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/04/21/2018-04-21-technology-x-ui/" title="x-ui">
+							x-ui
+						</a>
+						<p>
+							跨平台的移动端ui组件库
+介绍x-ui是基于react native和react开发出的跨android、ios和h5的三端ui组件库。
+如何使用起步git clone https://github.com/mescalchuan/x...
+						</p>
+					</div>
+
+					<a href="/2018/04/21/2018-04-21-technology-x-ui/" title="x-ui">				
+						<img src="/img/mescal/3.jpg" class="relateImg" alt="x-ui">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/02/25/2018-02-25-technology-angular-m-cli/" title="一个能够快速构建AngularJS多页项目的轻量级脚手架">
+							一个能够快速构建AngularJS多页项目的轻量级脚手架
+						</a>
+						<p>
+							
+一款基于webpack的快速构建angular1的多页应用构建方案文档地址使用angular-m-cli，您可以做到
+快速构建项目原型
+自动生成新页面并完成相关配置（包括入口文件、css、index.html）
+利用本地服务器完成开...
+						</p>
+					</div>
+
+					<a href="/2018/02/25/2018-02-25-technology-angular-m-cli/" title="一个能够快速构建AngularJS多页项目的轻量级脚手架">				
+						<img src="/img/mescal/4.jpg" class="relateImg" alt="一个能够快速构建AngularJS多页项目的轻量级脚手架">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/01/27/2018-01-27-technology-atom/" title="优雅地配置Atom">
+							优雅地配置Atom
+						</a>
+						<p>
+							从最初的sublime text，到webstorm，后来又转战visual studio code，直到现在的atom，就个人使用体验来看是越来越舒适的。之前一直在使用sublime text和webstorm，后来尝试了一把vs ...
+						</p>
+					</div>
+
+					<a href="/2018/01/27/2018-01-27-technology-atom/" title="优雅地配置Atom">				
+						<img src="/img/mescal/5.jpg" class="relateImg" alt="优雅地配置Atom">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/01/19/2018-01-19-technology-react-native-textinput/" title="React Native之巧用TextInput">
+							React Native之巧用TextInput
+						</a>
+						<p>
+							近日使用rn开发电商app遇到一个再简单不过的需求：买家申请退款，填写申请单，其中有一个多行文本输入框用于填写退款理由，如图所示：
+
+看似简单的需求，然而用rn开发还是会遇到问题。
+页面搭建两个View和一个TextInput足矣，外...
+						</p>
+					</div>
+
+					<a href="/2018/01/19/2018-01-19-technology-react-native-textinput/" title="React Native之巧用TextInput">				
+						<img src="/img/mescal/6.jpg" class="relateImg" alt="React Native之巧用TextInput">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2017/11/20/2017-11-20-technology-react-native-linking/" title="近日使用React Native Linking踩过的坑">
+							近日使用React Native Linking踩过的坑
+						</a>
+						<p>
+							使用react native（以下简称rn）开发移动端app已经有四个月的时间了（包括第一个月的上手），感谢rn，让前端开发人员也能够开发原生的app。前几天遇到一个需求：打开第三方的支付应用并监听返回的结果。听上去这个需求并不难，然...
+						</p>
+					</div>
+
+					<a href="/2017/11/20/2017-11-20-technology-react-native-linking/" title="近日使用React Native Linking踩过的坑">				
+						<img src="/img/mescal/7.jpg" class="relateImg" alt="近日使用React Native Linking踩过的坑">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2017/11/15/2017-11-15-technology-webpack-config/" title="Webpack工程化配置">
+							Webpack工程化配置
+						</a>
+						<p>
+							本文重点讲述如何一步一步搭建webpack工程化配置，这里涉及到一些常用插件的使用以及node.js的文件操作。上篇文章介绍到，webpack配置成了两种模式，有些人喜欢将两种模式的代码放到不同的配置文件中，而我更偏爱全部集成到web...
+						</p>
+					</div>
+
+					<a href="/2017/11/15/2017-11-15-technology-webpack-config/" title="Webpack工程化配置">				
+						<img src="/img/mescal/8.jpg" class="relateImg" alt="Webpack工程化配置">
+					</a>
+				</li>											
+		
+		
+	</ul>
+</div>	
+			</div>
+			<div class="investment-content-list">
+				<div class="layout-comment">
+
+	
+
+		
+
+			<!-- I don't know 【表情】-->
+			
+		
+		
+	
+
+</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+
+	<script>
+		var appid = 'CqXKtSjjcNvnClld9bAoTF5d-gzGzoHsz',
+            appkey = 'u6UWhjE8CwlhhefsUo7HNHRq';	  
+        AnnieLeancloud(appid, appkey);         
+	</script>
+    
+
+
+ 
+
+<!-- show math formula -->
+
+
+
+
+<!-- TODO: There seems to be a bug when you close the post gallery! -->
+<link rel="stylesheet" href="/plugin/lightgallery/css/lightgallery.css">
+<script src="/plugin/lightgallery/js/jquery-1.11.0.min.js"></script>
+<script src="/plugin/lightgallery/js/lightgallery-all.min.js"></script>
+
+<script type="text/javascript">
+	var postTitle = $('.article-title a').text() ? $('.article-title a').text() : "No post title!";
+	$('.article-content img').each(function() {
+		var imgPath = $(this).attr('src'),
+			imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		$(this).wrap('<div class="img-responsive" data-src="' + imgPath + '" data-responsive="' + imgPath + '" data-sub-html="<p>图片 ' + imgTitle + '</p><h4>文章' + postTitle + '</h4>"></div>');
+	});
+
+	$('.article-content').lightGallery({
+		mode: 'lg-slide',
+		selector: '.img-responsive',
+		share: false,
+		zoom: false,
+		download: false
+	});
+	//TODO：支持video
+</script>
+
+<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+		
+
+		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
+	
+		</main>
+		
+		<!--footer-->
+		<footer>
+	<div class="social">
+		<ul>
+	
+		
+			<li>
+				<a href="https://github.com/mescalchuan" title="Github" target="_blank">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="https://weibo.com/6454388854/profile?topnav=1&wvr=6" title="Weibo" target="_blank">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="/1335382915@qq.com" title="Email" target="_blank">
+					<i class="fa fa-envelope-o"></i>
+				</a>
+			</li>
+		
+
+		
+			<li>
+				<a href="/1335382915" title="QQ" target="_blank">
+					<i class="fa fa-qq"></i>
+				</a>
+			</li>
+		
+		
+	 
+</ul>
+	</div>
+		
+	<div class="copyright">
+		<p>
+			 
+				&copy;2019, content by Mescal Chuan. All Rights Reserved.
+			
+			
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<!-- <span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span> -->
+
+	
+
+
+
+
+		</p>
+		<!-- <p>
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay. 					
+		</p> -->
+	</div>		
+</footer>
+		
+    <!-- set '1' to show motto in all pages! -->
+
+	<script src="/js/motto.js"></script>
+	<script type="text/javascript">
+		$(".motto").html( getMingYanContent() );
+	</script>	
+
+
+
+
+    <!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup">
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      ESC
+   </span>
+		<div class="local-search-header">
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			
+
+   
+	<div id="topN"></div>
+	
+    <script>
+        var appid = 'CqXKtSjjcNvnClld9bAoTF5d-gzGzoHsz',
+            appkey = 'u6UWhjE8CwlhhefsUo7HNHRq',
+            limitCount = 10;
+        if( $('#topN').length ){
+            AV.initialize(appid, appkey);
+            var Counter = AV.Object.extend("Counter");  
+            topNPost(Counter, limitCount);
+        }
+    </script>
+   
+
+		</div>
+	</div>
+</div>
+
+<script src="/js/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
+
+
+
+
+<!--back to top-->
+
+    
+	<div id="totop">
+  		<a href="javascript:;" name="TOTOP" class="fa fa-arrow-up"></a>
+	</div>
+	<div id="tobuttom">
+		<a href="javascript:;" name="TOBUTTOM" class="fa fa-arrow-down"></a>
+	</div>
+ 
+
+
+ 
+
+<script src="/js/vibrant.js"></script>
+<script src="/js/chinese.js"></script>
+<script src="/js/main.js"></script>
+	</body>
+	</html>
