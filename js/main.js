@@ -83,6 +83,7 @@ jQuery(document).ready(function($) {
 			if(grayLevel >= 192) {
 				// 若为浅色，把文字设置为黑色
 				fontColor = '#000';
+				fontColor = '#fff';
 			} else {
 				fontColor = '#fff';
 			}

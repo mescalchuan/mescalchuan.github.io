@@ -36,7 +36,8 @@
 }
 
 .article-content {
-	font-family: Arial, 'Courier New', "Helvetica Neue", Helvetica, sans-serif;
+	/* font-family: Arial, 'Courier New', "Helvetica Neue", Helvetica, sans-serif; */
+	font-family: Ovo, Georgia, STZhongsong, "Microsoft YaHei", serif;
 	font-size: 1em;
 	line-height: 2em;
 	margin: 0.5em;
@@ -193,7 +194,8 @@
 }
 
 .article-content code {
-	font-family: Georgia, Times New Roman, Times, serif;
+	/* font-family: Georgia, Times New Roman, Times, serif; */
+	font-family: "Consolas", "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei";
 	font-size: 1em;
 	/* font-style: italic; */
 	background: rgba(220, 220, 220, 0.25);
