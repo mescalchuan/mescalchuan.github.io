@@ -123,6 +123,10 @@ audio {
 	cursor: pointer;
 }
 
+img {
+	width: auto;
+}
+
 audio {
 	height: 54px; 
 	position: fixed; 

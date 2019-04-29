@@ -149,7 +149,7 @@
 .article-content img {
 	opacity: 1;
 	cursor: pointer;
-	width: 100%;
+	/* width: 100%; */
 	height: auto;
 }
 
