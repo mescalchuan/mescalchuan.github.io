@@ -19,7 +19,7 @@ npm link
 
 <!--![](https://upload-images.jianshu.io/upload_images/1495096-29a6e471537ccb32.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)-->
 
-![](https://upload-images.jianshu.io/upload_images/1495096-4a2a1c5c4ca38817.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://mescal-chuan.oss-cn-beijing.aliyuncs.com/1495096-4a2a1c5c4ca38817.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 * -v | --version：查看vue-app-cli版本
 * -h | --help：查看帮助

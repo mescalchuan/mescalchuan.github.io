@@ -3,19 +3,19 @@
 在命令行中输入`vue-app init vueApp`，等待片刻
 
 <!--![](https://upload-images.jianshu.io/upload_images/1495096-76414d4eddee68ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)-->
-![](https://upload-images.jianshu.io/upload_images/1495096-4d37b1bdef2fdbcf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://mescal-chuan.oss-cn-beijing.aliyuncs.com/1495096-4d37b1bdef2fdbcf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 进入到`vueApp`文件夹下，安装依赖`cd vueApp && npm i`，之后使用`npm start`启动项目，双击`pages/home.html`
 
 <!--![vue-app-cli](https://upload-images.jianshu.io/upload_images/1495096-a98647dfbb9fff11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)-->
-![vue-app-cli](https://upload-images.jianshu.io/upload_images/1495096-9a04da83b48c0b21.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![vue-app-cli](https://mescal-chuan.oss-cn-beijing.aliyuncs.com/1495096-9a04da83b48c0b21.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 下面我们来看一下目录结构
 
 <!--![](https://upload-images.jianshu.io/upload_images/1495096-16283bf9c5cd55cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)-->
-![](https://upload-images.jianshu.io/upload_images/1495096-160c3728aeb50049.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://mescal-chuan.oss-cn-beijing.aliyuncs.com/1495096-160c3728aeb50049.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 * `build`存放构建好的js和css
 * `components`存放每个页面的根组件，你可以在每个文件夹内部扩展其他组件
