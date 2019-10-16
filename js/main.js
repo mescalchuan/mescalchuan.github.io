@@ -63,7 +63,7 @@ jQuery(document).ready(function($) {
 			$('header').css('background-image', backgroundImg);
 
 			Annie_Transition();
-			if(window.location.href != 'https://mescalchuan.github.io') {
+			if(window.location.href != 'https://mescalchuan.github.io/') {
 				Annie_Scroll()
 			}
 		}
@@ -112,7 +112,7 @@ jQuery(document).ready(function($) {
 				function timeoutCalled() {
 					console.log('timeout');
 					Annie_Transition();
-					if(window.location.href != 'https://mescalchuan.github.io') {
+					if(window.location.href != 'https://mescalchuan.github.io/') {
 						Annie_Scroll()
 					}
 					//Annie_Scroll();
@@ -141,7 +141,7 @@ jQuery(document).ready(function($) {
 
 			//背景主色提取可能影响页面加载速度 or 引起CROS bug！
 			//TODO: 重构header模块
-			if(window.location.href != 'https://mescalchuan.github.io') {
+			if(window.location.href != 'https://mescalchuan.github.io/') {
 				Annie_ColorExtraction(img);
 			}
 			
