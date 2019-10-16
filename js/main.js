@@ -63,7 +63,7 @@ jQuery(document).ready(function($) {
 			$('header').css('background-image', backgroundImg);
 
 			Annie_Transition();
-			if($(postPageId).length || $(archivePageId).length || $(galleryPageId).length || $(pageId).length) {
+			if(window.location.href != 'https://mescalchuan.github.io') {
 				Annie_Scroll()
 			}
 		}
@@ -112,7 +112,10 @@ jQuery(document).ready(function($) {
 				function timeoutCalled() {
 					console.log('timeout');
 					Annie_Transition();
-					Annie_Scroll();
+					if(window.location.href != 'https://mescalchuan.github.io') {
+						Annie_Scroll()
+					}
+					//Annie_Scroll();
 				}
 				return timeoutCalled();
 			}, 10000);
@@ -138,7 +141,10 @@ jQuery(document).ready(function($) {
 
 			//背景主色提取可能影响页面加载速度 or 引起CROS bug！
 			//TODO: 重构header模块
-			Annie_ColorExtraction(img);
+			if(window.location.href != 'https://mescalchuan.github.io') {
+				Annie_ColorExtraction(img);
+			}
+			
 		}
 		//The following code may have a bug when using img.src 'https://source.unsplash.com/collection/954550/1920x1080' in Fixfox...( because of cache)!
 		//		if( img.complete || img.height ){
