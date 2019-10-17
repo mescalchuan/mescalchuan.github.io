@@ -228,6 +228,9 @@ header .h-header {
 header #logo-S {
 	float: left;
 }
+header #logo-S a {
+	font-weight: bold;
+}
 
 header #logo-S img {
 	max-width: 6em;
@@ -256,10 +259,11 @@ header #navigation-S ul li a {
 	padding: .1em;
 	margin-left: 0em;
 	border-bottom: none;
+	font-weight: bold;
 }
 
 header #navigation-S ul li a:hover {
-	color: darkgoldenrod;
+	color: #ff4f4f;
 }
 
 header #navigation-S ul li .active {
@@ -283,6 +287,7 @@ header .motto {
 	width: 60%;
 	margin: 4em auto;
 	margin-top: 8em;
+	font-weight: bold;
 }
 
 header .motto .content {
@@ -1092,3 +1097,11 @@ main {
 		width: 50% !important;
 	  }
   }
+
+  .header-date span {
+	font-weight: bold;
+}
+.header-date {
+	right: 40px;
+	left: 0;
+}

@@ -142,7 +142,7 @@ jQuery(document).ready(function($) {
 			//背景主色提取可能影响页面加载速度 or 引起CROS bug！
 			//TODO: 重构header模块
 			if(window.location.href != 'https://mescalchuan.github.io/') {
-				Annie_ColorExtraction(img);
+				//Annie_ColorExtraction(img);
 			}
 			
 		}
