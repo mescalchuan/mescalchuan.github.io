@@ -4,7 +4,7 @@
 
 React
 
-```
+```jsx
 <Header
   title = {'导航栏'}
   containerStyle = {{backgroundColor: '#01DD9B'}}
@@ -14,7 +14,7 @@ React
 
 ReactNative
 
-```
+```jsx
 const rightBtn = (
   <TouchableOpacity onPress = {() => alert('更多')} >
     <Text style = {styles.more} >更多</Text>

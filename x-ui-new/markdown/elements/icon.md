@@ -4,7 +4,7 @@
 
 React
 
-```
+```jsx
 <Icon name = {'ios-analytics'} size = {20} color = {'#ff4f4f'} />
 ```
 

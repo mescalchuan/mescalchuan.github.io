@@ -11,6 +11,24 @@ const SubMenu = Menu.SubMenu;
 
 const MenuItemGroup = Menu.ItemGroup;
 
+const pathnameExc = pathname => {
+    let _pathname = pathname
+    if(pathname.indexOf('/') > -1) {
+        if(_pathname == '/xui') {
+            _pathname = ''
+        }
+        else {
+            _pathname = pathname.substring(1)
+        }
+    }
+    else {
+        if(_pathname == 'xui') {
+            _pathname = ''
+        }
+    }
+    return _pathname
+}
+
 export default class Root extends Component {
     constructor(props) {
         super(props);
@@ -22,7 +40,7 @@ export default class Root extends Component {
     }
     handleClick = (e) => {
         console.log('click ', e);
-        console.log(this.props.history.push('xui'))
+        console.log(this.props.history.push(e.key))
         this.setState({
           current: e.key,
         });
@@ -42,6 +60,9 @@ export default class Root extends Component {
             //     return hljs.highlightAuto(code).value;
             // },
         });
+        this.setState({
+            current: pathnameExc(this.props.location.pathname)
+        })
     }
     render() {
         return (
@@ -72,33 +93,71 @@ export default class Root extends Component {
                     </Menu.Item>
                 </Menu>
                 <Row>
-                    <Col span={6}>
+                    <Col span={4}>
                         <Menu
                             onClick={this.handleClick}
-                        
-                            defaultSelectedKeys={['xui']}
+                            openKeys={['sub1']}
+                            selectedKeys={[this.state.current]}
                             //defaultOpenKeys={['sub1']}
                             mode="inline"
                         >
                             <Menu.Item key="xui">
-                                <Icon type="mail" />
+                                <Icon type="home" />
                                 X-UI
                             </Menu.Item>
-                            <SubMenu key="sub1" title={<span><Icon type="mail" /><span>Componants</span></span>}>
-                                <MenuItemGroup key="g1" title="Item 1">
-                                    <Menu.Item key="1">Option 1</Menu.Item>
-                                    <Menu.Item key="2">Option 2</Menu.Item>
+                            <SubMenu key="sub1" title={<span><Icon type="layout" /><span>Components</span></span>}>
+                                <MenuItemGroup key="layout" title="布局">
+                                    <Menu.Item key="flex">Flex</Menu.Item>
                                 </MenuItemGroup>
-                                <MenuItemGroup key="g2" title="Item 2">
-                                    <Menu.Item key="3">Option 3</Menu.Item>
-                                    <Menu.Item key="4">Option 4</Menu.Item>
+                                <MenuItemGroup key="navigation" title="导航">
+                                    <Menu.Item key="drawerLayout">Drawer</Menu.Item>
+                                    <Menu.Item key="header">Header</Menu.Item>
+                                    <Menu.Item key="tabbar">Tabbar</Menu.Item>
+                                    <Menu.Item key="pagination">Pagination</Menu.Item>
+                                </MenuItemGroup>
+                                <MenuItemGroup key="form" title="表单">
+                                    <Menu.Item key="radio">Radio</Menu.Item>
+                                    <Menu.Item key="checkbox">Checkbox</Menu.Item>
+                                    <Menu.Item key="counter">Counter</Menu.Item>
+                                    <Menu.Item key="switch">Switch</Menu.Item>
+                                    <Menu.Item key="slider">Slider</Menu.Item>
+                                    <Menu.Item key="search">Search</Menu.Item>
+                                </MenuItemGroup>
+                                <MenuItemGroup key="view" title="展示">
+                                    <Menu.Item key="badge">Badge</Menu.Item>
+                                    <Menu.Item key="icon">Icon</Menu.Item>
+                                    <Menu.Item key="carousel">Carousel</Menu.Item>
+                                    <Menu.Item key="collapse">Collapse</Menu.Item>
+                                    <Menu.Item key="card">Card</Menu.Item>
+                                    <Menu.Item key="list">List</Menu.Item>
+                                </MenuItemGroup>
+                                <MenuItemGroup key="operate" title="操作">
+                                    <Menu.Item key="button">Button</Menu.Item>
+                                    <Menu.Item key="actionSheet">ActionSheet</Menu.Item>
+                                    <Menu.Item key="toast">Toast</Menu.Item>
                                 </MenuItemGroup>
                             </SubMenu>
                         </Menu>
                     </Col>
-                    <Col span={18}>
+                    <Col span={12}>
                         <div style={{padding: '24px 32px'}} >
                             {this.props.children}
+                        </div>
+                    </Col>
+                    <Col span={8}>
+                        <div style={{padding: '24px 32px'}} >
+                            <div style={{position:'fixed', right:'50px', top: '60px'}}>
+                                <img style={{width:'350px'}} src={'../images/iphone8-tt.jpg'}/>
+                                <iframe src={"https://mescalchuan.github.io/xui-example/pages/index.html#" + pathnameExc(this.props.location.pathname)} style={{
+                                    position:'absolute', 
+                                    top: '88px', 
+                                    left: '24px', 
+                                    width:'303px', 
+                                    height: '539px',
+                                    border: 0
+                                }}/>
+                            </div>
+                            
                         </div>
                     </Col>
                 </Row>

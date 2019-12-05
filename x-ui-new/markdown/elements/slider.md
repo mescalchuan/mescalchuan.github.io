@@ -2,7 +2,7 @@
 
 #### 滑块
 
-```
+```jsx
 <Slider
   progress = {1}
   minValue = {1}

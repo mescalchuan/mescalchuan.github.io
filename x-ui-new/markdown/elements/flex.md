@@ -4,7 +4,7 @@
 
 React
 
-```
+```jsx
 <Flex flexStyle = {{marginBottom: '0.4rem'}} >
   <Flex.Item>
     <div className = {'flex-item'} style = {{backgroundColor: '#108EE9'}} >
@@ -21,7 +21,7 @@ React
 
 ReactNative
 
-```
+```jsx
 <Flex 
   justify = {'flex-end'} 
   align = {'flex-end'} 

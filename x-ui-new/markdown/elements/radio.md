@@ -4,7 +4,7 @@
 
 React
 
-```
+```jsx
 <Radio.Group value = {this.state.value} onChange = {value => this.setState({value})} >
   <Radio id = {'radio_1'} value = {'A'} >A</Radio>
   <Radio id = {'radio_2'} value = {'B'} >B</Radio>
@@ -14,7 +14,7 @@ React
 
 ReactNative
 
-```
+```jsx
 <Radio.Group defaultValue = {'B'} >
   <Radio value = {'A'} >A</Radio>
   <Radio value = {'B'} >B</Radio>

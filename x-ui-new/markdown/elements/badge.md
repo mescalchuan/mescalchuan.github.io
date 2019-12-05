@@ -4,7 +4,7 @@
 
 React
 
-```
+```jsx
 const boxContainer = <div className = {'badge-box'} ></div>
 <Badge num = {1} style = {{marginRight: '0.8rem'}} >{boxContainer}</Badge>
 <Badge text = {'券'} defaultBackColor = {'#f19736'} />
@@ -12,7 +12,7 @@ const boxContainer = <div className = {'badge-box'} ></div>
 
 ReactNative
 
-```
+```jsx
 const containerBox = {
   width: 30,
   height: 30,

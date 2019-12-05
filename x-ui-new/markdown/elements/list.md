@@ -4,7 +4,7 @@
 
 React
 
-```
+```jsx
 <List
   title = {'控制左右内容的对齐方式'}
   showRightIcon = {false}
@@ -19,7 +19,7 @@ React
 
 ReactNative
 
-```
+```jsx
 <List
   title = {'灰色置顶'}
   listStyle = {{marginBottom: 20}}

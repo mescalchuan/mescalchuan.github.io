@@ -4,7 +4,7 @@
 
 React
 
-```
+```jsx
 <Collapse
   accordion = {true}
   onChange = {(activeKey) => activeKey && alert(activeKey)}
@@ -25,7 +25,7 @@ React
 
 ReactNative
 
-```
+```jsx
 <Collapse
   accordion = {true}
   onChange = {(activeKey) => activeKey && ToastAndroid.show(activeKey, ToastAndroid.SHORT)}

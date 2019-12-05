@@ -2,7 +2,7 @@
 
 #### 开关，用于设置两个相互斥的选项。
 
-```
+```jsx
 <Switch
   tintColor = {'gray'}
   onTintColor = {'#f75b25'}

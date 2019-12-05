@@ -3629,7 +3629,7 @@ var Root = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                null,
+                { style: { height: '100%' } },
                 _react2.default.createElement(_toast2.default, { ref: function ref(toast) {
                         return _this3.rootToast = toast;
                     } }),
@@ -3640,6 +3640,12 @@ var Root = function (_React$Component) {
 
     return Root;
 }(_react2.default.Component);
+
+if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function () {
+        FastClick.attach(document.body);
+    }, false);
+}
 
 _reactDom2.default.render(_react2.default.createElement(Root, null), document.getElementById('app'));
 
@@ -3702,7 +3708,7 @@ var Home = function (_Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
+                { style: { height: '100%', transform: 'translateY(0)' } },
                 _react2.default.createElement(
                     'header',
                     null,

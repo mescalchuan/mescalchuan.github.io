@@ -2,7 +2,7 @@
 
 #### 按钮，支持块级、内联级、全填充、边框填充、大小等设置。
 
-```
+```jsx
 import Button, {BUTTON_SIZE, BUTTON_TYPE} from './component/button'
 
 <Button

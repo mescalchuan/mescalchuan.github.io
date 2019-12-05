@@ -4,7 +4,7 @@
 
 React
 
-```
+```jsx
 <Card cardStyle = {margin15Ver} >
   <Card.Header>
     <p className = {'intro-text'} >这是一个标题</p>
@@ -21,7 +21,7 @@ React
 
 ReactNative
 
-```
+```jsx
 <Card cardStyle = {{marginHorizontal: 15, borderRadius: 8}} >
   <Card.Header>
     <Text style = {{color: '#333333', fontSize: 16, fontWeight: 'bold'}} >标题</Text>

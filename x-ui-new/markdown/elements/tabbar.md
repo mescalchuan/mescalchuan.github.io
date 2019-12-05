@@ -4,7 +4,7 @@
 
 React
 
-```
+```jsx
 import {Home, Active, Timer, Settings} from './container';
 
 constructor(props) {
@@ -60,7 +60,7 @@ render() {
 
 ReactNative
 
-```
+```jsx
 import {Home, Active, Timer, Settings} from './container';
 constructor(props) {
   super(props);

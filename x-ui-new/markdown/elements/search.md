@@ -4,7 +4,7 @@
 
 React
 
-```
+```jsx
 <Search
   defaultValue = {'test'}
   placeholder = {'输入任何内容'}
@@ -14,7 +14,7 @@ React
 
 ReactNative
 
-```
+```jsx
 <Search
   defaultValue = {'test'}
   value = {this.state.value}

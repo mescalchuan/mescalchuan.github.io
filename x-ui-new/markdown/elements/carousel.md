@@ -4,7 +4,7 @@
 
 React
 
-```
+```jsx
 const imgArr = ['./image/1.jpg', './image/2.jpg', './image/3.jpg', './image/4.jpg'];
 <Carousel
   width = { '100vw' }
@@ -21,7 +21,7 @@ const imgArr = ['./image/1.jpg', './image/2.jpg', './image/3.jpg', './image/4.jp
 ```
 ReactNative
 
-```
+```jsx
 const style = {width: utils.window.width, height: 200}
 <Carousel 
   carouselStyle = {{marginBottom: 20}} 

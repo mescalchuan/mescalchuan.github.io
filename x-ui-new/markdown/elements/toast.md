@@ -2,7 +2,7 @@
 
 #### 小型提示框
 
-```
+```jsx
 <Button onPress = {() => this.toast.show({
   content: '取消遮罩层',
   mask: false
@@ -13,7 +13,6 @@
 ```jsx
 /*react*/
 <script>
-
   const Toast = xui.Toast
   const Button = xui.Button
   export default class ToastEX extends React.Component {
@@ -37,7 +36,7 @@
 
 React
 
-```
+```jsx
 //根js
 componentDidMount() {
   window.addEventListener('showToast', e => {
@@ -65,7 +64,7 @@ render() {
 
 ReactNative
 
-```
+```jsx
 //根js
 componentDidMount() {
   DeviceEventEmitter.addListener('showToast', (config) => {

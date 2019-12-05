@@ -2,13 +2,13 @@
 
 #### 抽屉视图，用于左右侧弹出的菜单。
 
-```
+```js
 import DrawerLayout, {DRAWER_POSITION, DRAWER_LOCK_MODE, KEYBOARD_DISMISS_MODE} from './component/drawerLayout'
 ```
 
 React
 
-```
+```jsx
 const drawerView = (
   <div>
     <List title = {'前往商城'} showLine />
@@ -29,7 +29,7 @@ const drawerView = (
 
 ReactNative
 
-```
+```jsx
 const navigationView = (
   <View style={{flex: 1, backgroundColor: '#fff'}} >
     <List title = {'前往商城'} />
@@ -62,13 +62,13 @@ const navigationView = (
   const DRAWER_POSITION = xui.DRAWER_POSITION
   export default class DrawerLayoutEX extends React.Component {
         render() {
-        const drawerView = (
-            <div>
-                <List title = {'前往商城'} showLine />
-                <List title = {'个人中心'} showLine />
-                <List title = {'设置'} showLine />
-                <p className = {'margin-15 header-text'}>I'm in the Drawer!</p>
-            </div>
+            const drawerView = (
+                <div>
+                    <List title = {'前往商城'} showLine />
+                    <List title = {'个人中心'} showLine />
+                    <List title = {'设置'} showLine />
+                    <p className = {'margin-15 header-text'}>I'm in the Drawer!</p>
+                </div>
         )
         return (
             <div>

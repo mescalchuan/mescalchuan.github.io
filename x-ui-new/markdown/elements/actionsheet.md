@@ -4,7 +4,7 @@
 
 React
 
-```
+```jsx
 <ActionSheet
   ref = {o => this.ActionSheet = o}
   options = {[
@@ -22,7 +22,7 @@ React
 
 ReactNative
 
-```
+```jsx
 <ActionSheet
   ref = {o => this.ActionSheet = o}
   options = {[

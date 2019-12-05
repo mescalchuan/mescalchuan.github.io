@@ -2,7 +2,7 @@
 
 #### 分页控件
 
-```
+```jsx
 <Pagination
   pageTotal = {5}
   previous = {'prev'}

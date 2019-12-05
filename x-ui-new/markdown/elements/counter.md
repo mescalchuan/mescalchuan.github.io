@@ -2,7 +2,7 @@
 
 #### 计数器，数字选择框。
 
-```
+```jsx
 <Counter defaultValue = {5} stepNum = {2} minValue = {1} maxValue = {9} />
 ```
 

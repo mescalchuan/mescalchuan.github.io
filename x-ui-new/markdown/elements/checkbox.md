@@ -4,7 +4,7 @@
 
 React
 
-```
+```jsx
 <Checkbox.Group value = {this.state.value} onChange = {value => this.setState({value})} >
   <Checkbox id = {'checkbox_1'} value = {'A'} >A</Checkbox>
   <Checkbox id = {'checkbox_2'} value = {'B'} >B</Checkbox>
@@ -14,7 +14,7 @@ React
 
 ReactNative
 
-```
+```jsx
 <Checkbox.Group defaultValue = {['B']} >
   <Checkbox value = {'A'} >A</Checkbox>
   <Checkbox value = {'B'} >B</Checkbox>
