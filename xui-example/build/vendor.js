@@ -98,12 +98,12 @@
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 39);
+/******/ 	return __webpack_require__(__webpack_require__.s = 44);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 23:
+/***/ 28:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -113,7 +113,7 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-__webpack_require__(40);
+__webpack_require__(45);
 
 exports.default = {
 	message: "Hello Vue-App"
@@ -121,15 +121,15 @@ exports.default = {
 
 /***/ }),
 
-/***/ 39:
+/***/ 44:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(23);
+module.exports = __webpack_require__(28);
 
 
 /***/ }),
 
-/***/ 40:
+/***/ 45:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
