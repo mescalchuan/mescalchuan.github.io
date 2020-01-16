@@ -125,6 +125,17 @@ module.exports = {
                     '/ydkjs/xia/2-8'
                 ]
             }]
+        },
+        {
+            title: '手写代码',
+            collapsable: false,
+            children: [
+                '/write/promise',
+                '/write/copy',
+                '/write/bind',
+                '/write/throttledebounce',
+                '/write/suanfa'
+            ]
         }
       ]
     },
