@@ -134,7 +134,8 @@ module.exports = {
                 '/write/copy',
                 '/write/bind',
                 '/write/throttledebounce',
-                '/write/suanfa'
+                '/write/suanfa',
+                '/write/array'
             ]
         }
       ]
