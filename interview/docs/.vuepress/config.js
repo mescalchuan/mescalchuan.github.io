@@ -137,6 +137,13 @@ module.exports = {
                 '/write/suanfa',
                 '/write/array'
             ]
+        },
+        {
+            title: '项目经验',
+            collapsable: false,
+            children: [
+                '/expires/click'
+            ]
         }
       ]
     },
