@@ -41,6 +41,14 @@ module.exports = {
                     '/days/webpack/shizhan',
                     '/days/webpack/opt'
                 ]
+            }, {
+              title: 'Http',
+              collapsable: false,
+              children: [
+                '/days/http/cache.md',
+                '/days/http/https.md',
+                '/days/http/security.md'
+              ]
             }]
         },
         {
