@@ -23,7 +23,7 @@ module.exports = {
             collapsable: false,
             children: [{
                 title: 'Javascript',
-                collapsable: false,
+                collapsable: true,
                 children: [
                     '/days/js/curry',
                     '/days/js/eventloop',
@@ -33,7 +33,7 @@ module.exports = {
                 ]
             }, {
                 title: 'Webpack',
-                collapsable: false,
+                collapsable: true,
                 children: [
                     '/days/webpack/yuanli',
                     '/days/webpack/rumen',
@@ -43,7 +43,7 @@ module.exports = {
                 ]
             }, {
               title: 'Http',
-              collapsable: false,
+              collapsable: true,
               children: [
                 '/days/http/cache.md',
                 '/days/http/https.md',
@@ -95,7 +95,7 @@ module.exports = {
             collapsable: false,
             children: [{
                 title: '上',
-                collapsable: false,
+                collapsable: true,
                 children: [
                     '/ydkjs/shang/1-3',
                     '/ydkjs/shang/1-4',
@@ -108,7 +108,7 @@ module.exports = {
                 ]
             }, {
                 title: '中',
-                collapsable: false,
+                collapsable: true,
                 children: [
                     '/ydkjs/zhong/1-2',
                     '/ydkjs/zhong/1-3',
@@ -121,7 +121,7 @@ module.exports = {
                 ]
             }, {
                 title: '下',
-                collapsable: false,
+                collapsable: true,
                 children: [
                     '/ydkjs/xia/1',
                     '/ydkjs/xia/2-2',
