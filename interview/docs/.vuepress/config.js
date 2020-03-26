@@ -29,7 +29,8 @@ module.exports = {
                     '/days/js/eventloop',
                     '/days/js/lastcall',
                     '/days/js/microtask',
-                    '/days/js/module'
+                    '/days/js/module',
+                    '/days/js/jsast'
                 ]
             }, {
                 title: 'Webpack',

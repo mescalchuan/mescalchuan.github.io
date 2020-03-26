@@ -75,3 +75,55 @@ setTimeout(()=>{
 console.log('start');
 //start、Promise1、setTimeout1、Promise2、setTimeout2
 ```
+
+```js
+/**
+ * 1. 先执行宏任务 1 setTimeout new Promise setTimeout 10 const promise = new Promise 4
+ * 此时已输出 1 5 10 1 2 4，两个 setTimeout 被放入事件队列中，第一波宏任务执行完毕
+ * 2. 执行微任务 new Promise.then，输出 6。最下面的 promise.then不会执行，因为在构造时没有resolve或reject，该promise永久pending
+ * 3. 执行新一轮宏任务，取出第一个setTimout，输出 2 3
+ * 4. 执行微任务，输出 4
+ * 5. 执行新一轮宏任务，取出第二个setTimout，输出 7 8
+ * 6. 执行微任务，输出 9
+ * 有两个坑：最后的promise没有resolve，因此不会走到then；两个setTimout的微任务是隔离的，顺序为
+ * setTimout1宏任务-》setTimout1微任务-》setTimout2宏任务-》setTimout2微任务
+ * 也可以理解为：主线程宏任务-》主线程微任务-》事件队列事件1宏任务-》事件队列事件1微任务-》事件队列事件2宏任务-》事件队列事件2微任务......
+*/
+console.log(1)
+setTimeout(() => {
+    console.log(2)
+    new Promise((resolve, reject) => {
+        console.log(3)
+        resolve()
+    }).then(() => {
+        console.log(4)
+    })
+}, 0)
+new Promise((resolve, reject) => {
+    console.log(5)
+    resolve()
+}).then(() => {
+    console.log(6)
+})
+setTimeout(() => {
+    console.log(7)
+    new Promise((resolve, reject) => {
+        console.log(8)
+        resolve()
+    }).then(() => {
+        console.log(9)
+    })
+}, 0)
+console.log(10)
+const promise = new Promise((resolve, reject) => {
+  console.log(1);
+  console.log(2);
+});
+promise.then(() => {
+  console.log(3);
+});
+console.log(4);
+//1 5 10 1 2 4 6 2 3 4 7 8 9
+//如果你在const promise的console.log(1);console.log(2)后面加个resolve()
+//那么结果为 1 5 10 1 2 4 6 3 2 3 4 7 8 9
+```
