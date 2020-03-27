@@ -35,6 +35,17 @@ CSRF 攻击是攻击者借助受害者的 Cookie 骗取服务器的信任，可�
 
 验证码、token、Referer Check 等方式防范。
 
+也可以利用 cookie 的 samesite 属性，可以对请求中 Cookie 的携带作一些限制，这个字段就是SameSite。
+
+SameSite可以设置为三个值，Strict、Lax和 None。
+
+* 在Strict模式下，浏览器完全禁止第三方请求携带Cookie。比如请求sanyuan.com网站只能在sanyuan.com域名当中请求才能携带 Cookie，在其他网站请求都不能。
+
+* 在Lax模式，就宽松一点了，但是只能在 get 方法提交表单况或者a 标签发送 get 请求的情况下可以携带 Cookie，其他情况均不能。
+
+* 在None模式下，也就是默认模式，请求会自动携带上 Cookie。
+
+
 #### XSS 跨站脚本攻击
 
 XSS 攻击是指攻击者在网站上注入恶意的客户端代码，通过恶意脚本对客户端网页进行篡改，从而在用户浏览网页时，对用户浏览器进行控制或者获取用户隐私数据的一种攻击方式。

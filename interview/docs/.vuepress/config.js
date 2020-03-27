@@ -48,7 +48,8 @@ module.exports = {
               children: [
                 '/days/http/cache.md',
                 '/days/http/https.md',
-                '/days/http/security.md'
+                '/days/http/security.md',
+                '/days/http/url'
               ]
             }]
         },
