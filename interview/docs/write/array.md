@@ -27,3 +27,52 @@ console.log(result);
 ```js
 [1,2,3,3].filter((v, i, s) => {return s.indexOf(v) === i})
 ```
+
+### 扁平化
+
+`[1, [2, [3, [4, 5]]], 6] => [1, 2, 3, 4, 5, 6]`
+
+```js
+ary = arr.flat(Infinity);
+```
+
+```js
+ary = str.replace(/(\[|\])/g, '').split(',')
+```
+
+```js
+str = str.replace(/(\[|\]))/g, '');
+str = '[' + str + ']';
+ary = JSON.parse(str);
+```
+
+```js
+//递归实现
+let result = [];
+let fn = function(ary) {
+  for(let i = 0; i < ary.length; i++) {
+    let item = ary[i];
+    if (Array.isArray(ary[i])){
+      fn(item);
+    } else {
+      result.push(item);
+    }
+  }
+}
+```
+
+```js
+function flatten(ary) {
+    return ary.reduce((pre, cur) => {
+        return pre.concat(Array.isArray(cur) ? flatten(cur) : cur);
+    }, []);
+}
+```
+
+```js
+//只要有一个元素有数组，那么循环继续
+while (ary.some(Array.isArray())) {
+  ary = [].concat(...ary);
+}
+```
+
