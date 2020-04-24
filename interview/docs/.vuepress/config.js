@@ -155,6 +155,10 @@ module.exports = {
             children: [
                 '/expires/click'
             ]
+        },
+        {
+            title: '常见问题',
+            path: '/question/common'
         }
       ]
     },
