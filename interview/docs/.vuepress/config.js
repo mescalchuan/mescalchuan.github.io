@@ -49,7 +49,9 @@ module.exports = {
                 '/days/http/cache.md',
                 '/days/http/https.md',
                 '/days/http/security.md',
-                '/days/http/url'
+                '/days/http/url',
+                '/days/http/httphistory',
+                '/days/http/nginx'
               ]
             }]
         },
