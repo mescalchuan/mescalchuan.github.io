@@ -18,4 +18,4 @@
 | <img width="200" src="./wx.jpg" alt="foo"> | <img  width="200"  src="./zfb.jpg" alt="foo"> | -->
 如有任何问题或建议，欢迎扫码添加微信好友～，想交个朋友也可以～:kissing_heart:
 
-<img width="200" src="./weixin.jpeg" alt="foo">
+<img width="250" src="./weixin.jpeg" alt="foo">
