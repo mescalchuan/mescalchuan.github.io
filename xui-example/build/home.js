@@ -3813,7 +3813,7 @@ var Flex = function (_Component) {
 Flex.defaultProps = {
     justify: 'flex-start',
     align: 'flex-start',
-    wrap: 'wrap',
+    wrap: 'nowrap',
     flexStyle: {}
 };
 Flex.propTypes = {
@@ -7263,7 +7263,7 @@ var ActionSheet = function (_Component) {
                 }
                 var isCancel = _this4.props.showCancelButton && index == options.length - 1;
                 var isTitle = _this4.props.title && index == 0;
-                var marginTop = isCancel ? CANCEL_MARGIN : 0;
+                var marginTop = isCancel ? _util2.default.px2rem(CANCEL_MARGIN) : 0;
                 var height = isTitle ? _util2.default.px2rem(TITLE_HEIGHT) : _util2.default.px2rem(ITEM_HEIGHT);
                 var fontClass = isTitle ? 'x-ah-title-text' : 'x-ah-item-text';
                 var fontWeight = isCancel ? 'bold' : 'normal';
@@ -9389,6 +9389,7 @@ var Panel = function (_Component2) {
                 _react2.default.createElement('hr', null),
                 _react2.default.createElement(_list2.default, {
                     title: this.props.title,
+                    showRightIcon: true,
                     rightIcon: _react2.default.createElement('img', { className: 'x-collapse-icon', src: source }),
                     onPress: function onPress() {
                         return changeOpenState(changeOpenStateParams);
@@ -9825,43 +9826,49 @@ var DrawerLayoutExample = function (_React$Component) {
             );
             return _react2.default.createElement(
                 'div',
-                { className: 'container' },
+                null,
                 _react2.default.createElement(
-                    _button2.default,
+                    _drawerLayout2.default,
                     {
-                        onPress: function onPress() {
-                            return _this2.drawer.openDrawer();
+                        drawerPosition: _drawerLayout.DRAWER_POSITION.RIGHT,
+                        renderNavigationView: function renderNavigationView() {
+                            return drawerView;
+                        },
+                        ref: function ref(drawer) {
+                            return _this2.drawer1 = drawer;
                         }
                     },
-                    '\u6253\u5F00\u5DE6\u4FA7\u62BD\u5C49'
+                    _react2.default.createElement(
+                        _button2.default,
+                        {
+                            onPress: function onPress() {
+                                return _this2.drawer1.openDrawer();
+                            }
+                        },
+                        '\u6253\u5F00\u53F3\u4FA7\u62BD\u5C49'
+                    )
                 ),
-                _react2.default.createElement(_drawerLayout2.default, {
-                    renderNavigationView: function renderNavigationView() {
-                        return drawerView;
-                    },
-                    ref: function ref(drawer) {
-                        return _this2.drawer = drawer;
-                    }
-                }),
                 _react2.default.createElement('br', null),
                 _react2.default.createElement(
-                    _button2.default,
+                    _drawerLayout2.default,
                     {
-                        onPress: function onPress() {
-                            return _this2.drawer1.openDrawer();
+                        renderNavigationView: function renderNavigationView() {
+                            return drawerView;
+                        },
+                        ref: function ref(drawer) {
+                            return _this2.drawer = drawer;
                         }
                     },
-                    '\u6253\u5F00\u53F3\u4FA7\u62BD\u5C49'
-                ),
-                _react2.default.createElement(_drawerLayout2.default, {
-                    drawerPosition: _drawerLayout.DRAWER_POSITION.RIGHT,
-                    renderNavigationView: function renderNavigationView() {
-                        return drawerView;
-                    },
-                    ref: function ref(drawer) {
-                        return _this2.drawer1 = drawer;
-                    }
-                })
+                    _react2.default.createElement(
+                        _button2.default,
+                        {
+                            onPress: function onPress() {
+                                return _this2.drawer.openDrawer();
+                            }
+                        },
+                        '\u6253\u5F00\u5DE6\u4FA7\u62BD\u5C49'
+                    )
+                )
             );
         }
     }]);
@@ -9958,7 +9965,8 @@ var DrawerLayout = function (_Component) {
                     'div',
                     { className: 'x-drawer-view x-drawer-view-' + (this.props.drawerPosition === DRAWER_POSITION.LEFT ? 'left' : 'right') },
                     this.props.renderNavigationView()
-                )
+                ),
+                this.props.children
             );
         }
     }]);
@@ -10104,7 +10112,7 @@ var FlexExample = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     _flex2.default,
-                    { flexStyle: { marginBottom: 20 } },
+                    { flexStyle: { marginBottom: 20 }, wrap: 'wrap' },
                     function () {
                         return [1, 2, 3, 5, 6, 7, 8, 9].map(function (item, index) {
                             return _react2.default.createElement(
