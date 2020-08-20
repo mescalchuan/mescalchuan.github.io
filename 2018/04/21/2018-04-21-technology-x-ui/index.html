@@ -1,361 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script> -->
+  <!-- <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
 
-	<!DOCTYPE html>
-	<html class="scrollbar">
-		
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-<head><meta name="generator" content="Hexo 3.8.0">
+    gtag('config', 'UA-xxxxxx-xx');
+  </script> -->
+  
+
+  <!-- Baidu Tongji -->
+  
+  <!-- <script type="text/javascript">
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script> -->
+  
+
+  <!-- Baidu Push -->
+  
+  <!-- <script>
+    (function() {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script> -->
+  
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc" />
+  <meta name="baidu-site-verification" content="PpzM9WxOJU" /> -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mescal 秦先生的小站" />
+  <meta name="keyword" content="mescal,chuan,fe,Blog,秦" />
   <meta name="referrer" content="no-referrer">
-	<meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="/img/favicon.ico" />
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/beantech.min.css" />
+
+  <!-- Pygments Highlight CSS -->
+  
+<link rel="stylesheet" href="../../../../css/highlight.css">
+<link rel="stylesheet" href="../../../../css/widget.css">
+<link rel="stylesheet" href="../../../../css/rocket.css">
+<link rel="stylesheet" href="../../../../css/signature.css">
+<link rel="stylesheet" href="../../../../css/catalog.css">
+<link rel="stylesheet" href="../../../../css/livemylife.css">
+
+
+  
+  <!-- wave start -->
+  <link rel="stylesheet" href="/css/wave.css" />
+  <!-- wave end -->
+  
+
+  
+  <!-- top start (article top hot config) -->
+  <link rel="stylesheet" href="/css/top.css" />
+  <!-- top end -->
+  
+
+  
+  <!-- ThemeColor start -->
+  <link rel="stylesheet" href="/css/scroll.css" />
+  <!-- ThemeColor end -->
+  
+
+  
+  <!-- viewer start (Picture preview) -->
+  <link rel="stylesheet" href="/css/viewer.min.css" />
+  <!-- viewer end -->
+  
+
+  
+  <!-- Search start -->
+  <link rel="stylesheet" href="/css/search.css" />
+  <!-- Search end -->
+  
+
+  
+  <!-- ThemeColor start -->
+  <link rel="stylesheet" href="/css/themecolor.css" />
+  <!-- ThemeColor end -->
+  
+
+  
+
+  
+  <!-- gitalk start -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+  <!-- <link rel="stylesheet" href="/css/gitalk.css" /> -->
+  <!-- gitalk end -->
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+    href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://mescalchuan.github.io/2018/04/21/2018-04-21-technology-x-ui/">
   <title>
     
-      x-ui | Mescal 川
+    x-ui - MescalChuan
     
   </title>
-  <meta name="author" content="Mescal Chuan">
-  <meta name="keywords" content>
-  <meta name="description" content>
-	<!-- favicon -->
-  <link rel="shortcut icon" href="/img/favicon.ico">
-
-  <!-- css -->
-  <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-
-    <!-- jquery -->
-	<script src="/js/jquery-2.1.1.min.js"></script>
-
-  <!-- leancloud -->
-  
-  <link rel="stylesheet" href="/css/prismCustom.css">
-  <link rel="stylesheet" href="/css/remodal.css">
-  <link rel="stylesheet" href="/css/remodal-default-theme.css">
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
-	<body class="language-js">
-		<!-- Preloader -->
-
-	<div id="preloader">
-		<div class="pre-container">
-			
-				<div class="transition">
-					<div class="three-bounce1"></div>
-					<div class="three-bounce2"></div>
-					<div class="three-bounce3"></div>
-				</div>
-						
-		</div>
-	</div>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 
-<!-- header -->
-<header class="fixbackground" data-img-mode="normal" data-normal-src="/img/48.jpg" data-random-max="110" data-random-src="https://sariay.github.io/Random-img/">
-	<div class="mask">
-		<div class="h-header">
-			<div id="logo-S">
-				
-					<a href="/">
-						Mescal
-					</a>
-				
-			</div>
-			<!-- Navigation in header(id="navigation-S") -->
-			<div id="navigation-S">
-				<ul>
-					
-						<li class="menu-home">
-							<a href="/" class="menu-item-home">主页</a>
-						</li>
-					
-						<li class="menu-archive">
-							<a href="/archives" class="menu-item-archive">归档</a>
-						</li>
-					
-						<li class="menu-categories">
-							<a href="/categories" class="menu-item-categories">分类</a>
-						</li>
-					
-						<li class="menu-tags">
-							<a href="/tags" class="menu-item-tags">标签</a>
-						</li>
-					
-						<li class="menu-about">
-							<a href="/about" class="menu-item-about">关于</a>
-						</li>
-					
-						<li class="menu-gallery">
-							<a href="/gallery" class="menu-item-gallery">摄影集</a>
-						</li>
-					
+<!-- hack iOS CSS :active style -->
 
-					
-						<li class="menu-search">
-							<a href="javascript:;" class="popup-trigger" title="Search">搜索</a>
-						</li>
-					
-				</ul>			
-			</div>				
-		</div>
+<body ontouchstart="" class="body--home">
+	<!-- ThemeColor -->
+	
+	<!-- ThemeColor -->
+<!-- <div class="toggle" onclick="document.body.classList.toggle('body--dark')">Switch Color</div> -->
 
-		<div class="h-body">	
-			<!-- motto -->
-			
-				<div id="page-motto">
-					<p class="motto">
-						
-					</p>
-				</div>
-			
-
-			<div id="navigation-H">
-				<!-- Page title -->
-				<p>
-					
-						当前文章&nbsp;:&nbsp;《x-ui》
-					
-				</p>
-				<!-- Progress bar -->
-				<div id="progress-bar"></div>
-
-				<!-- Progress percent -->
-				<div id="progress-percentage">
-					<h1>0.0%</h1>
-				</div>
-			</div>
-		</div>
-		
-		<!-- others: such as time... -->			
-		<div class="h-footer">
-			<ul>
-				<!-- <li>
-					<a><i class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>切换背景</a>
-				</li> -->
-				<li>
-					<a href="javascript:;" id="read-more"><i class="fa fa-angle-double-down"></i></a>
-				</li>
-				<!-- <li>
-					<a href="https://github.com/Sariay/hexo-theme-Annie" target="_blank"><i class="fa fa-download"></i>克隆主题</a>
-				</li> -->
-			</ul>
-		</div>
-		
-		<!-- This is only a demo, please go to "https://time.is" to set your city time! -->
-<style type="text/css">
-	.header-date {
-		position: absolute;
-		left: 40px;
-		bottom: 30px;
-		writing-mode: tb-rl;
-		font-size: 36px;
-	}	
-	.header-date a {
-		border-bottom: none;
-	}
-	@media only screen and (max-width: 768 ) {
-		.header-date {
-			position: absolute;
-			left: 40px;
-			bottom: 30px;
-			writing-mode: tb-rl;
-			font-size: 20px;
-		}			
-	}
-</style>
-<div class="header-date">
-	<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow"></a>
-	<span id="Beijing_z43d"></span>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons bright-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
 </div>
-<script src="//widget.time.is/zh.js"></script>
-<script>
-	time_is_widget.init({
-		Beijing_z43d:{
-			template:"DATE", 
-			date_format:"year年 monthname dnum日"
-		}
-	});
-</script>
-</div></header>
 
-<!-- Navigation in div(id="navigation-H") -->
-<a class="nav-trigger">
-	<span></span>
-</a>
-
-<nav class="nav-container" id="cd-nav">
-	<div class="nav-header">
-		<h3>Navigation</h3>
-		<a href="javascript:;" class="nav-close"></a>
-	</div>
-	<div class="nav-body">
-		<ul>
-			
-				<li class="menu-home">
-					<a href="/" class="menu-item-home">主页</a>
-				</li>
-			
-				<li class="menu-archive">
-					<a href="/archives" class="menu-item-archive">归档</a>
-				</li>
-			
-				<li class="menu-categories">
-					<a href="/categories" class="menu-item-categories">分类</a>
-				</li>
-			
-				<li class="menu-tags">
-					<a href="/tags" class="menu-item-tags">标签</a>
-				</li>
-			
-				<li class="menu-about">
-					<a href="/about" class="menu-item-about">关于</a>
-				</li>
-			
-				<li class="menu-gallery">
-					<a href="/gallery" class="menu-item-gallery">摄影集</a>
-				</li>
-			
-
-			
-				<li class="menu-search">
-					<a href="javascript:;" class="popup-trigger" title="Search">搜索</a>
-				</li>
-			
-		</ul>
-	</div>
-
-	<div class="nav-footer">
-		<ul>
 	
-		
-			<li>
-				<a href="https://github.com/mescalchuan" title="Github" target="_blank">
-					<i class="fa fa-github"></i>
-				</a>
-			</li>
-		
-		
-			<li>
-				<a href="https://weibo.com/6454388854/profile?topnav=1&wvr=6" title="Weibo" target="_blank">
-					<i class="fa fa-weibo"></i>
-				</a>
-			</li>
-		
-		
-			<li>
-				<a href="mailto:/1335382915@qq.com" title="Email" target="_blank">
-					<i class="fa fa-envelope-o"></i>
-				</a>
-			</li>
-		
 
-		
-			<li>
-				<a href="javasvript:void(0)" title="QQ" target="_blank" data-remodal-target="modalQ">
-					<i class="fa fa-qq"></i>
-				</a>
-			</li>
-		
-		
-			<li>
-				<a href="javasvript:void(0)" title="WeiXin" target="_blank" data-remodal-target="modalW">
-					<i class="fa fa-weixin"></i>
-				</a>
-			</li>
-		
-		
-			<li>
-				<a href="https://mescalchuan.github.io" title="Website">
-					<i class="fa fa-globe"></i>
-				</a>
-			</li>
-		
-		
-	 
-</ul>
-	</div>
+	<!-- Gitter -->
+	
+
+	<!-- Navigation (contains search)-->
+	<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Mescal Chuan</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+          <li>
+            <a href="/archive/">归档</a>
+          </li>
+          <li>
+            <a href="/categories/">分类</a>
+          </li>
+          <li>
+            <a href="/tags/">标签</a>
+          </li>
+          <li>
+            <a href="/gallery/">摄影</a>
+          </li>
+          <li>
+            <a href="/about/">关于</a>
+          </li>
+          <!-- 
+
+          
+          
+
+          
+          <li>
+            archive/index.html
+            <a href="/archive/">归档</a>
+          </li>
+          
+          
+
+          
+          <li>
+            about/index.html
+            <a href="/about/">关于</a>
+          </li>
+          
+          
+
+          
+          <li>
+            categories/index.html
+            <a href="/categories/">分类</a>
+          </li>
+          
+          
+
+          
+          <li>
+            tags/index.html
+            <a href="/tags/">标签</a>
+          </li>
+          
+          
+
+          
+          <li>
+            gallery/index.html
+            <a href="/gallery/">摄影</a>
+          </li>
+          
+           -->
+
+          
+          <li><a class="popup-trigger" title="Search"><span class="search-icon"></span>搜索</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
 </nav>
-
-		
-		<!--main-->
-		<main>
-			<div class="layout-post">
-	
-	
-	<div class="article-title">
-		
-	<a href="/2018/04/21/2018-04-21-technology-x-ui/" itemprop="url">
-		x-ui
-	</a>
-
-	</div>
-
-	<div class="article-meta">
-		<span>
-			
-	发布于
-	<a href="/2018/04/21/2018-04-21-technology-x-ui/" itemprop="url">
-		<time datetime="2018-04-21T10:32:20.000Z" itemprop="datePublished">
-	  		2018-04-21
-	  </time>
-	</a> 
-
-	/
-	更新于
-	<a href="/2018/04/21/2018-04-21-technology-x-ui/" itemprop="url">
-		<time datetime="2018-04-21T10:32:20.000Z" itemprop="dateUpdated">
-	  		2019-04-26
-	  </time>
-	</a> 	
-
-		</span>
-		/
-		<span>
-			<i class="fa fa-tags"></i>
-			
-	
-		<a href="/tags/博客/" class=" ">
-			博客
-		</a>
-	
-		<a href="/tags/技术博客/" class=" ">
-			技术博客
-		</a>
-	
-		<a href="/tags/react/" class=" ">
-			react
-		</a>
-	
-		<a href="/tags/react-native/" class=" ">
-			react-native
-		</a>
-	
-		
-		</span>
-		<!-- /
-		
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
 
 
- -->
-	</div>
+<script>
+  // Drop Bootstarp low-performance Navbar
+  // Use customize navbar with high-quality material design animation
+  // in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
 
-	<div class="article-content" id="article-content">
-		<p>跨平台的移动端ui组件库</p>
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+	<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    header.intro-header {
+       /*post*/
+        background-image: url('/img/3.jpg');
+      
+    }
+
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#博客" title="博客">博客</a>
+              
+              <a class="tag" href="/tags/#技术博客" title="技术博客">技术博客</a>
+              
+              <a class="tag" href="/tags/#react-native" title="react-native">react-native</a>
+              
+              <a class="tag" href="/tags/#react" title="react">react</a>
+              
+            </div>
+            <h1>x-ui</h1>
+            <h2 class="subheading"></h2>
+            <!-- <span class="meta">
+              Posted by Mescal Chuan on
+              2018-04-21
+            </span> -->
+
+
+            
+            <!-- WordCount start -->
+            <!-- <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">30</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">6k</span> In Total
+            </span>
+            <div class="blank_box"></div> -->
+            <!-- 不蒜子统计 start -->
+            <!-- <span class="meta">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span> -->
+            <!-- 不蒜子统计 end -->
+            <!-- WordCount end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+	<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+	<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>跨平台的移动端ui组件库</p>
 <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>x-ui是基于react native和react开发出的跨android、ios和h5的三端ui组件库。</p>
 <h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><h4 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h4><p><code>git clone https://github.com/mescalchuan/x-ui.git</code>，将<code>common</code>和<code>component</code>放入项目中，之后您需要根据自身需求做出相应配置。</p>
 <h4 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h4><h5 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h5><p><code>x-ui</code> h5端统一使用了阿里的<code>flexible.js</code>适配方案，版本为<code>0.3.4</code>，通过<code>&lt;script src=&quot;http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js&quot;&gt;&lt;/script&gt;</code>将其链接到<code>header</code>标签中。<code>flexible.js</code>以iphone6为参考单位：在<code>375 x 667</code>dp， <code>dpr</code>为2的情况下，页面的缩放比例为0.5，html的<code>font-size</code>为75px。以100px为例，最终计算出的rem值为<code>(100*2/75)rem</code>。对于字体而言，建议以<code>[data-dpr]</code>属性来区分不同dpr下的文本字号大小：</p>
-<pre><code>div { font-size: 16px; } 
-[data-dpr=&quot;2&quot;] div { font-size: 32px; } 
-[data-dpr=&quot;3&quot;] div { font-size: 48px; }
-</code></pre><h5 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h5><p>请将<code>fonts</code>文件夹放入您的项目中，并在css文件中配置：</p>
-<pre><code>@font-face
-{
-    font-family: Ionicons;
-    src: url(&#39;fonts/Ionicons.ttf&#39;);
-    font-style: italic; //required
-}
-</code></pre><h4 id="React-Native"><a href="#React-Native" class="headerlink" title="React Native"></a>React Native</h4><h5 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h5><p>请将<code>fonts</code>文件夹放入<code>android/app/src/main/assets/</code>中。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123; <span class="attribute">font-size</span>: <span class="number">16px</span>; &#125; </span><br><span class="line"><span class="selector-attr">[data-dpr=<span class="string">"2"</span>]</span> <span class="selector-tag">div</span> &#123; <span class="attribute">font-size</span>: <span class="number">32px</span>; &#125; </span><br><span class="line"><span class="selector-attr">[data-dpr=<span class="string">"3"</span>]</span> <span class="selector-tag">div</span> &#123; <span class="attribute">font-size</span>: <span class="number">48px</span>; &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h5><p>请将<code>fonts</code>文件夹放入您的项目中，并在css文件中配置：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@font-face</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">font-family</span>: Ionicons;</span><br><span class="line">    <span class="attribute">src</span>: url(<span class="string">'fonts/Ionicons.ttf'</span>);</span><br><span class="line">    <span class="attribute">font-style</span>: italic; <span class="comment">//required</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="React-Native"><a href="#React-Native" class="headerlink" title="React Native"></a>React Native</h4><h5 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h5><p>请将<code>fonts</code>文件夹放入<code>android/app/src/main/assets/</code>中。</p>
 <h5 id="IOS"><a href="#IOS" class="headerlink" title="IOS"></a>IOS</h5><p>请将<code>fonts</code>文件夹托至xcode中，勾选<code>Add to targets</code>和<code>Create groups</code>。在<code>Info.plist</code>中新建<code>Fonts provided by application</code>属性，item设置为<code>Ionicons</code>。</p>
 <h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><ul>
 <li><h4 id="ActionSheet"><a href="#ActionSheet" class="headerlink" title="ActionSheet"></a>ActionSheet</h4>底部弹出框，多用于分享、图片下载等操作。</li>
@@ -369,8 +436,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>title</td>
 <td>标题</td>
 <td>string</td>
@@ -417,41 +483,23 @@
 <td>外部打开actionsheet</td>
 <td>function</td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td>hide()  <code>static</code></td>
 <td>外部关闭actionsheet</td>
 <td>function</td>
 <td></td>
+</tr>
+<tr>
+<td><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">ActionSheet</span></span></span></span><br><span class="line"><span class="xml">  ref = </span><span class="template-variable">&#123;o =&gt; this.ActionSheet = o&#125;</span></span><br><span class="line"><span class="xml">  options = </span><span class="template-variable">&#123;[</span></span><br><span class="line"><span class="template-variable">    'option1',</span></span><br><span class="line"><span class="template-variable">    &lt;span className = &#123;'header-text text-blue-color'&#125;</span><span class="xml"> &gt;</span><span class="template-variable">&#123;'option2'&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span>,</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">className</span> = </span></span><span class="template-variable">&#123;'intro-title main-text-color'&#125;</span><span class="xml"><span class="tag"> &gt;</span></span><span class="template-variable">&#123;'删除'&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">  ]&#125;</span></span><br><span class="line"><span class="xml">  title = </span><span class="template-variable">&#123;'自定义组件'&#125;</span></span><br><span class="line"><span class="xml">  backdropPressToClose = </span><span class="template-variable">&#123;true&#125;</span></span><br><span class="line"><span class="xml">  cancelButtonColor = </span><span class="template-variable">&#123;'#ff4f4f'&#125;</span></span><br><span class="line"><span class="xml">  onPress = </span><span class="template-variable">&#123;() =&gt; alert(index)&#125;</span></span><br><span class="line"><span class="xml">/&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span> = </span></span><span class="template-variable">&#123;() =&gt; this.ActionSheet.show()&#125;</span><span class="xml"><span class="tag"> &gt;</span>open<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br></pre></td></tr></table></figure></td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
-</tbody>
-</table>
-<pre><code>&lt;ActionSheet
-  ref = {o =&gt; this.ActionSheet = o}
-  options = {[
-    &#39;option1&#39;,
-    &lt;span className = {&#39;header-text text-blue-color&#39;} &gt;{&#39;option2&#39;}&lt;/span&gt;,
-    &lt;span className = {&#39;intro-title main-text-color&#39;} &gt;{&#39;删除&#39;}&lt;/span&gt;
-  ]}
-  title = {&#39;自定义组件&#39;}
-  backdropPressToClose = {true}
-  cancelButtonColor = {&#39;#ff4f4f&#39;}
-  onPress = {() =&gt; alert(index)}
-/&gt;
-&lt;button onClick = {() =&gt; this.ActionSheet.show()} &gt;open&lt;/button&gt;
-</code></pre><pre><code>&lt;ActionSheet
-  ref = {o =&gt; this.ActionSheet = o}
-  options = {[
-    &#39;option1&#39;,
-    &lt;Text style = {{color: '#108EE9', fontSize: 18}} &gt;{&#39;option2&#39;}&lt;/Text&gt;,
-    &lt;Text style = {{color: '#ff4f4f', fontSize: 20}} &gt;{&#39;删除&#39;}&lt;/Text&gt;
-  ]}
-  title = {&#39;自定义组件&#39;}
-/&gt;
-&lt;Button title = {&#39;open&#39;} onPress = {() =&gt; this.ActionSheet.show()} /&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">ActionSheet</span></span></span></span><br><span class="line"><span class="xml">  ref = </span><span class="template-variable">&#123;o =&gt; this.ActionSheet = o&#125;</span></span><br><span class="line"><span class="xml">  options = </span><span class="template-variable">&#123;[</span></span><br><span class="line"><span class="template-variable">    'option1',</span></span><br><span class="line"><span class="template-variable">    &lt;Text style = &#123;&#123;color: '#108EE9', fontSize: 18&#125;</span><span class="xml">&#125; &gt;</span><span class="template-variable">&#123;'option2'&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">Text</span>&gt;</span>,</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span> = </span></span><span class="template-variable">&#123;&#123;color: '#ff4f4f', fontSize: 20&#125;</span><span class="xml"><span class="tag">&#125; &gt;</span></span><span class="template-variable">&#123;'删除'&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span></span><br><span class="line"><span class="xml">  ]&#125;</span></span><br><span class="line"><span class="xml">  title = </span><span class="template-variable">&#123;'自定义组件'&#125;</span></span><br><span class="line"><span class="xml">/&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Button</span> <span class="attr">title</span> = </span></span><span class="template-variable">&#123;'open'&#125;</span><span class="xml"><span class="tag"> <span class="attr">onPress</span> = </span></span><span class="template-variable">&#123;() =&gt; this.ActionSheet.show()&#125;</span><span class="xml"><span class="tag"> /&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Badge"><a href="#Badge" class="headerlink" title="Badge"></a>Badge</h4>角标，用于消息数量的显示以及一般的小型徽标。当含有子组件时，角标悬浮在自组件右上角，num生效，text失效；当不含自组件时，角标作为单独的徽标，text失效，num生效。</li>
 </ul>
 <table>
@@ -463,8 +511,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>num</td>
 <td>角标数字</td>
 <td>number</td>
@@ -494,20 +541,12 @@
 <td>object</td>
 <td><code>{}</code></td>
 </tr>
-</tbody>
-</table>
-<pre><code>const boxContainer = &lt;div className = {&#39;badge-box&#39;} &gt;&lt;/div&gt;
-&lt;Badge num = {1} style = {{marginRight: '0.8rem'}} &gt;{boxContainer}&lt;/Badge&gt;
-&lt;Badge text = {&#39;券&#39;} defaultBackColor = {&#39;#f19736&#39;} /&gt;
-</code></pre><pre><code>const containerBox = {
-  width: 30,
-  height: 30,
-  backgroundColor: &#39;gray&#39;
-}
-&lt;Badge num = {1} style = {{marginRight: 30}} &gt;
-  &lt;View style = {containerBox} &gt;&lt;/View&gt;
-&lt;/Badge&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">const boxContainer = <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span> = </span></span><span class="template-variable">&#123;'badge-box'&#125;</span><span class="xml"><span class="tag"> &gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Badge</span> <span class="attr">num</span> = </span></span><span class="template-variable">&#123;1&#125;</span><span class="xml"><span class="tag"> <span class="attr">style</span> = </span></span><span class="template-variable">&#123;&#123;marginRight: '0.8rem'&#125;</span><span class="xml"><span class="tag">&#125; &gt;</span></span><span class="template-variable">&#123;boxContainer&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">Badge</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Badge</span> <span class="attr">text</span> = </span></span><span class="template-variable">&#123;'券'&#125;</span><span class="xml"><span class="tag"> <span class="attr">defaultBackColor</span> = </span></span><span class="template-variable">&#123;'#f19736'&#125;</span><span class="xml"><span class="tag"> /&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">const containerBox = </span><span class="template-variable">&#123;</span></span><br><span class="line"><span class="template-variable">  width: 30,</span></span><br><span class="line"><span class="template-variable">  height: 30,</span></span><br><span class="line"><span class="template-variable">  backgroundColor: 'gray'</span></span><br><span class="line"><span class="template-variable">&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Badge</span> <span class="attr">num</span> = </span></span><span class="template-variable">&#123;1&#125;</span><span class="xml"><span class="tag"> <span class="attr">style</span> = </span></span><span class="template-variable">&#123;&#123;marginRight: 30&#125;</span><span class="xml"><span class="tag">&#125; &gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">View</span> <span class="attr">style</span> = </span></span><span class="template-variable">&#123;containerBox&#125;</span><span class="xml"><span class="tag"> &gt;</span><span class="tag">&lt;/<span class="name">View</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">Badge</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Button"><a href="#Button" class="headerlink" title="Button"></a>Button</h4>按钮，支持块级、内联级、全填充、边框填充、大小等设置。</li>
 </ul>
 <p><code>import Button, {BUTTON_SIZE, BUTTON_TYPE} from &#39;./component/button&#39;</code></p>
@@ -520,8 +559,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>activeOpacity <code>rn only</code></td>
 <td>按钮点击时的按钮透明度</td>
 <td>number</td>
@@ -591,18 +629,12 @@
 <td>onPress</td>
 <td>触摸函数</td>
 <td>function</td>
-<td><code>() =&gt; {}</code> </td>
+<td><code>() =&gt; {}</code></td>
 </tr>
-</tbody>
-</table>
-<pre><code>&lt;Button
-  inline
-  size = {BUTTON_SIZE.SMALL}
-  type = {BUTTON_TYPE.GHOST}
-  icon = {&lt;Icon name = {&#39;ios-close-circle&#39;} color = {&#39;white&#39;} size = {14} /&gt;}
-  onPress = {() =&gt; alert(&#39;button&#39;)}
-&gt;small&lt;/Button&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Button</span></span></span></span><br><span class="line"><span class="xml">  inline</span></span><br><span class="line"><span class="xml">  size = &#123;BUTTON_SIZE.SMALL&#125;</span></span><br><span class="line"><span class="xml">  type = &#123;BUTTON_TYPE.GHOST&#125;</span></span><br><span class="line"><span class="xml">  icon = &#123;<span class="tag">&lt;<span class="name">Icon</span> <span class="attr">name</span> = <span class="string">&#123;</span>'<span class="attr">ios-close-circle</span>'&#125; <span class="attr">color</span> = <span class="string">&#123;</span>'<span class="attr">white</span>'&#125; <span class="attr">size</span> = <span class="string">&#123;14&#125;</span> /&gt;</span>&#125;</span></span><br><span class="line"><span class="xml">  onPress = &#123;() =&gt; alert('button')&#125;</span></span><br><span class="line"><span class="xml">&gt;small<span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Card"><a href="#Card" class="headerlink" title="Card"></a>Card</h4>卡片视图，用于详细信息的展示。</li>
 </ul>
 <table>
@@ -614,8 +646,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><code>Card</code> cardStyle</td>
 <td>卡片基本样式</td>
 <td>object</td>
@@ -639,33 +670,12 @@
 <td>object</td>
 <td><code>{}</code></td>
 </tr>
-</tbody>
-</table>
-<pre><code>&lt;Card cardStyle = {margin15Ver} &gt;
-  &lt;Card.Header&gt;
-    &lt;p className = {&#39;intro-text&#39;} &gt;这是一个标题&lt;/p&gt;
-  &lt;/Card.Header&gt;
-  &lt;Card.Body&gt;
-    &lt;p className = {&#39;intro-text&#39;} &gt;这是一个同时使用到了Card.Header、Card.Body、Card.Footer的卡片。&lt;/p&gt;
-  &lt;/Card.Body&gt;
-  &lt;Card.Footer&gt;
-    &lt;p className = {&#39;intro-text&#39;} &gt;底部左侧&lt;/p&gt;
-    &lt;p className = {&#39;intro-text&#39;} &gt;底部右侧&lt;/p&gt;
-  &lt;/Card.Footer&gt;
-&lt;/Card&gt;
-</code></pre><pre><code>&lt;Card cardStyle = {{marginHorizontal: 15, borderRadius: 8}} &gt;
-  &lt;Card.Header&gt;
-    &lt;Text style = {{color: '#333333', fontSize: 16, fontWeight: 'bold'}} &gt;标题&lt;/Text&gt;
-  &lt;/Card.Header&gt;
-  &lt;Card.Body&gt;
-    &lt;Text style = {{color: '#666666'}} &gt;考虑到卡片的样式因需求的不同而不同，我们没有规定卡片所嵌套的组件的样式，这需要您自己定制。&lt;/Text&gt;
-  &lt;/Card.Body&gt;
-  &lt;Card.Footer footerStyle = {{paddingVertical: 10}} &gt;
-    &lt;Text style = {{color: '#68b1ed'}} &gt;喜欢&lt;/Text&gt;
-    &lt;Text style = {{color: '#68b1ed'}} &gt;更多&lt;/Text&gt;
-  &lt;/Card.Footer&gt;
-&lt;/Card&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Card</span> <span class="attr">cardStyle</span> = <span class="string">&#123;margin15Ver&#125;</span> &gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Card.Header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">className</span> = <span class="string">&#123;</span>'<span class="attr">intro-text</span>'&#125; &gt;</span>这是一个标题<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">Card.Header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Card.Body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">className</span> = <span class="string">&#123;</span>'<span class="attr">intro-text</span>'&#125; &gt;</span>这是一个同时使用到了Card.Header、Card.Body、Card.Footer的卡片。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">Card.Body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Card.Footer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">className</span> = <span class="string">&#123;</span>'<span class="attr">intro-text</span>'&#125; &gt;</span>底部左侧<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">className</span> = <span class="string">&#123;</span>'<span class="attr">intro-text</span>'&#125; &gt;</span>底部右侧<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">Card.Footer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Card</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Card</span> <span class="attr">cardStyle</span> = <span class="string">&#123;&#123;marginHorizontal:</span> <span class="attr">15</span>, <span class="attr">borderRadius:</span> <span class="attr">8</span>&#125;&#125; &gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Card.Header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span> = <span class="string">&#123;&#123;color:</span> '#<span class="attr">333333</span>', <span class="attr">fontSize:</span> <span class="attr">16</span>, <span class="attr">fontWeight:</span> '<span class="attr">bold</span>'&#125;&#125; &gt;</span>标题<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">Card.Header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Card.Body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span> = <span class="string">&#123;&#123;color:</span> '#<span class="attr">666666</span>'&#125;&#125; &gt;</span>考虑到卡片的样式因需求的不同而不同，我们没有规定卡片所嵌套的组件的样式，这需要您自己定制。<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">Card.Body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Card.Footer</span> <span class="attr">footerStyle</span> = <span class="string">&#123;&#123;paddingVertical:</span> <span class="attr">10</span>&#125;&#125; &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span> = <span class="string">&#123;&#123;color:</span> '#<span class="attr">68b1ed</span>'&#125;&#125; &gt;</span>喜欢<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span> = <span class="string">&#123;&#123;color:</span> '#<span class="attr">68b1ed</span>'&#125;&#125; &gt;</span>更多<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">Card.Footer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Card</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Carousel"><a href="#Carousel" class="headerlink" title="Carousel"></a>Carousel</h4>轮播图，用于图片切换展示。</li>
 </ul>
 <table>
@@ -677,8 +687,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>index</td>
 <td>当前索引值</td>
 <td>number</td>
@@ -748,38 +757,14 @@
 <td>carouselStyle <code>rn only</code></td>
 <td>轮播图样式</td>
 <td>object</td>
-<td><code>{}</code> </td>
+<td><code>{}</code></td>
 </tr>
-</tbody>
-</table>
-<pre><code>const imgArr = [&#39;./image/1.jpg&#39;, &#39;./image/2.jpg&#39;, &#39;./image/3.jpg&#39;, &#39;./image/4.jpg&#39;];
-&lt;Carousel
-  width = { &#39;100vw&#39; }
-  height = { &#39;30vh&#39; }
-  autoPlay = {false} 
-  index = {2} 
-  onIndexChanged = {(index) =&gt; console.log(index)}
-&gt;
-  {
-    imgArr &amp;&amp; imgArr.map((url, index) =&gt;
-      &lt;img key = { index } src = { url }/&gt;)
-  }
-&lt;/Carousel&gt;
-</code></pre><pre><code>const style = {width: utils.window.width, height: 200}
-&lt;Carousel 
-  carouselStyle = {{marginBottom: 20}} 
-  width = {utils.window.width} 
-  height = {200} 
-  autoPlay = {false} 
-  index = {2} 
-  onIndexChanged = {(index) =&gt; console.log(index)}
-&gt;
-  &lt;Image source = {require(&#39;../../image/scenery.jpg&#39;)} style = {style } /&gt;
-  &lt;Image source = {require(&#39;../../image/carousel1.jpg&#39;)} style = {style} /&gt;
-  &lt;Image source = {require(&#39;../../image/swiper-bk.jpg&#39;)} style = {style} /&gt;
-  &lt;Image source = {require(&#39;../../image/carousel2.jpg&#39;)} style = {style} /&gt;
-&lt;/Carousel&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> imgArr = [<span class="string">'./image/1.jpg'</span>, <span class="string">'./image/2.jpg'</span>, <span class="string">'./image/3.jpg'</span>, <span class="string">'./image/4.jpg'</span>];</span><br><span class="line">&lt;Carousel</span><br><span class="line">  width = &#123; <span class="string">'100vw'</span> &#125;</span><br><span class="line">  height = &#123; <span class="string">'30vh'</span> &#125;</span><br><span class="line">  autoPlay = &#123;<span class="literal">false</span>&#125; </span><br><span class="line">  index = &#123;<span class="number">2</span>&#125; </span><br><span class="line">  onIndexChanged = &#123;(index) =&gt; <span class="built_in">console</span>.log(index)&#125;</span><br><span class="line">&gt;</span><br><span class="line">  &#123;</span><br><span class="line">    imgArr &amp;&amp; imgArr.map(<span class="function">(<span class="params">url, index</span>) =&gt;</span></span><br><span class="line">      &lt;img key = &#123; index &#125; src = &#123; url &#125;/&gt;)</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="regexp">/Carousel&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">const style = </span><span class="template-variable">&#123;width: utils.window.width, height: 200&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Carousel</span> </span></span></span><br><span class="line"><span class="xml">  carouselStyle = </span><span class="template-variable">&#123;&#123;marginBottom: 20&#125;</span><span class="xml">&#125; </span></span><br><span class="line"><span class="xml">  width = </span><span class="template-variable">&#123;utils.window.width&#125;</span><span class="xml"> </span></span><br><span class="line"><span class="xml">  height = </span><span class="template-variable">&#123;200&#125;</span><span class="xml"> </span></span><br><span class="line"><span class="xml">  autoPlay = </span><span class="template-variable">&#123;false&#125;</span><span class="xml"> </span></span><br><span class="line"><span class="xml">  index = </span><span class="template-variable">&#123;2&#125;</span><span class="xml"> </span></span><br><span class="line"><span class="xml">  onIndexChanged = </span><span class="template-variable">&#123;(index) =&gt; console.log(index)&#125;</span></span><br><span class="line"><span class="xml">&gt;</span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">Image</span> <span class="attr">source</span> = </span></span><span class="template-variable">&#123;require('../../image/scenery.jpg')&#125;</span><span class="xml"><span class="tag"> <span class="attr">style</span> = </span></span><span class="template-variable">&#123;style &#125;</span><span class="xml"><span class="tag"> /&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">Image</span> <span class="attr">source</span> = </span></span><span class="template-variable">&#123;require('../../image/carousel1.jpg')&#125;</span><span class="xml"><span class="tag"> <span class="attr">style</span> = </span></span><span class="template-variable">&#123;style&#125;</span><span class="xml"><span class="tag"> /&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">Image</span> <span class="attr">source</span> = </span></span><span class="template-variable">&#123;require('../../image/swiper-bk.jpg')&#125;</span><span class="xml"><span class="tag"> <span class="attr">style</span> = </span></span><span class="template-variable">&#123;style&#125;</span><span class="xml"><span class="tag"> /&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">Image</span> <span class="attr">source</span> = </span></span><span class="template-variable">&#123;require('../../image/carousel2.jpg')&#125;</span><span class="xml"><span class="tag"> <span class="attr">style</span> = </span></span><span class="template-variable">&#123;style&#125;</span><span class="xml"><span class="tag"> /&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">Carousel</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Checkbox"><a href="#Checkbox" class="headerlink" title="Checkbox"></a>Checkbox</h4>多选框</li>
 </ul>
 <table>
@@ -791,8 +776,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><code>Checkbox.Group</code> defaultValue</td>
 <td>默认value</td>
 <td>any</td>
@@ -870,19 +854,12 @@
 <td>function</td>
 <td><code>() =&gt; {}</code></td>
 </tr>
-</tbody>
-</table>
-<pre><code>&lt;Checkbox.Group value = {this.state.value} onChange = {value =&gt; this.setState({value})} &gt;
-  &lt;Checkbox id = {&#39;checkbox_1&#39;} value = {&#39;A&#39;} &gt;A&lt;/Checkbox&gt;
-  &lt;Checkbox id = {&#39;checkbox_2&#39;} value = {&#39;B&#39;} &gt;B&lt;/Checkbox&gt;
-  &lt;Checkbox id = {&#39;checkbox_3&#39;} value = {&#39;C&#39;} &gt;C&lt;/Checkbox&gt;
-&lt;/Checkbox.Group&gt;
-</code></pre><pre><code>&lt;Checkbox.Group defaultValue = {[&#39;B&#39;]} &gt;
-  &lt;Checkbox value = {&#39;A&#39;} &gt;A&lt;/Checkbox&gt;
-  &lt;Checkbox value = {&#39;B&#39;} &gt;B&lt;/Checkbox&gt;
-  &lt;Checkbox value = {&#39;C&#39;} &gt;C&lt;/Checkbox&gt;
-&lt;/Checkbox.Group&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Checkbox.Group</span> <span class="attr">value</span> = <span class="string">&#123;this.state.value&#125;</span> <span class="attr">onChange</span> = <span class="string">&#123;value</span> =&gt;</span> this.setState(&#123;value&#125;)&#125; &gt;</span><br><span class="line">  <span class="tag">&lt;<span class="name">Checkbox</span> <span class="attr">id</span> = <span class="string">&#123;</span>'<span class="attr">checkbox_1</span>'&#125; <span class="attr">value</span> = <span class="string">&#123;</span>'<span class="attr">A</span>'&#125; &gt;</span>A<span class="tag">&lt;/<span class="name">Checkbox</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Checkbox</span> <span class="attr">id</span> = <span class="string">&#123;</span>'<span class="attr">checkbox_2</span>'&#125; <span class="attr">value</span> = <span class="string">&#123;</span>'<span class="attr">B</span>'&#125; &gt;</span>B<span class="tag">&lt;/<span class="name">Checkbox</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Checkbox</span> <span class="attr">id</span> = <span class="string">&#123;</span>'<span class="attr">checkbox_3</span>'&#125; <span class="attr">value</span> = <span class="string">&#123;</span>'<span class="attr">C</span>'&#125; &gt;</span>C<span class="tag">&lt;/<span class="name">Checkbox</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Checkbox.Group</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Checkbox.Group</span> <span class="attr">defaultValue</span> = <span class="string">&#123;[</span>'<span class="attr">B</span>']&#125; &gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Checkbox</span> <span class="attr">value</span> = <span class="string">&#123;</span>'<span class="attr">A</span>'&#125; &gt;</span>A<span class="tag">&lt;/<span class="name">Checkbox</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Checkbox</span> <span class="attr">value</span> = <span class="string">&#123;</span>'<span class="attr">B</span>'&#125; &gt;</span>B<span class="tag">&lt;/<span class="name">Checkbox</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Checkbox</span> <span class="attr">value</span> = <span class="string">&#123;</span>'<span class="attr">C</span>'&#125; &gt;</span>C<span class="tag">&lt;/<span class="name">Checkbox</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Checkbox.Group</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Collapse"><a href="#Collapse" class="headerlink" title="Collapse"></a>Collapse</h4>折叠面板，信息的展开与收起。</li>
 </ul>
 <table>
@@ -894,8 +871,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>activityKey</td>
 <td>当前激活项</td>
 <td>string, number</td>
@@ -931,40 +907,12 @@
 <td>string, number</td>
 <td><code>&quot;&quot;</code></td>
 </tr>
-</tbody>
-</table>
-<pre><code>&lt;Collapse
-  accordion = {true}
-  onChange = {(activeKey) =&gt; activeKey &amp;&amp; alert(activeKey)}
-  style = {{marginBottom: '0.4rem'}}
-  activeKey = {&#39;panel2&#39;}
-&gt;
-  &lt;Collapse.Panel title = {&#39;标题1&#39;} panelKey = {&#39;panel1&#39;} &gt;
-    &lt;p className = {&#39;panel-margin&#39;} &gt;这是一个含有回调函数的手风琴模式的面板子组件&lt;/p&gt;
-  &lt;/Collapse.Panel&gt;
-  &lt;Collapse.Panel title = {&#39;标题2&#39;} panelKey = {&#39;panel2&#39;} &gt;
-    &lt;p className = {&#39;panel-margin&#39;} &gt;这是一个含有回调函数的手风琴模式的面板子组件&lt;/p&gt;
-  &lt;/Collapse.Panel&gt;
-  &lt;Collapse.Panel title = {&#39;标题3&#39;} panelKey = {&#39;panel3&#39;} &gt;
-    &lt;p className = {&#39;panel-margin&#39;} &gt;这是一个含有回调函数的手风琴模式的面板子组件&lt;/p&gt;
-  &lt;/Collapse.Panel&gt;
-&lt;/Collapse&gt;
-</code></pre><pre><code>&lt;Collapse
-  accordion = {true}
-  onChange = {(activeKey) =&gt; activeKey &amp;&amp; ToastAndroid.show(activeKey, ToastAndroid.SHORT)}
-  style = {{marginBottom: 20}}
-&gt;
-  &lt;Collapse.Panel title = {&#39;标题1&#39;} panelKey = {&#39;panel1&#39;} &gt;
-    &lt;Text style= {styles.panel} &gt;这是一个含有回调函数的手风琴模式的面板子组件&lt;/Text&gt;
-  &lt;/Collapse.Panel&gt;
-  &lt;Collapse.Panel title = {&#39;标题2&#39;} panelKey = {&#39;panel2&#39;} &gt;
-    &lt;Text style= {styles.panel} &gt;这是一个含有回调函数的手风琴模式的面板子组件&lt;/Text&gt;
-  &lt;/Collapse.Panel&gt;
-  &lt;Collapse.Panel title = {&#39;标题3&#39;} panelKey = {&#39;panel3&#39;} &gt;
-    &lt;Text style= {styles.panel} &gt;这是一个含有回调函数的手风琴模式的面板子组件&lt;/Text&gt;
-  &lt;/Collapse.Panel&gt;
-&lt;/Collapse&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Collapse</span></span></span></span><br><span class="line"><span class="xml">  accordion = </span><span class="template-variable">&#123;true&#125;</span></span><br><span class="line"><span class="xml">  onChange = </span><span class="template-variable">&#123;(activeKey) =&gt; activeKey &amp;&amp; alert(activeKey)&#125;</span></span><br><span class="line"><span class="xml">  style = </span><span class="template-variable">&#123;&#123;marginBottom: '0.4rem'&#125;</span><span class="xml">&#125;</span></span><br><span class="line"><span class="xml">  activeKey = </span><span class="template-variable">&#123;'panel2'&#125;</span></span><br><span class="line"><span class="xml">&gt;</span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">Collapse.Panel</span> <span class="attr">title</span> = </span></span><span class="template-variable">&#123;'标题1'&#125;</span><span class="xml"><span class="tag"> <span class="attr">panelKey</span> = </span></span><span class="template-variable">&#123;'panel1'&#125;</span><span class="xml"><span class="tag"> &gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">className</span> = </span></span><span class="template-variable">&#123;'panel-margin'&#125;</span><span class="xml"><span class="tag"> &gt;</span>这是一个含有回调函数的手风琴模式的面板子组件<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">Collapse.Panel</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">Collapse.Panel</span> <span class="attr">title</span> = </span></span><span class="template-variable">&#123;'标题2'&#125;</span><span class="xml"><span class="tag"> <span class="attr">panelKey</span> = </span></span><span class="template-variable">&#123;'panel2'&#125;</span><span class="xml"><span class="tag"> &gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">className</span> = </span></span><span class="template-variable">&#123;'panel-margin'&#125;</span><span class="xml"><span class="tag"> &gt;</span>这是一个含有回调函数的手风琴模式的面板子组件<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">Collapse.Panel</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">Collapse.Panel</span> <span class="attr">title</span> = </span></span><span class="template-variable">&#123;'标题3'&#125;</span><span class="xml"><span class="tag"> <span class="attr">panelKey</span> = </span></span><span class="template-variable">&#123;'panel3'&#125;</span><span class="xml"><span class="tag"> &gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">className</span> = </span></span><span class="template-variable">&#123;'panel-margin'&#125;</span><span class="xml"><span class="tag"> &gt;</span>这是一个含有回调函数的手风琴模式的面板子组件<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">Collapse.Panel</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">Collapse</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Collapse</span></span></span></span><br><span class="line"><span class="xml">  accordion = &#123;true&#125;</span></span><br><span class="line"><span class="xml">  onChange = &#123;(activeKey) =&gt; activeKey &amp;&amp; ToastAndroid.show(activeKey, ToastAndroid.SHORT)&#125;</span></span><br><span class="line"><span class="xml">  style = </span><span class="template-variable">&#123;&#123;marginBottom: 20&#125;&#125;</span></span><br><span class="line"><span class="xml">&gt;</span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">Collapse.Panel</span> <span class="attr">title</span> = <span class="string">&#123;</span>'标题<span class="attr">1</span>'&#125; <span class="attr">panelKey</span> = <span class="string">&#123;</span>'<span class="attr">panel1</span>'&#125; &gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>= <span class="string">&#123;styles.panel&#125;</span> &gt;</span>这是一个含有回调函数的手风琴模式的面板子组件<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">Collapse.Panel</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">Collapse.Panel</span> <span class="attr">title</span> = <span class="string">&#123;</span>'标题<span class="attr">2</span>'&#125; <span class="attr">panelKey</span> = <span class="string">&#123;</span>'<span class="attr">panel2</span>'&#125; &gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>= <span class="string">&#123;styles.panel&#125;</span> &gt;</span>这是一个含有回调函数的手风琴模式的面板子组件<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">Collapse.Panel</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">Collapse.Panel</span> <span class="attr">title</span> = <span class="string">&#123;</span>'标题<span class="attr">3</span>'&#125; <span class="attr">panelKey</span> = <span class="string">&#123;</span>'<span class="attr">panel3</span>'&#125; &gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>= <span class="string">&#123;styles.panel&#125;</span> &gt;</span>这是一个含有回调函数的手风琴模式的面板子组件<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">Collapse.Panel</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">Collapse</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Counter"><a href="#Counter" class="headerlink" title="Counter"></a>Counter</h4>计数器，数字选择框。</li>
 </ul>
 <table>
@@ -976,8 +924,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>defaultValue</td>
 <td>计数器默认值</td>
 <td>number</td>
@@ -1054,12 +1001,11 @@
 <td>外部获取计数值</td>
 <td>function</td>
 <td></td>
-<td></td>
 </tr>
-</tbody>
-</table>
-<pre><code>&lt;Counter defaultValue = {5} stepNum = {2} minValue = {1} maxValue = {9} /&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Counter</span> <span class="attr">defaultValue</span> = <span class="string">&#123;5&#125;</span> <span class="attr">stepNum</span> = <span class="string">&#123;2&#125;</span> <span class="attr">minValue</span> = <span class="string">&#123;1&#125;</span> <span class="attr">maxValue</span> = <span class="string">&#123;9&#125;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="DrawerLayout"><a href="#DrawerLayout" class="headerlink" title="DrawerLayout"></a>DrawerLayout</h4>抽屉视图，用于左右侧弹出的菜单。<br><code>import DrawerLayout, {DRAWER_POSITION, DRAWER_LOCK_MODE, KEYBOARD_DISMISS_MODE} from &#39;./component/drawerLayout&#39;</code></li>
 </ul>
 <table>
@@ -1071,8 +1017,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>drawerWidth <code>rn only</code></td>
 <td>抽屉宽度</td>
 <td>number</td>
@@ -1125,55 +1070,19 @@
 <td>外部打开抽屉</td>
 <td>function</td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td>closeDrawer() <code>static</code></td>
 <td>外部关闭抽屉</td>
 <td>function</td>
 <td></td>
-<td></td>
 </tr>
-</tbody>
-</table>
-<pre><code>const drawerView = (
-  &lt;div&gt;
-    &lt;List title = {&#39;前往商城&#39;} showLine /&gt;
-    &lt;List title = {&#39;个人中心&#39;} showLine /&gt;
-    &lt;List title = {&#39;设置&#39;} showLine /&gt;
-    &lt;p className = {&#39;margin-15 header-text&#39;}&gt;I&#39;m in the Drawer!&lt;/p&gt;
-  &lt;/div&gt;
-)
-&lt;Button 
-  onPress = {() =&gt; this.drawer.openDrawer()} 
-&gt;打开右侧抽屉&lt;/Button&gt;
-&lt;DrawerLayout 
-  drawerPosition = {DRAWER_POSITION.RIGHT} 
-  renderNavigationView = {() =&gt; drawerView} 
-  ref = {drawer =&gt; this.drawer = drawer} 
-/&gt;
-</code></pre><pre><code>const navigationView = (
-  &lt;View style={{flex: 1, backgroundColor: '#fff'}} &gt;
-    &lt;List title = {&#39;前往商城&#39;} /&gt;
-    &lt;List title = {&#39;个人中心&#39;} /&gt;
-    &lt;List title = {&#39;设置&#39;} /&gt;
-    &lt;Text style={{margin: 10, fontSize: 15, textAlign: 'left'}}&gt;I&#39;m in the Drawer!&lt;/Text&gt;
-  &lt;/View&gt;
-)
-&lt;DrawerLayout
-  drawerWidth = {200}
-  renderNavigationView = {() =&gt; navigationView}
-  onDrawerOpen = {() =&gt; console.log(&#39;opend&#39;)}
-  onDrawerClose = {() =&gt; console.log(&#39;closed&#39;)}
-  onDrawerSlide = {() =&gt; console.log(&#39;sliding&#39;)}
-  ref = {drawer =&gt; this.Drawer = drawer}
-&gt;
-  &lt;View style = {styles.container} &gt;
-    &lt;Text style = {styles.introduction} &gt;一个纯JavaScript实现的抽屉组件，具有和React Native的DrawerLayoutAndroid相同的api。我们舍弃了使用率较低的onDrawerStateChanged，并将所有枚举类型单独提取出来。&lt;/Text&gt;
-    &lt;Button buttonColor = {&#39;#108EE9&#39;} onPress = {() =&gt; this.Drawer.openDrawer()} &gt;打开抽屉&lt;/Button&gt;
-  &lt;/View&gt;
-&lt;/DrawerLayout&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">const drawerView = (</span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">List</span> <span class="attr">title</span> = </span></span><span class="template-variable">&#123;'前往商城'&#125;</span><span class="xml"><span class="tag"> <span class="attr">showLine</span> /&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">List</span> <span class="attr">title</span> = </span></span><span class="template-variable">&#123;'个人中心'&#125;</span><span class="xml"><span class="tag"> <span class="attr">showLine</span> /&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">List</span> <span class="attr">title</span> = </span></span><span class="template-variable">&#123;'设置'&#125;</span><span class="xml"><span class="tag"> <span class="attr">showLine</span> /&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">className</span> = </span></span><span class="template-variable">&#123;'margin-15 header-text'&#125;</span><span class="xml"><span class="tag">&gt;</span>I'm in the Drawer!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">)</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Button</span> </span></span></span><br><span class="line"><span class="xml">  onPress = </span><span class="template-variable">&#123;() =&gt; this.drawer.openDrawer()&#125;</span><span class="xml"> </span></span><br><span class="line"><span class="xml">&gt;打开右侧抽屉<span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">DrawerLayout</span> </span></span></span><br><span class="line"><span class="xml">  drawerPosition = </span><span class="template-variable">&#123;DRAWER_POSITION.RIGHT&#125;</span><span class="xml"> </span></span><br><span class="line"><span class="xml">  renderNavigationView = </span><span class="template-variable">&#123;() =&gt; drawerView&#125;</span><span class="xml"> </span></span><br><span class="line"><span class="xml">  ref = </span><span class="template-variable">&#123;drawer =&gt; this.drawer = drawer&#125;</span><span class="xml"> </span></span><br><span class="line"><span class="xml">/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">const navigationView = (</span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">View</span> <span class="attr">style</span>=</span></span><span class="template-variable">&#123;&#123;flex: 1, backgroundColor: '#fff'&#125;</span><span class="xml"><span class="tag">&#125; &gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">List</span> <span class="attr">title</span> = </span></span><span class="template-variable">&#123;'前往商城'&#125;</span><span class="xml"><span class="tag"> /&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">List</span> <span class="attr">title</span> = </span></span><span class="template-variable">&#123;'个人中心'&#125;</span><span class="xml"><span class="tag"> /&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">List</span> <span class="attr">title</span> = </span></span><span class="template-variable">&#123;'设置'&#125;</span><span class="xml"><span class="tag"> /&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>=</span></span><span class="template-variable">&#123;&#123;margin: 10, fontSize: 15, textAlign: 'left'&#125;</span><span class="xml"><span class="tag">&#125;&gt;</span>I'm in the Drawer!<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">View</span>&gt;</span></span></span><br><span class="line"><span class="xml">)</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">DrawerLayout</span></span></span></span><br><span class="line"><span class="xml">  drawerWidth = </span><span class="template-variable">&#123;200&#125;</span></span><br><span class="line"><span class="xml">  renderNavigationView = </span><span class="template-variable">&#123;() =&gt; navigationView&#125;</span></span><br><span class="line"><span class="xml">  onDrawerOpen = </span><span class="template-variable">&#123;() =&gt; console.log('opend')&#125;</span></span><br><span class="line"><span class="xml">  onDrawerClose = </span><span class="template-variable">&#123;() =&gt; console.log('closed')&#125;</span></span><br><span class="line"><span class="xml">  onDrawerSlide = </span><span class="template-variable">&#123;() =&gt; console.log('sliding')&#125;</span></span><br><span class="line"><span class="xml">  ref = </span><span class="template-variable">&#123;drawer =&gt; this.Drawer = drawer&#125;</span></span><br><span class="line"><span class="xml">&gt;</span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">View</span> <span class="attr">style</span> = </span></span><span class="template-variable">&#123;styles.container&#125;</span><span class="xml"><span class="tag"> &gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span> = </span></span><span class="template-variable">&#123;styles.introduction&#125;</span><span class="xml"><span class="tag"> &gt;</span>一个纯JavaScript实现的抽屉组件，具有和React Native的DrawerLayoutAndroid相同的api。我们舍弃了使用率较低的onDrawerStateChanged，并将所有枚举类型单独提取出来。<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">Button</span> <span class="attr">buttonColor</span> = </span></span><span class="template-variable">&#123;'#108EE9'&#125;</span><span class="xml"><span class="tag"> <span class="attr">onPress</span> = </span></span><span class="template-variable">&#123;() =&gt; this.Drawer.openDrawer()&#125;</span><span class="xml"><span class="tag"> &gt;</span>打开抽屉<span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">View</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">DrawerLayout</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Flex"><a href="#Flex" class="headerlink" title="Flex"></a>Flex</h4>基于flex实现的栅格系统。</li>
 </ul>
 <table>
@@ -1185,8 +1094,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>justify</td>
 <td>主轴对齐方式</td>
 <td>string, flex-justify-conent</td>
@@ -1220,49 +1128,14 @@
 <td><code>Flex.Item</code> flexItemStyle</td>
 <td>flexItem样式</td>
 <td>object</td>
-<td><code>{}</code> </td>
+<td><code>{}</code></td>
 </tr>
-</tbody>
-</table>
-<pre><code>&lt;Flex flexStyle = {{marginBottom: '0.4rem'}} &gt;
-  &lt;Flex.Item&gt;
-    &lt;div className = {&#39;flex-item&#39;} style = {{backgroundColor: '#108EE9'}} &gt;
-      &lt;p className = {&#39;flex-text&#39;} &gt;50%&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/Flex.Item&gt;
-  &lt;Flex.Item&gt;
-    &lt;div className = {&#39;flex-item&#39;} style = {{backgroundColor: '#4badf3'}} &gt;
-      &lt;p className = {&#39;flex-text&#39;} &gt;50%&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/Flex.Item&gt;
-&lt;/Flex&gt;
-</code></pre><pre><code>&lt;Flex 
-  justify = {&#39;flex-end&#39;} 
-  align = {&#39;flex-end&#39;} 
-  flexStyle = {{marginBottom: 20}} 
-&gt;
-  {
-    (function() {
-      return [1,2,3].map((item, index) =&gt; {
-        let secondViewStyle = {};
-        if(index == 1) {
-          secondViewStyle = {
-            height: 20
-          }
-        }
-        return (
-          &lt;View 
-            key = {index} 
-            style = {[styles.wrapStyle, secondViewStyle, {marginLeft: 10, marginRight: 0}, {backgroundColor: &#39;#8c62f9&#39;}]} 
-          &gt;
-            &lt;Text style = {styles.flexText} &gt;修改次轴&lt;/Text&gt;
-          &lt;/View&gt;
-        )
-      })
-    })()
-  }
-&lt;/Flex&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Flex</span> <span class="attr">flexStyle</span> = <span class="string">&#123;&#123;marginBottom:</span> '<span class="attr">0.4rem</span>'&#125;&#125; &gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Flex.Item</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span> = <span class="string">&#123;</span>'<span class="attr">flex-item</span>'&#125; <span class="attr">style</span> = <span class="string">&#123;&#123;backgroundColor:</span> '#<span class="attr">108EE9</span>'&#125;&#125; &gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">className</span> = <span class="string">&#123;</span>'<span class="attr">flex-text</span>'&#125; &gt;</span>50%<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">Flex.Item</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Flex.Item</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span> = <span class="string">&#123;</span>'<span class="attr">flex-item</span>'&#125; <span class="attr">style</span> = <span class="string">&#123;&#123;backgroundColor:</span> '#<span class="attr">4badf3</span>'&#125;&#125; &gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">className</span> = <span class="string">&#123;</span>'<span class="attr">flex-text</span>'&#125; &gt;</span>50%<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">Flex.Item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Flex</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;Flex </span><br><span class="line">  justify = &#123;<span class="string">'flex-end'</span>&#125; </span><br><span class="line">  align = &#123;<span class="string">'flex-end'</span>&#125; </span><br><span class="line">  flexStyle = &#123;&#123;<span class="attr">marginBottom</span>: <span class="number">20</span>&#125;&#125; </span><br><span class="line">&gt;</span><br><span class="line">  &#123;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].map(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> secondViewStyle = &#123;&#125;;</span><br><span class="line">        <span class="keyword">if</span>(index == <span class="number">1</span>) &#123;</span><br><span class="line">          secondViewStyle = &#123;</span><br><span class="line">            height: <span class="number">20</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">          &lt;View </span><br><span class="line">            key = &#123;index&#125; </span><br><span class="line">            style = &#123;[styles.wrapStyle, secondViewStyle, &#123;<span class="attr">marginLeft</span>: <span class="number">10</span>, <span class="attr">marginRight</span>: <span class="number">0</span>&#125;, &#123;<span class="attr">backgroundColor</span>: <span class="string">'#8c62f9'</span>&#125;]&#125; </span><br><span class="line">          &gt;</span><br><span class="line">            &lt;Text style = &#123;styles.flexText&#125; &gt;修改次轴&lt;<span class="regexp">/Text&gt;</span></span><br><span class="line"><span class="regexp">          &lt;/</span>View&gt;</span><br><span class="line">        )</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)()</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="regexp">/Flex&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h4>头部导航</li>
 </ul>
 <table>
@@ -1274,8 +1147,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>containerStyle</td>
 <td>容器样式</td>
 <td>object</td>
@@ -1305,25 +1177,12 @@
 <td>element</td>
 <td><code>null</code></td>
 </tr>
-</tbody>
-</table>
-<pre><code>&lt;Header
-  title = {&#39;导航栏&#39;}
-  containerStyle = {{backgroundColor: '#01DD9B'}}
-  rightBtn = {&lt;span className = {&#39;header-text&#39;} style = {{color: 'white'}} &gt;更多&lt;/span&gt;}
-/&gt;
-</code></pre><pre><code>const rightBtn = (
-  &lt;TouchableOpacity onPress = {() =&gt; alert(&#39;更多&#39;)} &gt;
-    &lt;Text style = {styles.more} &gt;更多&lt;/Text&gt;
-  &lt;/TouchableOpacity&gt;
-)
-&lt;Header
-  title = {&#39;头部&#39;}
-  leftBtn = {rightBtn}
-  containerStyle = {{backgroundColor: '#f0eded'}}
-  titleStyle = {{color: '#333333'}}
-/&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Header</span></span></span></span><br><span class="line"><span class="xml">  title = &#123;'导航栏'&#125;</span></span><br><span class="line"><span class="xml">  containerStyle = </span><span class="template-variable">&#123;&#123;backgroundColor: '#01DD9B'&#125;&#125;</span></span><br><span class="line"><span class="xml">  rightBtn = &#123;<span class="tag">&lt;<span class="name">span</span> <span class="attr">className</span> = <span class="string">&#123;</span>'<span class="attr">header-text</span>'&#125; <span class="attr">style</span> = </span></span><span class="template-variable">&#123;&#123;color: 'white'&#125;&#125;</span><span class="xml"><span class="tag"> &gt;</span>更多<span class="tag">&lt;/<span class="name">span</span>&gt;</span>&#125;</span></span><br><span class="line"><span class="xml">/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const rightBtn = (</span><br><span class="line">  <span class="tag">&lt;<span class="name">TouchableOpacity</span> <span class="attr">onPress</span> = <span class="string">&#123;()</span> =&gt;</span> alert('更多')&#125; &gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span> = <span class="string">&#123;styles.more&#125;</span> &gt;</span>更多<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">TouchableOpacity</span>&gt;</span></span><br><span class="line">)</span><br><span class="line"><span class="tag">&lt;<span class="name">Header</span></span></span><br><span class="line"><span class="tag">  <span class="attr">title</span> = <span class="string">&#123;</span>'头部'&#125;</span></span><br><span class="line"><span class="tag">  <span class="attr">leftBtn</span> = <span class="string">&#123;rightBtn&#125;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">containerStyle</span> = <span class="string">&#123;&#123;backgroundColor:</span> '#<span class="attr">f0eded</span>'&#125;&#125;</span></span><br><span class="line"><span class="tag">  <span class="attr">titleStyle</span> = <span class="string">&#123;&#123;color:</span> '#<span class="attr">333333</span>'&#125;&#125;</span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Icon"><a href="#Icon" class="headerlink" title="Icon"></a>Icon</h4>字体图标，基于<code>Ionicons</code>。</li>
 </ul>
 <table>
@@ -1335,8 +1194,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>name</td>
 <td>icon名字，参考<code>iconMap.json</code></td>
 <td>string</td>
@@ -1360,10 +1218,10 @@
 <td>object</td>
 <td><code>{}</code></td>
 </tr>
-</tbody>
-</table>
-<pre><code>&lt;Icon name = {&#39;ios-analytics&#39;} size = {20} color = {&#39;#ff4f4f&#39;} /&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Icon</span> <span class="attr">name</span> = <span class="string">&#123;</span>'<span class="attr">ios-analytics</span>'&#125; <span class="attr">size</span> = <span class="string">&#123;20&#125;</span> <span class="attr">color</span> = <span class="string">&#123;</span>'#<span class="attr">ff4f4f</span>'&#125; /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="List"><a href="#List" class="headerlink" title="List"></a>List</h4>列表，用于数据列表展示、基本内容呈现。</li>
 </ul>
 <table>
@@ -1375,8 +1233,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>listStyle</td>
 <td>list最顶层的样式，一般用于margin和padding</td>
 <td>object</td>
@@ -1466,42 +1323,12 @@
 <td>array</td>
 <td><code>[]</code></td>
 </tr>
-</tbody>
-</table>
-<pre><code>&lt;List
-  title = {&#39;控制左右内容的对齐方式&#39;}
-  showRightIcon = {false}
-  leftContent = {contacts}
-  rightContent = {&lt;span className = {&#39;list-third-text&#39;} &gt;12:00&lt;/span&gt;}
-  rightContentFlex = {&#39;flex-start&#39;}
-&gt;
-  &lt;p className = {&#39;list-second-text&#39;} &gt;左侧内容居中于List&lt;/p&gt;
-  &lt;p className = {&#39;list-third-text&#39;} &gt;右侧内容上对齐于List&lt;/p&gt;
-&lt;/List&gt;
-</code></pre><pre><code>&lt;List
-  title = {&#39;灰色置顶&#39;}
-  listStyle = {{marginBottom: 20}}
-  showRightIcon = {false}
-  btnConfig = {[{
-    text: &#39;置顶&#39;,
-    width: 60,
-    backgroundColor: &#39;gray&#39;,
-    onPress: () =&gt; alert(&#39;您点击了置顶按钮&#39;)
-  }, {
-    text: &#39;提醒&#39;,
-    width: 60,
-    backgroundColor: &#39;#c4af00&#39;,
-    onPress: () =&gt; alert(&#39;您点击了提醒按钮&#39;)
-  }, {
-    text: &#39;删除&#39;,
-    width: 60,
-    onPress: () =&gt; alert(&#39;您点击了删除按钮&#39;)
-  }]}
-&gt;
-  &lt;Text style = {{fontSize: 15}} &gt;黄色提醒&lt;/Text&gt;
-  &lt;Text style = {{fontSize: 14}} &gt;红色删除&lt;/Text&gt;
-&lt;/List&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">List</span></span></span></span><br><span class="line"><span class="xml">  title = &#123;'控制左右内容的对齐方式'&#125;</span></span><br><span class="line"><span class="xml">  showRightIcon = &#123;false&#125;</span></span><br><span class="line"><span class="xml">  leftContent = &#123;contacts&#125;</span></span><br><span class="line"><span class="xml">  rightContent = &#123;<span class="tag">&lt;<span class="name">span</span> <span class="attr">className</span> = <span class="string">&#123;</span>'<span class="attr">list-third-text</span>'&#125; &gt;</span>12:00<span class="tag">&lt;/<span class="name">span</span>&gt;</span>&#125;</span></span><br><span class="line"><span class="xml">  rightContentFlex = &#123;'flex-start'&#125;</span></span><br><span class="line"><span class="xml">&gt;</span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">className</span> = <span class="string">&#123;</span>'<span class="attr">list-second-text</span>'&#125; &gt;</span>左侧内容居中于List<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">className</span> = <span class="string">&#123;</span>'<span class="attr">list-third-text</span>'&#125; &gt;</span>右侧内容上对齐于List<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">List</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;List</span><br><span class="line">  title = &#123;<span class="string">'灰色置顶'</span>&#125;</span><br><span class="line">  listStyle = &#123;&#123;<span class="attr">marginBottom</span>: <span class="number">20</span>&#125;&#125;</span><br><span class="line">  showRightIcon = &#123;<span class="literal">false</span>&#125;</span><br><span class="line">  btnConfig = &#123;[&#123;</span><br><span class="line">    text: <span class="string">'置顶'</span>,</span><br><span class="line">    width: <span class="number">60</span>,</span><br><span class="line">    backgroundColor: <span class="string">'gray'</span>,</span><br><span class="line">    onPress: <span class="function"><span class="params">()</span> =&gt;</span> alert(<span class="string">'您点击了置顶按钮'</span>)</span><br><span class="line">  &#125;, &#123;</span><br><span class="line">    text: <span class="string">'提醒'</span>,</span><br><span class="line">    width: <span class="number">60</span>,</span><br><span class="line">    backgroundColor: <span class="string">'#c4af00'</span>,</span><br><span class="line">    onPress: <span class="function"><span class="params">()</span> =&gt;</span> alert(<span class="string">'您点击了提醒按钮'</span>)</span><br><span class="line">  &#125;, &#123;</span><br><span class="line">    text: <span class="string">'删除'</span>,</span><br><span class="line">    width: <span class="number">60</span>,</span><br><span class="line">    onPress: <span class="function"><span class="params">()</span> =&gt;</span> alert(<span class="string">'您点击了删除按钮'</span>)</span><br><span class="line">  &#125;]&#125;</span><br><span class="line">&gt;</span><br><span class="line">  &lt;Text style = &#123;&#123;<span class="attr">fontSize</span>: <span class="number">15</span>&#125;&#125; &gt;黄色提醒&lt;<span class="regexp">/Text&gt;</span></span><br><span class="line"><span class="regexp">  &lt;Text style = &#123;&#123;fontSize: 14&#125;&#125; &gt;红色删除&lt;/</span>Text&gt;</span><br><span class="line">&lt;<span class="regexp">/List&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Pagination"><a href="#Pagination" class="headerlink" title="Pagination"></a>Pagination</h4>分页控件</li>
 </ul>
 <table>
@@ -1513,8 +1340,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>defaultPageNum</td>
 <td>默认页码数</td>
 <td>number</td>
@@ -1604,20 +1430,10 @@
 <td>object</td>
 <td><code>{}</code></td>
 </tr>
-</tbody>
-</table>
-<pre><code>&lt;Pagination
-  pageTotal = {5}
-  previous = {&#39;prev&#39;}
-  next = {&#39;next&#39;}
-  activePageColor = {&#39;#108EE9&#39;}
-  pageColor = {&#39;#333333&#39;}
-  previousBtnStyle = {{backgroundColor: '#108EE9', borderWidth: 0}}
-  previousTextStyle = {{color: 'white'}}
-  nextBtnStyle = {{backgroundColor: '#108EE9', borderWidth: 0}}
-  nextTextStyle = {{color: 'white'}}
-/&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;Pagination</span><br><span class="line">  pageTotal = &#123;<span class="number">5</span>&#125;</span><br><span class="line">  previous = &#123;<span class="string">'prev'</span>&#125;</span><br><span class="line">  next = &#123;<span class="string">'next'</span>&#125;</span><br><span class="line">  activePageColor = &#123;<span class="string">'#108EE9'</span>&#125;</span><br><span class="line">  pageColor = &#123;<span class="string">'#333333'</span>&#125;</span><br><span class="line">  previousBtnStyle = &#123;&#123;<span class="string">backgroundColor:</span> <span class="string">'#108EE9'</span>, <span class="string">borderWidth:</span> <span class="number">0</span>&#125;&#125;</span><br><span class="line">  previousTextStyle = &#123;&#123;<span class="string">color:</span> <span class="string">'white'</span>&#125;&#125;</span><br><span class="line">  nextBtnStyle = &#123;&#123;<span class="string">backgroundColor:</span> <span class="string">'#108EE9'</span>, <span class="string">borderWidth:</span> <span class="number">0</span>&#125;&#125;</span><br><span class="line">  nextTextStyle = &#123;&#123;<span class="string">color:</span> <span class="string">'white'</span>&#125;&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Radio"><a href="#Radio" class="headerlink" title="Radio"></a>Radio</h4>单选框</li>
 </ul>
 <table>
@@ -1629,8 +1445,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><code>Radio.Group</code> defaultValue</td>
 <td>默认值</td>
 <td>any</td>
@@ -1702,19 +1517,12 @@
 <td>boolean</td>
 <td><code>false</code></td>
 </tr>
-</tbody>
-</table>
-<pre><code>&lt;Radio.Group value = {this.state.value} onChange = {value =&gt; this.setState({value})} &gt;
-  &lt;Radio id = {&#39;radio_1&#39;} value = {&#39;A&#39;} &gt;A&lt;/Radio&gt;
-  &lt;Radio id = {&#39;radio_2&#39;} value = {&#39;B&#39;} &gt;B&lt;/Radio&gt;
-  &lt;Radio id = {&#39;radio_3&#39;} value = {&#39;C&#39;} &gt;C&lt;/Radio&gt;
-&lt;/Radio.Group&gt;
-</code></pre><pre><code>&lt;Radio.Group defaultValue = {&#39;B&#39;} &gt;
-  &lt;Radio value = {&#39;A&#39;} &gt;A&lt;/Radio&gt;
-  &lt;Radio value = {&#39;B&#39;} &gt;B&lt;/Radio&gt;
-  &lt;Radio value = {&#39;C&#39;} &gt;C&lt;/Radio&gt;
-&lt;/Radio.Group&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Radio.Group</span> <span class="attr">value</span> = <span class="string">&#123;this.state.value&#125;</span> <span class="attr">onChange</span> = <span class="string">&#123;value</span> =&gt;</span> this.setState(&#123;value&#125;)&#125; &gt;</span><br><span class="line">  <span class="tag">&lt;<span class="name">Radio</span> <span class="attr">id</span> = <span class="string">&#123;</span>'<span class="attr">radio_1</span>'&#125; <span class="attr">value</span> = <span class="string">&#123;</span>'<span class="attr">A</span>'&#125; &gt;</span>A<span class="tag">&lt;/<span class="name">Radio</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Radio</span> <span class="attr">id</span> = <span class="string">&#123;</span>'<span class="attr">radio_2</span>'&#125; <span class="attr">value</span> = <span class="string">&#123;</span>'<span class="attr">B</span>'&#125; &gt;</span>B<span class="tag">&lt;/<span class="name">Radio</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Radio</span> <span class="attr">id</span> = <span class="string">&#123;</span>'<span class="attr">radio_3</span>'&#125; <span class="attr">value</span> = <span class="string">&#123;</span>'<span class="attr">C</span>'&#125; &gt;</span>C<span class="tag">&lt;/<span class="name">Radio</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Radio.Group</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Radio.Group</span> <span class="attr">defaultValue</span> = <span class="string">&#123;</span>'<span class="attr">B</span>'&#125; &gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Radio</span> <span class="attr">value</span> = <span class="string">&#123;</span>'<span class="attr">A</span>'&#125; &gt;</span>A<span class="tag">&lt;/<span class="name">Radio</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Radio</span> <span class="attr">value</span> = <span class="string">&#123;</span>'<span class="attr">B</span>'&#125; &gt;</span>B<span class="tag">&lt;/<span class="name">Radio</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Radio</span> <span class="attr">value</span> = <span class="string">&#123;</span>'<span class="attr">C</span>'&#125; &gt;</span>C<span class="tag">&lt;/<span class="name">Radio</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Radio.Group</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Search"><a href="#Search" class="headerlink" title="Search"></a>Search</h4>搜索框，一般放置于头部导航下方，用于搜索信息，支持弹出层。</li>
 </ul>
 <table>
@@ -1726,8 +1534,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>defaultValue</td>
 <td>默认值</td>
 <td>string</td>
@@ -1811,25 +1618,12 @@
 <td>element</td>
 <td><code>null</code></td>
 </tr>
-</tbody>
-</table>
-<pre><code>&lt;Search
-  defaultValue = {&#39;test&#39;}
-  placeholder = {&#39;输入任何内容&#39;}
-  showCancelButton
-/&gt;
-</code></pre><pre><code>&lt;Search
-  defaultValue = {&#39;test&#39;}
-  value = {this.state.value}
-  onChange = {(value) =&gt; {this.setState({value})}}
-  showModal
-  modalComponent = {
-    &lt;View style = {styles.component} &gt;
-      &lt;Text style = {{fontSize: 16}} &gt;您自己的组件&lt;/Text&gt;
-    &lt;/View&gt;
-  }
-/&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Search</span></span></span><br><span class="line"><span class="tag">  <span class="attr">defaultValue</span> = <span class="string">&#123;</span>'<span class="attr">test</span>'&#125;</span></span><br><span class="line"><span class="tag">  <span class="attr">placeholder</span> = <span class="string">&#123;</span>'输入任何内容'&#125;</span></span><br><span class="line"><span class="tag">  <span class="attr">showCancelButton</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Search</span></span></span><br><span class="line"><span class="tag">  <span class="attr">defaultValue</span> = <span class="string">&#123;</span>'<span class="attr">test</span>'&#125;</span></span><br><span class="line"><span class="tag">  <span class="attr">value</span> = <span class="string">&#123;this.state.value&#125;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">onChange</span> = <span class="string">&#123;(value)</span> =&gt;</span> &#123;this.setState(&#123;value&#125;)&#125;&#125;</span><br><span class="line">  showModal</span><br><span class="line">  modalComponent = &#123;</span><br><span class="line">    <span class="tag">&lt;<span class="name">View</span> <span class="attr">style</span> = <span class="string">&#123;styles.component&#125;</span> &gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span> = <span class="string">&#123;&#123;fontSize:</span> <span class="attr">16</span>&#125;&#125; &gt;</span>您自己的组件<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">View</span>&gt;</span></span><br><span class="line">  &#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Slider"><a href="#Slider" class="headerlink" title="Slider"></a>Slider</h4>滑块</li>
 </ul>
 <table>
@@ -1841,8 +1635,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>width</td>
 <td>滑块宽度</td>
 <td>number</td>
@@ -1901,17 +1694,11 @@
 <td>外部获取滑块值</td>
 <td>function</td>
 <td></td>
-<td></td>
 </tr>
-</tbody>
-</table>
-<pre><code>&lt;Slider
-  progress = {1}
-  minValue = {1}
-  maxValue = {99}
-  onChange = {val =&gt; this.setState({value2: val})}
-/&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Slider</span></span></span><br><span class="line"><span class="tag">  <span class="attr">progress</span> = <span class="string">&#123;1&#125;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">minValue</span> = <span class="string">&#123;1&#125;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">maxValue</span> = <span class="string">&#123;99&#125;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">onChange</span> = <span class="string">&#123;val</span> =&gt;</span> this.setState(&#123;value2: val&#125;)&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Switch"><a href="#Switch" class="headerlink" title="Switch"></a>Switch</h4>开关，用于设置两个相互斥的选项。</li>
 </ul>
 <table>
@@ -1923,8 +1710,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>value</td>
 <td>开关值（true or false）</td>
 <td>boolean</td>
@@ -1978,19 +1764,10 @@
 <td>boolean</td>
 <td><code>false</code></td>
 </tr>
-</tbody>
-</table>
-<pre><code>&lt;Switch
-  tintColor = {&#39;gray&#39;}
-  onTintColor = {&#39;#f75b25&#39;}
-  thumbTintColor = {&#39;#68b1ed&#39;}
-  tintBorderColor = {&#39;gray&#39;}
-  onTintBorderColor = {&#39;#f75b25&#39;}
-  thumbBorderColor = {&#39;#68b1ed&#39;}
-  value = {this.state.value}
-  onValueChange = {value =&gt; this.setState({value: value})}
-/&gt;
-</code></pre><ul>
+</tbody></table>
+<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;Switch</span><br><span class="line">  tintColor = &#123;<span class="string">'gray'</span>&#125;</span><br><span class="line">  onTintColor = &#123;<span class="string">'#f75b25'</span>&#125;</span><br><span class="line">  thumbTintColor = &#123;<span class="string">'#68b1ed'</span>&#125;</span><br><span class="line">  tintBorderColor = &#123;<span class="string">'gray'</span>&#125;</span><br><span class="line">  onTintBorderColor = &#123;<span class="string">'#f75b25'</span>&#125;</span><br><span class="line">  thumbBorderColor = &#123;<span class="string">'#68b1ed'</span>&#125;</span><br><span class="line">  <span class="keyword">value</span> = &#123;<span class="keyword">this</span>.state.<span class="keyword">value</span>&#125;</span><br><span class="line">  onValueChange = &#123;<span class="keyword">value</span> =&gt; <span class="keyword">this</span>.setState(&#123;<span class="keyword">value</span>: <span class="keyword">value</span>&#125;)&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Tabbar"><a href="#Tabbar" class="headerlink" title="Tabbar"></a>Tabbar</h4>选项卡，位于页面最底部，用于页面切换。</li>
 </ul>
 <table>
@@ -2002,8 +1779,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>tabBarStyle</td>
 <td>自定义tabBar容器样式</td>
 <td>object</td>
@@ -2075,8 +1851,7 @@
 <td>function</td>
 <td><code>() =&gt; {}</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <table>
 <thead>
 <tr>
@@ -2086,8 +1861,7 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>tabBarStyle</td>
 <td>自定义tabBar容器样式</td>
 <td>object</td>
@@ -2165,93 +1939,12 @@
 <td>function</td>
 <td><code>() =&gt; {}</code></td>
 </tr>
-</tbody>
-</table>
-<pre><code>import {Home, Active, Timer, Settings} from &#39;./container&#39;;
+</tbody></table>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;Home, Active, Timer, Settings&#125; from <span class="string">'./container'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">  <span class="keyword">super</span>(props);</span><br><span class="line">  <span class="keyword">this</span>.state = &#123;</span><br><span class="line">    currentTab: <span class="string">'active'</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">setTabItem(name, title, icon) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;TabBar.Item </span><br><span class="line">      changeTab = &#123;(tab) =&gt; <span class="keyword">this</span>.setState(&#123;currentTab: tab&#125;)&#125;</span><br><span class="line">      title = &#123;title&#125;</span><br><span class="line">      name = &#123;name&#125;</span><br><span class="line">      icon = &#123;&lt;Icon name = &#123;icon&#125; size = &#123;<span class="number">25</span>&#125; color = &#123;<span class="string">'#666666'</span>&#125; /&gt;&#125;</span><br><span class="line">      selectedIcon = &#123;&lt;Icon name = &#123;icon&#125; size = &#123;<span class="number">25</span>&#125; color = &#123;<span class="string">'#ff4f4f'</span>&#125; /&gt;&#125;</span><br><span class="line">    /&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line">setTabComponent(name, component) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;TabBar.Component name = &#123;name&#125; &gt;</span><br><span class="line">      &#123;component&#125;</span><br><span class="line">    &lt;/TabBar.Component&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line">renderTabItem() &#123;</span><br><span class="line">  let tabItems = [];</span><br><span class="line">  tabItems.push(<span class="keyword">this</span>.setTabItem(<span class="string">'home'</span>, <span class="string">'首页'</span>, <span class="string">'ios-home'</span>));</span><br><span class="line">  tabItems.push(<span class="keyword">this</span>.setTabItem(<span class="string">'active'</span>, <span class="string">'激活'</span>, <span class="string">'ios-bulb'</span>));</span><br><span class="line">  tabItems.push(<span class="keyword">this</span>.setTabItem(<span class="string">'timer'</span>, <span class="string">'定时器'</span>, <span class="string">'ios-clock'</span>));</span><br><span class="line">  tabItems.push(<span class="keyword">this</span>.setTabItem(<span class="string">'settings'</span>, <span class="string">'设置'</span>, <span class="string">'ios-settings'</span>));</span><br><span class="line">  <span class="keyword">return</span> tabItems;</span><br><span class="line">&#125;</span><br><span class="line">renderTabComponents() &#123;</span><br><span class="line">  let tabComponents = [];</span><br><span class="line">  tabComponents.push(<span class="keyword">this</span>.setTabComponent(<span class="string">'home'</span>, &lt;Home/&gt;));</span><br><span class="line">  tabComponents.push(<span class="keyword">this</span>.setTabComponent(<span class="string">'active'</span>, &lt;Active/&gt;));</span><br><span class="line">  tabComponents.push(<span class="keyword">this</span>.setTabComponent(<span class="string">'timer'</span>, &lt;Timer/&gt;));</span><br><span class="line">  tabComponents.push(<span class="keyword">this</span>.setTabComponent(<span class="string">'settings'</span>, &lt;Settings/&gt;));</span><br><span class="line">  <span class="keyword">return</span> tabComponents;</span><br><span class="line">&#125;</span><br><span class="line">render() &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;TabBar </span><br><span class="line">      selectedTab = &#123;<span class="keyword">this</span>.state.currentTab&#125; </span><br><span class="line">      items = &#123;<span class="keyword">this</span>.renderTabItem()&#125; </span><br><span class="line">      components = &#123;<span class="keyword">this</span>.renderTabComponents()&#125; </span><br><span class="line">    /&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-constructor(props) {
-  super(props);
-  this.state = {
-    currentTab: &#39;active&#39;
-  };
-}
-setTabItem(name, title, icon) {
-  return (
-    &lt;TabBar.Item 
-      changeTab = {(tab) =&gt; this.setState({currentTab: tab})}
-      title = {title}
-      name = {name}
-      icon = {&lt;Icon name = {icon} size = {25} color = {&#39;#666666&#39;} /&gt;}
-      selectedIcon = {&lt;Icon name = {icon} size = {25} color = {&#39;#ff4f4f&#39;} /&gt;}
-    /&gt;
-  )
-}
-setTabComponent(name, component) {
-  return (
-    &lt;TabBar.Component name = {name} &gt;
-      {component}
-    &lt;/TabBar.Component&gt;
-  )
-}
-renderTabItem() {
-  let tabItems = [];
-  tabItems.push(this.setTabItem(&#39;home&#39;, &#39;首页&#39;, &#39;ios-home&#39;));
-  tabItems.push(this.setTabItem(&#39;active&#39;, &#39;激活&#39;, &#39;ios-bulb&#39;));
-  tabItems.push(this.setTabItem(&#39;timer&#39;, &#39;定时器&#39;, &#39;ios-clock&#39;));
-  tabItems.push(this.setTabItem(&#39;settings&#39;, &#39;设置&#39;, &#39;ios-settings&#39;));
-  return tabItems;
-}
-renderTabComponents() {
-  let tabComponents = [];
-  tabComponents.push(this.setTabComponent(&#39;home&#39;, &lt;Home/&gt;));
-  tabComponents.push(this.setTabComponent(&#39;active&#39;, &lt;Active/&gt;));
-  tabComponents.push(this.setTabComponent(&#39;timer&#39;, &lt;Timer/&gt;));
-  tabComponents.push(this.setTabComponent(&#39;settings&#39;, &lt;Settings/&gt;));
-  return tabComponents;
-}
-render() {
-  return (
-    &lt;TabBar 
-      selectedTab = {this.state.currentTab} 
-      items = {this.renderTabItem()} 
-      components = {this.renderTabComponents()} 
-    /&gt;
-  )
-}
-</code></pre><pre><code>import {Home, Active, Timer, Settings} from &#39;./container&#39;;
-constructor(props) {
-  super(props);
-  this.state = {
-    currentTab: &#39;active&#39;
-  }
-}
-renderTabItem(name, title, icon, component) {
-  return (
-    &lt;TabBar.Item
-      selected = {this.state.currentTab === name}
-      changeTab = {(tab) =&gt; this.setState({currentTab: tab})}
-      title = {title}
-      name = {name}
-      icon = {&lt;Icon name = {icon} size = {25} color = {&#39;#666666&#39;} /&gt;}
-      selectedIcon = {&lt;Icon name = {icon} size = {25} color = {&#39;#ff4f4f&#39;} /&gt;}
-      titleStyle = {{fontSize: 12, color: '#666666'}}
-      selectedTitleStyle = {{fontSize: 12}}
-    &gt;
-      {component}
-    &lt;/TabBar.Item&gt;
-  )
-}
-render() {
-  return (
-    &lt;TabBar hidesTabTouch&gt;
-      {this.renderTabItem(&#39;home&#39;, &#39;首页&#39;, &#39;ios-home&#39;, &lt;Home/&gt;)}
-      {this.renderTabItem(&#39;active&#39;, &#39;激活&#39;, &#39;ios-bulb&#39;, &lt;Active/&gt;)}
-      {this.renderTabItem(&#39;timer&#39;, &#39;定时器&#39;, &#39;ios-clock&#39;, &lt;Timer/&gt;)}
-      {this.renderTabItem(&#39;settings&#39;, &#39;设置&#39;, &#39;ios-settings&#39;, &lt;Settings/&gt;)}
-    &lt;/TabBar&gt;
-  )
-}
-</code></pre><ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;Home, Active, Timer, Settings&#125; from <span class="string">'./container'</span>;</span><br><span class="line"><span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">  <span class="keyword">super</span>(props);</span><br><span class="line">  <span class="keyword">this</span>.state = &#123;</span><br><span class="line">    currentTab: <span class="string">'active'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">renderTabItem(name, title, icon, component) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;TabBar.Item</span><br><span class="line">      selected = &#123;<span class="keyword">this</span>.state.currentTab === name&#125;</span><br><span class="line">      changeTab = &#123;(tab) =&gt; <span class="keyword">this</span>.setState(&#123;currentTab: tab&#125;)&#125;</span><br><span class="line">      title = &#123;title&#125;</span><br><span class="line">      name = &#123;name&#125;</span><br><span class="line">      icon = &#123;&lt;Icon name = &#123;icon&#125; size = &#123;<span class="number">25</span>&#125; color = &#123;<span class="string">'#666666'</span>&#125; /&gt;&#125;</span><br><span class="line">      selectedIcon = &#123;&lt;Icon name = &#123;icon&#125; size = &#123;<span class="number">25</span>&#125; color = &#123;<span class="string">'#ff4f4f'</span>&#125; /&gt;&#125;</span><br><span class="line">      titleStyle = &#123;&#123;fontSize: <span class="number">12</span>, color: <span class="string">'#666666'</span>&#125;&#125;</span><br><span class="line">      selectedTitleStyle = &#123;&#123;fontSize: <span class="number">12</span>&#125;&#125;</span><br><span class="line">    &gt;</span><br><span class="line">      &#123;component&#125;</span><br><span class="line">    &lt;/TabBar.Item&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line">render() &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;TabBar hidesTabTouch&gt;</span><br><span class="line">      &#123;<span class="keyword">this</span>.renderTabItem(<span class="string">'home'</span>, <span class="string">'首页'</span>, <span class="string">'ios-home'</span>, &lt;Home/&gt;)&#125;</span><br><span class="line">      &#123;<span class="keyword">this</span>.renderTabItem(<span class="string">'active'</span>, <span class="string">'激活'</span>, <span class="string">'ios-bulb'</span>, &lt;Active/&gt;)&#125;</span><br><span class="line">      &#123;<span class="keyword">this</span>.renderTabItem(<span class="string">'timer'</span>, <span class="string">'定时器'</span>, <span class="string">'ios-clock'</span>, &lt;Timer/&gt;)&#125;</span><br><span class="line">      &#123;<span class="keyword">this</span>.renderTabItem(<span class="string">'settings'</span>, <span class="string">'设置'</span>, <span class="string">'ios-settings'</span>, &lt;Settings/&gt;)&#125;</span><br><span class="line">    &lt;/TabBar&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h4 id="Toast"><a href="#Toast" class="headerlink" title="Toast"></a>Toast</h4>小型提示框</li>
 </ul>
 <table>
@@ -2262,8 +1955,7 @@ render() {
 <th>类型</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>content</td>
 <td>提示信息</td>
 <td>string</td>
@@ -2278,529 +1970,697 @@ render() {
 <td>是否使用遮罩层，默认为true，使用遮罩层的话在toast显示期间无法对屏幕进行任何操作</td>
 <td>boolean</td>
 </tr>
-</tbody>
-</table>
-<pre><code>&lt;Button onPress = {() =&gt; this.toast.show({
-  content: &#39;取消遮罩层&#39;,
-  mask: false
-})} &gt;取消遮罩层&lt;/Button&gt;
-&lt;Toast ref = {toast =&gt; this.toast = toast} /&gt;
-</code></pre><h5 id="全局提示"><a href="#全局提示" class="headerlink" title="全局提示"></a>全局提示</h5><pre><code>//根js
-componentDidMount() {
-  window.addEventListener(&#39;showToast&#39;, e =&gt; {
-    this.rootToast.show(window.toastConfig);
-  })
-}
-render() {
-  return (
-    &lt;div&gt;
-      &lt;Router history={hashHistory} routes = {routerConfig} /&gt;
-        &lt;Toast ref = {toast =&gt; this.rootToast = toast} /&gt;
-    &lt;/div&gt;
-  )
-}
+</tbody></table>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Button onPress = &#123;() =&gt; <span class="keyword">this</span>.toast.<span class="keyword">show</span>(&#123;</span><br><span class="line">  content: <span class="string">'取消遮罩层'</span>,</span><br><span class="line">  mask: <span class="keyword">false</span></span><br><span class="line">&#125;)&#125; &gt;取消遮罩层&lt;/Button&gt;</span><br><span class="line">&lt;Toast ref = &#123;toast =&gt; <span class="keyword">this</span>.toast = toast&#125; /&gt;</span><br></pre></td></tr></table></figure>
 
-//子组件
-&lt;Button onPress = {() =&gt; {
-  window.toastConfig = {
-    content: &#39;全局提示&#39;,
-    mask: false
-  }
-  window.dispatchEvent(new Event(&#39;showToast&#39;))
-}} &gt;全局提示&lt;/Button&gt;
-</code></pre><pre><code>//根js
-componentDidMount() {
-  DeviceEventEmitter.addListener(&#39;showToast&#39;, (config) =&gt; {
-    this.rootToast.show(config);
-  })
-}
-render() {
-  return (
-    &lt;View style = {{flex: 1}} &gt;
-      &lt;Navigator /&gt;
-      &lt;Toast ref = {toast =&gt; this.rootToast = toast} /&gt;
-    &lt;/View&gt;
-  );
-}
+<h5 id="全局提示"><a href="#全局提示" class="headerlink" title="全局提示"></a>全局提示</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//根js</span></span><br><span class="line">componentDidMount() &#123;</span><br><span class="line">  <span class="built_in">window</span>.addEventListener(<span class="string">'showToast'</span>, e =&gt; &#123;</span><br><span class="line">    <span class="keyword">this</span>.rootToast.show(<span class="built_in">window</span>.toastConfig);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line">render() &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;Router history=&#123;hashHistory&#125; routes = &#123;routerConfig&#125; /&gt;</span><br><span class="line">        &lt;Toast ref = &#123;toast =&gt; <span class="keyword">this</span>.rootToast = toast&#125; /&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  )</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/子组件</span></span><br><span class="line"><span class="regexp">&lt;Button onPress = &#123;() =&gt; &#123;</span></span><br><span class="line"><span class="regexp">  window.toastConfig = &#123;</span></span><br><span class="line"><span class="regexp">    content: '全局提示',</span></span><br><span class="line"><span class="regexp">    mask: false</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">  window.dispatchEvent(new Event('showToast'))</span></span><br><span class="line"><span class="regexp">&#125;&#125; &gt;全局提示&lt;/</span>Button&gt;</span><br></pre></td></tr></table></figure>
 
-//子组件
-&lt;Button 
-  onPress = {() =&gt; DeviceEventEmitter.emit(&#39;showToast&#39;, {
-    content: &#39;全局提示&#39;,
-    mask: false
-})} &gt;全局提示&lt;/Button&gt;
-</code></pre>	
-	</div>
-	
-	<div id="current-post-cover" data-scr="/img/mescal/3.jpg"></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//根js</span></span><br><span class="line">componentDidMount() &#123;</span><br><span class="line">  DeviceEventEmitter.addListener(<span class="string">'showToast'</span>, (config) =&gt; &#123;</span><br><span class="line">    <span class="keyword">this</span>.rootToast.show(config);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line">render() &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;View style = &#123;&#123;<span class="attr">flex</span>: <span class="number">1</span>&#125;&#125; &gt;</span><br><span class="line">      &lt;Navigator /&gt;</span><br><span class="line">      &lt;Toast ref = &#123;toast =&gt; <span class="keyword">this</span>.rootToast = toast&#125; /&gt;</span><br><span class="line">    &lt;<span class="regexp">/View&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/子组件</span></span><br><span class="line"><span class="regexp">&lt;Button </span></span><br><span class="line"><span class="regexp">  onPress = &#123;() =&gt; DeviceEventEmitter.emit('showToast', &#123;</span></span><br><span class="line"><span class="regexp">    content: '全局提示',</span></span><br><span class="line"><span class="regexp">    mask: false</span></span><br><span class="line"><span class="regexp">&#125;)&#125; &gt;全局提示&lt;/</span>Button&gt;</span><br></pre></td></tr></table></figure>
 
-	<!-- relate post, comment...-->
-	<div class="investment-container">
-		<div class="investment-header">
-			<div class="investment-title-1">
-				<div class="on">相关文章</div>
-				<!-- <div>评论</div> -->
-			</div>
-			<div class="investment-title-2">	            
-				
-	<span>
-		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
-		
-			<a href="/2018/07/04/2018-07-04-technology-vpull-refresh/" title="基于vue封装的轻量级下拉刷新组件" rel="prev">
-				&laquo;上一篇
-			</a>
-		
-		
-			<a href="/2018/02/25/2018-02-25-technology-angular-m-cli/" title="一个能够快速构建AngularJS多页项目的轻量级脚手架" rel="next">
-				下一篇&raquo;
-			</a>
-			
-	</span>
-      		
-			</div>	
-		</div>
-		
-		<div class="investment-content">
-			<div class="investment-content-list">
-				
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/2018/07/04/2018-07-04-technology-vpull-refresh/" title="基于vue封装的轻量级下拉刷新组件">&larr; 上一篇</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/2018/02/25/2018-02-25-technology-angular-m-cli/" title="一个能够快速构建AngularJS多页项目的轻量级脚手架">下一篇 &rarr;</a>
+          </li>
+          
+        </ul>
 
-<div class="relate-post">
-	<ul>
-		
-				<li>
-					<div>
-						<a href="/2019/10/16/2019-10-16-technology-css-block/" title="Css Block">
-							Css Block
-						</a>
-						<p>
-							CSS-BLOCK文档地址
-初衷Css Block 启发于前不久阅读的张鑫旭的《CSS世界》一书，让我对 css 又有了新的理解，并且从中学到了一些“妙招”。日常项目中频频会用到一些常用的样式代码块，这些代码块可以封装到一个通用的样式...
-						</p>
-					</div>
+        
 
-					<a href="/2019/10/16/2019-10-16-technology-css-block/" title="Css Block">				
-						<img src="/img/mescal/18.jpg" class="relateImg" alt="Css Block">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2019/05/10/2019-05-10-technology-async-rules-form/" title="IVIEW 动态校验规则组件">
-							IVIEW 动态校验规则组件
-						</a>
-						<p>
-							async-rules-form动态配置 iview 的表单规则
-初衷实现 iview 的Form 组件可以动态修改校验规则的功能。
-需求场景例如：当用户年龄下拉框选择“未成年”时，身份证号为非必填项，否则为必填项。
-原理为该字段生成...
-						</p>
-					</div>
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
 
-					<a href="/2019/05/10/2019-05-10-technology-async-rules-form/" title="IVIEW 动态校验规则组件">				
-						<img src="/img/mescal/17.jpg" class="relateImg" alt="IVIEW 动态校验规则组件">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2018/09/27/2018-09-27-technology-vue-app-cli/" title="快速开发基于vue的app应用——vue-app-cli">
-							快速开发基于vue的app应用——vue-app-cli
-						</a>
-						<p>
-							
-一个能够让你快速构建基于vue的app多页应用脚手架，可独立开发h5 app或集成到hbuilder开发原生应用。文档地址vue-cli之所以不使用官方的vue-cli构建应用是因为：
+<!-- <div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=x-ui&body=Hi,I found this website and thought you might like it https://mescalchuan.github.io/2018/04/21/2018-04-21-technology-x-ui/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div> -->
 
-vue-cli需要自己实现多页面构建。
-在开...
-						</p>
-					</div>
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<!-- <script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script> -->
 
-					<a href="/2018/09/27/2018-09-27-technology-vue-app-cli/" title="快速开发基于vue的app应用——vue-app-cli">				
-						<img src="/img/mescal/1.jpg" class="relateImg" alt="快速开发基于vue的app应用——vue-app-cli">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2018/08/29/2018-08-29-technology-weixin/" title="初探微信小程序之小川天气">
-							初探微信小程序之小川天气
-						</a>
-						<p>
-							微信小程序可以说是当下很火热的应用了。在好奇心的作用下，通读了一遍之后便开始上手撸了一个很简单的天气应用——小川天气。
+        <!-- Sharing End -->
+        
+        <hr>
 
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
 
+<!-- gitalk start -->
+<!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
 
-目前已经发布正式版本，你可以直接在微信中搜索小川天气来使用。
-小程序的文档已经很完善了，通读一遍后上手写代码...
-						</p>
-					</div>
+<div id="gitalk-container"></div>
 
-					<a href="/2018/08/29/2018-08-29-technology-weixin/" title="初探微信小程序之小川天气">				
-						<img src="/img/mescal/xiaochuan_weather.jpg" class="relateImg" alt="初探微信小程序之小川天气">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2018/07/31/2018-07-31-technology-node-health/" title="基于React和Node实现一个食物热量参考应用">
-							基于React和Node实现一个食物热量参考应用
-						</a>
-						<p>
-							利用业余时间，自己做了一个食物热量参考网站，数据参考自一个app食物库。技术栈使用了sass+react+react-router+redux+antd+express+mongoose。
+<!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+<!-- <script src="/js/comment/gitalk.js"></script> -->
 
-一、How To Use下载首先将代码cl...
-						</p>
-					</div>
+<script>
+  // var gitalk = new Gitalk({
+  //   clientID: '',
+  //   clientSecret: '',
+  //   repo: '',
+  //   owner: '',
+  //   admin: '',
+  //   id: 'Sat Apr 21 2018 18:32:20 GMT+0800', // Ensure uniqueness and length less than 50
+  //   distractionFreeMode: false, // Facebook-like distraction free mode
+  //   perPage: 10 ,
+  //   pagerDirection: 'last',
+  //   createIssueManually: false ,
+  //   language: 'en'
+  // });
+  // gitalk.render('gitalk-container');
 
-					<a href="/2018/07/31/2018-07-31-technology-node-health/" title="基于React和Node实现一个食物热量参考应用">				
-						<img src="/img/mescal/node_health.jpg" class="relateImg" alt="基于React和Node实现一个食物热量参考应用">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2018/07/04/2018-07-04-technology-vpull-refresh/" title="基于vue封装的轻量级下拉刷新组件">
-							基于vue封装的轻量级下拉刷新组件
-						</a>
-						<p>
-							如何使用将项目中的src/components/pullRefresh.vue和src/img拷贝到你的工程内。如层级发生改变，你需要手动修改pullRefresh.vue中的图片链接地址。
-API
-
-
-属性
-说明
-类型
-默认值
-
-
-...
-						</p>
-					</div>
-
-					<a href="/2018/07/04/2018-07-04-technology-vpull-refresh/" title="基于vue封装的轻量级下拉刷新组件">				
-						<img src="/img/mescal/2.jpg" class="relateImg" alt="基于vue封装的轻量级下拉刷新组件">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2018/02/25/2018-02-25-technology-angular-m-cli/" title="一个能够快速构建AngularJS多页项目的轻量级脚手架">
-							一个能够快速构建AngularJS多页项目的轻量级脚手架
-						</a>
-						<p>
-							
-一款基于webpack的快速构建angular1的多页应用构建方案文档地址使用angular-m-cli，您可以做到
-快速构建项目原型
-自动生成新页面并完成相关配置（包括入口文件、css、index.html）
-利用本地服务器完成开...
-						</p>
-					</div>
-
-					<a href="/2018/02/25/2018-02-25-technology-angular-m-cli/" title="一个能够快速构建AngularJS多页项目的轻量级脚手架">				
-						<img src="/img/mescal/4.jpg" class="relateImg" alt="一个能够快速构建AngularJS多页项目的轻量级脚手架">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2018/01/27/2018-01-27-technology-atom/" title="优雅地配置Atom">
-							优雅地配置Atom
-						</a>
-						<p>
-							从最初的sublime text，到webstorm，后来又转战visual studio code，直到现在的atom，就个人使用体验来看是越来越舒适的。之前一直在使用sublime text和webstorm，后来尝试了一把vs ...
-						</p>
-					</div>
-
-					<a href="/2018/01/27/2018-01-27-technology-atom/" title="优雅地配置Atom">				
-						<img src="/img/mescal/5.jpg" class="relateImg" alt="优雅地配置Atom">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2018/01/19/2018-01-19-technology-react-native-textinput/" title="React Native之巧用TextInput">
-							React Native之巧用TextInput
-						</a>
-						<p>
-							近日使用rn开发电商app遇到一个再简单不过的需求：买家申请退款，填写申请单，其中有一个多行文本输入框用于填写退款理由，如图所示：
-
-看似简单的需求，然而用rn开发还是会遇到问题。
-页面搭建两个View和一个TextInput足矣，外...
-						</p>
-					</div>
-
-					<a href="/2018/01/19/2018-01-19-technology-react-native-textinput/" title="React Native之巧用TextInput">				
-						<img src="/img/mescal/6.jpg" class="relateImg" alt="React Native之巧用TextInput">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2017/11/20/2017-11-20-technology-react-native-linking/" title="近日使用React Native Linking踩过的坑">
-							近日使用React Native Linking踩过的坑
-						</a>
-						<p>
-							使用react native（以下简称rn）开发移动端app已经有四个月的时间了（包括第一个月的上手），感谢rn，让前端开发人员也能够开发原生的app。前几天遇到一个需求：打开第三方的支付应用并监听返回的结果。听上去这个需求并不难，然...
-						</p>
-					</div>
-
-					<a href="/2017/11/20/2017-11-20-technology-react-native-linking/" title="近日使用React Native Linking踩过的坑">				
-						<img src="/img/mescal/7.jpg" class="relateImg" alt="近日使用React Native Linking踩过的坑">
-					</a>
-				</li>											
-		
-		
-	</ul>
-</div>	
-			</div>
-			<div class="investment-content-list">
-				<div class="layout-comment">
-
-	
-
-</div>
-			</div>
-		</div>	
-	</div>
-</div>
-
-
-
-	<!-- leancloud -->
-	<!--
-	时间：2018-11-27
-	描述：
-		文章访问量：visitors
-		文章喜欢量：likes	
-		文章排行榜：topNPost
-		其他得说明：
-			01-Cookie相关的函数 
-				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
-			02-visitors相关的函数 
-				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
-				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
-			03-topNPost相关的函数
-				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
-			04-likes相关的函数，
-				参考了01 & 02进行简单的设计与实现
--->
-
-
-
- 
-
-<!-- show math formula -->
-
-
-
-
-<!-- TODO: There seems to be a bug when you close the post gallery! -->
-<link rel="stylesheet" href="/plugin/lightgallery/css/lightgallery.css">
-<script src="/plugin/lightgallery/js/jquery-1.11.0.min.js"></script>
-<script src="/plugin/lightgallery/js/lightgallery-all.min.js"></script>
-
-<script type="text/javascript">
-	var postTitle = $('.article-title a').text() ? $('.article-title a').text() : "No post title!";
-	$('.article-content img').each(function() {
-		var imgPath = $(this).attr('src'),
-			imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
-		$(this).wrap('<div class="img-responsive" data-src="' + imgPath + '" data-responsive="' + imgPath + '" data-sub-html="<p>图片 ' + imgTitle + '</p><h4>文章' + postTitle + '</h4>"></div>');
-	});
-
-	$('.article-content').lightGallery({
-		mode: 'lg-slide',
-		selector: '.img-responsive',
-		share: false,
-		zoom: false,
-		download: false
-	});
-	//TODO：支持video
+  // var gtFolded = () => {
+  //   setTimeout(function() {
+  //     let markdownBody = document.getElementsByClassName("markdown-body");
+  //     let list = Array.from(markdownBody);
+  //     list.forEach(item => {
+  //       if (item.clientHeight > 250) {
+  //         item.classList.add('gt-comment-body-folded');
+  //         item.style.maxHeight = '250px';
+  //         item.title = 'Click to Expand';
+  //         item.onclick = function() {
+  //           item.classList.remove('gt-comment-body-folded');
+  //           item.style.maxHeight = '';
+  //           item.title = '';
+  //           item.onclick = null;
+  //         };
+  //       }
+  //     })
+  //   }, 800);
+  // }
 </script>
 
-<!--
-	时间：2018-11-17
-	描述：
-		插件名称：katelog.min.js
-		插件作者：KELEN
-		插件来源: https://github.com/KELEN/katelog
--->
-
-		
-
-		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
-		<script src="/plugin/toc/katelog.min.js"></script>
-
-		
-	
-			<audio loop="loop" controls>
-				<source src="/xingzhezui.mp3" type="audio/mp3" />
-			</audio>
-		</main>
-		
-		<!--footer-->
-		<footer>
-	<div class="social">
-		<ul>
-	
-		
-			<li>
-				<a href="https://github.com/mescalchuan" title="Github" target="_blank">
-					<i class="fa fa-github"></i>
-				</a>
-			</li>
-		
-		
-			<li>
-				<a href="https://weibo.com/6454388854/profile?topnav=1&wvr=6" title="Weibo" target="_blank">
-					<i class="fa fa-weibo"></i>
-				</a>
-			</li>
-		
-		
-			<li>
-				<a href="mailto:/1335382915@qq.com" title="Email" target="_blank">
-					<i class="fa fa-envelope-o"></i>
-				</a>
-			</li>
-		
-
-		
-			<li>
-				<a href="javasvript:void(0)" title="QQ" target="_blank" data-remodal-target="modalQ">
-					<i class="fa fa-qq"></i>
-				</a>
-			</li>
-		
-		
-			<li>
-				<a href="javasvript:void(0)" title="WeiXin" target="_blank" data-remodal-target="modalW">
-					<i class="fa fa-weixin"></i>
-				</a>
-			</li>
-		
-		
-			<li>
-				<a href="https://mescalchuan.github.io" title="Website">
-					<i class="fa fa-globe"></i>
-				</a>
-			</li>
-		
-		
-	 
-</ul>
-	</div>
-		
-	<div class="copyright">
-		<p>
-			 
-				&copy;2019, content by Mescal Chuan. All Rights Reserved.
-			
-			
-			
-
-	<!-- busuanzi -->
-	<!-- busuanzi -->
+<!-- gitalk end -->
 
 
 
-		</p>
-		<!-- <p>
-			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay. 					
-		</p> -->
-	</div>	
-
-	<div class="remodal" data-remodal-id="modalQ">
-		<img style="max-width:100%;height:auto;" src="/img/mescal/qq.jpeg" alt>
-	</div>
-	<div class="remodal" data-remodal-id="modalW">
-		<img style="max-width:100%;height:auto;" src="/img/mescal/weixin.jpg" alt>
-	</div>
-</footer>
-		
-    <!-- set '1' to show motto in all pages! -->
-
-	<script src="/js/motto.js"></script>
-	<script type="text/javascript">
-		$(".motto").html( getMingYanContent() );
-	</script>	
+<!-- 2. gitment comment -->
 
 
 
-
-    <!--
-	时间：2018-10-3
-	描述：
-		插件名称：hexo-generator-search-zip
-		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
-		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
--->
-<div class="popup search-popup local-search-popup">
-	<div class="local-search-container">
-		<span class="popup-btn-close">
-      ESC
-   </span>
-		<div class="local-search-header">
-			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
-		</div>
-		<div class="local-search-body">
-			<div id="local-search-output"></div>
-		</div>
-		<div class="local-search-footer">
-			
-
-		</div>
-	</div>
-</div>
-
-<script src="/js/ziploader.js"></script>
-<script src="/js/search.js"></script>
-
-<script type="text/javascript">
-	var search_path = 'search.json',
-		zip_Path = '/search.zip',
-		version_Path = '/searchVersion.txt',
-		input_Trigger = 'auto',
-		top_N = '2';
-
-	themeLocalSearch({
-		search_path, 
-		zip_Path, 
-		version_Path, 
-		input_Trigger, 
-		top_N
-	});
-</script>
+<!-- 3. disqus comment -->
 
 
+        <!-- comments end -->
+        <hr>
 
+      </div>
 
-<!--back to top-->
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
 
     
-	<div id="totop">
-  		<a href="javascript:;" name="TOTOP" class="fa fa-arrow-up"></a>
-	</div>
-	<div id="tobuttom">
-		<a href="javascript:;" name="TOBUTTOM" class="fa fa-arrow-down"></a>
-	</div>
- 
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">内容</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#介绍"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">介绍</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#如何使用"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">如何使用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#起步"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">起步</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#H5"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">H5</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#移动端适配"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">移动端适配</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#字体"><span class="toc-nav-number">2.2.2.</span> <span class="toc-nav-text">字体</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#React-Native"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">React Native</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Android"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">Android</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#IOS"><span class="toc-nav-number">2.3.2.</span> <span class="toc-nav-text">IOS</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#组件"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">组件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#ActionSheet"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">ActionSheet</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Badge"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Badge</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Button"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">Button</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Card"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">Card</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Carousel"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">Carousel</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Checkbox"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">Checkbox</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Collapse"><span class="toc-nav-number">3.7.</span> <span class="toc-nav-text">Collapse</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Counter"><span class="toc-nav-number">3.8.</span> <span class="toc-nav-text">Counter</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#DrawerLayout"><span class="toc-nav-number">3.9.</span> <span class="toc-nav-text">DrawerLayout</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Flex"><span class="toc-nav-number">3.10.</span> <span class="toc-nav-text">Flex</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Header"><span class="toc-nav-number">3.11.</span> <span class="toc-nav-text">Header</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Icon"><span class="toc-nav-number">3.12.</span> <span class="toc-nav-text">Icon</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#List"><span class="toc-nav-number">3.13.</span> <span class="toc-nav-text">List</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Pagination"><span class="toc-nav-number">3.14.</span> <span class="toc-nav-text">Pagination</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Radio"><span class="toc-nav-number">3.15.</span> <span class="toc-nav-text">Radio</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Search"><span class="toc-nav-number">3.16.</span> <span class="toc-nav-text">Search</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Slider"><span class="toc-nav-number">3.17.</span> <span class="toc-nav-text">Slider</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Switch"><span class="toc-nav-number">3.18.</span> <span class="toc-nav-text">Switch</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Tabbar"><span class="toc-nav-number">3.19.</span> <span class="toc-nav-text">Tabbar</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Toast"><span class="toc-nav-number">3.20.</span> <span class="toc-nav-text">Toast</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#全局提示"><span class="toc-nav-number">3.20.1.</span> <span class="toc-nav-text">全局提示</span></a></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
 
 
- 
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
 
-<script src="/js/vibrant.js"></script>
-<script src="/js/chinese.js"></script>
-<script src="/js/main.js"></script>
-		<script src="/js/prism.js"></script>	
-		<script src="/js/remodal.js"></script>  
-	</body>
-	</html>
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#博客" title="博客">博客</a>
+            
+            <a class="tag" href="/tags/#技术博客" title="技术博客">技术博客</a>
+            
+            <a class="tag" href="/tags/#react-native" title="react-native">react-native</a>
+            
+            <a class="tag" href="/tags/#react" title="react">react</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+	<!-- Footer (contains ThemeColor、viewer) -->
+	<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <!-- <li>
+              <a target="_blank" href="https://github.com/MescalChuan">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li> -->
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Mescal Chuan
+          2020
+          <!-- <br>
+          Theme by
+          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://v-vincen.life/" target="_blank" rel="noopener">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+<!-- jQuery -->
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="/js/jquery.js"></script> -->
+<!-- <script type="text/javascript" src="//cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+<!-- Bootstrap Core JavaScript -->
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script type="text/javascript" src="/js/hux-blog.min.js"></script>
+
+<!-- catalog -->
+<script type="text/javascript" async="true" src="/js/catalog.js?v=1.0.0"></script>
+
+<!-- totop(rocket) -->
+<script type="text/javascript" async="true" src="/js/totop.js?v=1.0.0"></script>
+
+<!-- Busuanzi JavaScript -->
+<!-- <script type="text/javascript" async="true" src="/js/busuanzi.pure.mini.js"></script> -->
+
+
+  <!-- Scroll start -->
+  <script type="text/javascript" src="/js/scroll.js"></script>
+  <!-- Scroll end -->
+
+
+
+  <!-- ThemeColor start -->
+  <script type="text/javascript" src="/js/themecolor.js"></script>
+  <!-- ThemeColor end -->
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  <script type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+  <script type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){ hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if($('#tag_cloud').length !== 0){ async("https://mescalchuan.github.io/js/jquery.tagcloud.js",function(){ $.fn.tagcloud.defaults = { //size: {start: 1, end: 1, unit: 'em'}, color: {start:
+'#bbbbee', end: '#0085a1'}, }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+	<!-- Search -->
+	
+	<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/ziploader.js"></script>
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+	
+
+	<!-- Image to hack wechat -->
+	<!-- <img src="https://mescalchuan.github.io/img/icon_wechat.png" width="0" height="0" /> -->
+	<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

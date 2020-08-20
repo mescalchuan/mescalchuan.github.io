@@ -1,1027 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script> -->
+  <!-- <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
 
-	<!DOCTYPE html>
-	<html class="scrollbar">
-		
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-<head><meta name="generator" content="Hexo 3.8.0">
+    gtag('config', 'UA-xxxxxx-xx');
+  </script> -->
+  
+
+  <!-- Baidu Tongji -->
+  
+  <!-- <script type="text/javascript">
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script> -->
+  
+
+  <!-- Baidu Push -->
+  
+  <!-- <script>
+    (function() {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script> -->
+  
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc" />
+  <meta name="baidu-site-verification" content="PpzM9WxOJU" /> -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mescal 秦先生的小站" />
+  <meta name="keyword" content="mescal,chuan,fe,Blog,秦" />
   <meta name="referrer" content="no-referrer">
-	<meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="/img/favicon.ico" />
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/beantech.min.css" />
+
+  <!-- Pygments Highlight CSS -->
+  
+<link rel="stylesheet" href="../../../../css/highlight.css">
+<link rel="stylesheet" href="../../../../css/widget.css">
+<link rel="stylesheet" href="../../../../css/rocket.css">
+<link rel="stylesheet" href="../../../../css/signature.css">
+<link rel="stylesheet" href="../../../../css/catalog.css">
+<link rel="stylesheet" href="../../../../css/livemylife.css">
+
+
+  
+  <!-- wave start -->
+  <link rel="stylesheet" href="/css/wave.css" />
+  <!-- wave end -->
+  
+
+  
+  <!-- top start (article top hot config) -->
+  <link rel="stylesheet" href="/css/top.css" />
+  <!-- top end -->
+  
+
+  
+  <!-- ThemeColor start -->
+  <link rel="stylesheet" href="/css/scroll.css" />
+  <!-- ThemeColor end -->
+  
+
+  
+  <!-- viewer start (Picture preview) -->
+  <link rel="stylesheet" href="/css/viewer.min.css" />
+  <!-- viewer end -->
+  
+
+  
+  <!-- Search start -->
+  <link rel="stylesheet" href="/css/search.css" />
+  <!-- Search end -->
+  
+
+  
+  <!-- ThemeColor start -->
+  <link rel="stylesheet" href="/css/themecolor.css" />
+  <!-- ThemeColor end -->
+  
+
+  
+
+  
+  <!-- gitalk start -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+  <!-- <link rel="stylesheet" href="/css/gitalk.css" /> -->
+  <!-- gitalk end -->
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+    href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://mescalchuan.github.io/2016/10/30/2016-10-30-technology-es6-1/">
   <title>
     
-      ES6学习笔记（一） | Mescal 川
+    ES6学习笔记（一） - MescalChuan
     
   </title>
-  <meta name="author" content="Mescal Chuan">
-  <meta name="keywords" content>
-  <meta name="description" content>
-	<!-- favicon -->
-  <link rel="shortcut icon" href="/img/favicon.ico">
-
-  <!-- css -->
-  <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-
-    <!-- jquery -->
-	<script src="/js/jquery-2.1.1.min.js"></script>
-
-  <!-- leancloud -->
-  
-  <link rel="stylesheet" href="/css/prismCustom.css">
-  <link rel="stylesheet" href="/css/remodal.css">
-  <link rel="stylesheet" href="/css/remodal-default-theme.css">
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
-	<body class="language-js">
-		<!-- Preloader -->
-
-	<div id="preloader">
-		<div class="pre-container">
-			
-				<div class="transition">
-					<div class="three-bounce1"></div>
-					<div class="three-bounce2"></div>
-					<div class="three-bounce3"></div>
-				</div>
-						
-		</div>
-	</div>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 
-<!-- header -->
-<header class="fixbackground" data-img-mode="normal" data-normal-src="/img/48.jpg" data-random-max="110" data-random-src="https://sariay.github.io/Random-img/">
-	<div class="mask">
-		<div class="h-header">
-			<div id="logo-S">
-				
-					<a href="/">
-						Mescal
-					</a>
-				
-			</div>
-			<!-- Navigation in header(id="navigation-S") -->
-			<div id="navigation-S">
-				<ul>
-					
-						<li class="menu-home">
-							<a href="/" class="menu-item-home">主页</a>
-						</li>
-					
-						<li class="menu-archive">
-							<a href="/archives" class="menu-item-archive">归档</a>
-						</li>
-					
-						<li class="menu-categories">
-							<a href="/categories" class="menu-item-categories">分类</a>
-						</li>
-					
-						<li class="menu-tags">
-							<a href="/tags" class="menu-item-tags">标签</a>
-						</li>
-					
-						<li class="menu-about">
-							<a href="/about" class="menu-item-about">关于</a>
-						</li>
-					
-						<li class="menu-gallery">
-							<a href="/gallery" class="menu-item-gallery">摄影集</a>
-						</li>
-					
+<!-- hack iOS CSS :active style -->
 
-					
-						<li class="menu-search">
-							<a href="javascript:;" class="popup-trigger" title="Search">搜索</a>
-						</li>
-					
-				</ul>			
-			</div>				
-		</div>
-
-		<div class="h-body">	
-			<!-- motto -->
-			
-				<div id="page-motto">
-					<p class="motto">
-						
-					</p>
-				</div>
-			
-
-			<div id="navigation-H">
-				<!-- Page title -->
-				<p>
-					
-						当前文章&nbsp;:&nbsp;《ES6学习笔记（一）》
-					
-				</p>
-				<!-- Progress bar -->
-				<div id="progress-bar"></div>
-
-				<!-- Progress percent -->
-				<div id="progress-percentage">
-					<h1>0.0%</h1>
-				</div>
-			</div>
-		</div>
-		
-		<!-- others: such as time... -->			
-		<div class="h-footer">
-			<ul>
-				<!-- <li>
-					<a><i class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>切换背景</a>
-				</li> -->
-				<li>
-					<a href="javascript:;" id="read-more"><i class="fa fa-angle-double-down"></i></a>
-				</li>
-				<!-- <li>
-					<a href="https://github.com/Sariay/hexo-theme-Annie" target="_blank"><i class="fa fa-download"></i>克隆主题</a>
-				</li> -->
-			</ul>
-		</div>
-		
-		<!-- This is only a demo, please go to "https://time.is" to set your city time! -->
-<style type="text/css">
-	.header-date {
-		position: absolute;
-		left: 40px;
-		bottom: 30px;
-		writing-mode: tb-rl;
-		font-size: 36px;
-	}	
-	.header-date a {
-		border-bottom: none;
-	}
-	@media only screen and (max-width: 768 ) {
-		.header-date {
-			position: absolute;
-			left: 40px;
-			bottom: 30px;
-			writing-mode: tb-rl;
-			font-size: 20px;
-		}			
-	}
-</style>
-<div class="header-date">
-	<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow"></a>
-	<span id="Beijing_z43d"></span>
-</div>
-<script src="//widget.time.is/zh.js"></script>
-<script>
-	time_is_widget.init({
-		Beijing_z43d:{
-			template:"DATE", 
-			date_format:"year年 monthname dnum日"
-		}
-	});
-</script>
-</div></header>
-
-<!-- Navigation in div(id="navigation-H") -->
-<a class="nav-trigger">
-	<span></span>
-</a>
-
-<nav class="nav-container" id="cd-nav">
-	<div class="nav-header">
-		<h3>Navigation</h3>
-		<a href="javascript:;" class="nav-close"></a>
-	</div>
-	<div class="nav-body">
-		<ul>
-			
-				<li class="menu-home">
-					<a href="/" class="menu-item-home">主页</a>
-				</li>
-			
-				<li class="menu-archive">
-					<a href="/archives" class="menu-item-archive">归档</a>
-				</li>
-			
-				<li class="menu-categories">
-					<a href="/categories" class="menu-item-categories">分类</a>
-				</li>
-			
-				<li class="menu-tags">
-					<a href="/tags" class="menu-item-tags">标签</a>
-				</li>
-			
-				<li class="menu-about">
-					<a href="/about" class="menu-item-about">关于</a>
-				</li>
-			
-				<li class="menu-gallery">
-					<a href="/gallery" class="menu-item-gallery">摄影集</a>
-				</li>
-			
-
-			
-				<li class="menu-search">
-					<a href="javascript:;" class="popup-trigger" title="Search">搜索</a>
-				</li>
-			
-		</ul>
-	</div>
-
-	<div class="nav-footer">
-		<ul>
+<body ontouchstart="" class="body--home">
+	<!-- ThemeColor -->
 	
-		
-			<li>
-				<a href="https://github.com/mescalchuan" title="Github" target="_blank">
-					<i class="fa fa-github"></i>
-				</a>
-			</li>
-		
-		
-			<li>
-				<a href="https://weibo.com/6454388854/profile?topnav=1&wvr=6" title="Weibo" target="_blank">
-					<i class="fa fa-weibo"></i>
-				</a>
-			</li>
-		
-		
-			<li>
-				<a href="mailto:/1335382915@qq.com" title="Email" target="_blank">
-					<i class="fa fa-envelope-o"></i>
-				</a>
-			</li>
-		
+	<!-- ThemeColor -->
+<!-- <div class="toggle" onclick="document.body.classList.toggle('body--dark')">Switch Color</div> -->
 
-		
-			<li>
-				<a href="javasvript:void(0)" title="QQ" target="_blank" data-remodal-target="modalQ">
-					<i class="fa fa-qq"></i>
-				</a>
-			</li>
-		
-		
-			<li>
-				<a href="javasvript:void(0)" title="WeiXin" target="_blank" data-remodal-target="modalW">
-					<i class="fa fa-weixin"></i>
-				</a>
-			</li>
-		
-		
-			<li>
-				<a href="https://mescalchuan.github.io" title="Website">
-					<i class="fa fa-globe"></i>
-				</a>
-			</li>
-		
-		
-	 
-</ul>
-	</div>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons bright-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+
+	
+
+	<!-- Gitter -->
+	
+
+	<!-- Navigation (contains search)-->
+	<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Mescal Chuan</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+          <li>
+            <a href="/archive/">归档</a>
+          </li>
+          <li>
+            <a href="/categories/">分类</a>
+          </li>
+          <li>
+            <a href="/tags/">标签</a>
+          </li>
+          <li>
+            <a href="/gallery/">摄影</a>
+          </li>
+          <li>
+            <a href="/about/">关于</a>
+          </li>
+          <!-- 
+
+          
+          
+
+          
+          <li>
+            archive/index.html
+            <a href="/archive/">归档</a>
+          </li>
+          
+          
+
+          
+          <li>
+            about/index.html
+            <a href="/about/">关于</a>
+          </li>
+          
+          
+
+          
+          <li>
+            categories/index.html
+            <a href="/categories/">分类</a>
+          </li>
+          
+          
+
+          
+          <li>
+            tags/index.html
+            <a href="/tags/">标签</a>
+          </li>
+          
+          
+
+          
+          <li>
+            gallery/index.html
+            <a href="/gallery/">摄影</a>
+          </li>
+          
+           -->
+
+          
+          <li><a class="popup-trigger" title="Search"><span class="search-icon"></span>搜索</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
 </nav>
-
-		
-		<!--main-->
-		<main>
-			<div class="layout-post">
-	
-	
-	<div class="article-title">
-		
-	<a href="/2016/10/30/2016-10-30-technology-es6-1/" itemprop="url">
-		ES6学习笔记（一）
-	</a>
-
-	</div>
-
-	<div class="article-meta">
-		<span>
-			
-	发布于
-	<a href="/2016/10/30/2016-10-30-technology-es6-1/" itemprop="url">
-		<time datetime="2016-10-30T10:32:20.000Z" itemprop="datePublished">
-	  		2016-10-30
-	  </time>
-	</a> 
-
-	/
-	更新于
-	<a href="/2016/10/30/2016-10-30-technology-es6-1/" itemprop="url">
-		<time datetime="2016-10-30T10:32:20.000Z" itemprop="dateUpdated">
-	  		2019-04-26
-	  </time>
-	</a> 	
-
-		</span>
-		/
-		<span>
-			<i class="fa fa-tags"></i>
-			
-	
-		<a href="/tags/博客/" class=" ">
-			博客
-		</a>
-	
-		<a href="/tags/技术博客/" class=" ">
-			技术博客
-		</a>
-	
-		<a href="/tags/javascript/" class=" ">
-			javascript
-		</a>
-	
-		
-		</span>
-		<!-- /
-		
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
 
 
- -->
-	</div>
+<script>
+  // Drop Bootstarp low-performance Navbar
+  // Use customize navbar with high-quality material design animation
+  // in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
 
-	<div class="article-content" id="article-content">
-		<h3 id="最近学习了ES6，被它更简洁的代码编写方式、面向对象以及模块化开发所吸引。ES6有一定的学习成本而且知识点比较琐碎，我把自己经常用到的知识点进行了整理。"><a href="#最近学习了ES6，被它更简洁的代码编写方式、面向对象以及模块化开发所吸引。ES6有一定的学习成本而且知识点比较琐碎，我把自己经常用到的知识点进行了整理。" class="headerlink" title="最近学习了ES6，被它更简洁的代码编写方式、面向对象以及模块化开发所吸引。ES6有一定的学习成本而且知识点比较琐碎，我把自己经常用到的知识点进行了整理。"></a>最近学习了ES6，被它更简洁的代码编写方式、面向对象以及模块化开发所吸引。ES6有一定的学习成本而且知识点比较琐碎，我把自己经常用到的知识点进行了整理。</h3><h4 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h4><p>es6很强大，遗憾的是所有浏览器都没有完美支持它。因此我们需要通过babel将es6转换成es5让我们的代码在浏览器端运行。</p>
-<p>我本人用的是webpack+babel，你也可以使用gulp或者直接将babel的browser.js引入，将type设为”text/babel”。</p>
-<p>首先安装webpack</p>
-<pre><code>npm install webpack --save-dev 
-</code></pre><p>webpack需要安装相应的loader加载器—babel-loader，别忘了安装转换规则—babel-preset-es2015</p>
-<pre><code>npm install babel-loader --save-dev
-npm install babel-preset-es2015 --save-dev
-</code></pre><p>接下来简单地配置一下webpack.config.js文件</p>
-<pre><code>module.exports = {
-  entry: &quot;./main.js&quot;,
-  output: {
-    path: __dirname,
-    filename: &quot;after.js&quot;
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        loader: &#39;babel-loader&#39;,
-        query: {
-          presets: [&#39;es2015&#39;]
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
         }
-      }
-    ]
-  },
-}
-</code></pre><p>上面的main.js就是我们即将要写的es6代码，通过在命令行输入<code>webpack</code>将其转化成es5并保存在after.js中，因此我们只需要引入after.js即可。如果你希望webpack可以实时监听并编译，可以安装webpack-dev-server，这里不多说明。</p>
-<p>小贴士：如果你在使用es6中的Generator、async的时候遇到了错误信息<code>regeneratorRuntime is not defined</code>，请单独安装babel-polyfill：在webpack.config.js的头部<code>var babelpolyfill = require(&quot;babel-polyfill&quot;);</code>，将入口文件改写成<code>entry:[&quot;babel-polyfill&quot;,&quot;./main.js&quot;],</code>，然后在你的js中<code>import &quot;babel-polyfill&quot;</code>。</p>
-<p>准备工作已经完成，接下来我们可以测试一下，我准备了一个用es6编写的main.js文件</p>
-<pre><code>class MyClass{
-    constructor(x,y){
-        this.x=x;
-        this.y=y;
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
     }
-    print(){
-        return `(${this.x},${this.y})`;
-    }
-}
-var myclass=new MyClass(2,3);
-console.log(myclass.print());
-</code></pre><p>运行webpack后看看生成的after.js里面都有啥</p>
-<pre><code>//部分代码
-var MyClass = function () {
-        function MyClass(x, y) {
-            _classCallCheck(this, MyClass);
-            this.x = x;
-            this.y = y;
-        }
-        _createClass(MyClass, [{
-            key: &quot;print&quot;,
-            value: function print() {
-                return &quot;(&quot; + this.x + &quot;,&quot; + this.y + &quot;)&quot;;
-            }
-        }]);
-        return MyClass;
-    }();
-    var myclass = new MyClass(2, 3);
-    console.log(myclass.print());
-</code></pre><p>可以看到webpack已经将es6转化为es5，现在可以尽情使用es6了。</p>
-<h3 id="let和const"><a href="#let和const" class="headerlink" title="let和const"></a>let和const</h3><h4 id="let"><a href="#let" class="headerlink" title="let"></a>let</h4><p>let是新的变量声明方式，使用方法类似于var，但是let声明的变量只在它所在的代码块内有效</p>
-<pre><code>{
-    var name=&quot;SunnyChuan&quot;;
-    let age=22;
-}
-console.log(name); //&quot;SunnyChuan&quot;
-console.log(age);  //age is not defined
-</code></pre><p>let变量只在自己的块级作用域内有效，也就意味着使用let可以代替闭包解决常见的for循环引用同一个变量的问题</p>
-<pre><code>for(let i=0;i&lt;5;i++)console.log(i);  //0 1 2 3 4
-</code></pre><p>let不存在变量声明提升，必须先声明后使用</p>
-<pre><code>console.log(name); //ReferenceError
-let name=&quot;SunnyChuan&quot;;
-</code></pre><p>let不允许在同一个作用域内重复声明同一个变量（无论新变量是let/const/var）</p>
-<pre><code>let name=&quot;SunnyChuan&quot;;
-var name=&quot;DannyQin&quot;; //报错
-</code></pre><h4 id="const"><a href="#const" class="headerlink" title="const"></a>const</h4><p>const是es6增加的另一个变量声明方式，它用来声明常量，并且声明后变量的值不能再更改。因此一旦声明必须初始化，不能稍后再赋值</p>
-<pre><code>const a=100;
-a=10; //TypeError
-const b  //SyntaxError;
-b=100;
-</code></pre><p>const和let一样存在自己的作用域，个人认为除了变量的值是否可以改变以及是否必须声明立即初始化之外，let和const没有其他区别。需要注意的是，对于对象，数组等复合型的变量，const保证的是地址不变而不是值不变</p>
-<pre><code>const arr=[1,2,3];
-arr.push(4); //地址不变，改变值是可以的
-arr=[5]; //修改了地址，报错
-</code></pre><h3 id="变量的解构赋值"><a href="#变量的解构赋值" class="headerlink" title="变量的解构赋值"></a>变量的解构赋值</h3><p>es6支持解构赋值的形式将变量的赋值简单化，数组/对象/字符串/数值/布尔/函数均可解构赋值。最为常用的是数组和对象。</p>
-<h4 id="数组的解构赋值"><a href="#数组的解构赋值" class="headerlink" title="数组的解构赋值"></a>数组的解构赋值</h4><p>只要等号两边的模式相同即可解构成功</p>
-<pre><code>var [a,b,c]=[1,2,3] //a=1,b=2,c=3
-var [a,,b] //a=1,b=3
-var [a,..b] //a=1,b=[2,3]
-</code></pre><p>当左边的数量大于右边时，右边会默认用undefined进行补充，导致解构不成功</p>
-<pre><code>let [a,b,c]=[1,2] //a=1,b=2,c=undefined
-</code></pre><p>允许指定默认值，默认值只有当左边的变量所对应的右边的值严格等于undefined才生效</p>
-<pre><code>var [a,b,c=3]=[1,2]; //a=1,b=2,c=3
-var [a,b,c=3]=[1,2,null]; //a=1,b=2,c=null
-</code></pre><h4 id="对象的解构赋值"><a href="#对象的解构赋值" class="headerlink" title="对象的解构赋值"></a>对象的解构赋值</h4><p>与数组不同的是，对象解构赋值依靠的是key值，因此只要左边和右边key值同名即可（变量名等于属性名），无所谓顺序，而数组是按照顺序赋值的</p>
-<pre><code>var {name,age}={name:&quot;SunnyChuan&quot;,age:22}; //name=&quot;SunnyChuan&quot; age=22 
-//相当于
-var {name:name,age:age}={name:&quot;SunnyChuan&quot;,age:22};
-</code></pre><p>按照上面的匹配方式，变量名必须等于属性名，如果不相等则匹配失败。如果变量名不等于属性名，只能使用属性名：变量名的形式，不能省去变量名。这时候，属性只不过是一个模式，真正被赋值的是变量</p>
-<pre><code>var {name:myName,age:myAge}={name:&quot;SunnyChuan&quot;,age:22};
-//name is not defined, age is not defined, myName=&quot;SunnyChuan&quot;, myAge=22
-</code></pre><p>对象解构赋值也提供了默认值，与数组相同，只有属性值严格等于undefined时才生效</p>
-<pre><code>var {name,age=22}={name:&quot;SunnyChuan&quot;} //name=&quot;SunnyChuan&quot; age=22
-var {name,age=22}={name:&quot;SunnyChuan&quot;,age:null} //name=&quot;SunnyChuan&quot; age=null
-</code></pre><p>解构赋值最常用的地方就是交换变量。不需要额外的临时变量temp，一句代码就搞定</p>
-<pre><code>[x,y]=[y,x]
-</code></pre><h3 id="字符串-数值-数组的扩展"><a href="#字符串-数值-数组的扩展" class="headerlink" title="字符串/数值/数组的扩展"></a>字符串/数值/数组的扩展</h3><h4 id="字符串的扩展"><a href="#字符串的扩展" class="headerlink" title="字符串的扩展"></a>字符串的扩展</h4><p>includes(str)，返回布尔值，是否在当前字符串中找到了str</p>
-<pre><code>&quot;SunnyChuan&quot;.includes(&quot;Chuan&quot;); //true
-</code></pre><p>startsWith(str)，返回布尔值，当前字符串是否以str开头</p>
-<pre><code>&quot;SunnyChuan&quot;.startsWidth(&quot;Sunny&quot;); //true
-</code></pre><p>endsWith(str)，返回布尔值，当前字符串是否以str结尾</p>
-<pre><code>&quot;SunnyChuan&quot;.endsWith(&quot;Chuan&quot;); //true
-</code></pre><p>repeat(n)，将当前字符串重复n次（可以理解为在原有的基础上重复n-1次）并返回新字符串，如果n是小数则向下取整。当n小于等于0时，返回空字符串</p>
-<pre><code>&quot;x&quot;.repeat(3); // &quot;xxx&quot;
-</code></pre><p>模板字符串</p>
-<pre><code>var name=&quot;SunnyChuan&quot;;
-var str=`hello ${name},this is ES6 `;
-//等同于&quot;hello&quot;+name+&quot;,this is ES6&quot;;
-</code></pre><h4 id="数值的扩展"><a href="#数值的扩展" class="headerlink" title="数值的扩展"></a>数值的扩展</h4><p>Number.isFinite(n)，布尔值，检查n是否有穷，与es5的isFinite()不同的是，它不会进行类型转换，因此只对真正的数值有效</p>
-<pre><code>Number.isFinite(10); //true
-Number.isFinite(NaN); //false
-Number.isFinite(Infinity); //false
-Number.isFinite(&quot;10&quot;); //false
-</code></pre><p>Number.isNaN(n)，布尔值，检查n是否是NaN，与es5的isNaN()不同的是，它不会进行类型转换，因此只对真正的NaN有效</p>
-<pre><code>Number.isNaN(NaN); //true
-Number.isNaN(&quot;str&quot;); //false
-</code></pre><p>Number.isInteger(n)，布尔值，检查n是否是整数，需要注意1.0和1是同一个值</p>
-<pre><code>Number.isInteger(1); //true
-Number.isInteger(1.0); //true
-Number.isInteger(1.2); //false
-</code></pre><p> Math.trunc(n)，去除小数部分并返回（正数向下取整，负数向上取整）</p>
-<pre><code> Math.trunc(1.2); //1
- Math.trunc(-1.2); //-2
-</code></pre><p>Math.sign(n)，布尔值，n是正数返回+1，是负数返回-1，0返回0，-0返回-0，其他值返回NaN</p>
-<pre><code>Math.sign(100); //+1
-Math.sign(-100); //-1
-Math.sign(0); //0
-Math.sign(-0); //-0
-Math.sign(&quot;str&quot;); //NaN
-</code></pre><h4 id="数组的扩展"><a href="#数组的扩展" class="headerlink" title="数组的扩展"></a>数组的扩展</h4><p>Array.from(list)，将list转化成真正的数组，常用于将nodeList/arguments等伪数组<br>转化成数组</p>
-<pre><code>var obj={a:1,b:2,c:3};
-Array.from(obj); //[1,2,3]
-var div=document.getElementsByTagName(&quot;div&quot;);
-Array.from(div); //[[object HTMLDivElement],[object HTMLDivElement],[object HTMLDivElement]]
-</code></pre><p>includes(n)，布尔值，检查当前数组是否包含n，可以接收两个参数，第二个参数代表搜索的起始位置（负数代表从后往前）</p>
-<pre><code>[1,2,3,4].include(2); //true
-[1,2,3,4].include(2,2); //false
-[1,2,3,4].include(2,-3); //true
-</code></pre><p>数组新增三种遍历方式：entries()（遍历key和value）/keys()（遍历key）/values()（遍历value）</p>
-<pre><code>for(let v of [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;].values()){
-    console.log(v);
-} //&quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot;
-
-for(let k of [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;].keys()){
-    console.log(k);
-} //0 1 2 3
-
-for(let [k,v] of [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;].entries()){
-    console.log(k,v);
-} //0 &quot;a&quot; 1 &quot;b&quot; 2 &quot;c&quot; 3 &quot;d&quot;
-</code></pre><h3 id="函数和对象的扩展"><a href="#函数和对象的扩展" class="headerlink" title="函数和对象的扩展"></a>函数和对象的扩展</h3><h4 id="函数的扩展"><a href="#函数的扩展" class="headerlink" title="函数的扩展"></a>函数的扩展</h4><p>es6支持函数的参数设置默认值，但是这些参数必须位于函数的尾部，并且参数的变量是默认声明的，因此不能用let/const再次声明</p>
-<pre><code>function func(x,y=5){
-    console.log(y); //5
-    let y=3; //error
-}
-</code></pre><p>扩展运算符，用于将数组（伪数组）展开成参数序列</p>
-<pre><code>console.log(...[1,2,3]); //1 2 3
-[...document.getElementsByTagName(&quot;div&quot;)]; //[[object HTMLDivElement],[object HTMLDivElement],[object HTMLDivElement]]
-</code></pre><p>扩展运算符有很多应用场景，这里列举三个</p>
-<ol>
-<li>数组合并<pre><code>[1,2,3].concat([4,5,6]); //es5
-[1,2,3,...[4,5,6]]; //es6
-</code></pre></li>
-</ol>
-<p>2.与解构结合（用于生成数组）</p>
-<pre><code>let [a,b,...c]=[1,2,3,4,5]; //a=1,b=2,c=[3,4,5] 扩展运算符必须放在最后
-</code></pre><p>3.Math.max的参数不支持数组，在es5中需要用到apply。用扩展运算符可以解决该问题</p>
-<pre><code>Math.max.apply(Math,[1,2,3]); //es5
-Math.max(...[1,2,3]); //es6 相当于Math.max(1,2,3)
-</code></pre><p>箭头函数，如果不需要参数则用圆括号代替参数部分，如果函数体有多行代码则用大括号括起来</p>
-<pre><code>var func=x=&gt;x*2; //var func=function(x){return x*2;}
-var func=()=&gt;true; //var func=function(){return true;}
-var func=(x,y)=&gt;{var z=x+y;console.log(z);} //var func=function(x,y){var z=x+y;console.log(z);}
-var func=()=&gt;({a:1,b:2}); //返回对象需要用圆括号包起来，圆括号代表函数体，花括号代表这是一个对象
-</code></pre><p>函数绑定，使用a::b的形式取代传统的bind/call/apply</p>
-<pre><code>a::b; //b.bind(a);
-a::b(...arguments); //b.apply(a,arguments);
-</code></pre><h4 id="对象的扩展"><a href="#对象的扩展" class="headerlink" title="对象的扩展"></a>对象的扩展</h4><p>es6允许在对象中只写key，这样默认了value等于key所代表的变量值</p>
-<pre><code>var [name,age]=[&quot;SunnyChuan&quot;,22];
-var obj={name,age}; //obj={name:&quot;SunnyChuan&quot;,age:22} 
-//相当于obj={name:name,age:age};
-</code></pre><p>对象的方法也可以简写</p>
-<pre><code>var obj={
-    func(){
-        //函数体
-    }
-}
-//相当于
-var obj={
-    func:function(){
-        //函数体
-    }
-}
-</code></pre><p>Object.assign(obj,obj1,obj2,…)，将obj1/obj2/…与obj进行拼接（修改obj本身）</p>
-<pre><code>var [obj,obj1,obj2]=[{a:1},{b:2},{c:3}];
-Object.assign(obj,obj1,obj2);
-console.log(obj); //{a:1,b:2,c:3}
-</code></pre><p>Object.is(obj1,obj2)，布尔值，判断两个值是否严格相等，与===不同的是，+0不等于-0，NaN等于NaN</p>
-<pre><code>Object.is(100,100); //true
-Object.is(NaN,NaN); //true
-Object.is(+0,-0); //false
-Object.is({a:1},{a:1}); //false
-</code></pre>	
-	</div>
-	
-	<div id="current-post-cover" data-scr="/img/mescal/12.jpg"></div>
-
-	<!-- relate post, comment...-->
-	<div class="investment-container">
-		<div class="investment-header">
-			<div class="investment-title-1">
-				<div class="on">相关文章</div>
-				<!-- <div>评论</div> -->
-			</div>
-			<div class="investment-title-2">	            
-				
-	<span>
-		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
-		
-			<a href="/2016/11/03/2016-11-03-technology-react-es6/" title="用ES6书写React" rel="prev">
-				&laquo;上一篇
-			</a>
-		
-		
-			<a href="/2016/10/30/2016-10-30-technology-es6-2/" title="ES6学习笔记（二）" rel="next">
-				下一篇&raquo;
-			</a>
-			
-	</span>
-      		
-			</div>	
-		</div>
-		
-		<div class="investment-content">
-			<div class="investment-content-list">
-				
-
-<div class="relate-post">
-	<ul>
-		
-				<li>
-					<div>
-						<a href="/2019/10/16/2019-10-16-technology-css-block/" title="Css Block">
-							Css Block
-						</a>
-						<p>
-							CSS-BLOCK文档地址
-初衷Css Block 启发于前不久阅读的张鑫旭的《CSS世界》一书，让我对 css 又有了新的理解，并且从中学到了一些“妙招”。日常项目中频频会用到一些常用的样式代码块，这些代码块可以封装到一个通用的样式...
-						</p>
-					</div>
-
-					<a href="/2019/10/16/2019-10-16-technology-css-block/" title="Css Block">				
-						<img src="/img/mescal/18.jpg" class="relateImg" alt="Css Block">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2019/05/10/2019-05-10-technology-async-rules-form/" title="IVIEW 动态校验规则组件">
-							IVIEW 动态校验规则组件
-						</a>
-						<p>
-							async-rules-form动态配置 iview 的表单规则
-初衷实现 iview 的Form 组件可以动态修改校验规则的功能。
-需求场景例如：当用户年龄下拉框选择“未成年”时，身份证号为非必填项，否则为必填项。
-原理为该字段生成...
-						</p>
-					</div>
-
-					<a href="/2019/05/10/2019-05-10-technology-async-rules-form/" title="IVIEW 动态校验规则组件">				
-						<img src="/img/mescal/17.jpg" class="relateImg" alt="IVIEW 动态校验规则组件">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2018/09/27/2018-09-27-technology-vue-app-cli/" title="快速开发基于vue的app应用——vue-app-cli">
-							快速开发基于vue的app应用——vue-app-cli
-						</a>
-						<p>
-							
-一个能够让你快速构建基于vue的app多页应用脚手架，可独立开发h5 app或集成到hbuilder开发原生应用。文档地址vue-cli之所以不使用官方的vue-cli构建应用是因为：
-
-vue-cli需要自己实现多页面构建。
-在开...
-						</p>
-					</div>
-
-					<a href="/2018/09/27/2018-09-27-technology-vue-app-cli/" title="快速开发基于vue的app应用——vue-app-cli">				
-						<img src="/img/mescal/1.jpg" class="relateImg" alt="快速开发基于vue的app应用——vue-app-cli">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2018/08/29/2018-08-29-technology-weixin/" title="初探微信小程序之小川天气">
-							初探微信小程序之小川天气
-						</a>
-						<p>
-							微信小程序可以说是当下很火热的应用了。在好奇心的作用下，通读了一遍之后便开始上手撸了一个很简单的天气应用——小川天气。
-
-
-
-目前已经发布正式版本，你可以直接在微信中搜索小川天气来使用。
-小程序的文档已经很完善了，通读一遍后上手写代码...
-						</p>
-					</div>
-
-					<a href="/2018/08/29/2018-08-29-technology-weixin/" title="初探微信小程序之小川天气">				
-						<img src="/img/mescal/xiaochuan_weather.jpg" class="relateImg" alt="初探微信小程序之小川天气">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2018/07/31/2018-07-31-technology-node-health/" title="基于React和Node实现一个食物热量参考应用">
-							基于React和Node实现一个食物热量参考应用
-						</a>
-						<p>
-							利用业余时间，自己做了一个食物热量参考网站，数据参考自一个app食物库。技术栈使用了sass+react+react-router+redux+antd+express+mongoose。
-
-一、How To Use下载首先将代码cl...
-						</p>
-					</div>
-
-					<a href="/2018/07/31/2018-07-31-technology-node-health/" title="基于React和Node实现一个食物热量参考应用">				
-						<img src="/img/mescal/node_health.jpg" class="relateImg" alt="基于React和Node实现一个食物热量参考应用">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2018/07/04/2018-07-04-technology-vpull-refresh/" title="基于vue封装的轻量级下拉刷新组件">
-							基于vue封装的轻量级下拉刷新组件
-						</a>
-						<p>
-							如何使用将项目中的src/components/pullRefresh.vue和src/img拷贝到你的工程内。如层级发生改变，你需要手动修改pullRefresh.vue中的图片链接地址。
-API
-
-
-属性
-说明
-类型
-默认值
-
-
-...
-						</p>
-					</div>
-
-					<a href="/2018/07/04/2018-07-04-technology-vpull-refresh/" title="基于vue封装的轻量级下拉刷新组件">				
-						<img src="/img/mescal/2.jpg" class="relateImg" alt="基于vue封装的轻量级下拉刷新组件">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2018/04/21/2018-04-21-technology-x-ui/" title="x-ui">
-							x-ui
-						</a>
-						<p>
-							跨平台的移动端ui组件库
-介绍x-ui是基于react native和react开发出的跨android、ios和h5的三端ui组件库。
-如何使用起步git clone https://github.com/mescalchuan/x...
-						</p>
-					</div>
-
-					<a href="/2018/04/21/2018-04-21-technology-x-ui/" title="x-ui">				
-						<img src="/img/mescal/3.jpg" class="relateImg" alt="x-ui">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2018/02/25/2018-02-25-technology-angular-m-cli/" title="一个能够快速构建AngularJS多页项目的轻量级脚手架">
-							一个能够快速构建AngularJS多页项目的轻量级脚手架
-						</a>
-						<p>
-							
-一款基于webpack的快速构建angular1的多页应用构建方案文档地址使用angular-m-cli，您可以做到
-快速构建项目原型
-自动生成新页面并完成相关配置（包括入口文件、css、index.html）
-利用本地服务器完成开...
-						</p>
-					</div>
-
-					<a href="/2018/02/25/2018-02-25-technology-angular-m-cli/" title="一个能够快速构建AngularJS多页项目的轻量级脚手架">				
-						<img src="/img/mescal/4.jpg" class="relateImg" alt="一个能够快速构建AngularJS多页项目的轻量级脚手架">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2018/01/27/2018-01-27-technology-atom/" title="优雅地配置Atom">
-							优雅地配置Atom
-						</a>
-						<p>
-							从最初的sublime text，到webstorm，后来又转战visual studio code，直到现在的atom，就个人使用体验来看是越来越舒适的。之前一直在使用sublime text和webstorm，后来尝试了一把vs ...
-						</p>
-					</div>
-
-					<a href="/2018/01/27/2018-01-27-technology-atom/" title="优雅地配置Atom">				
-						<img src="/img/mescal/5.jpg" class="relateImg" alt="优雅地配置Atom">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2018/01/19/2018-01-19-technology-react-native-textinput/" title="React Native之巧用TextInput">
-							React Native之巧用TextInput
-						</a>
-						<p>
-							近日使用rn开发电商app遇到一个再简单不过的需求：买家申请退款，填写申请单，其中有一个多行文本输入框用于填写退款理由，如图所示：
-
-看似简单的需求，然而用rn开发还是会遇到问题。
-页面搭建两个View和一个TextInput足矣，外...
-						</p>
-					</div>
-
-					<a href="/2018/01/19/2018-01-19-technology-react-native-textinput/" title="React Native之巧用TextInput">				
-						<img src="/img/mescal/6.jpg" class="relateImg" alt="React Native之巧用TextInput">
-					</a>
-				</li>											
-		
-		
-	</ul>
-</div>	
-			</div>
-			<div class="investment-content-list">
-				<div class="layout-comment">
-
-	
-
-</div>
-			</div>
-		</div>	
-	</div>
-</div>
-
-
-
-	<!-- leancloud -->
-	<!--
-	时间：2018-11-27
-	描述：
-		文章访问量：visitors
-		文章喜欢量：likes	
-		文章排行榜：topNPost
-		其他得说明：
-			01-Cookie相关的函数 
-				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
-			02-visitors相关的函数 
-				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
-				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
-			03-topNPost相关的函数
-				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
-			04-likes相关的函数，
-				参考了01 & 02进行简单的设计与实现
--->
-
-
-
- 
-
-<!-- show math formula -->
-
-
-
-
-<!-- TODO: There seems to be a bug when you close the post gallery! -->
-<link rel="stylesheet" href="/plugin/lightgallery/css/lightgallery.css">
-<script src="/plugin/lightgallery/js/jquery-1.11.0.min.js"></script>
-<script src="/plugin/lightgallery/js/lightgallery-all.min.js"></script>
-
-<script type="text/javascript">
-	var postTitle = $('.article-title a').text() ? $('.article-title a').text() : "No post title!";
-	$('.article-content img').each(function() {
-		var imgPath = $(this).attr('src'),
-			imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
-		$(this).wrap('<div class="img-responsive" data-src="' + imgPath + '" data-responsive="' + imgPath + '" data-sub-html="<p>图片 ' + imgTitle + '</p><h4>文章' + postTitle + '</h4>"></div>');
-	});
-
-	$('.article-content').lightGallery({
-		mode: 'lg-slide',
-		selector: '.img-responsive',
-		share: false,
-		zoom: false,
-		download: false
-	});
-	//TODO：支持video
-</script>
-
-<!--
-	时间：2018-11-17
-	描述：
-		插件名称：katelog.min.js
-		插件作者：KELEN
-		插件来源: https://github.com/KELEN/katelog
--->
-
-		
-
-		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
-		<script src="/plugin/toc/katelog.min.js"></script>
-
-		
-	
-			<audio loop="loop" controls>
-				<source src="/xingzhezui.mp3" type="audio/mp3" />
-			</audio>
-		</main>
-		
-		<!--footer-->
-		<footer>
-	<div class="social">
-		<ul>
-	
-		
-			<li>
-				<a href="https://github.com/mescalchuan" title="Github" target="_blank">
-					<i class="fa fa-github"></i>
-				</a>
-			</li>
-		
-		
-			<li>
-				<a href="https://weibo.com/6454388854/profile?topnav=1&wvr=6" title="Weibo" target="_blank">
-					<i class="fa fa-weibo"></i>
-				</a>
-			</li>
-		
-		
-			<li>
-				<a href="mailto:/1335382915@qq.com" title="Email" target="_blank">
-					<i class="fa fa-envelope-o"></i>
-				</a>
-			</li>
-		
-
-		
-			<li>
-				<a href="javasvript:void(0)" title="QQ" target="_blank" data-remodal-target="modalQ">
-					<i class="fa fa-qq"></i>
-				</a>
-			</li>
-		
-		
-			<li>
-				<a href="javasvript:void(0)" title="WeiXin" target="_blank" data-remodal-target="modalW">
-					<i class="fa fa-weixin"></i>
-				</a>
-			</li>
-		
-		
-			<li>
-				<a href="https://mescalchuan.github.io" title="Website">
-					<i class="fa fa-globe"></i>
-				</a>
-			</li>
-		
-		
-	 
-</ul>
-	</div>
-		
-	<div class="copyright">
-		<p>
-			 
-				&copy;2019, content by Mescal Chuan. All Rights Reserved.
-			
-			
-			
-
-	<!-- busuanzi -->
-	<!-- busuanzi -->
-
-
-
-		</p>
-		<!-- <p>
-			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay. 					
-		</p> -->
-	</div>	
-
-	<div class="remodal" data-remodal-id="modalQ">
-		<img style="max-width:100%;height:auto;" src="/img/mescal/qq.jpeg" alt>
-	</div>
-	<div class="remodal" data-remodal-id="modalW">
-		<img style="max-width:100%;height:auto;" src="/img/mescal/weixin.jpg" alt>
-	</div>
-</footer>
-		
-    <!-- set '1' to show motto in all pages! -->
-
-	<script src="/js/motto.js"></script>
-	<script type="text/javascript">
-		$(".motto").html( getMingYanContent() );
-	</script>	
-
-
-
-
-    <!--
-	时间：2018-10-3
-	描述：
-		插件名称：hexo-generator-search-zip
-		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
-		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
--->
-<div class="popup search-popup local-search-popup">
-	<div class="local-search-container">
-		<span class="popup-btn-close">
-      ESC
-   </span>
-		<div class="local-search-header">
-			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
-		</div>
-		<div class="local-search-body">
-			<div id="local-search-output"></div>
-		</div>
-		<div class="local-search-footer">
-			
-
-		</div>
-	</div>
-</div>
-
-<script src="/js/ziploader.js"></script>
-<script src="/js/search.js"></script>
-
-<script type="text/javascript">
-	var search_path = 'search.json',
-		zip_Path = '/search.zip',
-		version_Path = '/searchVersion.txt',
-		input_Trigger = 'auto',
-		top_N = '2';
-
-	themeLocalSearch({
-		search_path, 
-		zip_Path, 
-		version_Path, 
-		input_Trigger, 
-		top_N
-	});
+  }
 </script>
 
 
+	<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
 
-
-<!--back to top-->
+  <style type="text/css">
+    header.intro-header {
+       /*post*/
+        background-image: url('/img/12.jpg');
+      
+    }
 
     
-	<div id="totop">
-  		<a href="javascript:;" name="TOTOP" class="fa fa-arrow-up"></a>
-	</div>
-	<div id="tobuttom">
-		<a href="javascript:;" name="TOBUTTOM" class="fa fa-arrow-down"></a>
-	</div>
- 
+  </style>
 
 
- 
 
-<script src="/js/vibrant.js"></script>
-<script src="/js/chinese.js"></script>
-<script src="/js/main.js"></script>
-		<script src="/js/prism.js"></script>	
-		<script src="/js/remodal.js"></script>  
-	</body>
-	</html>
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#博客" title="博客">博客</a>
+              
+              <a class="tag" href="/tags/#技术博客" title="技术博客">技术博客</a>
+              
+              <a class="tag" href="/tags/#javascript" title="javascript">javascript</a>
+              
+            </div>
+            <h1>ES6学习笔记（一）</h1>
+            <h2 class="subheading"></h2>
+            <!-- <span class="meta">
+              Posted by Mescal Chuan on
+              2016-10-30
+            </span> -->
+
+
+            
+            <!-- WordCount start -->
+            <!-- <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">11</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">2.6k</span> In Total
+            </span>
+            <div class="blank_box"></div> -->
+            <!-- 不蒜子统计 start -->
+            <!-- <span class="meta">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span> -->
+            <!-- 不蒜子统计 end -->
+            <!-- WordCount end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+	<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+	<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h3 id="最近学习了ES6，被它更简洁的代码编写方式、面向对象以及模块化开发所吸引。ES6有一定的学习成本而且知识点比较琐碎，我把自己经常用到的知识点进行了整理。"><a href="#最近学习了ES6，被它更简洁的代码编写方式、面向对象以及模块化开发所吸引。ES6有一定的学习成本而且知识点比较琐碎，我把自己经常用到的知识点进行了整理。" class="headerlink" title="最近学习了ES6，被它更简洁的代码编写方式、面向对象以及模块化开发所吸引。ES6有一定的学习成本而且知识点比较琐碎，我把自己经常用到的知识点进行了整理。"></a>最近学习了ES6，被它更简洁的代码编写方式、面向对象以及模块化开发所吸引。ES6有一定的学习成本而且知识点比较琐碎，我把自己经常用到的知识点进行了整理。</h3><h4 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h4><p>es6很强大，遗憾的是所有浏览器都没有完美支持它。因此我们需要通过babel将es6转换成es5让我们的代码在浏览器端运行。</p>
+<p>我本人用的是webpack+babel，你也可以使用gulp或者直接将babel的browser.js引入，将type设为”text/babel”。</p>
+<p>首先安装webpack</p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack --<span class="built_in">save</span>-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure>
+
+<p>webpack需要安装相应的loader加载器—babel-loader，别忘了安装转换规则—babel-preset-es2015</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install </span><span class="keyword">babel-loader </span>--save-dev</span><br><span class="line">npm <span class="keyword">install </span><span class="keyword">babel-preset-es2015 </span>--save-dev</span><br></pre></td></tr></table></figure>
+
+<p>接下来简单地配置一下webpack.config.js文件</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">module.exports</span> = <span class="string">&#123;</span></span><br><span class="line">  <span class="attr">entry</span>: <span class="string">"./main.js",</span></span><br><span class="line">  <span class="attr">output</span>: <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">path</span>: <span class="string">__dirname,</span></span><br><span class="line">    <span class="attr">filename</span>: <span class="string">"after.js"</span></span><br><span class="line">  <span class="attr">&#125;,</span></span><br><span class="line">  <span class="attr">module</span>: <span class="string">&#123;</span></span><br><span class="line">    <span class="attr">loaders</span>: <span class="string">[</span></span><br><span class="line">      <span class="attr">&#123;</span></span><br><span class="line">        <span class="attr">test</span>: <span class="string">/\.js$/,</span></span><br><span class="line">        <span class="attr">loader</span>: <span class="string">'babel-loader',</span></span><br><span class="line">        <span class="attr">query</span>: <span class="string">&#123;</span></span><br><span class="line">          <span class="attr">presets</span>: <span class="string">['es2015']</span></span><br><span class="line">        <span class="attr">&#125;</span></span><br><span class="line">      <span class="attr">&#125;</span></span><br><span class="line">    <span class="attr">]</span></span><br><span class="line">  <span class="attr">&#125;,</span></span><br><span class="line"><span class="attr">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>上面的main.js就是我们即将要写的es6代码，通过在命令行输入<code>webpack</code>将其转化成es5并保存在after.js中，因此我们只需要引入after.js即可。如果你希望webpack可以实时监听并编译，可以安装webpack-dev-server，这里不多说明。</p>
+<p>小贴士：如果你在使用es6中的Generator、async的时候遇到了错误信息<code>regeneratorRuntime is not defined</code>，请单独安装babel-polyfill：在webpack.config.js的头部<code>var babelpolyfill = require(&quot;babel-polyfill&quot;);</code>，将入口文件改写成<code>entry:[&quot;babel-polyfill&quot;,&quot;./main.js&quot;],</code>，然后在你的js中<code>import &quot;babel-polyfill&quot;</code>。</p>
+<p>准备工作已经完成，接下来我们可以测试一下，我准备了一个用es6编写的main.js文件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span></span>&#123;</span><br><span class="line">	<span class="keyword">constructor</span>(x,y)&#123;</span><br><span class="line">		<span class="keyword">this</span>.x=x;</span><br><span class="line">		<span class="keyword">this</span>.y=y;</span><br><span class="line">	&#125;</span><br><span class="line">	print()&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">`(<span class="subst">$&#123;<span class="keyword">this</span>.x&#125;</span>,<span class="subst">$&#123;<span class="keyword">this</span>.y&#125;</span>)`</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> myclass=<span class="keyword">new</span> MyClass(<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line"><span class="built_in">console</span>.log(myclass.print());</span><br></pre></td></tr></table></figure>
+
+<p>运行webpack后看看生成的after.js里面都有啥</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//部分代码</span></span><br><span class="line"><span class="keyword">var</span> MyClass = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="function"><span class="keyword">function</span> <span class="title">MyClass</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">			_classCallCheck(<span class="keyword">this</span>, MyClass);</span><br><span class="line">			<span class="keyword">this</span>.x = x;</span><br><span class="line">			<span class="keyword">this</span>.y = y;</span><br><span class="line">		&#125;</span><br><span class="line">		_createClass(MyClass, [&#123;</span><br><span class="line">			key: <span class="string">"print"</span>,</span><br><span class="line">			value: <span class="function"><span class="keyword">function</span> <span class="title">print</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="string">"("</span> + <span class="keyword">this</span>.x + <span class="string">","</span> + <span class="keyword">this</span>.y + <span class="string">")"</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;]);</span><br><span class="line">		<span class="keyword">return</span> MyClass;</span><br><span class="line">	&#125;();</span><br><span class="line">    <span class="keyword">var</span> myclass = <span class="keyword">new</span> MyClass(<span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">	<span class="built_in">console</span>.log(myclass.print());</span><br></pre></td></tr></table></figure>
+<p>可以看到webpack已经将es6转化为es5，现在可以尽情使用es6了。</p>
+<h3 id="let和const"><a href="#let和const" class="headerlink" title="let和const"></a>let和const</h3><h4 id="let"><a href="#let" class="headerlink" title="let"></a>let</h4><p>let是新的变量声明方式，使用方法类似于var，但是let声明的变量只在它所在的代码块内有效</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="keyword">var</span> name=<span class="string">"SunnyChuan"</span>;</span><br><span class="line">	<span class="keyword">let</span> age=<span class="number">22</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(name); <span class="comment">//"SunnyChuan"</span></span><br><span class="line"><span class="built_in">console</span>.log(age);  <span class="comment">//age is not defined</span></span><br></pre></td></tr></table></figure>
+
+<p>let变量只在自己的块级作用域内有效，也就意味着使用let可以代替闭包解决常见的for循环引用同一个变量的问题</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">for(let</span> <span class="string">i=0;i&lt;5;i++)console.log(i);</span>  <span class="string">//0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></span><br></pre></td></tr></table></figure>
+
+<p>let不存在变量声明提升，必须先声明后使用</p>
+<figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.<span class="built_in">log</span>(<span class="built_in">name</span>); <span class="comment">//ReferenceError</span></span><br><span class="line">let <span class="built_in">name</span>=<span class="string">"SunnyChuan"</span>;</span><br></pre></td></tr></table></figure>
+
+<p>let不允许在同一个作用域内重复声明同一个变量（无论新变量是let/const/var）</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name=<span class="string">"SunnyChuan"</span>;</span><br><span class="line"><span class="keyword">var</span> name=<span class="string">"DannyQin"</span>; <span class="comment">//报错</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="const"><a href="#const" class="headerlink" title="const"></a>const</h4><p>const是es6增加的另一个变量声明方式，它用来声明常量，并且声明后变量的值不能再更改。因此一旦声明必须初始化，不能稍后再赋值</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a=<span class="number">100</span>;</span><br><span class="line">a=<span class="number">10</span>; <span class="comment">//TypeError</span></span><br><span class="line"><span class="keyword">const</span> b  <span class="comment">//SyntaxError;</span></span><br><span class="line">b=<span class="number">100</span>;</span><br></pre></td></tr></table></figure>
+
+<p>const和let一样存在自己的作用域，个人认为除了变量的值是否可以改变以及是否必须声明立即初始化之外，let和const没有其他区别。需要注意的是，对于对象，数组等复合型的变量，const保证的是地址不变而不是值不变</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">arr.push(<span class="number">4</span>); <span class="comment">//地址不变，改变值是可以的</span></span><br><span class="line">arr=[<span class="number">5</span>]; <span class="comment">//修改了地址，报错</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="变量的解构赋值"><a href="#变量的解构赋值" class="headerlink" title="变量的解构赋值"></a>变量的解构赋值</h3><p>es6支持解构赋值的形式将变量的赋值简单化，数组/对象/字符串/数值/布尔/函数均可解构赋值。最为常用的是数组和对象。</p>
+<h4 id="数组的解构赋值"><a href="#数组的解构赋值" class="headerlink" title="数组的解构赋值"></a>数组的解构赋值</h4><p>只要等号两边的模式相同即可解构成功</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">var</span> [<span class="selector-tag">a</span>,<span class="selector-tag">b</span>,c]=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] <span class="comment">//a=1,b=2,c=3</span></span><br><span class="line"><span class="selector-tag">var</span> [<span class="selector-tag">a</span>,,b] <span class="comment">//a=1,b=3</span></span><br><span class="line"><span class="selector-tag">var</span> [<span class="selector-tag">a</span>,..b] <span class="comment">//a=1,b=[2,3]</span></span><br></pre></td></tr></table></figure>
+
+<p>当左边的数量大于右边时，右边会默认用undefined进行补充，导致解构不成功</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let [a,b,c]=[<span class="number">1</span>,<span class="number">2</span>] <span class="comment">//a=1,b=2,c=undefined</span></span><br></pre></td></tr></table></figure>
+
+<p>允许指定默认值，默认值只有当左边的变量所对应的右边的值严格等于undefined才生效</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var [a,b,c=<span class="number">3</span>]=[<span class="number">1</span>,<span class="number">2</span>]; <span class="comment">//a=1,b=2,c=3</span></span><br><span class="line">var [a,b,c=<span class="number">3</span>]=[<span class="number">1</span>,<span class="number">2</span>,<span class="literal">null</span>]; <span class="comment">//a=1,b=2,c=null</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="对象的解构赋值"><a href="#对象的解构赋值" class="headerlink" title="对象的解构赋值"></a>对象的解构赋值</h4><p>与数组不同的是，对象解构赋值依靠的是key值，因此只要左边和右边key值同名即可（变量名等于属性名），无所谓顺序，而数组是按照顺序赋值的</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var &#123;name,age&#125;=&#123;<span class="string">name:</span><span class="string">"SunnyChuan"</span>,<span class="string">age:</span><span class="number">22</span>&#125;; <span class="comment">//name="SunnyChuan" age=22 </span></span><br><span class="line"><span class="comment">//相当于</span></span><br><span class="line">var &#123;<span class="string">name:</span>name,<span class="string">age:</span>age&#125;=&#123;<span class="string">name:</span><span class="string">"SunnyChuan"</span>,<span class="string">age:</span><span class="number">22</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>按照上面的匹配方式，变量名必须等于属性名，如果不相等则匹配失败。如果变量名不等于属性名，只能使用属性名：变量名的形式，不能省去变量名。这时候，属性只不过是一个模式，真正被赋值的是变量</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var <span class="built_in">&#123;name</span>:myName,age:myAge&#125;=<span class="built_in">&#123;name</span>:<span class="string">"SunnyChuan"</span>,age:<span class="number">22</span>&#125;;</span><br><span class="line">//name <span class="literal">is</span><span class="built_in"> not</span> defined, age <span class="literal">is</span><span class="built_in"> not</span> defined, myName=<span class="string">"SunnyChuan"</span>, myAge=<span class="number">22</span></span><br></pre></td></tr></table></figure>
+
+<p>对象解构赋值也提供了默认值，与数组相同，只有属性值严格等于undefined时才生效</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var &#123;<span class="type">name</span>,age=<span class="number">22</span>&#125;=&#123;<span class="type">name</span>:"SunnyChuan"&#125; //<span class="type">name</span>="SunnyChuan" age=<span class="number">22</span></span><br><span class="line">var &#123;<span class="type">name</span>,age=<span class="number">22</span>&#125;=&#123;<span class="type">name</span>:"SunnyChuan",age:<span class="keyword">null</span>&#125; //<span class="type">name</span>="SunnyChuan" age=<span class="keyword">null</span></span><br></pre></td></tr></table></figure>
+
+<p>解构赋值最常用的地方就是交换变量。不需要额外的临时变量temp，一句代码就搞定</p>
+<figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">x</span>,<span class="symbol">y</span>]=[<span class="symbol">y</span>,<span class="symbol">x</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串-数值-数组的扩展"><a href="#字符串-数值-数组的扩展" class="headerlink" title="字符串/数值/数组的扩展"></a>字符串/数值/数组的扩展</h3><h4 id="字符串的扩展"><a href="#字符串的扩展" class="headerlink" title="字符串的扩展"></a>字符串的扩展</h4><p>includes(str)，返回布尔值，是否在当前字符串中找到了str</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"SunnyChuan"</span>.<span class="keyword">includes</span>(<span class="string">"Chuan"</span>); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<p>startsWith(str)，返回布尔值，当前字符串是否以str开头</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"SunnyChuan"</span>.starts<span class="constructor">Width(<span class="string">"Sunny"</span>)</span>; <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<p>endsWith(str)，返回布尔值，当前字符串是否以str结尾</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"SunnyChuan"</span>.<span class="keyword">endsWith</span>(<span class="string">"Chuan"</span>); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<p>repeat(n)，将当前字符串重复n次（可以理解为在原有的基础上重复n-1次）并返回新字符串，如果n是小数则向下取整。当n小于等于0时，返回空字符串</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"x"</span>.<span class="keyword">repeat</span><span class="comment">(3)</span>; <span class="comment">// "xxx"</span></span><br></pre></td></tr></table></figure>
+
+<p>模板字符串</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name=<span class="string">"SunnyChuan"</span>;</span><br><span class="line"><span class="keyword">var</span> str=`hello $&#123;name&#125;,<span class="keyword">this</span> <span class="keyword">is</span> ES6 `;</span><br><span class="line"><span class="comment">//等同于"hello"+name+",this is ES6";</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="数值的扩展"><a href="#数值的扩展" class="headerlink" title="数值的扩展"></a>数值的扩展</h4><p>Number.isFinite(n)，布尔值，检查n是否有穷，与es5的isFinite()不同的是，它不会进行类型转换，因此只对真正的数值有效</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="module-access"><span class="module"><span class="identifier">Number</span>.</span></span>is<span class="constructor">Finite(10)</span>; <span class="comment">//true</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Number</span>.</span></span>is<span class="constructor">Finite(NaN)</span>; <span class="comment">//false</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Number</span>.</span></span>is<span class="constructor">Finite(Infinity)</span>; <span class="comment">//false</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Number</span>.</span></span>is<span class="constructor">Finite(<span class="string">"10"</span>)</span>; <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+
+<p>Number.isNaN(n)，布尔值，检查n是否是NaN，与es5的isNaN()不同的是，它不会进行类型转换，因此只对真正的NaN有效</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="module-access"><span class="module"><span class="identifier">Number</span>.</span></span>is<span class="constructor">NaN(NaN)</span>; <span class="comment">//true</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Number</span>.</span></span>is<span class="constructor">NaN(<span class="string">"str"</span>)</span>; <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+
+<p>Number.isInteger(n)，布尔值，检查n是否是整数，需要注意1.0和1是同一个值</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="module-access"><span class="module"><span class="identifier">Number</span>.</span></span>is<span class="constructor">Integer(1)</span>; <span class="comment">//true</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Number</span>.</span></span>is<span class="constructor">Integer(1.0)</span>; <span class="comment">//true</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Number</span>.</span></span>is<span class="constructor">Integer(1.2)</span>; <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+
+<p> Math.trunc(n)，去除小数部分并返回（正数向下取整，负数向上取整）<br> <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="module-access"><span class="module"><span class="identifier">Math</span>.</span></span>trunc(<span class="number">1.2</span>); <span class="comment">//1</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Math</span>.</span></span>trunc<span class="number">(-1.2)</span>; <span class="comment">//-2</span></span><br></pre></td></tr></table></figure></p>
+<p>Math.sign(n)，布尔值，n是正数返回+1，是负数返回-1，0返回0，-0返回-0，其他值返回NaN</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="module-access"><span class="module"><span class="identifier">Math</span>.</span></span>sign(<span class="number">100</span>); <span class="comment">//+1</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Math</span>.</span></span>sign<span class="number">(-100)</span>; <span class="comment">//-1</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Math</span>.</span></span>sign(<span class="number">0</span>); <span class="comment">//0</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Math</span>.</span></span>sign<span class="number">(-0)</span>; <span class="comment">//-0</span></span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">Math</span>.</span></span>sign(<span class="string">"str"</span>); <span class="comment">//NaN</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="数组的扩展"><a href="#数组的扩展" class="headerlink" title="数组的扩展"></a>数组的扩展</h4><p>Array.from(list)，将list转化成真正的数组，常用于将nodeList/arguments等伪数组<br>转化成数组</p>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj=&#123;a:<span class="number">1</span>,b:<span class="number">2</span>,c:<span class="number">3</span>&#125;;</span><br><span class="line"><span class="type">Array</span>.<span class="keyword">from</span>(obj); //[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="keyword">var</span> <span class="keyword">div</span>=document.getElementsByTagName(<span class="string">"div"</span>);</span><br><span class="line"><span class="type">Array</span>.<span class="keyword">from</span>(<span class="keyword">div</span>); //[[<span class="keyword">object</span> <span class="type">HTMLDivElement</span>],[<span class="keyword">object</span> <span class="type">HTMLDivElement</span>],[<span class="keyword">object</span> <span class="type">HTMLDivElement</span>]]</span><br></pre></td></tr></table></figure>
+
+<p>includes(n)，布尔值，检查当前数组是否包含n，可以接收两个参数，第二个参数代表搜索的起始位置（负数代表从后往前）</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>].include(<span class="number">2</span>); <span class="comment">//true</span></span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>].include(<span class="number">2</span>,<span class="number">2</span>); <span class="comment">//false</span></span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>].include(<span class="number">2</span>,<span class="number">-3</span>); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<p>数组新增三种遍历方式：entries()（遍历key和value）/keys()（遍历key）/values()（遍历value）</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="built_in">let</span> v of [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>].<span class="built_in">values</span>())&#123;</span><br><span class="line">	console.<span class="built_in">log</span>(v);</span><br><span class="line">&#125; //<span class="string">"a"</span> <span class="string">"b"</span> <span class="string">"c"</span> <span class="string">"d"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">let</span> k of [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>].keys())&#123;</span><br><span class="line">	console.<span class="built_in">log</span>(k);</span><br><span class="line">&#125; //<span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">let</span> [k,v] of [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>].entries())&#123;</span><br><span class="line">	console.<span class="built_in">log</span>(k,v);</span><br><span class="line">&#125; //<span class="number">0</span> <span class="string">"a"</span> <span class="number">1</span> <span class="string">"b"</span> <span class="number">2</span> <span class="string">"c"</span> <span class="number">3</span> <span class="string">"d"</span></span><br></pre></td></tr></table></figure>
+<h3 id="函数和对象的扩展"><a href="#函数和对象的扩展" class="headerlink" title="函数和对象的扩展"></a>函数和对象的扩展</h3><h4 id="函数的扩展"><a href="#函数的扩展" class="headerlink" title="函数的扩展"></a>函数的扩展</h4><p>es6支持函数的参数设置默认值，但是这些参数必须位于函数的尾部，并且参数的变量是默认声明的，因此不能用let/const再次声明</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">x,y=<span class="number">5</span></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(y); <span class="comment">//5</span></span><br><span class="line">	<span class="keyword">let</span> y=<span class="number">3</span>; <span class="comment">//error</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>扩展运算符，用于将数组（伪数组）展开成参数序列</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.<span class="built_in">log</span>(...[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]); //<span class="number">1</span> <span class="number">2</span> <span class="number">3</span></span><br><span class="line">[...document.getElementsByTagName(<span class="string">"div"</span>)]; //<span class="string">[[object HTMLDivElement],[object HTMLDivElement],[object HTMLDivElement]]</span></span><br></pre></td></tr></table></figure>
+
+<p>扩展运算符有很多应用场景，这里列举三个</p>
+<ol>
+<li>数组合并<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].concat([<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]); <span class="comment">//es5</span></span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,...[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]]; <span class="comment">//es6</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>2.与解构结合（用于生成数组）</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let [a,b,...c]=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; <span class="comment">//a=1,b=2,c=[3,4,5] 扩展运算符必须放在最后</span></span><br></pre></td></tr></table></figure>
+
+<p>3.Math.max的参数不支持数组，在es5中需要用到apply。用扩展运算符可以解决该问题</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Math.max.apply(Math,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]); <span class="comment">//es5</span></span><br><span class="line">Math.max(...[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]); <span class="comment">//es6 相当于Math.max(1,2,3)</span></span><br></pre></td></tr></table></figure>
+
+<p>箭头函数，如果不需要参数则用圆括号代替参数部分，如果函数体有多行代码则用大括号括起来</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="function"><span class="keyword">func</span>=<span class="title">x</span>=&gt;<span class="title">x</span>*2; //<span class="title">var</span> <span class="title">func</span>=<span class="title">function</span><span class="params">(x)</span></span>&#123;<span class="keyword">return</span> x*<span class="number">2</span>;&#125;</span><br><span class="line"><span class="keyword">var</span> <span class="function"><span class="keyword">func</span>=<span class="params">()</span>=&gt;<span class="title">true</span>; //<span class="title">var</span> <span class="title">func</span>=<span class="title">function</span><span class="params">()</span></span>&#123;<span class="keyword">return</span> <span class="literal">true</span>;&#125;</span><br><span class="line"><span class="keyword">var</span> <span class="function"><span class="keyword">func</span>=<span class="params">(x,y)</span>=&gt;</span>&#123;<span class="keyword">var</span> z=x+y;console.log(z);&#125; <span class="comment">//var func=function(x,y)&#123;var z=x+y;console.log(z);&#125;</span></span><br><span class="line"><span class="keyword">var</span> <span class="function"><span class="keyword">func</span>=<span class="params">()</span>=&gt;<span class="params">(&#123;a:1,b:2&#125;)</span>; //返回对象需要用圆括号包起来，圆括号代表函数体，花括号代表这是一个对象</span></span><br></pre></td></tr></table></figure>
+
+<p>函数绑定，使用a::b的形式取代传统的bind/call/apply</p>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a<span class="type">::b</span>; <span class="comment">//b.bind(a);</span></span><br><span class="line">a<span class="type">::b</span>(<span class="params">...</span>arguments); <span class="comment">//b.apply(a,arguments);</span></span><br></pre></td></tr></table></figure>
+<h4 id="对象的扩展"><a href="#对象的扩展" class="headerlink" title="对象的扩展"></a>对象的扩展</h4><p>es6允许在对象中只写key，这样默认了value等于key所代表的变量值</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var [<span class="type">name</span>,age]=["SunnyChuan",<span class="number">22</span>];</span><br><span class="line">var obj=&#123;<span class="type">name</span>,age&#125;; //obj=&#123;<span class="type">name</span>:"SunnyChuan",age:<span class="number">22</span>&#125; </span><br><span class="line">//相当于obj=&#123;<span class="type">name</span>:<span class="type">name</span>,age:age&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>对象的方法也可以简写</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj=&#123;</span><br><span class="line">	<span class="function"><span class="keyword">func</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="comment">//函数体</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//相当于</span></span><br><span class="line"><span class="keyword">var</span> obj=&#123;</span><br><span class="line">	<span class="function"><span class="keyword">func</span>:<span class="title">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="comment">//函数体</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Object.assign(obj,obj1,obj2,…)，将obj1/obj2/…与obj进行拼接（修改obj本身）</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var [obj,obj1,obj2]=[&#123;a:<span class="number">1</span>&#125;,&#123;b:<span class="number">2</span>&#125;,&#123;c:<span class="number">3</span>&#125;];</span><br><span class="line">Object.assign(obj,obj1,obj2);</span><br><span class="line">console.log(obj); <span class="comment">//&#123;a:1,b:2,c:3&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>Object.is(obj1,obj2)，布尔值，判断两个值是否严格相等，与===不同的是，+0不等于-0，NaN等于NaN</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Object.<span class="keyword">is</span>(<span class="number">100</span>,<span class="number">100</span>); <span class="comment">//true</span></span><br><span class="line">Object.<span class="keyword">is</span>(NaN,NaN); <span class="comment">//true</span></span><br><span class="line">Object.<span class="keyword">is</span>(+<span class="number">0</span>,<span class="number">-0</span>); <span class="comment">//false</span></span><br><span class="line">Object.<span class="keyword">is</span>(&#123;a:<span class="number">1</span>&#125;,&#123;a:<span class="number">1</span>&#125;); <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/2016/10/30/2016-10-30-technology-es6-2/" title="ES6学习笔记（二）">&larr; 上一篇</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/2016/08/02/2016-08-02-technology-blob/" title="Blob对象">下一篇 &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<!-- <div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=ES6学习笔记（一）&body=Hi,I found this website and thought you might like it https://mescalchuan.github.io/2016/10/30/2016-10-30-technology-es6-1/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div> -->
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<!-- <script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script> -->
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+<!-- gitalk start -->
+<!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+<div id="gitalk-container"></div>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+<!-- <script src="/js/comment/gitalk.js"></script> -->
+
+<script>
+  // var gitalk = new Gitalk({
+  //   clientID: '',
+  //   clientSecret: '',
+  //   repo: '',
+  //   owner: '',
+  //   admin: '',
+  //   id: 'Sun Oct 30 2016 18:32:20 GMT+0800', // Ensure uniqueness and length less than 50
+  //   distractionFreeMode: false, // Facebook-like distraction free mode
+  //   perPage: 10 ,
+  //   pagerDirection: 'last',
+  //   createIssueManually: false ,
+  //   language: 'en'
+  // });
+  // gitalk.render('gitalk-container');
+
+  // var gtFolded = () => {
+  //   setTimeout(function() {
+  //     let markdownBody = document.getElementsByClassName("markdown-body");
+  //     let list = Array.from(markdownBody);
+  //     list.forEach(item => {
+  //       if (item.clientHeight > 250) {
+  //         item.classList.add('gt-comment-body-folded');
+  //         item.style.maxHeight = '250px';
+  //         item.title = 'Click to Expand';
+  //         item.onclick = function() {
+  //           item.classList.remove('gt-comment-body-folded');
+  //           item.style.maxHeight = '';
+  //           item.title = '';
+  //           item.onclick = null;
+  //         };
+  //       }
+  //     })
+  //   }, 800);
+  // }
+</script>
+
+<!-- gitalk end -->
+
+
+
+<!-- 2. gitment comment -->
+
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">内容</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#最近学习了ES6，被它更简洁的代码编写方式、面向对象以及模块化开发所吸引。ES6有一定的学习成本而且知识点比较琐碎，我把自己经常用到的知识点进行了整理。"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">最近学习了ES6，被它更简洁的代码编写方式、面向对象以及模块化开发所吸引。ES6有一定的学习成本而且知识点比较琐碎，我把自己经常用到的知识点进行了整理。</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#安装与配置"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">安装与配置</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#let和const"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">let和const</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#let"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">let</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#const"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">const</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#变量的解构赋值"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">变量的解构赋值</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#数组的解构赋值"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">数组的解构赋值</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#对象的解构赋值"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">对象的解构赋值</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#字符串-数值-数组的扩展"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">字符串&#x2F;数值&#x2F;数组的扩展</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#字符串的扩展"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">字符串的扩展</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#数值的扩展"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">数值的扩展</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#数组的扩展"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">数组的扩展</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#函数和对象的扩展"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">函数和对象的扩展</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#函数的扩展"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">函数的扩展</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#对象的扩展"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">对象的扩展</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#博客" title="博客">博客</a>
+            
+            <a class="tag" href="/tags/#技术博客" title="技术博客">技术博客</a>
+            
+            <a class="tag" href="/tags/#javascript" title="javascript">javascript</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+	<!-- Footer (contains ThemeColor、viewer) -->
+	<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <!-- <li>
+              <a target="_blank" href="https://github.com/MescalChuan">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li> -->
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Mescal Chuan
+          2020
+          <!-- <br>
+          Theme by
+          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://v-vincen.life/" target="_blank" rel="noopener">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+<!-- jQuery -->
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="/js/jquery.js"></script> -->
+<!-- <script type="text/javascript" src="//cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+<!-- Bootstrap Core JavaScript -->
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script type="text/javascript" src="/js/hux-blog.min.js"></script>
+
+<!-- catalog -->
+<script type="text/javascript" async="true" src="/js/catalog.js?v=1.0.0"></script>
+
+<!-- totop(rocket) -->
+<script type="text/javascript" async="true" src="/js/totop.js?v=1.0.0"></script>
+
+<!-- Busuanzi JavaScript -->
+<!-- <script type="text/javascript" async="true" src="/js/busuanzi.pure.mini.js"></script> -->
+
+
+  <!-- Scroll start -->
+  <script type="text/javascript" src="/js/scroll.js"></script>
+  <!-- Scroll end -->
+
+
+
+  <!-- ThemeColor start -->
+  <script type="text/javascript" src="/js/themecolor.js"></script>
+  <!-- ThemeColor end -->
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  <script type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+  <script type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){ hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if($('#tag_cloud').length !== 0){ async("https://mescalchuan.github.io/js/jquery.tagcloud.js",function(){ $.fn.tagcloud.defaults = { //size: {start: 1, end: 1, unit: 'em'}, color: {start:
+'#bbbbee', end: '#0085a1'}, }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+	<!-- Search -->
+	
+	<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/ziploader.js"></script>
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+	
+
+	<!-- Image to hack wechat -->
+	<!-- <img src="https://mescalchuan.github.io/img/icon_wechat.png" width="0" height="0" /> -->
+	<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

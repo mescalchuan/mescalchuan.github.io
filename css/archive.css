@@ -1,255 +1,146 @@
-/* Archive - 归档 */
-
-.layout-archive {
-	width: 70%;
-	margin: 0em auto;
-	padding: 4em 0;
-	border: 1px solid transparent;
-	background-color: #FFFFFF;
+.archive-year,
+.archive-tag,
+.archive-category {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: color-grey;
+  margin-bottom: 1em;
+  margin-left: 5px;
+  line-height: 1em;
+  font-weight: bold;
 }
-
-.layout-archive i {
-	color: red;
-	letter-spacing: 2px;
-	margin: 60px 0;
+.archives-wrap {
+  margin: 50px 0;
 }
-
-.layout-archive a {
-	border-bottom: 0px dotted lightgray;
+.archives {
+  margin-left: 2em;
 }
-
-.layout-archive .i-container {
-	text-align: center;
+.archive-year-wrap {
+  margin-bottom: 1em;
 }
-
-#layout-archive-year {
-	margin-top: 2rem;
-	text-align: left;
-	width: 100%;
-	display: none;
+.archive-year-wrap h1 {
+  font-size: 1.3em;
 }
-
-#layout-archive-year ul {
-	list-style: none;
-	padding-left: 0rem;
-	transition: height 0.5s;
-	padding: 0px;
-	border: none;
+.archive-year {
+  color: #fb6d19;
 }
-
-#layout-archive-year ul li {
-	height: 44px;
-	border-bottom: 1px dashed #ccc;
-	line-height: 44px;
-	font-size: 1em;
-	padding-left: 0px;
-	overflow: hidden;
-	margin: 0px;
+.archive-year:hover {
+  color: #fb6d19;
 }
-
-#layout-archive-year ul li em {
-	font-style: normal;
-	margin-right: 10px;
-	line-height: 10px;
-	margin-top: 10px;
-	padding: 5px 8px;
-	background: #eaeaea;
-	color: #999999;
+.archive-year:before {
+  font-family: "FontAwesome";
+  content: "\f273";
+  margin-right: 0.2em;
 }
-
-#layout-archive-year h3 {
-	cursor: pointer;
-	text-align: center;
-	background-color: grey;
-	padding: 20px 0px;
-	margin-top: 2rem;
-	color: white;
-	transition: all 0.5s;
+.archives-tags-wrap {
+  margin: 50px 0;
 }
-
-#layout-archive-year a {
-	background: none;
+.archives-tags-wrap blockquote {
+  padding: 1em;
+  margin: 4em 0 0 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #33363b;
+  text-align: center;
+  border-left: 0px solid #fb6d19;
+  background: rgba(208,211,248,0.15);
 }
-
-#layout-archive-year h3 em {
-	font-size: 0.5em;
-	position: absolute;
-	margin-top: -10px;
+.archives-tags-wrap blockquote a {
+  color: #33363b;
+  margin: 0.2em;
 }
-
-#layout-archive-year .title-bg {
-	background-color: grey;
+.archives-tags-wrap blockquote a:hover {
+  color: #fb6d19;
 }
-
-#layout-archive-year h3:hover {
-	background-color: dimgray;
+.archive-tag {
+  text-transform: none;
+  color: #fb6d19;
 }
-
-#layout-archive-year ul li:hover {
-	background: #f7f9fa;
+.archive-tag:hover {
+  color: #fb6d19;
 }
-
-#layout-archive-year ul li:hover:after {
-	content: '|';
-	width: 5px;
-	background: #F44336;
-	position: absolute;
-	right: 0px;
-	color: #F44336;
+.archive-tag:before {
+  font-family: "FontAwesome";
+  content: "\f02c";
+  margin-right: 0.2em;
 }
-
-#layout-archive-year ul li:hover em {
-	font-style: normal;
-	margin-right: 10px;
-	line-height: 10px;
-	margin-top: 10px;
-	padding: 5px 8px;
-	background: #F44336;
-	color: #f7f9fa;
+.archives-category-wrap {
+  margin: 50px 0;
 }
-
-#layout-archive-year ul li:hover:before {
-	content: '|';
-	width: 5px;
-	background: #F44336;
-	position: absolute;
-	left: 0px;
-	color: #F44336;
+.archives-category-wrap blockquote {
+  padding: 1em;
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1.7em;
+  color: #fb6d19;
+  text-align: left;
+  border-left: 0px solid #fb6d19;
+  background: rgba(208,211,248,0.15);
 }
-
-#layout-archive-year li a {
-	text-decoration: none;
+.archives-category-wrap blockquote a {
+  color: #33363b;
+  margin: 0.2em;
 }
-
-#layout-archive-year li .tag {
-	font-style: normal;
-	margin-right: 0px;
-	line-height: 10px;
-	margin-top: 10px;
-	padding: 8px 8px;
-	background: #eaeaea;
-	color: #999999;
-	float: right;
+.archives-category-wrap blockquote a:hover {
+  color: #fb6d19;
 }
-
-#layout-archive-year li a:hover {
-	color: red;
+.archives-category-wrap blockquote a:before {
+  font-family: "FontAwesome";
+  content: "\f0da";
+  margin-right: 0.5em;
 }
-
-#layout-archive-month ul {
-	/*Archive by month*/
-	list-style: none;
-	padding-left: 0rem;
-	transition: height 0.5s;
-	padding: 0px;
-	border: none;
+.archive-category {
+  text-transform: none;
+  color: #fb6d19;
 }
-
-#layout-archive-month ul li {
-	height: 44px;
-	border-bottom: 1px dashed #ccc;
-	line-height: 44px;
-	font-size: 1em;
-	padding-left: 0x;
-	overflow: hidden;
-	margin: 0px;
+.archive-category:before {
+  font-family: "FontAwesome";
+  content: "\f07c";
+  margin-right: 0.3em;
 }
-
-#layout-archive-month ul li em {
-	font-style: normal;
-	margin-right: 10px;
-	line-height: 10px;
-	margin-top: 10px;
-	padding: 5px 8px;
-	background: #eaeaea;
-	color: #999999;
+.archives {
+  column-gap: 10px;
 }
-
-#layout-archive-month h3 {
-	cursor: auto;
-	text-align: center;
-	background-color: grey;
-	padding: 20px 0px;
-	color: white;
-	transition: all 0.5s;
+@media mq-tablet {
+  .archives {
+    column-count: 1;
+  }
 }
-
-#layout-archive-month h3>a {
-	color: white;
-	border-bottom: 0px dotted lightgray;
+@media mq-normal {
+  .archives {
+    column-count: 1;
+  }
 }
-
-#layout-archive-month {
-	margin-top: 0rem;
-	text-align: left;
-	max-width: 100%;
+.archive-article-inner {
+  padding: 0px;
+  margin-bottom: 0px;
 }
-
-#layout-archive-month a {
-	background: none;
+.archive-article-title {
+  text-decoration: none;
+  color: #606060;
+  transition: color 0.2s;
+  line-height: 1.6em;
+  border-left: 1px solid #fb6d19;
+  padding-left: 15px;
 }
-
-#layout-archive-month h3 em {
-	font-size: 0.5em;
-	position: absolute;
-	margin-top: -10px;
+.archive-article-title:hover {
+  color: #fb6d19;
 }
-
-#layout-archive-month .title-bg {
-	background-color: grey;
+.archive-article-footer {
+  margin-top: 1em;
 }
-
-#layout-archive-month h3:hover {
-	background-color: dimgray;
+.archive-article-date {
+  min-width: 85px;
+  float: left;
+  color: #c7c7c7;
+  text-decoration: none;
+  line-height: 1.6em;
+  margin-right: 15px;
+  display: block;
+  font-size: 1.1em;
+  font-family: "futura-pt", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei, WenQuanYi Micro Hei, "Microsoft YaHei", sans-serif;
 }
-
-#layout-archive-month ul li:hover {
-	background: #f7f9fa;
-}
-
-#layout-archive-month ul li:hover:after {
-	content: '|';
-	width: 5px;
-	background: #F44336;
-	position: absolute;
-	right: 0px;
-	color: #F44336;
-}
-
-#layout-archive-month ul li:hover em {
-	font-style: normal;
-	margin-right: 10px;
-	line-height: 10px;
-	margin-top: 10px;
-	padding: 5px 8px;
-	background: #F44336;
-	color: #f7f9fa;
-}
-
-#layout-archive-month ul li:hover:before {
-	content: '|';
-	width: 5px;
-	background: #F44336;
-	position: absolute;
-	left: 0px;
-	color: #F44336;
-}
-
-#layout-archive-month li a {
-	text-decoration: none;
-}
-
-#layout-archive-month li .tag {
-	font-style: normal;
-	margin-right: 0px;
-	line-height: 10px;
-	margin-top: 10px;
-	padding: 8px 8px;
-	background: #eaeaea;
-	color: #999999;
-	float: right;
-}
-
-#layout-archive-month li a:hover {
-	color: red;
+.archive-article-date:hover {
+  color: #fb6d19;
 }
