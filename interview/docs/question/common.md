@@ -72,3 +72,11 @@ parseFloat 没有第二个参数，所以返回的就是 1 2 3。[1, 2, 3]
 同上，parseInt 的三个结果只有第一个是 1（符合true），其他全是 NaN，导致 filter 把后两项全过滤掉了，因此返回 ['1']
 
 parseFloat 没有第二个参数，原样返回，每个元素都不会被过滤。['1', '2', '3']
+
+### 5. JSON.parse(JSON.stringify()) 深拷贝的局限性
+答：
+1. undefined、函数、symbol 值，会被忽略（不在新对象中）
+2. Date 日期调用了 Date.toISOString() 将其转换为了字符串
+3. NaN、Infinity、null 都会被当做 null
+4. 其他类型的对象，包括 Map/Set/WeakMap/WeakSet，仅会序列化可枚举的属性
+5. 对包含循环引用的对象（对象之间相互引用，形成无限循环）执行此方法，会抛出错误
