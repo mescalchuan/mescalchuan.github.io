@@ -215,14 +215,6 @@
 
           
           <li>
-            archive/index.html
-            <a href="/archive/">归档</a>
-          </li>
-          
-          
-
-          
-          <li>
             about/index.html
             <a href="/about/">关于</a>
           </li>
@@ -239,8 +231,8 @@
 
           
           <li>
-            tags/index.html
-            <a href="/tags/">标签</a>
+            archive/index.html
+            <a href="/archive/">归档</a>
           </li>
           
           
@@ -249,6 +241,14 @@
           <li>
             gallery/index.html
             <a href="/gallery/">摄影</a>
+          </li>
+          
+          
+
+          
+          <li>
+            tags/index.html
+            <a href="/tags/">标签</a>
           </li>
           
            -->
@@ -326,7 +326,7 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
           <div class="site-heading">
-            <h1>一个爱玩的 FE</h1>
+            <h1>一个瞎折腾的 FE 工程师</h1>
             <!--<hr class="small">-->
             <span class="subheading">Mescal Chuan</span>
           </div>
@@ -386,6 +386,54 @@
 
       <!-- Main Content -->
 
+
+<div class="post-preview">
+
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+
+  <a href="/2021/03/25/2021-03-25-technology-pdf-img/">
+    <h2 class="post-title">
+      前端 PDF 预览方案
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      产品需求描述后端返回 pdf 文件链接，前端预览，要求不允许用户下载、复制、打印。
+初步方案
+浏览器支持 pdf 文件预览功能，通过 window.open 的方式打开新的链接，效果如下：
+
+
+问题：浏览器提供的下载、打印控件以及复制内容、右键下载等操作无法干预
+
+以 iframe 的方式加载文件，并禁用 iframe 的右键：1&lt;iframe ref="iframe" :src="p......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Mescal Chuan 发布于
+    2021-03-25
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#博客" title="博客">博客</a>
+    
+    <a href="/tags/#技术博客" title="技术博客">技术博客</a>
+    
+    <a href="/tags/#javascript" title="javascript">javascript</a>
+    
+    <a href="/tags/#vue" title="vue">vue</a>
+    
+  </div>
+  
+
+</div>
+<hr>
 
 <div class="post-preview">
 
@@ -606,9 +654,9 @@ SetData类似于React的setState，用于更改状态，但小程序做得更加
     
     <a href="/tags/#技术博客" title="技术博客">技术博客</a>
     
-    <a href="/tags/#node" title="node">node</a>
-    
     <a href="/tags/#react" title="react">react</a>
+    
+    <a href="/tags/#node" title="node">node</a>
     
   </div>
   
@@ -625,15 +673,15 @@ SetData类似于React的setState，用于更改状态，但小程序做得更加
   
 
 
-  <a href="/2018/07/17/2018-07-17-life-cannon/">
+  <a href="/2018/07/17/2018-07-31-life-the-rest-of-life/">
     <h2 class="post-title">
-      拇指琴之卡农第一部分
+      拇指琴之往后余生
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      卡农整首曲子下来还是很有难度的，主要是谱子实在太难背了。。。还需要多多练习呀~ 先奉上第一段的视频吧~ 
+      拇指琴的声音很清脆，搭配上马良的伴奏，很有美感~ 往后余生，四季冷暖是你。
 
     
         
@@ -671,15 +719,15 @@ SetData类似于React的setState，用于更改状态，但小程序做得更加
   
 
 
-  <a href="/2018/07/17/2018-07-31-life-the-rest-of-life/">
+  <a href="/2018/07/17/2018-07-17-life-cannon/">
     <h2 class="post-title">
-      拇指琴之往后余生
+      拇指琴之卡农第一部分
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      拇指琴的声音很清脆，搭配上马良的伴奏，很有美感~ 往后余生，四季冷暖是你。
+      卡农整首曲子下来还是很有难度的，主要是谱子实在太难背了。。。还需要多多练习呀~ 先奉上第一段的视频吧~ 
 
     
         
@@ -804,61 +852,9 @@ H5移动端适配x-ui h5端统一使用了阿里的flexibl......
     
     <a href="/tags/#技术博客" title="技术博客">技术博客</a>
     
-    <a href="/tags/#react-native" title="react-native">react-native</a>
-    
     <a href="/tags/#react" title="react">react</a>
     
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-
-  <a href="/2018/02/25/2018-02-25-technology-angular-m-cli/">
-    <h2 class="post-title">
-      一个能够快速构建AngularJS多页项目的轻量级脚手架
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      
-一款基于webpack的快速构建angular1的多页应用构建方案文档地址使用angular-m-cli，您可以做到
-快速构建项目原型
-自动生成新页面并完成相关配置（包括入口文件、css、index.html）
-利用本地服务器完成开发
-使用mock进行接口测试，实现前后端分离
-一键删除指定页面和相关配置
-一键打包
-
-核心技术
-co 自动执行Generator
-co-prompt co的命令......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Mescal Chuan 发布于
-    2018-02-25
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#博客" title="博客">博客</a>
-    
-    <a href="/tags/#技术博客" title="技术博客">技术博客</a>
-    
-    <a href="/tags/#webpack" title="webpack">webpack</a>
-    
-    <a href="/tags/#angular" title="angular">angular</a>
+    <a href="/tags/#react-native" title="react-native">react-native</a>
     
   </div>
   
@@ -873,7 +869,7 @@ co-prompt co的命令......
     
     
     <li class="next">
-      <a href="/archives/2/">较旧文章 &rarr;</a>
+      <a href="/archives/2/">之前文章 &rarr;</a>
     </li>
     
   </ul>
@@ -916,15 +912,11 @@ co-prompt co的命令......
   <div class="tags">
     
     
-    <a href="/tags/#博客" title="博客" rel="22">博客</a>
+    <a href="/tags/#博客" title="博客" rel="23">博客</a>
     
     
     
-    <a href="/tags/#技术博客" title="技术博客" rel="20">技术博客</a>
-    
-    
-    
-    <a href="/tags/#webpack" title="webpack" rel="2">webpack</a>
+    <a href="/tags/#技术博客" title="技术博客" rel="21">技术博客</a>
     
     
     
@@ -932,7 +924,11 @@ co-prompt co的命令......
     
     
     
-    <a href="/tags/#javascript" title="javascript" rel="4">javascript</a>
+    <a href="/tags/#javascript" title="javascript" rel="5">javascript</a>
+    
+    
+    
+    <a href="/tags/#react" title="react" rel="3">react</a>
     
     
     
@@ -940,7 +936,15 @@ co-prompt co的命令......
     
     
     
+    <a href="/tags/#webpack" title="webpack" rel="2">webpack</a>
+    
+    
+    
     <a href="/tags/#react-native" title="react-native" rel="3">react-native</a>
+    
+    
+    
+    <a href="/tags/#工具" title="工具" rel="1">工具</a>
     
     
     
@@ -948,11 +952,7 @@ co-prompt co的命令......
     
     
     
-    <a href="/tags/#vue" title="vue" rel="3">vue</a>
-    
-    
-    
-    <a href="/tags/#工具" title="工具" rel="1">工具</a>
+    <a href="/tags/#vue" title="vue" rel="4">vue</a>
     
     
     
@@ -961,10 +961,6 @@ co-prompt co的命令......
     
     
     <a href="/tags/#拇指琴" title="拇指琴" rel="2">拇指琴</a>
-    
-    
-    
-    <a href="/tags/#react" title="react" rel="3">react</a>
     
     
     
@@ -983,13 +979,13 @@ co-prompt co的命令......
   <div class="short-about">
 
     
-    <img id="avatar_pic" src="/img/about5.jpeg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    <img id="avatar_pic" src="/img/about6.jpeg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
     -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
     -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
     
 
     
-    <p>林深时见鹿，老树陪古屋</p>
+    <p>雨滴掌心 装不下世界的一厘米</p>
     
 
     <!-- SNS Link -->
@@ -1031,6 +1027,10 @@ co-prompt co的命令......
 <div class="widget">
   <ul>
     
+    <a href="2021/03/25/2021-03-25-technology-pdf-img/">
+      <li>前端 PDF 预览方案</li>
+    </a>
+    
     <a href="2019/10/16/2019-10-16-technology-css-block/">
       <li>Css Block</li>
     </a>
@@ -1045,10 +1045,6 @@ co-prompt co的命令......
     
     <a href="2018/08/29/2018-08-29-technology-weixin/">
       <li>初探微信小程序之小川天气</li>
-    </a>
-    
-    <a href="2018/07/31/2018-07-31-technology-node-health/">
-      <li>基于React和Node实现一个食物热量参考应用</li>
     </a>
     
   </ul>
@@ -1066,7 +1062,7 @@ co-prompt co的命令......
     <!-- <h5>ARCHIVES</h5> -->
     <h5><a href="/archives/">归档</a></h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2019/10/">十月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2019/05/">五月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/09/">九月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/08/">八月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/07/">七月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/04/">四月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/01/">一月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2017/11/">十一月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/11/">十一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/10/">十月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/02/">二月 2016</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/03/">三月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2019/10/">十月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2019/05/">五月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/09/">九月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/08/">八月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/07/">七月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/04/">四月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/01/">一月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2017/11/">十一月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/11/">十一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/10/">十月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2016/02/">二月 2016</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
 
@@ -1136,7 +1132,7 @@ co-prompt co的命令......
         <p class="copyright text-muted">
           Copyright &copy;
           Mescal Chuan
-          2020
+          2021
           <!-- <br>
           Theme by
           <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
