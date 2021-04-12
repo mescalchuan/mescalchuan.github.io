@@ -1,0 +1,25 @@
+name: deploy-github-page
+
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: install deps
+        run: npm ci
+
+      - name: generate static file
+        run: npm run build:prod
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GH_PAGE_TOKEN }}
+          external_repository: echaoo/echaoo.github.io
+          publish_dir: ./dist
+          publish_branch: master
