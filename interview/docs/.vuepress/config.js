@@ -30,7 +30,9 @@ module.exports = {
                     '/days/js/lastcall',
                     '/days/js/microtask',
                     '/days/js/module',
-                    '/days/js/jsast'
+                    '/days/js/jsast',
+                    '/days/js/esmodule',
+                    '/days/js/vue3'
                 ]
             }, {
                 title: 'Webpack',
