@@ -10,6 +10,23 @@ module.exports = {
       ],
       sidebar: [
         {
+            title: '框架',
+            collapsable: false,
+            children: [
+                '/framework/vue',
+                '/framework/react',
+                '/framework/angular',
+                // '/interview/order',
+                // '/interview/js',
+                // '/interview/htmlcss',
+                // '/interview/opt',
+                // 
+                // '/interview/vue',
+                // '/interview/react',
+                // '/interview/mobile'
+            ]
+        },
+        {
             title: '移动端',
             collapsable: false,
             children: [
@@ -56,20 +73,6 @@ module.exports = {
                 '/days/http/nginx'
               ]
             }]
-        },
-        {
-            title: '面试',
-            collapsable: false,
-            children: [
-                '/interview/order',
-                '/interview/js',
-                '/interview/htmlcss',
-                '/interview/opt',
-                '/interview/angular',
-                '/interview/vue',
-                '/interview/react',
-                '/interview/mobile'
-            ]
         },
         {
             title: 'Css 世界',
@@ -153,6 +156,13 @@ module.exports = {
                 '/write/new'
             ]
         },
+        // {
+        //     title: 'Vue 哲学',
+        //     collapsable: false,
+        //     children: [
+        //         '/vue/base',
+        //     ]
+        // },
         {
             title: '项目经验',
             collapsable: false,
