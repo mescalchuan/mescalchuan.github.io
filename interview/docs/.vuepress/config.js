@@ -14,6 +14,7 @@ module.exports = {
             collapsable: false,
             children: [
                 '/framework/vue',
+                '/framework/vue3',
                 '/framework/react',
                 '/framework/angular',
                 // '/interview/order',
