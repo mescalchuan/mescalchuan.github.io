@@ -174,6 +174,24 @@ module.exports = {
         {
             title: '常见问题',
             path: '/question/common'
+        },
+        {
+            title: 'Java',
+            collapsable: false,
+            children: [{
+                title: '基础',
+                collapsable: true,
+                children: [
+                    '/java/base',
+                    '/java/convert',
+                    '/java/operator',
+                    '/java/circulate',
+                    '/java/array',
+                    '/java/object',
+                    '/java/package',
+                    '/java/object-core'
+                ]
+            }]
         }
       ]
     },
